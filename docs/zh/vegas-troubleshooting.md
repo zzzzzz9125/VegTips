@@ -631,7 +631,7 @@ Q：项目属性/自定义渲染模板/首选项设置等**窗口太大，没法
 
 A：Vegas 窗口大小会根据 Windows 屏幕设置自动缩放，如果 Windows 屏幕 DPI 缩放比例过大，也会导致 Vegas 的窗口变得很大，在特大缩放比例下部分设置窗口显示不完全。如果只需按“确认”，可以直接按键盘上的 **`Enter` 键**进行代替。如果必须要完整显示窗口，就只能提前修改屏幕的 DPI 缩放比例，**在 Windows 设置中将屏幕缩放比例调为 100%**，Vegas 内改完设置后再调回原来的值。或者也可以**单独将 Vegas 程序的 DPI 缩放改为 100%**，对着 Vegas 主程序或者快捷方式进入 `右键 -> 属性 -> 兼容性 -> 更改高 DPI 设置`，然后如下图所示：
 
-![just a test](img/vegas-troubleshooting/image19_high_dpi_application.png)
+![just a test](img/vegas-troubleshooting/image019_high_dpi_application.png)
 
 <br>
 

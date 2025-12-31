@@ -607,7 +607,7 @@ See: <a href="https://www.vegascreativesoftware.info/us/forum/posts--138828/">ht
 
 **A:** VEGAS windows scale with Windows DPI settings. High DPI scaling can make windows too large. To click "OK", you can press **`Enter`** on the keyboard. To see the full window, you must adjust Windows DPI scaling: **In Windows Settings, set screen scaling to 100%**, change settings in VEGAS, then set it back. Alternatively, **set VEGAS-specific DPI scaling to 100%**: Right-click VEGAS executable or shortcut -> `Properties -> Compatibility -> Change high DPI settings`, then:
 
-![just a test](img/vegas-troubleshooting/image19_high_dpi_application.png)
+![just a test](img/vegas-troubleshooting/image019_high_dpi_application.png)
 
 <br>
 
