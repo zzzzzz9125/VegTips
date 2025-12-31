@@ -1,0 +1,123 @@
+.outline-depth-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.25rem 0.5rem 0.5rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+.outline-depth-toggle .row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.outline-depth-toggle .label {
+  font-size: 0.875rem;
+  color: var(--vp-c-text-2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.outline-depth-toggle .actions {
+  display: inline-flex;
+  gap: 0.35rem;
+}
+
+.outline-depth-toggle .depth-slider {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.outline-depth-toggle .depth-slider input[type='range'] {
+  width: 100%;
+  accent-color: var(--vp-c-brand-1);
+  cursor: pointer;
+}
+
+.outline-depth-toggle .auto-expand {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-1);
+  gap: 0.35rem;
+  justify-content: space-between;
+}
+
+.outline-depth-toggle .switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+
+.outline-depth-toggle .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.outline-depth-toggle .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  transition: 0.2s;
+  border-radius: 34px;
+}
+
+.outline-depth-toggle .switch .slider:before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 2px;
+  background-color: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.outline-depth-toggle .switch input:checked + .slider {
+  background-color: var(--vp-c-brand-soft);
+  border-color: var(--vp-c-brand-1);
+}
+
+.outline-depth-toggle .switch input:checked + .slider:before {
+  transform: translateX(16px);
+  border-color: var(--vp-c-brand-1);
+}
+
+:root[data-outline-depth="2"] .VPDocAsideOutline nav ul ul,
+:root[data-outline-depth="2"] .VPDocAsideOutline nav ol ol {
+  display: none;
+}
+
+:root[data-outline-depth="3"] .VPDocAsideOutline nav ul ul ul,
+:root[data-outline-depth="3"] .VPDocAsideOutline nav ol ol ol {
+  display: none;
+}
+
+:root[data-outline-depth="4"] .VPDocAsideOutline nav ul ul ul ul,
+:root[data-outline-depth="4"] .VPDocAsideOutline nav ol ol ol ol {
+  display: none;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.image-center {
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,10 @@
+node_modules/
+.npm
+.pnp
+.yarn/
+pnpm-lock.yaml
+
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+docs/out/
+docs/output/
