@@ -68,7 +68,7 @@ Note: The following paths use **environment variable notation `% %`**. You can c
 <br>
 
 For VEGAS preferences:
-- Older versions (VP18 and earlier) are saved in the registry path **`HKEY_CURRENT_USER\Software\Sony Creative Software\VEGAS Pro\18.0\Metrics\Application\`**, which is difficult to edit manually. For backup, you can use the Registry Editor (`regedit`) to manually back up all contents under that registry path.
+- Older versions (VP18 and earlier) are saved in the registry path **`HKEY_CURRENT_USER\Software\Sony Creative Software\VEGAS Pro\<version>\Metrics\Application\`**, which is difficult to edit manually. For backup, you can use the Registry Editor (`regedit`) to manually back up all contents under that registry path.
 
 - Newer versions (VP19 and later) are saved in the cache directory file **`%localappdata%\VEGAS Pro\<version>\persist.prefs`**. The file content is in `XML` format, making it easier to edit manually. You can copy this file for backup.
 

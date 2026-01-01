@@ -68,7 +68,7 @@ For the time being, I do not accept direct private inquiries about specific issu
 <br>
 
 对于 Vegas 首选项：
-- 旧版（18 及以前）保存在注册表路径 **`HKEY_CURRENT_USER\Software\Sony Creative Software\VEGAS Pro\18.0\Metrics\Application\`** 内，比较难手动编辑。备份时，可以通过注册表编辑器 `regedit` 工具，手动备份该注册表路径的所有内容。
+- 旧版（18 及以前）保存在注册表路径 **`HKEY_CURRENT_USER\Software\Sony Creative Software\VEGAS Pro\<版本号>\Metrics\Application\`** 内，比较难手动编辑。备份时，可以通过注册表编辑器 `regedit` 工具，手动备份该注册表路径的所有内容。
 
 - 新版（19 及以后）保存在缓存目录 **`%localappdata%\VEGAS Pro\<版本号>\persist.prefs`** 文件内，文件内容格式为 `XML`，容易手动编辑。可以复制该文件以备份。
 
