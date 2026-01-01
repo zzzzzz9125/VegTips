@@ -1,0 +1,6 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <!-- 白色背景 -->
+    <rect width="100" height="100" fill="white"/>
+    <!-- 蓝色V字母 -->
+    <path d="M30,30 L50,70 L70,30" fill="none" stroke="#2196F3" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

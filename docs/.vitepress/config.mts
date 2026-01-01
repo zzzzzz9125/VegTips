@@ -1,29 +1,35 @@
 import { defineConfig } from 'vitepress'
 
 const enNav = [
-  { text: 'Home', link: '/' },
-  { text: 'Vegas Troubleshooting', link: '/vegas-troubleshooting' }
+  { text: 'Vegas Troubleshooting', link: '/' },
+  { text: 'Video FX List', link: '/videofxlist' },
+  { text: 'UltraPaste! Extention', link: '/ultrapaste' }
 ]
 
 const zhNav = [
-  { text: '首页', link: '/zh/' },
-  { text: 'Vegas 疑难杂症', link: '/zh/vegas-troubleshooting' }
+  { text: 'Vegas 疑难杂症', link: '/zh/' },
+  { text: '视频 FX 效果列表', link: '/zh/videofxlist' },
+  { text: '超级粘贴! 扩展', link: '/zh/ultrapaste' }
 ]
 
 const enSidebar = [
   {
-    text: 'Examples',
+    text: 'Articles',
     items: [
-      { text: 'Vegas Troubleshooting', link: '/vegas-troubleshooting' }
+      { text: 'Vegas Troubleshooting', link: '/' },
+      { text: 'Video FX List', link: '/videofxlist' },
+      { text: 'UltraPaste! Extention', link: '/ultrapaste' }
     ]
   }
 ]
 
 const zhSidebar = [
   {
-    text: '示例',
+    text: '文章',
     items: [
-      { text: 'Vegas 疑难杂症', link: '/zh/vegas-troubleshooting' }
+      { text: 'Vegas 疑难杂症', link: '/zh/' },
+      { text: '视频 FX 效果列表', link: '/zh/videofxlist' },
+      { text: '超级粘贴! 扩展', link: '/zh/ultrapaste' }
     ]
   }
 ]
@@ -81,22 +87,40 @@ const outlineDepthScript = `
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  cleanUrls: true,
+  vite: {
+    publicDir: '../public'
+  },
   locales: {
     root: {
       label: 'English',
       lang: 'en-US',
       title: 'VegTips',
-      description: 'Some practical tips for VEGAS Pro'
+      description: 'Some practical tips for VEGAS Pro',
+      themeConfig: {
+        nav: enNav,
+        sidebar: enSidebar
+      }
     },
     zh: {
       label: '简体中文',
       lang: 'zh-CN',
       title: 'VegTips',
       description: 'VEGAS Pro 的实用技巧',
-      link: '/zh/'
+      link: '/zh/',
+      themeConfig: {
+        nav: zhNav,
+        sidebar: zhSidebar,
+        outlineTitle: '页面导航',
+        docFooter: {
+          prev: '上一页',
+          next: '下一页'
+        }
+      }
     }
   },
   head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
     [
       'script',
       {},
@@ -112,23 +136,8 @@ export default defineConfig({
     nav: enNav,
     sidebar: enSidebar,
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/zzzzzz9125' }
+      { icon: 'github', link: 'https://github.com/zzzzzz9125/VegTips' }
     ],
-    locales: {
-      root: {
-        nav: enNav,
-        sidebar: enSidebar
-      },
-      zh: {
-        nav: zhNav,
-        sidebar: zhSidebar,
-        outlineTitle: '页面导航',
-        docFooter: {
-          prev: '上一页',
-          next: '下一页'
-        }
-      }
-    },
     outline: [2, 4]
   }
 })

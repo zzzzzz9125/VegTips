@@ -66,7 +66,11 @@ const applyOutlineFilter = () => {
     const items = node.querySelectorAll(':scope > li')
     items.forEach((li) => {
       const link = li.querySelector(':scope > a.outline-link') as HTMLAnchorElement | null
-      const isExpandedRoot = level === 2 && link && expandedH2Href.value && link.getAttribute('href') === expandedH2Href.value
+      const isExpandedRoot =
+        level === 2 &&
+        link !== null &&
+        expandedH2Href.value !== null &&
+        link.getAttribute('href') === expandedH2Href.value
       const nextUnderExpanded = underExpanded || isExpandedRoot
 
       const show = (autoExpand.value && nextUnderExpanded) || level <= targetDepth
