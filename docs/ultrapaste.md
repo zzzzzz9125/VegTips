@@ -72,7 +72,7 @@ Interaction of the `Clipboard Image` function with your screenshot tool:
 
 ![Screenshot](img/ultrapaste/img016_ultrapaste_screenshot.gif)
 
-Interaction of the `Clipboard Image` function with PPT:
+Interaction of the `Clipboard Image` function with PowerPoint:
 
 ![PPT](img/ultrapaste/img017_ultrapaste_ppt.gif)
 
