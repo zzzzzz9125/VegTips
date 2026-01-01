@@ -31,6 +31,18 @@ title: UltraPaste! Extension
 
 This extension introduces a **<u>novel</u>** file import method for VEGAS Pro. With just one hotkey, you can import almost any type of file: regular media files, images from the clipboard, SRT subtitle files, and even REAPER clipboard data. You simply need to `Ctrl + C`, then `Ctrl + Shift + V` to quickly import these files into the VEGAS timeline.
 
+Example of media file import method:
+
+![Media Import](img/ultrapaste/img015_ultrapaste_media_import.gif)
+
+Interaction of the `Clipboard Image` feature with your screenshot tool:
+
+![Screenshot](img/ultrapaste/img016_ultrapaste_screenshot.gif)
+
+Interaction of the `Clipboard Image` feature with PowerPoint:
+
+![PowerPoint](img/ultrapaste/img017_ultrapaste_ppt.gif)
+
 ## Installation
 
 Current Extension Version: v1.03 beta
@@ -38,8 +50,9 @@ Current Extension Version: v1.03 beta
 Supported Versions: Sony Vegas Pro 13 - Magix Vegas Pro 22
 
 1.  Go to [Releases](https://github.com/zzzzzz9125/UltraPaste/releases) to download the latest .zip file and extract it. Select `UltraPaste.dll` <small>(or `UltraPaste_13.dll` for `Sony VEGAS Pro 13`)</small> and `UltraPaste.png`, copy them, and paste into the extension folder:
-    *   `C:\ProgramData\Vegas Pro\Application Extensions\`
-    *   or for Sony versions: `C:\ProgramData\Sony\Vegas Pro\Application Extensions\`
+  - `C:\ProgramData\Vegas Pro\Application Extensions\`
+  - or for Sony: `C:\ProgramData\Sony\Vegas Pro\Application Extensions\`
+  - Click [here](/index#general-steps-to-install-a-script-or-extension) if you don't know how to install extensions
 
 2.  After installation, you can find the dockable extension window via `Tools -> UltraPaste!`.
 
@@ -47,13 +60,13 @@ Supported Versions: Sony Vegas Pro 13 - Magix Vegas Pro 22
 
 ## Usage
 
-First is the topmost `UltraPaste!`. This is the extension's primary function; almost all operations can be completed using it. You can assign it a keyboard shortcut in `Options -> Customize Keyboard`:
+First is the topmost `UltraPaste!`. This is the extension's primary feature; almost all operations can be completed using it. You can assign it a keyboard shortcut in `Options -> Customize Keyboard`:
 
 ![Customize Keyboard](img/ultrapaste/img003_ultrapaste_keyboard.png)
 
 `Ctrl + Shift + V` is my personal recommendation. You can bind another convenient shortcut as well. It's not recommended to bind `Ctrl + V`, as it would override VEGAS's native paste key.
 
-This binds the shortcut for our UltraPaste key. All one-click operation functions that appear in the menu can also have shortcuts added this way.
+This binds the shortcut for our UltraPaste key. All one-click operation features that appear in the menu can also have shortcuts added this way.
 
 The file import logic is simple: for example, select any media file on your desktop, `Ctrl + C` it, run the `UltraPaste` shortcut in VEGAS, and it will be imported onto the currently selected VEGAS track. Furthermore, if you have defined a loop region in VEGAS, the file can be imported according to the length of that loop region.
 
@@ -63,18 +76,6 @@ Beyond basic file import, the extension can also read these clipboard data types
 *   REAPER clipboard data
 
 All this data can be correctly recognized and processed.
-
-Example of media file import method:
-
-![Media Import](img/ultrapaste/img015_ultrapaste_media_import.gif)
-
-Interaction of the `Clipboard Image` function with your screenshot tool:
-
-![Screenshot](img/ultrapaste/img016_ultrapaste_screenshot.gif)
-
-Interaction of the `Clipboard Image` function with PowerPoint:
-
-![PPT](img/ultrapaste/img017_ultrapaste_ppt.gif)
 
 <br>
 

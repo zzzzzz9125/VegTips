@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 const enNav = [
   { text: 'Vegas Troubleshooting', link: '/' },
   { text: 'Video FX List', link: '/videofxlist' },
-  { text: 'UltraPaste! Extention', link: '/ultrapaste' }
+  { text: 'UltraPaste! Extension', link: '/ultrapaste' }
 ]
 
 const zhNav = [
@@ -18,7 +18,7 @@ const enSidebar = [
     items: [
       { text: 'Vegas Troubleshooting', link: '/' },
       { text: 'Video FX List', link: '/videofxlist' },
-      { text: 'UltraPaste! Extention', link: '/ultrapaste' }
+      { text: 'UltraPaste! Extension', link: '/ultrapaste' }
     ]
   }
 ]

@@ -31,6 +31,18 @@ title: 超级粘贴 UltraPaste 扩展
 
 本扩展为 VEGAS Pro 设计了一种 	**<u>很新</u>** 的文件导入方式。仅仅通过一个快捷键，你可以导入几乎所有类型的文件：普通媒体文件、剪贴板里的图像文件、SRT 字幕文件，甚至是 REAPER 的剪贴板数据。你只需要 `Ctrl + C`，然后 `Ctrl + Shift + V`，即可快速导入这些文件到 VEGAS 时间轴中。
 
+媒体文件导入方式示例：
+
+![媒体导入](img/ultrapaste/img015_ultrapaste_media_import.gif)
+
+`剪贴板图像` 功能与你的截图工具的交互：
+
+![截图](img/ultrapaste/img016_ultrapaste_screenshot.gif)
+
+`剪贴板图像` 功能与 PPT 的交互：
+
+![PPT](img/ultrapaste/img017_ultrapaste_ppt.gif)
+
 ## 安装
 
 当前扩展版本号：v1.03 beta
@@ -38,8 +50,9 @@ title: 超级粘贴 UltraPaste 扩展
 支持版本：Sony Vegas Pro 13 - Magix Vegas Pro 22
 
 1. 前往 [Releases](https://github.com/zzzzzz9125/UltraPaste/releases) 下载最新的压缩包并解压。选择 `UltraPaste.dll`<small>（如果是 `Sony VEGAS Pro 13` 的话就是 `UltraPaste_13.dll`）</small> 和 `UltraPaste.png` 并复制，粘贴到扩展文件夹：
-   - `C:\ProgramData\Vegas Pro\Application Extensions\`  
-   - 或者 Sony 版的 `C:\ProgramData\Sony\Vegas Pro\Application Extensions\` 
+  - `C:\ProgramData\Vegas Pro\Application Extensions\`  
+  - 或者 Sony 版的 `C:\ProgramData\Sony\Vegas Pro\Application Extensions\` 
+  - 如果你不知道如何安装扩展的话，点击[这里](/index#general-steps-to-install-a-script-or-extension)
 
 2. 安装完毕后，可通过 `工具 -> 超级粘贴!` 中找到可停靠的扩展窗口。
 
@@ -63,18 +76,6 @@ title: 超级粘贴 UltraPaste 扩展
 - REAPER 剪贴板数据
 
 这些数据都可以被正确地识别和处理。
-
-媒体文件导入方式示例：
-
-![媒体导入](img/ultrapaste/img015_ultrapaste_media_import.gif)
-
-`剪贴板图像` 功能与你的截图工具的交互：
-
-![截图](img/ultrapaste/img016_ultrapaste_screenshot.gif)
-
-`剪贴板图像` 功能与 PPT 的交互：
-
-![PPT](img/ultrapaste/img017_ultrapaste_ppt.gif)
 
 <br>
 
