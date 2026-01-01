@@ -38,34 +38,41 @@ const languageRedirectScript = `
 (function () {
   if (typeof window === 'undefined') return;
 
+  const storageKey = 'vegTips-lang';
   const path = window.location.pathname;
-  const isZhPath = path.startsWith('/zh/');
   const search = window.location.search;
   const hash = window.location.hash;
-  const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  const params = new URLSearchParams(search);
+  const isZhPath = path.startsWith('/zh/') || path === '/zh';
+  const isHome = path === '/' || path === '/index.html' || path === '/zh/' || path === '/zh';
 
-  let preferred = localStorage.getItem('vegTips-lang');
+  let preferred = localStorage.getItem(storageKey);
+  const requested = params.get('lang');
+
+  if (requested === 'zh' || requested === 'en') {
+    preferred = requested;
+    localStorage.setItem(storageKey, preferred);
+    params.delete('lang');
+  }
 
   if (!preferred) {
+    const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
     preferred = isZhPath || browserLang.startsWith('zh') ? 'zh' : 'en';
-    localStorage.setItem('vegTips-lang', preferred);
-
-    if (preferred === 'zh' && !isZhPath) {
-      window.location.replace('/zh' + path + search + hash);
-      return;
-    }
+    localStorage.setItem(storageKey, preferred);
   }
 
-  const current = isZhPath ? 'zh' : 'en';
+  if (!isHome) return;
 
-  if (preferred !== current) {
-    preferred = current;
-    localStorage.setItem('vegTips-lang', preferred);
-  }
+  const targetLocale = preferred === 'zh' ? 'zh' : 'en';
+  const onZh = isZhPath;
+  const targetPath = targetLocale === 'zh' ? '/zh/' : '/';
 
-  if (preferred === 'zh' && !isZhPath) {
-    window.location.replace('/zh' + path + search + hash);
-  }
+  const needsRedirect = (targetLocale === 'zh' && !onZh) || (targetLocale === 'en' && onZh);
+  if (!needsRedirect) return;
+
+  const nextSearch = params.toString();
+  const nextUrl = targetPath + (nextSearch ? '?' + nextSearch : '') + hash;
+  window.location.replace(nextUrl);
 })();
 `
 
