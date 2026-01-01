@@ -1419,7 +1419,7 @@ Due to API changes in VP14, scripts/extensions for Sony-era and MAGIX-era VEGAS 
 
 ### General Steps to Install a Script or Extension
 
-Using extensions as an example; similar for scripts. For other paths, see the lists above.
+Using extensions as an example; similar for scripts. For other paths, see the [lists above](#xii-scripts-extensions-related).
 
 1.  Copy `C:\ProgramData\VEGAS Pro\` and paste into File Explorer's address bar to navigate.
 

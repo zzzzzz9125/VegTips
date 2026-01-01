@@ -52,7 +52,7 @@ title: 超级粘贴 UltraPaste 扩展
 1. 前往 [Releases](https://github.com/zzzzzz9125/UltraPaste/releases) 下载最新的压缩包并解压。选择 `UltraPaste.dll`<small>（如果是 `Sony VEGAS Pro 13` 的话就是 `UltraPaste_13.dll`）</small> 和 `UltraPaste.png` 并复制，粘贴到扩展文件夹：
   - `C:\ProgramData\Vegas Pro\Application Extensions\`  
   - 或者 Sony 版的 `C:\ProgramData\Sony\Vegas Pro\Application Extensions\` 
-  - 如果你不知道如何安装扩展的话，点击[这里](/index#general-steps-to-install-a-script-or-extension)
+  - 如果你不知道如何安装扩展的话，点击[这里](/index#安装脚本或扩展时的一般步骤)
 
 2. 安装完毕后，可通过 `工具 -> 超级粘贴!` 中找到可停靠的扩展窗口。
 
