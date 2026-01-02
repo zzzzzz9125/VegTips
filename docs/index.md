@@ -164,7 +164,7 @@ Encountering inexplicable issues, like **imported audio being completely noisy**
 
 **Resetting will clear: [All preferences and cache for the current VEGAS version].**
 
-The standard method: Hold `Ctrl + Shift` and double-click to run VEGAS. A "Reset?" prompt will appear. Check `Delete all cached application data` and click `Yes`.
+The standard method: Hold `Ctrl + Shift` and run VEGAS. A "Reset?" prompt will appear. Check `Delete all cached application data` and click `Yes`.
 
 ![Reset](img/vegtips/image003_reset.png)
 
@@ -194,7 +194,7 @@ VEGAS Pro / VEGAS Post Release History: https://www.vegascreativesoftware.info/u
 
 ### 7. Troubleshooting Ideas for Specific Errors
 
-If you've tried almost all methods in this article (especially those in the [VEGAS Software Operation Q&A](#iv-vegas-software-operation-q-a) chapter) and the error persists, try this section's approach. Some errors, like `0xC0000005`, have no fixed, definite cause. Encountering such errors and finding that most solutions here don't work is perfectly normal. Searching online for the error code yields many solutions, but finding one that actually works can be like finding a needle in a haystack. This section provides a general troubleshooting思路:
+If you've tried almost all methods in this article (especially those in the [VEGAS Software Operation Q&A](#iv-vegas-software-operation-q-a) chapter) and the error persists, try this section's approach. Some errors, like `0xC0000005`, have no fixed, definite cause. Encountering such errors and finding that most solutions here don't work is perfectly normal. Searching online for the error code yields many solutions, but finding one that actually works can be like finding a needle in a haystack. This section provides a general troubleshooting idea:
 
 1.  **Find the error details.** If error reporting is [enabled](#2-disable-vegas-error-reporting-pop-up), check the `Show Problem Details` box in the pop-up. Even with error reporting disabled, you might sometimes get error details. These two sources might provide different or additional information; it's advisable to check both.
 
@@ -428,9 +428,17 @@ Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--14725
 
 <br>
 
-## V. File Import Related
+Q: <sup>**French Version**</sup> The French version of VEGAS Pro crashes on startup?
+
+A: This is an issue **specific to the French version**. The only solution is to **uninstall and reinstall the English version**. MAGIX intended to fix it but has no clear solution. Users who can reproduce this issue are encouraged to contact MAGIX support.
+
+<small>
+Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--147150/#ca926950">https://www.vegascreativesoftware.info/us/forum/posts--147150/#ca926950</a><br>
+</small>
 
 <br>
+
+## V. File Import Related
 
 ### General Troubleshooting for Files Not Importing/Importing with Glitches/Green Flashes:
 
@@ -491,9 +499,9 @@ Q: Can't **drag and drop files from folders** into VEGAS, only use the `Open` bu
 
 A: If VEGAS is running **with administrator privileges**, drag-and-drop is disabled. The fix is to **run VEGAS without administrator privileges**.
 
-Note: If you're using a **portable version of VEGAS (marked `Portable`)**, it might require admin rights to start, preventing drag-and-drop. Some "solutions" involve disabling UAC via registry, which is **not recommended**. **It's better to switch to a regular version, not the portable one.**
+Note: If you're using a **portable version of VEGAS (marked `Portable`)**, it might require administrator privileges to start, preventing drag-and-drop. Some "solutions" involve disabling UAC via registry, which is **not recommended**. **It's better to switch to a regular version, not the portable one.**
 
-**Issues with Portable VEGAS: Requires admin rights; cannot run multiple instances; doesn't recognize system environment variables; some plugins (e.g., Voukoder) need manual connector placement. Avoid if possible.**
+**Issues with Portable VEGAS: Requires administrator privileges; cannot run multiple instances; doesn't recognize system environment variables; some plugins (e.g., [Voukoder](#recommended-render-plugin-voukoder)) need manual connector placement. Avoid if possible.**
 
 <br>
 
@@ -579,8 +587,8 @@ If you get "**Unknown error occurred while trying to save video profile**":
   - **`notepad "C:\ProgramData\VEGAS\VEGAS Pro\16.0\Vegas profiles.ini"`** <sup>VP14+</sup>
   - **`notepad "C:\ProgramData\Sony\Vegas Pro\13.0\Vegas profiles.ini"`** <sup>VP13-</sup>
 
-3. Instead of clicking `OK`, press **`Ctrl + Shift + Enter`** to open the file with admin privileges. Manually edit the default import profile for `4:3`, changing all `1.3333333333` values to `1`, then save.
-  - Note: Opening without admin privileges will cause Notepad to prompt "Save As" instead of writing to the original file.
+3. Instead of clicking `OK`, press **`Ctrl + Shift + Enter`** to open the file with administrator privileges. Manually edit the default import profile for `4:3`, changing all `1.3333333333` values to `1`, then save.
+  - Note: Opening without administrator privileges will cause Notepad to prompt `Save As` instead of writing to the original file.
 
 ![Video Profile Edit 1](img/vegtips/image011_profile_edit_1.png)
 
@@ -638,6 +646,16 @@ To prevent accidental triggering in VP18+, go to **`Preferences -> General`**, s
 
 <br>
 
+Q: Pressing **Undo (`Ctrl + Z`)** while the **Media Generator** window is open causes the Media Generator effect to **disappear from the preview**?
+
+A: When focus is on the **Media Generator's edit window**, pressing **Undo (`Ctrl + Z`)** may cause the Media Generator's **`Frame size`** and **`Duration`** parameters to change to abnormal values. Repeatedly pressing `Ctrl + Z` likely won't help in this case.
+
+Both parameters are located in the top-left corner of the Media Generator window. You need to manually **change the Media Generator's `Frame size` and `Duration` back to their original values**. By default, `Frame size` matches the project dimensions (e.g., `1920*1080`), and `Duration` defaults to 5 seconds (or `00:00:05.00` on the `Time & Frames` ruler).
+
+- Another related minor bug: After modifying the `Frame size` and `Duration` of a Media Generator, if you immediately open a second Media Generator's edit window on the timeline, the second generator may inherit the `Frame size` and `Duration` parameters from the first one.
+
+<br>
+
 Q: **Some FX windows** (e.g., (legacy) Text, TV Simulator FX, other DXT plugins) **display incompletely**?
 
 A:
@@ -659,7 +677,7 @@ Q: Project Properties / Custom Render Template / Preferences windows are **too l
 
 ![Window Too Large](img/vegtips/image018_window_too_large.png)
 
-A: VEGAS window size scales with Windows display settings. High DPI scaling can make VEGAS windows very large, causing cut-off displays at extreme scales. To click "OK", you can press the **`Enter` key**. If you need the full window displayed, you must **change the screen DPI scaling to 100%** in Windows Settings before opening the window, then change it back. Alternatively, **set VEGAS's DPI scaling individually to 100%**: Right-click the VEGAS executable or shortcut -> `Properties -> Compatibility -> Change high DPI settings`, then configure as shown:
+A: VEGAS window size scales with Windows display settings. High DPI scaling can make VEGAS windows very large, causing cut-off displays at extreme scales. To click "OK", you can press the **`Enter` key**. If you need the full window displayed, you must **change the screen DPI scaling to 100%** in Windows Settings before opening the window, then change it back. Alternatively, **set VEGAS's DPI scaling individually to 100%**: Right-click the VEGAS executable or shortcut -> `Properties -> Compatibility -> Change high DPI settings`. **Set `Scaling performed by:` to `Application`**.
 
 ![High DPI - Application](img/vegtips/image019_high_dpi_application.png)
 
@@ -713,8 +731,10 @@ Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--14874
 
 Q: <sup>VP22+</sup> **Left-dragging on the timeline now selects events, can't select a time range anymore**?
 
-A: After VP22, left-drag on the timeline selects events, while right-drag selects a time range. If you're used to the old logic, you can **check `Preferences -> Editing -> Use right mouse button to switch to selection edit tool`** to swap left/right button functions, similar to Reaper's default logic.
-If this happens in older versions, first confirm your edit tool is selected correctly (press D key twice).
+A: After VP22, left-drag on the timeline selects events, while right-drag selects a time range. If you're used to the old logic, you can **check `Preferences -> Editing -> Use right mouse button to switch to selection edit tool`** to swap left/right button functions, similar to Reaper's default logic.  
+<small>
+If this happens in older versions, first confirm your edit tool is selected correctly (press <code>D</code> key twice).
+</small>
 
 This update also introduced a minor issue: the actual event selection area is slightly smaller than the mouse-drawn area due to a new offset value. Go to [Internal Preferences](#accessing-vegas-internal-preferences), search for **`Default SelectionMode Offset`**, change it to **`0`**.
 
@@ -750,7 +770,7 @@ A: This issue appears with **certain Nvidia driver versions**. Here are solution
 
     Alternatively, change settings in the **Nvidia Control Panel**:
 
-    Open **NVIDIA Control Panel**, click **`Manage 3D settings`** on the left, switch to the **`Program Settings`** tab on the right. Click "Add", select the VEGAS executable, and change **`OpenGL GDI compatibility`** from `Use global setting` to **`Prefer compatibility`**. Restart VEGAS. (If you have multiple VEGAS versions, set each separately.)
+    Open **NVIDIA Control Panel**, click **`Manage 3D settings`** on the left, switch to the **`Program Settings`** tab on the right. Click `Add`, select the VEGAS executable, and change **`OpenGL GDI compatibility`** from `Use global setting` to **`Prefer compatibility`**. Restart VEGAS. (If you have multiple VEGAS versions, set each separately.)
 
 ![NVIDIA OpenGL GDI Compatibility](img/vegtips/image022_nvidia_opengl.png)
 
@@ -776,7 +796,7 @@ Two versions: Voukoder Classic and Voukoder Pro.
 
   User backups on GitHub:
   - [https://github.com/FORARTfe/voukoderFREE](https://github.com/FORARTfe/voukoderFREE)
-  - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)
+  - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)  
   Requires installing both the Voukoder core (e.g., `Voukoder 13.4.1`) and the connector (e.g., `connector-vegas22-1.0.0.msi`).
 - Voukoder Pro is currently paid. Official site: [https://www.voukoder.org/](https://www.voukoder.org/).
   - Voukoder Pro 1 was once free, but Voukoder Pro 2 became paid, with each major version requiring a separate purchase.
@@ -816,7 +836,7 @@ Other similar plugins include [DebugMode FrameServer](http://www.debugmode.com/f
 5.  Use a different render format (e.g., wmv).
   - Note: Default wmv template is: **resolution `1440*1080`, Pixel aspect ratio `1.3333`**. Although the final aspect ratio is 16:9, rendering directly with these parameters can cause issues. Manually change to **resolution `1920*1080`, Pixel aspect ratio `1`**.
 
-6.  **<sup>Recommended</sup> Render using the [Voukoder plugin](#recommended-render-plugin-voukoder).**
+6.  **<sup>Recommended</sup> Render using [Voukoder](#recommended-render-plugin-voukoder).**
 
 7.  **<sup>Recommended</sup> Nest and Render.**
   - Create a new project, **drag the original .veg file directly into it**. After proxy creation, render directly. Nested rendering is slower; low-spec PCs may struggle.
@@ -859,7 +879,7 @@ If that fails, try temporarily moving all folders from the codec path **`...<VEG
 
 Q: Immediate render error: **`An error occurred creating media file xxx.mp4. Unable to determine the cause of the error.`**
 
-A: In custom render template, **uncheck `Enable progressive download`**. Or try the **[Voukoder plugin](#recommended-render-plugin-voukoder)**.
+A: In custom render template, **uncheck `Enable progressive download`**. Or try **[Voukoder](#recommended-render-plugin-voukoder)**.
 
 <br>
 
@@ -919,7 +939,7 @@ A:
 
 ![Render Alpha ProRes](img/vegtips/image028_render_alpha_prores.png)
 
-- **Voukoder Render Plugin <small>(VP18+, Voukoder Classic version 12.0+.)</small>**
+- **[Voukoder](#recommended-render-plugin-voukoder)<small>(VP18+, Voukoder Classic version 12.0+.)</small>**
 
   In Voukoder templates, find those marked **`4:4:4 10 bit with alpha channel`** and render. Or customize: Output container `QuickTime (.mov)`, Video encoder `ProRes KS` or `QuickTime Animation`.
 
@@ -931,7 +951,7 @@ A1: In VP17 and below, **color space** settings in Project Properties and Render
 
 Three solutions:
 
-1.  **Use Voukoder plugin, create a template with `Filters` to convert color space.**
+1.  **Use [Voukoder](#recommended-render-plugin-voukoder), create a template with `Filters` to convert color space.**
 
 ![Voukoder Color Space](img/vegtips/image040_voukoder_color_space.png)
 
@@ -974,7 +994,7 @@ Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--14229
 
 Q: **[VP18 and below] Cannot render videos taller than `2304` (e.g., vertical 4K)**?
 
-A: In older versions, trying to set height above `2304` in a native template's custom dialog automatically reverts to `2304`. The easiest solution is to **use the [Voukoder plugin](#recommended-render-plugin-voukoder)** after setting your desired project properties.
+A: In older versions, trying to set height above `2304` in a native template's custom dialog automatically reverts to `2304`. The easiest solution is to **use [Voukoder](#recommended-render-plugin-voukoder)** after setting your desired project properties.
 
 Here's a "bug exploit" method using native templates:
 
@@ -1002,7 +1022,7 @@ A: VEGAS requests microphone permission after rendering. If a mic is connected b
 
 <br>
 
-Q: Videos rendered with **Voukoder** (or built-in templates) look fine locally but show **horizontal stripes** when uploaded to YouTube/other sites at full resolution?
+Q: Videos rendered with **[Voukoder](#recommended-render-plugin-voukoder)** (or built-in templates) look fine locally but show **horizontal stripes** when uploaded to YouTube/other sites at full resolution?
 
 A: Voukoder auto-matches project properties. In VP17 and below, the default project template has `Field order` set to `Upper field first` (interlaced). Local players support deinterlacing, so it looks fine. Sites like YouTube may not, showing interlacing stripes. For Voukoder, **change `Field order` in `Project Properties` to `Progressive (no fields)`** before rendering. For built-in templates, **avoid templates with `i` in the name; choose those with `p`**.
 
@@ -1014,8 +1034,8 @@ A: This bug was fixed in VP19. For older versions, try these (not guaranteed):
 
 1.  Install/Reinstall HEIF Image Extensions: [https://apps.microsoft.com/detail/9pmmsr1cgpwg](https://apps.microsoft.com/detail/9pmmsr1cgpwg).
 
-2.  Use an image sequence render script.
-  - Download link: https://www.vegascreativesoftware.info/us/forum/vegas-pro-19-missing-image-sequence-as-a-render-option--133068/?page=3#ca863786
+2.  Use the image sequence render script.
+  - Download link: https://www.vegascreativesoftware.info/us/forum/posts--133068/?page=3#ca863786
 
 3.  Render to another format (`.mov`), then convert using [FFmpeg](https://ffmpeg.org/).
 
@@ -1088,7 +1108,7 @@ In VP20, the "Titles & Text" feature "**Transfer Subtitle Attributes**" is also 
 
 Q: Clicking menu **`Insert -> Subtitle from File`** **doesn't open the insert window**, no response?
 
-A: A relatively rare bug, seemingly unfixed. It might work one day and stop the next. Currently, the only known fix is **resetting preferences**.
+A: A relatively rare bug, seemingly unfixed. It might work one day and stop the next. Currently, the only known fix is **[resetting preferences](#5-reset-preferences)**.
 
 <small>
 Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--137861/">https://www.vegascreativesoftware.info/us/forum/posts--137861/</a><br>
@@ -1222,7 +1242,7 @@ Strictly, DXT plugins don't have a mandated folder like OFX. They are DLL files 
 
 Q: Changed VEGAS to other language via registry, but **built-in plugin names are still English**. How to fix?
 
-A: **Delete the plugin name cache** mentioned above, restart VEGAS. Or simply **reset preferences**.
+A: **Delete the plugin name cache** mentioned above, restart VEGAS. Or simply **[reset preferences](#5-reset-preferences)**.
 
 <br>
 
@@ -1254,7 +1274,7 @@ Q: **Using built-in AI FX prompts to install VEGAS Deep Learning Models componen
 A: For newer built-in AI FX, **you must install the corresponding version of Deep Learning Models** separately.
 
 <small>
-Official AI Deep Learning Models download: <a href="https://www.vegascreativesoftware.info/us/forum/posts--104782/">https://www.vegascreativesoftware.info/us/forum/posts--104782/</a>
+Official AI Deep Learning Models download: <a href="https://www.vegascreativesoftware.info/us/forum/posts--104782/">https://www.vegascreativesoftware.info/us/forum/posts--104782/<br></a>
 </small>
 
 <br>
@@ -1293,7 +1313,7 @@ Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--14435
 
 ## XI. Audio Plugin Related
 
-VEGAS audio plugins fall into two categories: DirectX plugins (older) and VST plugins (current standard). Apart from VEGAS's built-in "no prefix" and "ExpressFX" series audio FX (which are DirectX), all other audio plugins are VST. The eFX series built into VP16+ are also VST. Older VEGAS supports VST2; VP20+ also supports VST3. No VEGAS version supports VSTi.
+VEGAS audio plugins fall into two categories: DirectX plugins (older) and VST plugins (current standard). Apart from VEGAS's built-in "no prefix" and `ExpressFX` series audio FX (which are DirectX), all other audio plugins are VST. The `eFX` series built into VP16+ are also VST. Older VEGAS supports VST2; VP20+ also supports VST3. No VEGAS version supports VSTi.
 
 <br>
 
@@ -1362,7 +1382,7 @@ Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--14398
 
 Q: After adding a **Limiter FX (built-in `eFX_Limiter` or other VST limiter)** to the Master bus, **adding pan envelopes and envelope points** to any audio track causes **crackling/zipper noise**?
 
-A: A weird bug occurring when **pan envelope point type is "Smooth Fade" or "Sharp"**. Fix: **Change the envelope point type to another**.
+A: A weird bug occurring when **pan envelope point type is `Smooth` or `Sharp`**. Fix: **Change the envelope point type to another**.
 
 <br>
 
@@ -1413,7 +1433,7 @@ Where `23.0` is your VEGAS version. The first path (`C:\ProgramData\...`) is my 
 
 <br>
 
-Due to API changes in VP14, scripts/extensions for Sony-era and MAGIX-era VEGAS are not directly compatible. Sony-era uses `Sony.Vegas` namespace; MAGIX-era uses `ScriptPortal.Vegas`. For source code files (`.cs`, `.js`, `.vb`), you can edit the namespace manually in a text editor. For pre-compiled `.dll` files, you must modify the source project and recompile.
+Due to API changes in history, scripts/extensions for SonicFoundry-era, Sony-era (VP13-) and MAGIX-era (VP14+) VEGAS are not directly compatible. Very ancient SonicFoundry-era uses `SonicFoundry.Vegas` namespace; relatively ancient Sony-era uses `Sony.Vegas`; morden MAGIX-era uses `ScriptPortal.Vegas`. For source code files (`.cs`, `.js`, `.vb`), you can edit the namespace manually in a text editor. For pre-compiled `.dll` files, you must modify the source project and recompile.
 
 <br>
 
@@ -1426,7 +1446,9 @@ Using extensions as an example; similar for scripts. For other paths, see the [l
 2.  Check if the `Application Extensions` folder exists. If not, create it with the exact name. Enter the folder.
 
 3.  Copy all required `.dll` files for the extension and paste them directly here. E.g., `C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`.
-    *   Some scripts/extensions may include `32*32` `.png` icon files. You can optionally place these. Icons appear in VEGAS menus/toolbars for identification.
+    *   Some scripts/extensions may include `16*16` `.png` icon files. You can optionally place these. Icons appear in VEGAS menus/toolbars for identification.
+
+4. If some scripts/extensions require additional installers, please follow the installation steps they provide.
 
 <br>
 
@@ -1509,7 +1531,7 @@ For other questions, click the **question mark in the top-right of the Advanced 
 
 ### 4. Use Incremental Save (VP18+)
 
-Incremental Save, available since VP18, shortcut **`Ctrl + Alt + S`**. Similar to "Save As" but more convenient; **automatically saves as a new file with an incremental number**, not overwriting the original. You can remap the shortcut via `Options -> Customize Keyboard`. The default conflicts with QQ's screen recording shortcut.
+Incremental Save, available since VP18, shortcut **`Ctrl + Alt + S`**. Similar to "Save As" but more convenient; **automatically saves as a new file with an incremental number**, not overwriting the original. You can remap the shortcut via `Options -> Customize Keyboard`.
 
 <br>
 
@@ -1577,7 +1599,7 @@ Q: After importing audio/video, **audio waveform is not visible, shows "Peaks un
 A: If **media files are in a folder requiring administrator permissions**, VEGAS cannot generate `.sfk` files, causing **`Peaks unavailable`**. Solution: **Move media files to a folder not requiring admin permissions**.
 
 <small>
-Also, for info on `.sfk`, `.sfl`, `.sfap0`, `.sfvp0` files, see: <a href="https://vegasaur.com/sweeper">https://vegasaur.com/sweeper</a><br>
+Also, for info on <code>.sfk</code>, <code>.sfl</code>, <code>.sfap0</code>, <code>.sfvp0</code> files, see: <a href="https://vegasaur.com/sweeper">https://vegasaur.com/sweeper</a><br>
 </small>
 
 <br>

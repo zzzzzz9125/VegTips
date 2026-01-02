@@ -164,7 +164,7 @@ vv13 及以下的版本的缓存目录会带 Sony 文件夹，如 **`%localappda
 
 **重置后会清理掉：【当前 Vegas 版本的所有首选项和缓存】。**
 
-首选项的常规办法：按住 `Ctrl + Shift` 双击运行 Vegas，会弹出“是否重置”的选项，勾选 `删除所有缓存的应用程序数据`，点 `是`。
+首选项的常规办法：按住 `Ctrl + Shift` 并运行 Vegas，会弹出“是否重置”的选项，勾选 `删除所有缓存的应用程序数据`，点 `是`。
 
 ![重置](img/vegtips/image003_reset.png)
 
@@ -396,7 +396,7 @@ A：VEGAS Hub 相关功能是基于微软的 Edge WebView 的。如果**不需�
 
 <br>
 
-Q：【**vv19**】工程做了一会儿，Vegas 窗口突然**随机出现花屏，UI 呈现故障效果，软件变得卡顿，无法继续做工程**，只能重启 Vegas？
+Q：<sup>**vv19**</sup> 工程做了一会儿，Vegas 窗口突然**随机出现花屏，UI 呈现故障效果，软件变得卡顿，无法继续做工程**，只能重启 Vegas？
 
 A：这个是 **vv19 旧版（如 `19 build 341`）**特有的花屏问题，**更新到 `19 build 651`** 可解决。
 
@@ -406,7 +406,7 @@ A：这个是 **vv19 旧版（如 `19 build 341`）**特有的花屏问题，**�
 
 <br>
 
-Q：【**vv19、vv20**】Vegas 读完加载框后直接闪退，【**没有任何报错弹窗**】？
+Q：<sup>**vv19、vv20**</sup> Vegas 读完加载框后直接闪退，【**没有任何报错弹窗**】？
 
 A：检查 Vegas 的小版本号，是否为 `19 build 648` 及以前版本或 `20 build 402` 及以前版本。
 
@@ -416,7 +416,7 @@ A：检查 Vegas 的小版本号，是否为 `19 build 648` 及以前版本或 `
 
 <br>
 
-Q：【**`22 build 122` 及以上**】Vegas 无法运行，也没有加载框？
+Q：<sup>**`22 build 122` 及以上**</sup> Vegas 无法运行，也没有加载框？
 
 A：Windows 更新的问题，下载并运行 vc_redist.x86.exe 和 vc_redist.x64.exe，修复 C++ 运行库：https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist
 
@@ -428,9 +428,17 @@ A：Windows 更新的问题，下载并运行 vc_redist.x86.exe 和 vc_redist.x6
 
 <br>
 
-## 五、文件导入相关
+Q：<sup>**法语版**</sup> 法语版本的 VEGAS Pro 在启动时崩溃？
+
+A：这是**法语版本特有**的问题，只能**卸载后重装为英语版本**。Magix 打算修复它，但毫无头绪。如果有其他能够复现的用户，可以联系 Magix。
+
+<small>
+参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--147150/#ca926950">https://www.vegascreativesoftware.info/us/forum/posts--147150/#ca926950</a><br>
+</small>
 
 <br>
+
+## 文件导入相关
 
 ### 文件无法正常导入/导入进去乱码/闪绿色等情况的一般处理思路：
 
@@ -493,7 +501,7 @@ A：如果是用管理员权限运行的 Vegas，那就会造成无法拖放文�
 
 注意，如果你使用的是**便携版 Vegas（标有 `Portable` 字样）**，就可能必须得用管理员权限才能启动 Vegas，会导致没法拖放导入文件。某些人提供的“解决办法”是通过修改注册表关闭 UAC 模式（Windows 用户帐户控制）这样解决的，但此处不建议使用此办法，**建议更换为常规版本，不要使用便携版的 Vegas**。
 
-**便携版 Vegas 的几个问题：必须用管理员权限运行；程序不能多开；不识别系统环境变量；某些插件（比如 Voukoder 等）需要手动放置连接器，不能自动安装。能不用，尽量不用。**
+**便携版 Vegas 的几个问题：必须用管理员权限运行；程序不能多开；不识别系统环境变量；某些插件（比如 [Voukoder 渲染插件](#渲染插件-voukoder-推荐) 等）需要手动放置连接器，不能自动安装。能不用，尽量不用。**
 
 <br>
 
@@ -580,7 +588,7 @@ A：这是由于 `4:3` 的媒体文件导入进 `16:9` 的工程里，可能会�
   - **`notepad "C:\ProgramData\Sony\Vegas Pro\13.0\Vegas profiles.ini"`** <sup>13 及以下</sup>
 
 3. 输入完后不要点击 `确认`，而是按下 **`Ctrl + Shift + Enter`**，这样就能用管理员权限打开该文件。手动修改 `4:3` 的默认导入配置，将该文件里的 `1.3333333333` 值全改成 `1`，保存。
-  - 注意，不使用管理员权限打开文件会导致记事本无法写入原文件，而弹出“另存为”窗口。
+  - 注意，不使用管理员权限打开文件会导致记事本无法写入原文件，而弹出 `另存为` 窗口。
 
 ![视频配置文件编辑 1](img/vegtips/image011_profile_edit_1.png)
 
@@ -638,6 +646,16 @@ A：一般这种情况下是不小心双击了事件边缘，再**双击一遍�
 
 <br>
 
+Q：打开**媒体生成器**窗口时按下**撤销（`Ctrl + Z`）**，这个媒体生成器效果**在预览中消失**了？
+
+A：当聚焦于**媒体生成器的编辑窗口**时，**撤销（`Ctrl + Z`）可能会导致媒体生成器的 `帧大小` 和 `持续时间` 这两个参数变为异常值**。这时候狂按 `Ctrl + Z` 可能也并没有什么用。
+
+这两个参数均位于媒体生成器窗口左上角，请自行**将媒体生成器的 `帧大小` 和 `持续时间` 改为原先的值**。`帧大小` 默认情况下是项目的宽高，比如 `1920*1080`；`持续时间` 默认是5秒，对于 `时间与帧数` 标尺来说就是 `00:00:05.00`。
+
+- 另一个和它类似的小 bug：当你通过媒体生成器窗口更改完第一个媒体生成器的帧大小和持续时间后，立即在时间轴上打开第二个媒体生成器的编辑窗口，会使第二个媒体生成器的帧大小和持续时间继承自第一个媒体生成器的对应参数。
+
+<br>
+
 Q：**部分 FX 效果**（(自带)文字、电视模拟器 FX 等 DXT 类插件）的**窗口显示不全**？
 
 A：
@@ -659,7 +677,7 @@ Q：项目属性/自定义渲染模板/首选项设置等**窗口太大，没法
 
 ![窗口太大](img/vegtips/image018_window_too_large.png)
 
-A：Vegas 窗口大小会根据 Windows 屏幕设置自动缩放，如果 Windows 屏幕 DPI 缩放比例过大，也会导致 Vegas 的窗口变得很大，在特大缩放比例下部分设置窗口显示不完全。如果只需按“确认”，可以直接按键盘上的 **`Enter` 键**进行代替。如果必须要完整显示窗口，就只能提前修改屏幕的 DPI 缩放比例，**在 Windows 设置中将屏幕缩放比例调为 100%**，Vegas 内改完设置后再调回原来的值。或者也可以**单独将 Vegas 程序的 DPI 缩放改为 100%**，对着 Vegas 主程序或者快捷方式进入 `右键 -> 属性 -> 兼容性 -> 更改高 DPI 设置`，然后如下图所示：
+A：Vegas 窗口大小会根据 Windows 屏幕设置自动缩放，如果 Windows 屏幕 DPI 缩放比例过大，也会导致 Vegas 的窗口变得很大，在特大缩放比例下部分设置窗口显示不完全。如果只需按“确认”，可以直接按键盘上的 **`Enter` 键**进行代替。如果必须要完整显示窗口，就只能提前修改屏幕的 DPI 缩放比例，**在 Windows 设置中将屏幕缩放比例调为 100%**，Vegas 内改完设置后再调回原来的值。或者也可以**单独将 Vegas 程序的 DPI 缩放改为 100%**，对着 Vegas 主程序或者快捷方式进入 `右键 -> 属性 -> 兼容性 -> 更改高 DPI 设置`，**单独设置 Vegas 的缩放选项，将 `缩放执行` 改为 `应用程序`。**
 
 ![高 DPI - 应用程序](img/vegtips/image019_high_dpi_application.png)
 
@@ -713,8 +731,10 @@ A：Windows 11 更新的问题，**升级到 `22 build 250`** 可以解决。
 
 Q：<sup>22 及以上</sup>**左键在时间轴上拖动，变成事件选择了，不能在时间轴上选择区域了**？
 
-A：在 22 更新后，鼠标左键在时间轴上拖动的操作变成了框选时间轴上的事件，而鼠标右键才是时间轴上选择区域。如果用旧版用惯了，不习惯这个新版逻辑，可以**勾选 `首选项 -> 编辑 -> 使用鼠标右键切换到选择编辑工具`，交换左右键**，变成类似于 Reaper 默认的操作逻辑。
-若是旧版遇到这个问题，你先确认一遍你鼠标编辑工具选没选对，敲两下 D 键。
+A：在 22 更新后，鼠标左键在时间轴上拖动的操作变成了框选时间轴上的事件，而鼠标右键才是时间轴上选择区域。如果用旧版用惯了，不习惯这个新版逻辑，可以**勾选 `首选项 -> 编辑 -> 使用鼠标右键切换到选择编辑工具`，交换左右键**，变成类似于 Reaper 默认的操作逻辑。  
+<small>
+若是旧版遇到这个问题，你先确认一遍你鼠标编辑工具选没选对，敲两下 `D` 键。
+</small>
 
 这次更新以后，还出现了一个新的小问题，也就是实际的事件选择范围，与你鼠标划的区域稍有差异，实际的事件选择范围会略小于鼠标划的区域。这是因为新版额外引入了一个选区偏移值。到 [内部首选项](#vegas-内部首选项的进入方法)，搜索并找到 **`Default SelectionMode Offset`**，改成 **`0`** 即可。
 
@@ -750,7 +770,7 @@ A：一般此问题出现在**某些版本的 N 卡驱动**中，以下是几种
 
     或者也可以在 **N 卡控制面板**中更改相关设置，具体操作如下：
 
-    打开 **NVIDIA 控制面板**，点击左侧的 **`管理 3D 设置`**，在右侧切换到 **`程序设置`** 选项卡。在“自定义程序”那一栏中点击“添加”，选择 Vegas 主程序并确定，将下方的 **`OpenGL GDI 兼容性`** 功能设置，从 `使用全局设置` 更改到 **`优先兼容性`**，然后重新运行 Vegas 程序，即可解决此问题。（如果电脑里有多个 Vegas 版本，则需要分别设置。）
+    打开 **NVIDIA 控制面板**，点击左侧的 **`管理 3D 设置`**，在右侧切换到 **`程序设置`** 选项卡。在 `自定义程序` 那一栏中点击 `添加`，选择 Vegas 主程序并确定，将下方的 **`OpenGL GDI 兼容性`** 功能设置，从 `使用全局设置` 更改到 **`优先兼容性`**，然后重新运行 Vegas 程序，即可解决此问题。（如果电脑里有多个 Vegas 版本，则需要分别设置。）
 
 ![NVIDIA OpenGL GDI 兼容性](img/vegtips/image022_nvidia_opengl.png)
 
@@ -776,7 +796,7 @@ Voukoder 一共有两个版本：Voukoder Classic 和 Voukoder Pro。
 
   有其他用户做了 GitHub 仓库备份：
   - [https://github.com/FORARTfe/voukoderFREE](https://github.com/FORARTfe/voukoderFREE)
-  - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)
+  - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)  
   需要同时安装 Voukoder 本体（比如 `Voukoder 13.4.1`）和 Voukoder 连接器（比如 `connector-vegas22-1.0.0.msi`）。
 - Voukoder Pro 目前是付费的，官网链接为：[https://www.voukoder.org/](https://www.voukoder.org/)。
   - Voukoder Pro 1 曾经宣称免费，但自 Voukoder Pro 2 开始转为付费软件，并且每一个大版本都需要额外付钱。
@@ -919,7 +939,7 @@ A：
 
 ![渲染带 alpha 通道的 ProRes](img/vegtips/image028_render_alpha_prores.png)
 
-- **Voukoder 渲染插件 <small>（18 及以上版本，且 Voukoder Classic 版本需在 12.0 及以上。）</small>**
+- **[Voukoder 渲染插件](#渲染插件-voukoder-推荐) <small>（18 及以上版本，且 Voukoder Classic 版本需在 12.0 及以上。）</small>**
 
   在 Voukoder 渲染插件的渲染模板中找到标注 **`4:4:4 10 bit 带 alpha 透明通道`** 的模板，渲染。也可以自定义渲染模板，输出容器选择`QuickTime (.mov)`，视频编码器选择 `ProRes KS` 或者 `QuickTime Animation`。
 
@@ -931,7 +951,7 @@ A1：vv17 及以下版本中，由于项目属性和渲染模板的**色彩空�
 
 解决办法有以下三种：
 
-1. **使用 Voukoder 渲染插件，用 `滤镜` 制作能够转换色彩空间的模板。**
+1. **使用 [Voukoder 渲染插件](#渲染插件-voukoder-推荐)，用 `滤镜` 制作能够转换色彩空间的模板。**
 
 ![Voukoder 色彩空间](img/vegtips/image040_voukoder_color_space.png)
 
@@ -1002,7 +1022,7 @@ A：Vegas 在渲染完毕后会请求一遍麦克风权限，如果电脑插了�
 
 <br>
 
-Q：**Voukoder 渲染插件**（或自带的渲染模板）渲染出来的视频，在本地播放器上看没问题，上传到哔哩哔哩等视频网站上全分辨率观看，怎么会出现**上下条纹**？
+Q：**[Voukoder 渲染插件](#渲染插件-voukoder-推荐)**（或自带的渲染模板）渲染出来的视频，在本地播放器上看没问题，上传到哔哩哔哩等视频网站上全分辨率观看，怎么会出现**上下条纹**？
 
 A：Voukoder 渲染插件是自动匹配项目属性的。在 vv17 及以下版本中，项目属性的默认模板， `场顺序` 一栏默认为 `上场优先`，属于隔行扫描。本地播放器一般都支持隔行反交错，所以看上去是没问题的。而哔哩哔哩等视频网站则不支持，所以能直接看到明显的隔行交错条纹。如果是用 Voukoder 渲染，需**将 `项目属性` 的 `场顺序` 改为 `逐行扫描`** 后重新渲染。如果是 Vegas 自带的渲染模板，**也不要选择模板名称中带 `i` 的，应选择带 `p` 的**。
 
@@ -1015,7 +1035,7 @@ A：该 bug 已于 vv19 修复。以下是可供低版本尝试的几种解决�
 1. 安装（卸载重装）HEIF 图像扩展：[https://apps.microsoft.com/detail/9pmmsr1cgpwg](https://apps.microsoft.com/detail/9pmmsr1cgpwg)。
 
 2. 使用图像序列渲染脚本。
-  - 下载链接：https://www.vegascreativesoftware.info/us/forum/vegas-pro-19-missing-image-sequence-as-a-render-option--133068/?page=3#ca863786
+  - 下载链接：https://www.vegascreativesoftware.info/us/forum/posts--133068/?page=3#ca863786
 
 3. 先渲染为其他格式（`.mov` 等），再用 [FFmpeg](https://ffmpeg.org/) 进行转换。
 
@@ -1088,7 +1108,7 @@ vv20 里的“字幕和文字”有个新功能是“**一键更改同轨道字�
 
 Q：点击菜单栏的 **`插入 -> 从文件插入字幕`**，**不能弹出插入字幕的窗口**，点了没有任何反应？
 
-A：这个是比较少见的 bug，并且到目前为止似乎仍未修复。甚至可能之前一直能正常使用这个功能的，突然间就用不了了。目前已知能够解决此问题的办法只有**重置首选项**。
+A：这个是比较少见的 bug，并且到目前为止似乎仍未修复。甚至可能之前一直能正常使用这个功能的，突然间就用不了了。目前已知能够解决此问题的办法只有**[重置首选项](#5-重置首选项)**。
 
 <small>
 参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--137861/">https://www.vegascreativesoftware.info/us/forum/posts--137861/</a><br>
@@ -1222,7 +1242,7 @@ OFX 接口文件的路径结构如下：
 
 Q：已经通过注册表将 Vegas 界面的英文改成中文了，但**自带的插件名称仍然是全英文的**，怎么改成中文？
 
-A：**删除上述 Vegas 插件缓存中的名称缓存**，重启 Vegas。偷懒一点的话可以直接**重置首选项**。
+A：**删除上述 Vegas 插件缓存中的名称缓存**，重启 Vegas。偷懒一点的话可以直接**[重置首选项](#5-重置首选项)**。
 
 <br>
 
@@ -1254,7 +1274,7 @@ Q：**使用自带的 AI 效果，提示要安装 VEGAS 深度学习模型组件
 A：对于高版本自带的 AI 效果，**需要额外安装对应版本的深度学习模型（Deep Learning Models）**才能使用。
 
 <small>
-官方 AI 深度学习模型下载链接：<a href="https://www.vegascreativesoftware.info/us/forum/posts--104782/">https://www.vegascreativesoftware.info/us/forum/posts--104782/</a>
+官方 AI 深度学习模型下载链接：<a href="https://www.vegascreativesoftware.info/us/forum/posts--104782/">https://www.vegascreativesoftware.info/us/forum/posts--104782/<br></a>
 </small>
 
 <br>
@@ -1293,7 +1313,7 @@ A：可在旧版中通过插件链保存这个 FX，然后使用时应用该插�
 
 ## 十一、音频插件相关
 
-Vegas 的音频插件一共分两类。一类是 DirectX 插件，是比较旧的插件形式。一类是 VST 插件，是现在通用的插件形式。除了 Vegas 自带的“不带任何前缀”和“ExpressFX 系列”的音频 FX 属于 DirectX 插件以外，其余音频插件为 VST 插件。vv16 及以上自带的 eFX 系列，也属于 VST 插件。对于 VST 插件，低版本的 Vegas 只支持 VST2 插件，而 vv20 及以上版本可以支持 VST3。所有 Vegas 版本均不支持 VSTi。
+Vegas 的音频插件一共分两类。一类是 DirectX 插件，是比较旧的插件形式。一类是 VST 插件，是现在通用的插件形式。除了 Vegas 自带的“不带任何前缀”和 `ExpressFX` 系列的音频 FX 属于 DirectX 插件以外，其余音频插件为 VST 插件。vv16 及以上自带的 `eFX` 系列，也属于 VST 插件。对于 VST 插件，低版本的 Vegas 只支持 VST2 插件，而 vv20 及以上版本可以支持 VST3。所有 Vegas 版本均不支持 VSTi。
 
 <br>
 
@@ -1362,7 +1382,7 @@ A：**卸载 Vegas**后，删除 **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins
 
 Q：在主控添加**限制器 FX（自带的 `eFX_Limiter` 或其他限制器 VST）**后，给任意一个音频轨道**添加声像包络和包络点**，会导致**滋滋声**？
 
-A：这是一个很离谱的 bug，当**声像包络点类型为“平滑淡化”或“急剧”时就会出现问题**。解决办法是**将包络点类型修改为其他的**。
+A：这是一个很离谱的 bug，当**声像包络点类型为 `平滑淡化` 或 `急剧` 时就会出现问题**。解决办法是**将包络点类型修改为其他的**。
 
 <br>
 
@@ -1413,7 +1433,7 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 
 <br>
 
-由于 Magix 在 14 中对于脚本 API 的更改，Sony 版和 Magix 版的脚本和扩展是不直接兼容的。Sony 版使用 `Sony.Vegas` 命名空间，而 Magix 版使用 `ScriptPortal.Vegas` 命名空间。对于现成的脚本代码文件（`.cs`、`.js` 或 `.vb`），可以手动用记事本编辑其中的文件内容，使其兼容。对于已经编译成 `.dll` 的脚本或扩展文件，只能修改原项目以后重新编译。
+由于对于脚本 API 的更改，SonicFoundry 版、Sony 版（13 以前）和 Magix 版（14 至今）的脚本和扩展是不直接兼容的。十分远古的 SonicFoundry 版使用 `SonicFoundry.Vegas` 命名空间，比较远古的 Sony 版使用 `Sony.Vegas` 命名空间，现代的 Magix 版使用 `ScriptPortal.Vegas` 命名空间。对于现成的脚本代码文件（`.cs`、`.js` 或 `.vb`），可以手动用记事本编辑其中的文件内容，使其兼容。对于已经编译成 `.dll` 的脚本或扩展文件，只能修改原项目以后重新编译。
 
 <br>
 
