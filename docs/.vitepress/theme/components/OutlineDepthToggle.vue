@@ -42,6 +42,10 @@ const expandedH2Href = ref<string | null>(null)
 const autoExpand = ref(true)
 const { lang } = useData()
 const route = useRoute()
+let outlineObserver: MutationObserver | null = null
+let activeMarkerObserver: MutationObserver | null = null
+let proxyActiveLink: HTMLAnchorElement | null = null
+let activeMarkerRaf = 0
 
 const labels = computed(() => {
   const isZh = (lang.value || '').toLowerCase().startsWith('zh')
@@ -53,6 +57,96 @@ const labels = computed(() => {
 const applyDepthDataset = (value: number) => {
   if (typeof document === 'undefined') return
   document.documentElement.dataset.outlineDepth = String(value)
+}
+
+const isHiddenByDisplay = (el: HTMLElement | null) => {
+  if (!el) return true
+  let node: HTMLElement | null = el
+  while (node && node !== document.body) {
+    const style = window.getComputedStyle(node)
+    if (style.display === 'none' || style.visibility === 'hidden') return true
+    node = node.parentElement as HTMLElement | null
+  }
+  return false
+}
+
+const findVisibleAncestorLink = (link: HTMLAnchorElement | null) => {
+  let li = link?.closest('li') as HTMLElement | null
+  while (li) {
+    li = li.parentElement?.closest('li') as HTMLElement | null
+    if (!li) break
+    if (window.getComputedStyle(li).display === 'none') continue
+    const ancestorLink = li.querySelector(':scope > a.outline-link') as HTMLAnchorElement | null
+    if (ancestorLink) return ancestorLink
+  }
+  return null
+}
+
+const syncActiveMarker = () => {
+  if (typeof document === 'undefined') return
+  const outline = document.querySelector('.VPDocAsideOutline') as HTMLElement | null
+  if (!outline) return
+
+  const marker = outline.querySelector('.outline-marker') as HTMLElement | null
+  const active = outline.querySelector('a.outline-link.active') as HTMLAnchorElement | null
+
+  if (!active) {
+    if (proxyActiveLink) {
+      proxyActiveLink.classList.remove('outline-proxy-active')
+      proxyActiveLink = null
+    }
+    return
+  }
+
+  const visibleTarget = isHiddenByDisplay(active) ? findVisibleAncestorLink(active) : active
+  const nextTarget = visibleTarget || active
+
+  if (proxyActiveLink && proxyActiveLink !== nextTarget) {
+    proxyActiveLink.classList.remove('outline-proxy-active')
+    proxyActiveLink = null
+  }
+
+  if (nextTarget !== active) {
+    nextTarget.classList.add('outline-proxy-active')
+    proxyActiveLink = nextTarget
+  }
+
+  if (marker) {
+    marker.style.top = `${nextTarget.offsetTop + 39}px`
+    marker.style.opacity = '1'
+  }
+}
+
+const scheduleSyncActiveMarker = () => {
+  if (typeof window === 'undefined' || typeof requestAnimationFrame === 'undefined') return
+  if (activeMarkerRaf) cancelAnimationFrame(activeMarkerRaf)
+  activeMarkerRaf = requestAnimationFrame(() => {
+    activeMarkerRaf = 0
+    syncActiveMarker()
+  })
+}
+
+const startActiveMarkerObserver = () => {
+  if (typeof MutationObserver === 'undefined') return
+  activeMarkerObserver?.disconnect()
+  const outline = document.querySelector('.VPDocAsideOutline') as HTMLElement | null
+  if (!outline) return
+
+  activeMarkerObserver = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.type === 'attributes' || mutation.type === 'childList') {
+        scheduleSyncActiveMarker()
+        break
+      }
+    }
+  })
+
+  activeMarkerObserver.observe(outline, {
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['class'],
+    childList: true
+  })
 }
 
 const applyOutlineFilter = () => {
@@ -84,6 +178,7 @@ const applyOutlineFilter = () => {
 
   // Outline root corresponds to H2 depth.
   walk(listRoot, 2, false)
+  scheduleSyncActiveMarker()
 }
 
 const setDepth = (value: number) => {
@@ -129,14 +224,17 @@ onMounted(() => {
   depth.value = hydrateFromStorage()
   autoExpand.value = hydrateAutoExpand()
   applyDepthDataset(depth.value)
-  requestAnimationFrame(applyOutlineFilter)
+  requestAnimationFrame(() => {
+    applyOutlineFilter()
+    startActiveMarkerObserver()
+  })
 
-  const observer = new MutationObserver(applyOutlineFilter)
+  outlineObserver = new MutationObserver(applyOutlineFilter)
   const startObserving = () => {
-    observer.disconnect()
+    outlineObserver?.disconnect()
     const listRoot = document.querySelector('.VPDocAsideOutline .VPDocOutlineItem.root')
     if (listRoot) {
-      observer.observe(listRoot, { childList: true, subtree: true })
+      outlineObserver?.observe(listRoot, { childList: true, subtree: true })
     }
   }
 
@@ -179,12 +277,19 @@ onMounted(() => {
         expandedH2Href.value = null
         applyOutlineFilter()
         startObserving()
+        startActiveMarkerObserver()
       })
     }
   )
 
   onBeforeUnmount(() => {
-    observer.disconnect()
+    if (activeMarkerRaf) cancelAnimationFrame(activeMarkerRaf)
+    outlineObserver?.disconnect()
+    activeMarkerObserver?.disconnect()
+    if (proxyActiveLink) {
+      proxyActiveLink.classList.remove('outline-proxy-active')
+      proxyActiveLink = null
+    }
     document.removeEventListener('click', handleOutlineClick, true)
   })
 })
@@ -192,5 +297,6 @@ onMounted(() => {
 watch(depth, (value) => {
   applyDepthDataset(value)
   applyOutlineFilter()
+  scheduleSyncActiveMarker()
 })
 </script>

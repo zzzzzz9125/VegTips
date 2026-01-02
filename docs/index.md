@@ -142,7 +142,7 @@ Two ways to disable error reporting pop-ups:
 
 Either method will disable VEGAS error reporting pop-ups.
 
-Sometimes the issue may persist. If so, re-enable it and focus on analyzing the error content. **The error content can sometimes provide useful clues. See [Troubleshooting Ideas for Specific Errors](#7-troubleshooting-ideas-for-specific-errors).**
+Sometimes the issue may persist. If so, re-enable it and focus on analyzing the error content. **The error content can sometimes provide useful clues. See [Troubleshooting Ideas for Specific Errors](#8-troubleshooting-ideas-for-specific-errors).**
 
 <br>
 
@@ -192,7 +192,7 @@ VEGAS Pro / VEGAS Post Release History: https://www.vegascreativesoftware.info/u
 
 <br>
 
-### 7. Troubleshooting Ideas for Specific Errors
+### 8. Troubleshooting Ideas for Specific Errors
 
 If you've tried almost all methods in this article (especially those in the [VEGAS Software Operation Q&A](#iv-vegas-software-operation-q-a) chapter) and the error persists, try this section's approach. Some errors, like `0xC0000005`, have no fixed, definite cause. Encountering such errors and finding that most solutions here don't work is perfectly normal. Searching online for the error code yields many solutions, but finding one that actually works can be like finding a needle in a haystack. This section provides a general troubleshooting idea:
 
