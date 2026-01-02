@@ -364,7 +364,7 @@ Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--14989
 
 Q: After opening VEGAS, there's **noise/no audio/...**?
 
-A: **Go to `Control Panel -> Hardware and Sound -> Sound`, open `Properties` for your current playback device. On the `Advanced` tab, under `Exclusive Mode`, check `Allow applications to take exclusive control of this device`, OR change the `Default Format` to `2 channel, 24 bit, 44100 Hz`.** If that doesn't work, try **reinstalling your sound card drivers**.
+A: **Go to `Control Panel -> Hardware and Sound -> Sound`, open `Properties` for your current playback device. On the `Advanced` tab, under `Exclusive Mode`, uncheck `Allow applications to take exclusive control of this device`, OR change the `Default Format` to `2 channel, 24 bit, 44100 Hz`.** If that doesn't work, try **reinstalling your sound card drivers**.
 
 ![Audio Device](img/vegtips/image009_sound_device.png)
 
