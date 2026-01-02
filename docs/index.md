@@ -553,7 +553,7 @@ Q: After importing media files originally **with alpha channel (mov or png)**, t
 
 A: In VEGAS, **right-click the media file or event -> Properties**, switch to the `Media` tab, find `Alpha channel`, change it to **`Straight (unmatted)`**.  
 <small>
-(Note: For <code>Alpha channel</code>, <b>as long as you don't select `Undefined` or <code>None</code></b>, the alpha channel should display.)
+(Note: For <code>Alpha channel</code>, <b>as long as you don't select <code>Undefined</code> or <code>None</code></b>, the alpha channel should display.)
 </small>
 
 You can also modify this property for multiple files in the **`Project Media`** window.
@@ -1220,9 +1220,9 @@ OFX interface file structure:
  └── ...
 ```
 
-`Win64\xxx.ofx` is the OFX interface file. `Presets\PresetPackage.xml` contains built-in presets. `Resources\xxx.xml` is the language file (usually English; localizers edit this).
+`Win64\xxx.ofx` is the OFX interface file. `Presets\PresetPackage.xml` contains built-in presets. `Resources\xxx.xml` is the language translation file.
 
-Note: Editing OFX paths often requires admin rights. For `xml` files, I recommend `Visual Studio Code`, which prompts for admin rights on save.
+Note: Editing OFX paths often requires administrator privileges. For `xml` files, I recommend `Visual Studio Code`, which prompts for administrator privileges on save.
 
 After modifying language files, delete the **plugin name cache** mentioned earlier and restart VEGAS to see changes.
 
@@ -1596,7 +1596,7 @@ A:
 
 Q: After importing audio/video, **audio waveform is not visible, shows "Peaks unavailable"**, but audio plays?
 
-A: If **media files are in a folder requiring administrator permissions**, VEGAS cannot generate `.sfk` files, causing **`Peaks unavailable`**. Solution: **Move media files to a folder not requiring admin permissions**.
+A: If **media files are in a folder requiring administrator permissions**, VEGAS cannot generate `.sfk` files, causing **`Peaks unavailable`**. Solution: **Move media files to a folder not requiring administrator privileges**.
 
 <small>
 Also, for info on <code>.sfk</code>, <code>.sfl</code>, <code>.sfap0</code>, <code>.sfvp0</code> files, see: <a href="https://vegasaur.com/sweeper">https://vegasaur.com/sweeper</a><br>
