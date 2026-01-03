@@ -95,6 +95,7 @@ const outlineDepthScript = `
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   cleanUrls: true,
+  base: process.env.GITHUB_ACTIONS ? '/VegTips/' : '/',
   vite: {
     publicDir: '../public'
   },
