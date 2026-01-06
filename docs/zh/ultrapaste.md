@@ -1,4 +1,4 @@
----
+﻿---
 layout: doc
 title: 超级粘贴 UltraPaste 扩展
 ---
@@ -25,7 +25,7 @@ title: 超级粘贴 UltraPaste 扩展
 
 # 超级粘贴 UltraPaste! 扩展
 
-![图标](img/ultrapaste/img001_ultrapaste_icon.png)
+<ImageOnDemand alt="图标" src="img/zh/ultrapaste/img001_ultrapaste_icon.png" />
 
 ## 简述
 
@@ -33,15 +33,15 @@ title: 超级粘贴 UltraPaste 扩展
 
 媒体文件导入方式示例：
 
-![媒体导入](img/ultrapaste/img015_ultrapaste_media_import.gif)
+<ImageOnDemand alt="媒体导入" src="img/zh/ultrapaste/img015_ultrapaste_media_import.gif" />
 
 `剪贴板图像` 功能与你的截图工具的交互：
 
-![截图](img/ultrapaste/img016_ultrapaste_screenshot.gif)
+<ImageOnDemand alt="截图" src="img/zh/ultrapaste/img016_ultrapaste_screenshot.gif" />
 
 `剪贴板图像` 功能与 PPT 的交互：
 
-![PPT](img/ultrapaste/img017_ultrapaste_ppt.gif)
+<ImageOnDemand alt="PPT" src="img/zh/ultrapaste/img017_ultrapaste_ppt.gif" />
 
 ## 安装
 
@@ -56,13 +56,13 @@ title: 超级粘贴 UltraPaste 扩展
 
 2. 安装完毕后，可通过 `工具 -> 超级粘贴!` 中找到可停靠的扩展窗口。
 
-![工具菜单](img/ultrapaste/img002_ultrapaste_tools_menu.png)
+<ImageOnDemand alt="工具菜单" src="img/zh/ultrapaste/img002_ultrapaste_tools_menu.png" />
 
 ## 使用
 
 首先是最顶上的 `超级粘贴!`。这个是扩展最主要的功能，几乎所有操作都可以依赖它来完成。可以为它绑定一个键盘快捷键，到上边的 `选项 -> 自定义键盘`：
 
-![自定义键盘](img/ultrapaste/img003_ultrapaste_keyboard.png)
+<ImageOnDemand alt="自定义键盘" src="img/zh/ultrapaste/img003_ultrapaste_keyboard.png" />
 
 `Ctrl + Shift +V` 是我个人推荐的快捷键，绑个其他顺手的也可以。不建议绑 `Ctrl + V`，会覆盖掉 VEGAS 原生的粘贴键。
 
@@ -83,7 +83,7 @@ title: 超级粘贴 UltraPaste 扩展
 
 ### 常规
 
-![常规](img/ultrapaste/img004_ultrapaste_general.png)
+<ImageOnDemand alt="常规" src="img/zh/ultrapaste/img004_ultrapaste_general.png" />
 
 排除文件类型：这个选项会使扩展排除特定名称规则的文件。使用的是基本的 DOS 表达式。比如图上的 `*.sfvp0` 和 `*.sfap0`，分别是 VEGAS Pro 的视频代理文件和音频代理文件。这些代理文件实际上是可以直接导入进 VEGAS 的，但是为了避免用户误操作，默认是排除掉的。如果你不需要导入某些特定的文件的话，可以自行调整这个设置。
 
@@ -91,7 +91,7 @@ title: 超级粘贴 UltraPaste 扩展
 
 ### 剪贴板图像
 
-![剪贴板图像](img/ultrapaste/img005_ultrapaste_clipboard_image.png)
+<ImageOnDemand alt="剪贴板图像" src="img/zh/ultrapaste/img005_ultrapaste_clipboard_image.png" />
 
 `起始位置`：文件导入的起始位置。一共分为三类：`光标`、`播放光标`、`项目起始处`。`光标` 和 `播放光标` 的区别是，当你播放时间轴时， `光标` 只是播放的起始处，而 `播放光标` 是时间轴的实时播放位置。
 
@@ -107,7 +107,7 @@ title: 超级粘贴 UltraPaste 扩展
 
 ### REAPER 数据
 
-![Reaper 数据](img/ultrapaste/img006_ultrapaste_reaper_data.png)
+<ImageOnDemand alt="Reaper 数据" src="img/zh/ultrapaste/img006_ultrapaste_reaper_data.png" />
 
 这个是本扩展的重点功能之一：完全实现了 REAPER 剪贴板数据的导入和导出。你可以在 REAPER 中选择各种物件或者轨道，`Ctrl + C` 以后，直接 `Ctrl + Shift + V` 粘贴到 VEGAS 时间轴里。
 
@@ -122,9 +122,9 @@ title: 超级粘贴 UltraPaste 扩展
 
 你还可以将 VEGAS 事件或轨道导出为 REAPER 剪贴板数据，然后在 REAPER 里 `Ctrl + V`，实现软件间的完全互通。
 
-![Reaper 图例 1](img/ultrapaste/img007_ultrapaste_reaper_1.png)
+<ImageOnDemand alt="Reaper 图例 1" src="img/zh/ultrapaste/img007_ultrapaste_reaper_1.png" />
 
-![Reaper 图例 2](img/ultrapaste/img008_ultrapaste_reaper_2.png)
+<ImageOnDemand alt="Reaper 图例 2" src="img/zh/ultrapaste/img008_ultrapaste_reaper_2.png" />
 
 注意，由于脚本 API 限制，当 VEGAS 版本低于 15 的最终版 `VP15B416` 时，与音频事件的音高有关的所有参数无法被转移进入 VEGAS 里，也无法输出到 REAPER 剪贴板数据。
 
@@ -136,7 +136,7 @@ title: 超级粘贴 UltraPaste 扩展
 
 ### PSD 图像
 
-![PSD 图像](img/ultrapaste/img009_ultrapaste_psd.png)
+<ImageOnDemand alt="PSD 图像" src="img/zh/ultrapaste/img009_ultrapaste_psd.png" />
 
 `展开所有图层`：当导入的 PSD 图像含有多个图层时，自动在 VEGAS 轨道中展开。
 
@@ -146,7 +146,7 @@ title: 超级粘贴 UltraPaste 扩展
 
 ### 字幕
 
-![字幕](img/ultrapaste/img010_ultrapaste_subtitles.png)
+<ImageOnDemand alt="字幕" src="img/zh/ultrapaste/img010_ultrapaste_subtitles.png" />
 
 字幕也是本扩展的重点功能之一。你可以复制任意 `纯文本` / `TXT` 文件 / `SRT` 字幕文件 / `LRC` 字幕文件，粘贴到 VEGAS 时间轴里。
 
@@ -168,7 +168,7 @@ title: 超级粘贴 UltraPaste 扩展
 
 `默认长度`：当导入剪贴板纯文本或者 TXT 文件这种不带时轴的字幕时的默认长度，单位为秒 (s)。
 
-![字幕区域](img/ultrapaste/img011_ultrapaste_subtitles_region.png)
+<ImageOnDemand alt="字幕区域" src="img/zh/ultrapaste/img011_ultrapaste_subtitles_region.png" />
 
 <p align="center">小技巧：在时间轴上提前划好区域后直接按下快捷键，更方便。</p>
 
@@ -180,7 +180,7 @@ title: 超级粘贴 UltraPaste 扩展
 
 ### 媒体
 
-![媒体](img/ultrapaste/img012_ultrapaste_media.png)
+<ImageOnDemand alt="媒体" src="img/zh/ultrapaste/img012_ultrapaste_media.png" />
 
 `添加方式`：一共分为 `跨时间`、`跨轨道`、`作为片段` 三种。与 VEGAS 自带的右键拖动导入选单中的三种文件导入方式完全一致。
 
@@ -196,7 +196,7 @@ title: 超级粘贴 UltraPaste 扩展
 
 媒体自定义导入：
 
-![媒体自定义导入](img/ultrapaste/img013_ultrapaste_media_custom.png)
+<ImageOnDemand alt="媒体自定义导入" src="img/zh/ultrapaste/img013_ultrapaste_media_custom.png" />
 
 <p align="center">为特定的媒体文件名称设置导入规则</p>
 
@@ -210,7 +210,7 @@ title: 超级粘贴 UltraPaste 扩展
 
 ### VEGAS 数据
 
-![VEGAS 数据](img/ultrapaste/img014_ultrapaste_vegas_data.png)
+<ImageOnDemand alt="VEGAS 数据" src="img/zh/ultrapaste/img014_ultrapaste_vegas_data.png" />
 
 `VEG 导入类型`：一共分为 `打开项目文件`、`作为嵌套项目导入`、`导入项目中的媒体` 三类。
 

@@ -100,7 +100,7 @@ Install and use  `Sony Preset Manager`.
 
 <!-- 2. As shown in the diagram:
 
-![Plugin Chain](img/vegtips/image001_plugin_chain.png)
+<ImageOnDemand button-text="Load image" alt="Plugin Chain" src="img/vegtips/image001_plugin_chain.png" />
 
 <p align="center">Illustration for using the VEGAS Preset Manager v0.2</p> -->
 
@@ -128,7 +128,7 @@ Install and use  `Sony Preset Manager`.
 
 A common scenario: When running VEGAS / **clicking `File -> Render As`**, an error pop-up appears immediately.
 
-![Problem Report](img/vegtips/image002_problem_report.png)
+<ImageOnDemand button-text="Load image" alt="Problem Report" src="img/vegtips/image002_problem_report.png" />
 
 **In this case, always check the box for `Show Problem Details` first to get the error content.**
 
@@ -166,7 +166,7 @@ Encountering inexplicable issues, like **imported audio being completely noisy**
 
 The standard method: Hold `Ctrl + Shift` and run VEGAS. A "Reset?" prompt will appear. Check `Delete all cached application data` and click `Yes`.
 
-![Reset](img/vegtips/image003_reset.png)
+<ImageOnDemand button-text="Load image" alt="Reset" src="img/vegtips/image003_reset.png" />
 
 <p align="center">Reset? (Y/N)</p>
 
@@ -250,7 +250,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 Here, `23.0` and `19.0` represent the current VEGAS major version. The first line is the main interface language setting, but it's recommended to change all four.
 
-![Language Registry](img/vegtips/image004_language_reg.png)
+<ImageOnDemand button-text="Load image" alt="Language Registry" src="img/vegtips/image004_language_reg.png" />
 
 If you installed the English version, the default value for `ULangID` is likely `409`. Change it to **`804` for Chinese**.
 
@@ -273,7 +273,7 @@ After successfully starting VEGAS, if the names of built-in video FX are still i
 Q: Error during installation: **PC needs to restart to continue installation**?  
 `Setup has detected that the system is currently waiting for a reboot to complete a previous installation or update. To avoid problems, please reboot your system before installing.`
 
-![Installation Reboot Issue](img/vegtips/image005_install_reboot.png)
+<ImageOnDemand button-text="Load image" alt="Installation Reboot Issue" src="img/vegtips/image005_install_reboot.png" />
 
 A: First, try restarting your PC. If that doesn't work, you need to modify the registry. Open Registry Editor, navigate to **`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager`**, **delete the value `PendingFileRenameOperations`**, then restart your PC.
 
@@ -285,7 +285,7 @@ A: First, try restarting your PC. If that doesn't work, you need to modify the r
 
 Q: Error: **`An error occurred during the installation -2147163964. Unable to register module xxxxx.dll`**.
 
-![Installation DLL Registration Issue](img/vegtips/image006_install_dll.png)
+<ImageOnDemand button-text="Load image" alt="Installation DLL Registration Issue" src="img/vegtips/image006_install_dll.png" />
 
 A: **Restarting your PC and reinstalling** usually fixes this. If it persists, try **installing a different version**.
 
@@ -318,7 +318,7 @@ Q: VEGAS **hangs/crashes/freezes** at the "**Scanning VST plug-ins...**" step du
 
 A: Try **disabling VST scanning on startup**. Right-click the VEGAS **shortcut -> Properties**. In the **`Target`** field, add **` /NOVSTGROVEL`** at the end (**note the space before the slash**). Then run VEGAS using this shortcut. Once it starts normally, you can move problematic plugins from the [VST paths](#xi-audio-plugin-related), store them separately, etc.
 
-![NOVSTGROVEL](img/vegtips/image007_novstgrovel.png)
+<ImageOnDemand button-text="Load image" alt="NOVSTGROVEL" src="img/vegtips/image007_novstgrovel.png" />
 
 <br>
 
@@ -348,7 +348,7 @@ A: Go to **`Control Panel -> Programs -> Programs and Features`** and check if *
 
 2. During installation, when prompted for additional components, go to `Individual components`, search for `MSVC`, check **`MSVC v143 - VS 2022 C++ x64/x86 build tools (latest)`**, and continue installation.
 
-![MSVC 143 Install](img/vegtips/image008_msvc143.png)
+<ImageOnDemand button-text="Load image" alt="MSVC 143 Install" src="img/vegtips/image008_msvc143.png" />
 
 3. After installation, go to the MSVC installation path: `C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\`. There will be folders like `v143` and `14.44.35112` (depending on the version you installed). The one resembling `14.44.35112` is the target.
 
@@ -366,7 +366,7 @@ Q: After opening VEGAS, there's **noise/no audio/...**?
 
 A: **Go to `Control Panel -> Hardware and Sound -> Sound`, open `Properties` for your current playback device. On the `Advanced` tab, under `Exclusive Mode`, uncheck `Allow applications to take exclusive control of this device`, OR change the `Default Format` to `2 channel, 24 bit, 44100 Hz`.** If that doesn't work, try **reinstalling your sound card drivers**.
 
-![Audio Device](img/vegtips/image009_sound_device.png)
+<ImageOnDemand button-text="Load image" alt="Audio Device" src="img/vegtips/image009_sound_device.png" />
 
 <br>
 
@@ -574,7 +574,7 @@ Q: 4:3 videos/images import **stretched horizontally** to 16:9. How to fix?
 
 A: This happens when `4:3` media is imported into a `16:9` project with certain auto-configuration. Fix: **Right-click the media -> Properties -> Media tab**, find `Pixel aspect ratio`, change from `1.3333` to `1`, then click the save button next to the `Stream` section<sup>(`Save settings to video profile for future auto-detection`)</sup>. This ensures future `4:3` imports aren't auto-stretched. This can also be done for multiple files in the **`Project Media`** window.
 
-![Video Profile Button](img/vegtips/image010_profile_button.png)
+<ImageOnDemand button-text="Load image" alt="Video Profile Button" src="img/vegtips/image010_profile_button.png" />
 
 <p align="center">Note: "Pixel aspect ratio" is a mis-translation; it should be "Pixel width:height ratio".</p>
 
@@ -590,9 +590,9 @@ If you get "**Unknown error occurred while trying to save video profile**":
 3. Instead of clicking `OK`, press **`Ctrl + Shift + Enter`** to open the file with administrator privileges. Manually edit the default import profile for `4:3`, changing all `1.3333333333` values to `1`, then save.
   - Note: Opening without administrator privileges will cause Notepad to prompt `Save As` instead of writing to the original file.
 
-![Video Profile Edit 1](img/vegtips/image011_profile_edit_1.png)
+<ImageOnDemand button-text="Load image" alt="Video Profile Edit 1" src="img/vegtips/image011_profile_edit_1.png" />
 
-![Video Profile Edit 2](img/vegtips/image012_profile_edit_2.png)
+<ImageOnDemand button-text="Load image" alt="Video Profile Edit 2" src="img/vegtips/image012_profile_edit_2.png" />
 
 <small>
 Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--128760/">https://www.vegascreativesoftware.info/us/forum/posts--128760/</a><br>
@@ -604,7 +604,7 @@ Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--12876
 
 Q: **Video Preview window shows nothing**?
 
-![Trimmer or Preview?](img/vegtips/image013_trimmer_or_preview.png)
+<ImageOnDemand button-text="Load image" alt="Trimmer or Preview?" src="img/vegtips/image013_trimmer_or_preview.png" />
 
 A: Check if you've switched to the **`Trimmer`** window. If so, **switch back to the `Video Preview` window**. If you prefer the separated `Trimmer` and `Preview` window layout from older versions (VP14 and below), go to the menu **`View -> Window Layout`** and select **`Source Window Layout`**.
 
@@ -622,13 +622,13 @@ A: Usually, the window was accidentally dragged below the Windows taskbar and ca
 
 Easy fix: **Click the corresponding button, then immediately press `Alt + Space`, choose `Move`**, and drag the window up. Alternatively, hide the Windows taskbar temporarily, then drag. As a last resort, try `View -> Restore Default Layout`.
 
-![Move Window](img/vegtips/image014_window_move.gif)
+<ImageOnDemand button-text="Load image" alt="Move Window" src="img/vegtips/image014_window_move.gif" />
 
 <br>
 
 Q: Added an FX, but in the Preview window, the **FX is not fully displayed, appearing split left/right**?
 
-![Split Screen View](img/vegtips/image015_split_screen.png)
+<ImageOnDemand button-text="Load image" alt="Split Screen View" src="img/vegtips/image015_split_screen.png" />
 
 A: As shown, check if **`Split Screen View`** is enabled.
 
@@ -636,7 +636,7 @@ A: As shown, check if **`Split Screen View`** is enabled.
 
 Q: Clicked something, and a single video track **split into A/B tracks**. How to revert?
 
-![AB Track](img/vegtips/image016_ab_track.png)
+<ImageOnDemand button-text="Load image" alt="AB Track" src="img/vegtips/image016_ab_track.png" />
 
 A: Usually, this happens by double-clicking the edge of an event. **Double-click the event edge again** to fix it.
 
@@ -665,7 +665,7 @@ A:
 
 2. If installing the font doesn't help, go to **`Control Panel -> Region -> Administrative -> Change system locale`**. Ensure **`Beta: Use Unicode UTF-8 for worldwide language support`** is **NOT** checked, as shown below.
 
-![Windows Unicode Settings](img/vegtips/image017_unicode_settings.png)
+<ImageOnDemand button-text="Load image" alt="Windows Unicode Settings" src="img/vegtips/image017_unicode_settings.png" />
 
 <small>
 Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--138828/">https://www.vegascreativesoftware.info/us/forum/posts--138828/</a><br>
@@ -675,11 +675,11 @@ Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--13882
 
 Q: Project Properties / Custom Render Template / Preferences windows are **too large, can't display fully, can't click OK**?
 
-![Window Too Large](img/vegtips/image018_window_too_large.png)
+<ImageOnDemand button-text="Load image" alt="Window Too Large" src="img/vegtips/image018_window_too_large.png" />
 
 A: VEGAS window size scales with Windows display settings. High DPI scaling can make VEGAS windows very large, causing cut-off displays at extreme scales. To click "OK", you can press the **`Enter` key**. If you need the full window displayed, you must **change the screen DPI scaling to 100%** in Windows Settings before opening the window, then change it back. Alternatively, **set VEGAS's DPI scaling individually to 100%**: Right-click the VEGAS executable or shortcut -> `Properties -> Compatibility -> Change high DPI settings`. **Set `Scaling performed by:` to `Application`**.
 
-![High DPI - Application](img/vegtips/image019_high_dpi_application.png)
+<ImageOnDemand button-text="Load image" alt="High DPI - Application" src="img/vegtips/image019_high_dpi_application.png" />
 
 <br>
 
@@ -697,7 +697,7 @@ Standard fix: **Press `Ctrl + Z` to undo, then drag by the filename below the vi
 
 VP21 added a **`Bypass Hover Scrub`** button. Enabling it prevents misoperation, but you lose the ability to preview video by hovering (only see thumbnail).
 
-![Bypass Hover Scrub](img/vegtips/image020_bypass_hover_scrub.png)
+<ImageOnDemand button-text="Load image" alt="Bypass Hover Scrub" src="img/vegtips/image020_bypass_hover_scrub.png" />
 
 <p align="center">Actually, this button was added in VP20, but in VP20 it had no effect.</p>
 
@@ -711,7 +711,7 @@ In VP22 and below, by default, **`Enter` is "Pause", `Space` is "Stop"**. In `21
 
 Since `21 build 187`, this option moved to the **transport bar below the Preview window**, alongside play/pause/stop buttons. If not visible, expand the three dots on the right.
 
-![Cursor Transport](img/vegtips/image021_cursor_transport.png)
+<ImageOnDemand button-text="Load image" alt="Cursor Transport" src="img/vegtips/image021_cursor_transport.png" />
 
 After the VP23 update, the default behavior changed: **`Enter` is "Stop", `Space` is "Pause"**. The option became `Use spacebar and F12 for play/stop instead of play/pause`, available in both `Preferences -> General` and the transport bar.
 
@@ -772,7 +772,7 @@ A: This issue appears with **certain Nvidia driver versions**. Here are solution
 
     Open **NVIDIA Control Panel**, click **`Manage 3D settings`** on the left, switch to the **`Program Settings`** tab on the right. Click `Add`, select the VEGAS executable, and change **`OpenGL GDI compatibility`** from `Use global setting` to **`Prefer compatibility`**. Restart VEGAS. (If you have multiple VEGAS versions, set each separately.)
 
-![NVIDIA OpenGL GDI Compatibility](img/vegtips/image022_nvidia_opengl.png)
+<ImageOnDemand button-text="Load image" alt="NVIDIA OpenGL GDI Compatibility" src="img/vegtips/image022_nvidia_opengl.png" />
 
 3. Roll back Nvidia driver to `522.30` or earlier, or update to the latest. When reinstalling, **choose "Custom" installation** and check **`Perform a clean installation`**. This resets all driver settings to default, so **not recommended**.
 
@@ -788,7 +788,7 @@ Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--13819
 
 When using VEGAS's built-in render templates, we often **need to constantly adjust resolution, frame rate, bitrate, etc.**, to match the project properties and achieve desired quality. However, there's a render plugin that **automatically matches resolution/frame rate to project properties and supports advanced CRF/CQP parameters for bitrate control**, allowing rendering **with less manual parameter tweaking**. This plugin is **Voukoder**.
 
-![Voukoder Classic](img/vegtips/image023_voukoder_classic.png)
+<ImageOnDemand button-text="Load image" alt="Voukoder Classic" src="img/vegtips/image023_voukoder_classic.png" />
 
 Two versions: Voukoder Classic and Voukoder Pro.
 
@@ -827,7 +827,7 @@ Other similar plugins include [DebugMode FrameServer](http://www.debugmode.com/f
 
 3.  **Change encoder in render template.**
 
-![Render Encoder](img/vegtips/image024_render_encoder.png)
+<ImageOnDemand button-text="Load image" alt="Render Encoder" src="img/vegtips/image024_render_encoder.png" />
 
 <p align="center">Available encoders depend on your GPU.</p>
 
@@ -847,7 +847,7 @@ Other similar plugins include [DebugMode FrameServer](http://www.debugmode.com/f
 
 9.  **Render Image Sequence**. Start rendering from where it froze. **This at least preserves rendered files.** Finally, **import the image sequence back into VEGAS and render it as a video**. After each sequence render, **output to a new folder** to avoid overwriting, as VEGAS always starts numbering from `000000`.
 
-![Import Image Sequence](img/vegtips/image025_import_image_sequence.png)
+<ImageOnDemand button-text="Load image" alt="Import Image Sequence" src="img/vegtips/image025_import_image_sequence.png" />
 
 <p align="center">Importing an image sequence. It behaves like a video file; you can set frame rate.</p>
 
@@ -907,7 +907,7 @@ Q: Want to **stop rendering midway** but **keep the partially rendered video fil
 
 A: The **SeMW extension** render display window has this feature.
 
-![SeMW Render Prompt](img/vegtips/image026_render_semw.png)
+<ImageOnDemand button-text="Load image" alt="SeMW Render Prompt" src="img/vegtips/image026_render_semw.png" />
 
 SeMW Extension official site: https://www.semw-software.com/en/extensions/
 
@@ -925,7 +925,7 @@ A:
 
   2.  In render template list, select `QuickTime` on the left. Choose any template on the right, click `Customize Template`, adjust parameters as shown:
 
-![Render Alpha QuickTime](img/vegtips/image027_render_alpha_quicktime.png)
+<ImageOnDemand button-text="Load image" alt="Render Alpha QuickTime" src="img/vegtips/image027_render_alpha_quicktime.png" />
 
   3.  Save template and render.
 
@@ -937,7 +937,7 @@ A:
 
   As shown:
 
-![Render Alpha ProRes](img/vegtips/image028_render_alpha_prores.png)
+<ImageOnDemand button-text="Load image" alt="Render Alpha ProRes" src="img/vegtips/image028_render_alpha_prores.png" />
 
 - **[Voukoder](#recommended-render-plugin-voukoder)<small>(VP18+, Voukoder Classic version 12.0+.)</small>**
 
@@ -953,7 +953,7 @@ Three solutions:
 
 1.  **Use [Voukoder](#recommended-render-plugin-voukoder), create a template with `Filters` to convert color space.**
 
-![Voukoder Color Space](img/vegtips/image040_voukoder_color_space.png)
+<ImageOnDemand button-text="Load image" alt="Voukoder Color Space" src="img/vegtips/image040_voukoder_color_space.png" />
 
 2.  Upgrade to VP18+. When opening an old project in new VP, change `Pixel format` in `File->Properties` from `Legacy 8-bit (video levels)` to **`8-bit (full range)`**, and **don't use render templates created in old VP**.
 
@@ -967,9 +967,9 @@ Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--14294
 
 A2: If source is **HDR footage**, change the **Project Properties `Color space` <sup>Fig 1</sup>** to match the source <sup>Fig 2</sup>. This switches the entire project to 10-bit color depth, making rendering slower than 8-bit.
 
-![Project HDR Color Space](img/vegtips/image029_color_space_hdr_project.png)
+<ImageOnDemand button-text="Load image" alt="Project HDR Color Space" src="img/vegtips/image029_color_space_hdr_project.png" />
 
-![Footage HDR Color Space](img/vegtips/image030_color_space_hdr_footage.png)
+<ImageOnDemand button-text="Load image" alt="Footage HDR Color Space" src="img/vegtips/image030_color_space_hdr_footage.png" />
 
 Alternatively, keep project color space unchanged and apply a color space conversion LUT to the source footage. Use the built-in `LUT Filter` FX or the newer `Color Grading` feature. The key is finding a LUT that converts the source color space to `Rec.709` standard. This loses HDR details, so if you don't plan to output HDR, avoid recording HDR footage initially.
 
@@ -977,7 +977,7 @@ Alternatively, keep project color space unchanged and apply a color space conver
 
 Q: Rendered video has **color shifts (red becomes purple, blue becomes yellow, etc.)**?
 
-![BGRA Color](img/vegtips/image031_bgra_color.png)
+<ImageOnDemand button-text="Load image" alt="BGRA Color" src="img/vegtips/image031_bgra_color.png" />
 
 A: AMD GPU driver issue. Try:
 
@@ -1063,7 +1063,7 @@ Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--83436
 
 Q: **[Win7 VP18+]** **Clicking `Render As` immediately errors**: **`An error occurred creating media file. Error 0x80131501 (Message missing)`**
 
-![Win7 Render](img/vegtips/image032_render_win7.png)
+<ImageOnDemand button-text="Load image" alt="Win7 Render" src="img/vegtips/image032_render_win7.png" />
 
 A: Normally, Win7 only supports **up to VP17**. VP18+ on Win7 throws this error.
 
@@ -1100,7 +1100,7 @@ Solutions:
 
 - In some cases, Windows Unicode settings might be the cause. Go to **`Control Panel -> Region -> Administrative -> Change system locale`**, ensure **`Beta: Use Unicode UTF-8 for worldwide language support`** is **NOT** checked.
 
-![Windows Unicode Settings](img/vegtips/image017_unicode_settings.png)
+<ImageOnDemand button-text="Load image" alt="Windows Unicode Settings" src="img/vegtips/image017_unicode_settings.png" />
 
 In VP20, the "Titles & Text" feature "**Transfer Subtitle Attributes**" is also affected, making some fonts unusable with this function.
 
@@ -1130,17 +1130,17 @@ A: Open the text file in Notepad, **Save As with ANSI encoding**, then import.
 
 Q: On high-resolution screens, using "**ProType Titler**" causes **UI glitches/tiny unreadable text**?
 
-![PPT Titler UI Issue](img/vegtips/image033_protype_titler_ui_issue.png)
+<ImageOnDemand button-text="Load image" alt="PPT Titler UI Issue" src="img/vegtips/image033_protype_titler_ui_issue.png" />
 
 A: DPI scaling issue when system scaling >= 150%. Right-click VEGAS executable/shortcut -> `Properties -> Compatibility -> Change high DPI settings`. **Set `Scaling performed by:` to `System (Enhanced)`**.
 
-![High DPI - System Enhanced](img/vegtips/image034_high_dpi_system_enhanced.png)
+<ImageOnDemand button-text="Load image" alt="High DPI - System Enhanced" src="img/vegtips/image034_high_dpi_system_enhanced.png" />
 
 <br>
 
 Q: **[VP20, VP21]** **"Transfer Subtitle Attributes" function in Titles & Text errors (as shown)**?
 
-![Subtitle Attributes Transfer](img/vegtips/image035_subtitles_transfer.png)
+<ImageOnDemand button-text="Load image" alt="Subtitle Attributes Transfer" src="img/vegtips/image035_subtitles_transfer.png" />
 
 A: The issue occurs when the text box contains **mixed formatting (different fonts, sizes, etc.)** that cannot be transferred. Try **unifying the text format** first before using the function. **VP21 final build 315 fixed this.** Older versions (including pre-VP20) can use a script I wrote with similar functionality, no error, but also doesn't support mixed formatting transfer. Script installation path see [Scripts](#xii-scripts-extensions-related).
 
@@ -1289,7 +1289,7 @@ Q: **Some Sapphire plugin FX ignore alpha channel, covering the background under
 
 A: As shown, enter the FX's `Help` and disable its `GPU` acceleration individually.
 
-![Sapphire Alpha Issue](img/vegtips/image036_sapphire_alpha.png)
+<ImageOnDemand button-text="Load image" alt="Sapphire Alpha Issue" src="img/vegtips/image036_sapphire_alpha.png" />
 
 If that doesn't work, **disable VEGAS's own `GPU Acceleration`**.
 
@@ -1348,7 +1348,7 @@ A: Go to registry key:
 
 There are `Path 1`, `Path 2`, etc., corresponding to VST paths in preferences.
 
-![VST Registry](img/vegtips/image037_vst_reg.png)
+<ImageOnDemand button-text="Load image" alt="VST Registry" src="img/vegtips/image037_vst_reg.png" />
 
 `CheckSum` is for VEGAS to check if rescan is needed; you can ignore it. Focus on `Path` (absolute path string) and `Flags` (`3` = scan, `0` = don't scan). Modify as needed.
 
@@ -1492,7 +1492,7 @@ Advantages:
 
 - Easy adjustment of backup intervals.
 
-![Advanced Save](img/vegtips/image038_advanced_save.png)
+<ImageOnDemand button-text="Load image" alt="Advanced Save" src="img/vegtips/image038_advanced_save.png" />
 
 <p align="center">Menu: <b><code>Tools -> Advanced Save</code></b>.</p>
 
@@ -1547,7 +1547,7 @@ Normally, newer VEGAS can open older project files with good compatibility. Olde
 
 ### 1. VEGAS Project File Version Downgrade Tool
 
-![MSVPVF](img/vegtips/image039_msvpvf.png)
+<ImageOnDemand button-text="Load image" alt="MSVPVF" src="img/vegtips/image039_msvpvf.png" />
 
 Original project link: https://sr.ht/~mrpapersonic/msvpvf/
 

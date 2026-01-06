@@ -100,7 +100,7 @@ vv13 及以下的版本的缓存目录会带 Sony 文件夹，如 **`%localappda
 
 2. 如图所示：
 
-![插件链](img/vegtips/image001_plugin_chain.png)
+<ImageOnDemand alt="插件链" src="img/zh/vegtips/image001_plugin_chain.png" />
 
 <p align="center">vv 插件预设管理器的使用图解 0.2 版</p>
 
@@ -128,7 +128,7 @@ vv13 及以下的版本的缓存目录会带 Sony 文件夹，如 **`%localappda
 
 比较常见的情况是：运行 Vegas 时 / **点击左上角 `文件 -> 渲染为` 时，直接弹出报错弹窗**。
 
-![问题报告](img/vegtips/image002_problem_report.png)
+<ImageOnDemand alt="问题报告" src="img/zh/vegtips/image002_problem_report.png" />
 
 **这时候请先务必勾选下方的 `顯示問題詳細資料`（`Show Problem Details`），获取报错内容。**
 
@@ -166,7 +166,7 @@ vv13 及以下的版本的缓存目录会带 Sony 文件夹，如 **`%localappda
 
 首选项的常规办法：按住 `Ctrl + Shift` 并运行 Vegas，会弹出“是否重置”的选项，勾选 `删除所有缓存的应用程序数据`，点 `是`。
 
-![重置](img/vegtips/image003_reset.png)
+<ImageOnDemand alt="重置" src="img/zh/vegtips/image003_reset.png" />
 
 <p align="center">是否重置？(Y/N)</p>
 
@@ -250,7 +250,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 其中 `23.0` 和 `19.0` 代表当前 Vegas 版本号。第一行是最主要的软件界面语言设置，不过其他三个也建议同时改。
 
-![语言注册表](img/vegtips/image004_language_reg.png)
+<ImageOnDemand alt="语言注册表" src="img/zh/vegtips/image004_language_reg.png" />
 
 若之前安装的是英文版，则 `ULangID` 的默认值应该是 `409`。将其**改成中文的 `804`** 即可。
 
@@ -273,7 +273,7 @@ Magix 旗下的 ACID Pro 等软件也同理，此处不再赘述。
 Q：错误：安装时提示**电脑需要重启，才能继续安装**？  
 `Setup has detected that the system is currently waiting for a reboot to complete a previous installation or update. To avoid problems, please reboot your system before installing.`
 
-![安装时的重启问题](img/vegtips/image005_install_reboot.png)
+<ImageOnDemand alt="安装时的重启问题" src="img/zh/vegtips/image005_install_reboot.png" />
 
 A：先试试重启电脑。若重启后无法解决，则需要更改注册表。打开注册表编辑器，找到 **`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager`** 项，**删除 `PendingFileRenameOperations`** 这一值，之后重启电脑。
 
@@ -285,7 +285,7 @@ A：先试试重启电脑。若重启后无法解决，则需要更改注册表�
 
 Q：错误：**`安装过程中发生 -2147163964。未能注册模块 xxxxx.dll`**。
 
-![安装时的 dll 注册问题](img/vegtips/image006_install_dll.png)
+<ImageOnDemand alt="安装时的 dll 注册问题" src="img/zh/vegtips/image006_install_dll.png" />
 
 A：这种情况**重启一遍电脑再安装**一般就能解决。仍无法解决时可以**试试安装其他版本**。
 
@@ -318,7 +318,7 @@ Q：Vegas 在启动时，“**正在扫描 VST 插件...**”这一步**卡住/�
 
 A：可以尝试**在启动 Vegas 时禁用 VST 扫描**，方法如下：对着 Vegas 的**快捷方式 `右键 -> 属性`**，在 **`目标`** 这一栏的最后加上 **` /NOVSTGROVEL`** 命令（**注意要和前面隔开空格**），之后运行这个快捷方式。确定能够正常启动后，可以将有问题的插件从 [VST 路径](#vst-相关路径)里挪开，单独存放，等等。
 
-![NOVSTGROVEL](img/vegtips/image007_novstgrovel.png)
+<ImageOnDemand alt="NOVSTGROVEL" src="img/zh/vegtips/image007_novstgrovel.png" />
 
 <br>
 
@@ -348,7 +348,7 @@ A：请到 **`控制面板 -> 程序 -> 程序和功能`** 中确认是否安装
 
 2. 在安装过程中，会提示你是否安装额外的东西，此时转到 `单个组件`，搜索 `MSVC`，找到 `MSVC v143 - VS 2022 C++ x64/x86 生成工具(最新)` 并勾选，然后继续安装。
 
-![MSVC 143 安装](img/vegtips/image008_msvc143.png)
+<ImageOnDemand alt="MSVC 143 安装" src="img/zh/vegtips/image008_msvc143.png" />
 
 3. 安装成功后，转到 MSVC 的安装路径：`C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\`，其中会有两个文件夹：`v143` 和 `14.44.35112`（具体取决于你安装的版本号），形如后者 `14.44.35112` 的是要找的文件夹。
 
@@ -366,7 +366,7 @@ Q：打开 Vegas 后**出现噪音/没声音了/…**？
 
 A：**转到 `控制面板 -> 硬件和声音 -> 声音`，打开当前播放设备的 `属性`，在 `高级` 选项卡的 `独占模式` 中取消勾选 `允许应用程序独占控制该设备`，或者将`默认格式`切换到 `2 通道，24 位，44100Hz`。**如果不行，可以试试**重装声卡驱动**。
 
-![音频设备](img/vegtips/image009_sound_device.png)
+<ImageOnDemand alt="音频设备" src="img/zh/vegtips/image009_sound_device.png" />
 
 <br>
 
@@ -574,7 +574,7 @@ Q：4:3 的视频/图片媒体文件导入进去，**被左右拉伸**成 16:9 �
 
 A：这是由于 `4:3` 的媒体文件导入进 `16:9` 的工程里，可能会因一些特定配置参数而被自动拉伸至 `16:9`。解决办法是**对着媒体文件 `右键 -> 属性`，切换到 `媒体` 选项卡，找到 `像素高宽比` 这一栏，从 `1.3333` 改到 `1`，然后点击 `流` 一栏右边的保存按钮<sup>（`将设置保存到视频配置文件以供将来进行自动检测`）</sup>，这样就可以保证之后导入的 `4:3` 媒体文件不再被自动拉伸**。同样地，该属性也能在 **`项目媒体`** 窗口中，多选媒体文件后再修改。
 
-![视频配置文件按钮](img/vegtips/image010_profile_button.png)
+<ImageOnDemand alt="视频配置文件按钮" src="img/zh/vegtips/image010_profile_button.png" />
 
 <p align="center">其实“像素高宽比”的翻译是错误的，应该为“像素宽高比”，即“宽:高”。</p>
 
@@ -590,9 +590,9 @@ A：这是由于 `4:3` 的媒体文件导入进 `16:9` 的工程里，可能会�
 3. 输入完后不要点击 `确认`，而是按下 **`Ctrl + Shift + Enter`**，这样就能用管理员权限打开该文件。手动修改 `4:3` 的默认导入配置，将该文件里的 `1.3333333333` 值全改成 `1`，保存。
   - 注意，不使用管理员权限打开文件会导致记事本无法写入原文件，而弹出 `另存为` 窗口。
 
-![视频配置文件编辑 1](img/vegtips/image011_profile_edit_1.png)
+<ImageOnDemand alt="视频配置文件编辑 1" src="img/zh/vegtips/image011_profile_edit_1.png" />
 
-![视频配置文件编辑 2](img/vegtips/image012_profile_edit_2.png)
+<ImageOnDemand alt="视频配置文件编辑 2" src="img/zh/vegtips/image012_profile_edit_2.png" />
 
 <small>
 参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--128760/">https://www.vegascreativesoftware.info/us/forum/posts--128760/</a><br>
@@ -604,7 +604,7 @@ A：这是由于 `4:3` 的媒体文件导入进 `16:9` 的工程里，可能会�
 
 Q：**视频预览窗口怎么什么都看不见了**？
 
-![修剪器还是预览？](img/vegtips/image013_trimmer_or_preview.png)
+<ImageOnDemand alt="修剪器还是预览？" src="img/zh/vegtips/image013_trimmer_or_preview.png" />
 
 A：请检查是否切换到了 **`修剪器`** 窗口，若是，请**自行切换回 `视频预览` 窗口**。如果你想使用类似于旧版（14 及以下）的 `修剪器` 与 `预览窗口` 分离的窗口布局，可到菜单栏的 **`视图 -> 窗口布局`** 中选择 **`源窗口布局`**。
 
@@ -622,13 +622,13 @@ A：这种情况一般是不小心把窗口拖到 Windows 任务栏下方了，�
 
 比较方便的解决办法是**先点击一下对应的按钮，之后马上按 `Alt + 空格`，选择 `移动`**，然后把窗口拖上来。或者也可以把 Windows 任务栏隐藏了再拖上来。实在无法解决，可以试试菜单栏的 `视图 -> 恢复默认布局`。
 
-![移动窗口](img/vegtips/image014_window_move.gif)
+<ImageOnDemand alt="移动窗口" src="img/zh/vegtips/image014_window_move.gif" />
 
 <br>
 
 Q：加了 FX，为什么在预览窗口中，**FX 效果显示不全，像左右分割了一样**？
 
-![分割屏幕视图](img/vegtips/image015_split_screen.png)
+<ImageOnDemand alt="分割屏幕视图" src="img/zh/vegtips/image015_split_screen.png" />
 
 A：如上图所示，请检查是否启用了**`分割屏幕视图`**功能。
 
@@ -636,7 +636,7 @@ A：如上图所示，请检查是否启用了**`分割屏幕视图`**功能。
 
 Q：不知点到什么了，单个视频轨道**被分成了 AB 两轨**，如何恢复？
 
-![AB 轨道](img/vegtips/image016_ab_track.png)
+<ImageOnDemand alt="AB 轨道" src="img/zh/vegtips/image016_ab_track.png" />
 
 A：一般这种情况下是不小心双击了事件边缘，再**双击一遍事件边缘**就可以解决了。
 
@@ -665,7 +665,7 @@ A：
 
 2. 若安装该字体后不管用，请转到 **`控制面板 -> 区域 -> 管理 -> 更改系统区域设置`**，确保 **`Beta 版:使用 Unicode UTF-8 提供全球语言支持`** 这个选项保持未勾选状态，如下图所示。
 
-![Windows Unicode 设置](img/vegtips/image017_unicode_settings.png)
+<ImageOnDemand alt="Windows Unicode 设置" src="img/zh/vegtips/image017_unicode_settings.png" />
 
 <small>
 参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--138828/">https://www.vegascreativesoftware.info/us/forum/posts--138828/</a><br>
@@ -675,11 +675,11 @@ A：
 
 Q：项目属性/自定义渲染模板/首选项设置等**窗口太大，没法显示完全**，**按不到确认键**？
 
-![窗口太大](img/vegtips/image018_window_too_large.png)
+<ImageOnDemand alt="窗口太大" src="img/zh/vegtips/image018_window_too_large.png" />
 
 A：Vegas 窗口大小会根据 Windows 屏幕设置自动缩放，如果 Windows 屏幕 DPI 缩放比例过大，也会导致 Vegas 的窗口变得很大，在特大缩放比例下部分设置窗口显示不完全。如果只需按“确认”，可以直接按键盘上的 **`Enter` 键**进行代替。如果必须要完整显示窗口，就只能提前修改屏幕的 DPI 缩放比例，**在 Windows 设置中将屏幕缩放比例调为 100%**，Vegas 内改完设置后再调回原来的值。或者也可以**单独将 Vegas 程序的 DPI 缩放改为 100%**，对着 Vegas 主程序或者快捷方式进入 `右键 -> 属性 -> 兼容性 -> 更改高 DPI 设置`，**单独设置 Vegas 的缩放选项，将 `缩放执行` 改为 `应用程序`。**
 
-![高 DPI - 应用程序](img/vegtips/image019_high_dpi_application.png)
+<ImageOnDemand alt="高 DPI - 应用程序" src="img/zh/vegtips/image019_high_dpi_application.png" />
 
 <br>
 
@@ -697,7 +697,7 @@ A：为人诟病的老问题了，只要是在视频画面上拖动，就会被�
 
 21 新增了一个 **`旁通悬停擦洗`**（`Bypass Hover Scrub`）的按钮，启用后就能保证不会误操作，不过这样就无法在鼠标悬停时预览视频画面，只能看到封面缩略图。
 
-![旁通悬停擦洗](img/vegtips/image020_bypass_hover_scrub.png)
+<ImageOnDemand alt="旁通悬停擦洗" src="img/zh/vegtips/image020_bypass_hover_scrub.png" />
 
 <p align="center">其实这个按钮是 vv20 加的，但是 vv20 按了这个按钮以后完全没有效果。</p>
 
@@ -711,7 +711,7 @@ A：Vegas 的“暂停”代表“停止播放，光标停留在当前位置”�
 
 自 `21 build 187` 更新后，这个选项被移到了**预览窗口下方的传输栏内**，和播放、暂停、停止按钮放在了一起。如果没有，请展开右边的三个点。
 
-![光标传输栏](img/vegtips/image021_cursor_transport.png)
+<ImageOnDemand alt="光标传输栏" src="img/zh/vegtips/image021_cursor_transport.png" />
 
 在 23 大版本更新后，和旧版不同，Vegas 的默认行为已经变成了 **`Enter` 键是“停止”，`空格` 键是“暂停”**。这个选项也随之变成了 `使用空格键和 F12 进行播放/停止而不是播放/暂停`，并且在 `首选项 -> 常规` 中以及传输栏内，都有这个设置选项可以调整。
 
@@ -772,7 +772,7 @@ A：一般此问题出现在**某些版本的 N 卡驱动**中，以下是几种
 
     打开 **NVIDIA 控制面板**，点击左侧的 **`管理 3D 设置`**，在右侧切换到 **`程序设置`** 选项卡。在 `自定义程序` 那一栏中点击 `添加`，选择 Vegas 主程序并确定，将下方的 **`OpenGL GDI 兼容性`** 功能设置，从 `使用全局设置` 更改到 **`优先兼容性`**，然后重新运行 Vegas 程序，即可解决此问题。（如果电脑里有多个 Vegas 版本，则需要分别设置。）
 
-![NVIDIA OpenGL GDI 兼容性](img/vegtips/image022_nvidia_opengl.png)
+<ImageOnDemand alt="NVIDIA OpenGL GDI 兼容性" src="img/zh/vegtips/image022_nvidia_opengl.png" />
 
 3. 将 N 卡驱动的版本回退至 `522.30` 及以前，或更新至最新版。重装驱动时，**必须选择“自定义”安装**，并且勾选 **`执行清洁安装`** 选项。此选项会将 N 卡驱动的所有配置选项全部恢复为默认值，因此**不建议使用此办法**。
 
@@ -788,7 +788,7 @@ A：一般此问题出现在**某些版本的 N 卡驱动**中，以下是几种
 
 在使用 Vegas 自带的渲染模板时，我们**通常需要不断地更改分辨率、帧率、码率等参数**，使得渲染模板匹配原工程的项目属性，并且达到预期的码率效果。但有这么一个渲染插件，可以使渲染模板的分辨率、帧率等参数**自动匹配项目属性，并且支持使用更高级的 CRF、CQP 等参数来控制码率**，在**不需要太操心渲染参数**的前提下完成渲染操作。这个渲染插件就是 **Voukoder**。
 
-![Voukoder Classic](img/vegtips/image023_voukoder_classic.png)
+<ImageOnDemand alt="Voukoder Classic" src="img/zh/vegtips/image023_voukoder_classic.png" />
 
 Voukoder 一共有两个版本：Voukoder Classic 和 Voukoder Pro。
 
@@ -827,7 +827,7 @@ Voukoder 一共有两个版本：Voukoder Classic 和 Voukoder Pro。
 
 3. **渲染模板换编码器。**
 
-![渲染的编码器](img/vegtips/image024_render_encoder.png)
+<ImageOnDemand alt="渲染的编码器" src="img/zh/vegtips/image024_render_encoder.png" />
 
 <p align="center">根据电脑的显卡配置，能使用的编码器可能会有所不同。</p>
 
@@ -847,7 +847,7 @@ Voukoder 一共有两个版本：Voukoder Classic 和 Voukoder Pro。
 
 9. **渲染图像序列**，哪里卡住就从哪里开始重新渲染，**这样至少能保留已渲染文件**，最后再**以图像序列的形式导入进 Vegas 重新渲染一遍**。每渲染完一次图像序列，都记得**输出到新的文件夹**，否则旧的图像序列会被新的覆盖，因为 Vegas 总是从 `000000` 开始编号。
 
-![导入图像序列](img/vegtips/image025_import_image_sequence.png)
+<ImageOnDemand alt="导入图像序列" src="img/zh/vegtips/image025_import_image_sequence.png" />
 
 <p align="center">导入图像序列的方法。导入后相当于一个视频文件，可自行设置帧率等参数。</p>
 
@@ -907,7 +907,7 @@ Q：渲染到一半**打算停止渲染**，但是**想保留已渲染的视频�
 
 A：**SeMW 扩展**的渲染显示窗口中有此功能。
 
-![SeMW 渲染提示](img/vegtips/image026_render_semw.png)
+<ImageOnDemand alt="SeMW 渲染提示" src="img/zh/vegtips/image026_render_semw.png" />
 
 SeMW 扩展官网：https://www.semw-software.com/en/extensions/
 
@@ -925,7 +925,7 @@ A：
 
   2. 在选择渲染模板界面的左侧中选择 `QuickTime`，右侧随便找一个模板，自定义模板，更改相关参数，如下图所示：
 
-![渲染带 alpha 通道的 QuickTime](img/vegtips/image027_render_alpha_quicktime.png)
+<ImageOnDemand alt="渲染带 alpha 通道的 QuickTime" src="img/zh/vegtips/image027_render_alpha_quicktime.png" />
 
   3. 保存模板。渲染。
 
@@ -937,7 +937,7 @@ A：
 
   如下图所示：
 
-![渲染带 alpha 通道的 ProRes](img/vegtips/image028_render_alpha_prores.png)
+<ImageOnDemand alt="渲染带 alpha 通道的 ProRes" src="img/zh/vegtips/image028_render_alpha_prores.png" />
 
 - **[Voukoder 渲染插件](#渲染插件-voukoder-推荐) <small>（18 及以上版本，且 Voukoder Classic 版本需在 12.0 及以上。）</small>**
 
@@ -953,7 +953,7 @@ A1：vv17 及以下版本中，由于项目属性和渲染模板的**色彩空�
 
 1. **使用 [Voukoder 渲染插件](#渲染插件-voukoder-推荐)，用 `滤镜` 制作能够转换色彩空间的模板。**
 
-![Voukoder 色彩空间](img/vegtips/image040_voukoder_color_space.png)
+<ImageOnDemand alt="Voukoder 色彩空间" src="img/zh/vegtips/image040_voukoder_color_space.png" />
 
 2. 升 vv18 及以上版本。旧版的工程在新版 vv 中打开后，需要在左上角 `文件-属性` 中将 `像素格式` 这一栏从 `旧版 8 位(视频级别)` 改成 **`8 位(全范围)`**”，并且渲染时**不要使用旧版 vv 所创建的渲染模板**。
 
@@ -967,9 +967,9 @@ A1：vv17 及以下版本中，由于项目属性和渲染模板的**色彩空�
 
 A2：若原素材是 **HDR 素材**，请将**项目属性的 `色彩空间` <sup>图 1</sup>** 更改至与原素材 <sup>图 2</sup> 一致。这会将整个项目更改为 10bit 色深，渲染也会比原先的 8bit 色深慢很多。
 
-![项目 HDR 色彩空间](img/vegtips/image029_color_space_hdr_project.png)
+<ImageOnDemand alt="项目 HDR 色彩空间" src="img/zh/vegtips/image029_color_space_hdr_project.png" />
 
-![素材 HDR 色彩空间](img/vegtips/image030_color_space_hdr_footage.png)
+<ImageOnDemand alt="素材 HDR 色彩空间" src="img/zh/vegtips/image030_color_space_hdr_footage.png" />
 
 或者，也可以不改项目的色彩空间，而是给原素材添加转换色彩空间的 LUT。这里用自带的 `LUT 筛选器` FX 或者高版本的 `颜色分级` 功能都可以，重点在于你要找到能将原素材的色彩空间转换成 `Rec.709` 标准的 LUT 文件。这样做会失去原素材的 HDR 细节，所以如果本来就没打算最终输出 HDR 视频，建议在一开始录制素材时就不要录制 HDR 素材。
 
@@ -977,7 +977,7 @@ A2：若原素材是 **HDR 素材**，请将**项目属性的 `色彩空间` <su
 
 Q：渲染出来的视频，**怎么变色了（红的变紫、蓝的变黄等）**？
 
-![BGRA 颜色](img/vegtips/image031_bgra_color.png)
+<ImageOnDemand alt="BGRA 颜色" src="img/zh/vegtips/image031_bgra_color.png" />
 
 A：A 卡驱动的问题。可以尝试以下几种方法：
 
@@ -1063,7 +1063,7 @@ A：目前已知的有效解决办法只有**通过 Windows 更新工具重装�
 
 Q：【**Win7 vv18 及以上**】**一点`渲染为`就报错**：**`创建媒体文件时发生错误。错误 0x80131501 (消息缺失)`**
 
-![Win7 渲染](img/vegtips/image032_render_win7.png)
+<ImageOnDemand alt="Win7 渲染" src="img/zh/vegtips/image032_render_win7.png" />
 
 A：正常情况下 Win7 最高**只支持到 vv17**，vv18 以后一点渲染就会弹出此报错弹窗。
 
@@ -1100,7 +1100,7 @@ A：这个是“字幕和文字”的问题，“字幕和文字”对各种字�
 
 - 在某些情况下，也可能是 Windows Unicode 设置导致的。转到 **`控制面板 -> 区域 -> 管理 -> 更改系统区域设置`**，确保 **`Beta 版: 使用 Unicode UTF-8 提供全球语言支持`** 这个选项保持未勾选状态，如下图所示。
 
-![Windows Unicode 设置](img/vegtips/image017_unicode_settings.png)
+<ImageOnDemand alt="Windows Unicode 设置" src="img/zh/vegtips/image017_unicode_settings.png" />
 
 vv20 里的“字幕和文字”有个新功能是“**一键更改同轨道字幕的属性**”，此新功能也会受到该 bug 的影响，导致部分字体无法正常使用此功能。
 
@@ -1130,17 +1130,17 @@ A：将文本文件用记事本打开，**另存为 ANSI 编码**，再尝试导
 
 Q：如图所示，在高分辨率屏幕上使用“**PTT 字幕**”时，**界面错乱/界面字体小，看不清**？
 
-![PPT 字幕 UI 问题](img/vegtips/image033_protype_titler_ui_issue.png)
+<ImageOnDemand alt="PPT 字幕 UI 问题" src="img/zh/vegtips/image033_protype_titler_ui_issue.png" />
 
 A：DPI 缩放的问题，当系统缩放 DPI >= 150% 时就会出现。可参考下图，对着 Vegas 主程序或者快捷方式进入 `右键 -> 属性 -> 兼容性 -> 更改高 DPI 设置`，**单独设置 Vegas 的缩放选项，将 `缩放执行` 改为 `系统(增强)`。**
 
-![高 DPI - 系统增强](img/vegtips/image034_high_dpi_system_enhanced.png)
+<ImageOnDemand alt="高 DPI - 系统增强" src="img/zh/vegtips/image034_high_dpi_system_enhanced.png" />
 
 <br>
 
 Q：【**vv20、21**】**字幕和文字“一键更改同轨道字幕的属性”功能报错（如下图）**？
 
-![字幕属性传输](img/vegtips/image035_subtitles_transfer.png)
+<ImageOnDemand alt="字幕属性传输" src="img/zh/vegtips/image035_subtitles_transfer.png" />
 
 A：问题在于当前文本框内的**富文本包含多种文本格式（如字体、字号不同等）**，文本格式无法正常转移。可尝试**先统一文本格式**后再使用该功能。**21 最终版 build 315 已修复此问题。**旧版（包括 20 以下，没有这个功能但是想用的）可以用我写的同类型脚本，没有这个报错，不过也不支持多种文本格式的转移。脚本安装路径见 [脚本](#十二、脚本-扩展相关) 章节。
 
@@ -1289,7 +1289,7 @@ Q：**蓝宝石插件的某些效果会忽略 alpha 通道，覆盖掉底下的�
 
 A：如图所示，进入该效果的 `帮助`，单独取消掉该效果的 `GPU`。
 
-![蓝宝石 alpha 通道问题](img/vegtips/image036_sapphire_alpha.png)
+<ImageOnDemand alt="蓝宝石 alpha 通道问题" src="img/zh/vegtips/image036_sapphire_alpha.png" />
 
 如果没有用，那只能**关闭 Vegas 自己的 `GPU 加速`**了。
 
@@ -1348,7 +1348,7 @@ A：转到注册表项：
 
 有 `Path 1`、`Path 2`、`Path 3`等项，分别对应 Vegas 首选项中的 VST 路径。
 
-![VST 注册表](img/vegtips/image037_vst_reg.png)
+<ImageOnDemand alt="VST 注册表" src="img/zh/vegtips/image037_vst_reg.png" />
 
 `CheckSum` 这个值是 Vegas 用来检查是否需要重新扫描该路径的校验和值，可以忽略掉。重点关注的是 `Path` 值和 `Flags` 值。`Path` 值是该 VST 路径设置所指向的绝对路径字符串，`Flags` 值则决定了是否扫描该路径，值为 `3` 是扫描，值为 `0` 是不扫描。可自行修改这些值。
 
@@ -1490,7 +1490,7 @@ Vegas 会每隔 5 分钟进行一次自动保存，以便于软件崩溃后的�
 
 - 可以方便快捷地更改备份间隔。
 
-![高级保存](img/vegtips/image038_advanced_save.png)
+<ImageOnDemand alt="高级保存" src="img/zh/vegtips/image038_advanced_save.png" />
 
 <p align="center">菜单栏的 <b><code>工具 -> 高级保存</code></b>。</p>
 
@@ -1545,7 +1545,7 @@ Vegas 会每隔 5 分钟进行一次自动保存，以便于软件崩溃后的�
 
 ### 1. Vegas 工程文件版本降级工具
 
-![MSVPVF](img/vegtips/image039_msvpvf.png)
+<ImageOnDemand alt="MSVPVF" src="img/zh/vegtips/image039_msvpvf.png" />
 
 该工具原项目链接：https://sr.ht/~mrpapersonic/msvpvf/
 
@@ -1630,7 +1630,7 @@ A：如果**媒体文件被放在了需要管理员权限的文件夹**，会导
 
 ## 十七、Vegas 交流群/交流网站
 
-夜__晓的 Vegas Pro 交流 QQ 群：[570497914](https://qm.qq.com/cgi-bin/qm/qr?k=vByv4vz64zLaygZW7AgX8-2QReEXjL0a&authKey=cjOBJV83QVauEVNAoJ3eNaNbp3QsQ7pN8MyhCfrioN9YziIUnV7AID2IBF0PEJiQ&noverify=0&group_code=570497914)
+夜__晓的 Vegas Pro 交流 QQ 群：[570497914](https://qm.qq.com/cgi-bin/qm/qr?k=vByv4vz64zLaygZW7AgX8-2QReEXjL0a) / [650370844](http://qm.qq.com/cgi-bin/qm/qr?k=ueSwAdOLZl7EvMaGXJu_U5o59fZQ_afi)
 
 Vegas Pro 官方论坛：[https://www.vegascreativesoftware.info/us/vegas-pro-forum/](https://www.vegascreativesoftware.info/us/vegas-pro-forum/)
 
