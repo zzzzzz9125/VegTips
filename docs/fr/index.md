@@ -1262,7 +1262,7 @@ R : Avec de nombreux plugins installés, les anciennes versions VEGAS se bloquen
 <br>
 
 Q : **Utilisation des FX IA intégrés demande d'installer le composant VEGAS Modèles d'Apprentissage Profond** ?  
-`Ce plug-in nécessite des données supplémentaires. Veuillez vous connecter à votre compte Service Center et télécharger le composant Modèles d'Apprentissage Profond depuis la section Mes Produits.`
+`Ce module externe requiert des données supplémentaires. Veuillez vous connecter à votre compte Service Center et télécharger le composant Modèles d&apos;apprentissage profond dans la section Mes produits.`
 
 R : Pour les nouveaux FX IA intégrés, **vous devez installer la version correspondante de Modèles d'Apprentissage Profond** séparément.
 
