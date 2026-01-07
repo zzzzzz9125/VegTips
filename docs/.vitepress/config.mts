@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress'
 
+const base = process.env.GITHUB_ACTIONS ? '/VegTips/' : '/'
+
 const enNav = [
   { text: 'Vegas Troubleshooting', link: '/' },
   { text: 'Video FX List', link: '/videofxlist' },
@@ -119,80 +121,10 @@ const frSidebar = [
   }
 ]
 
-const languageRedirectScript = `
-(function () {
-  if (typeof window === 'undefined') return;
-
-  const storageKey = 'vegTips-lang';
-  const path = window.location.pathname;
-  const search = window.location.search;
-  const hash = window.location.hash;
-  const params = new URLSearchParams(search);
-  const supported = ['en', 'zh', 'zh-hant', 'ja', 'ko', 'de', 'fr'];
-
-  // detect current locale from URL path (base-agnostic)
-  const match = path.match(/\/(zh-hant|zh|ja|ko|de|fr)(?:\/|$)/);
-  const currentLocale = match ? match[1] : 'en';
-
-  const isRoot = /\/(?:index\.html)?$/.test(path);
-  const isLocaleRoot = /\/(zh-hant|zh|ja|ko|de|fr)(?:\/(?:index\.html)?|$)/.test(path) && /\/(zh-hant|zh|ja|ko|de|fr)\/?(?:index\.html)?$/.test(path);
-  const isHome = isRoot || isLocaleRoot;
-
-  let preferred = localStorage.getItem(storageKey) || '';
-  const requested = params.get('lang');
-
-  if (requested && supported.includes(requested)) {
-    preferred = requested;
-    localStorage.setItem(storageKey, preferred);
-    params.delete('lang');
-  }
-
-  if (!preferred) {
-    const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-    if (browserLang.startsWith('zh-hant') || browserLang.startsWith('zh-tw') || browserLang.startsWith('zh-hk') || browserLang.startsWith('zh-mo')) preferred = 'zh-hant';
-    else if (browserLang.startsWith('zh')) preferred = 'zh';
-    else if (browserLang.startsWith('ja')) preferred = 'ja';
-    else if (browserLang.startsWith('ko')) preferred = 'ko';
-    else if (browserLang.startsWith('de')) preferred = 'de';
-    else if (browserLang.startsWith('fr')) preferred = 'fr';
-    else preferred = 'en';
-    localStorage.setItem(storageKey, preferred);
-  }
-
-  if (!isHome) return;
-
-  const targetLocale = supported.includes(preferred) ? preferred : 'en';
-  const targetPath = targetLocale === 'en' ? '/' : '/' + targetLocale + '/';
-
-  const needsRedirect = targetLocale !== currentLocale;
-  if (!needsRedirect) return;
-
-  const nextSearch = params.toString();
-  const nextUrl = targetPath + (nextSearch ? '?' + nextSearch : '') + hash;
-  window.location.replace(nextUrl);
-})();
-`
-
-const outlineDepthScript = `
-(function () {
-  if (typeof document === 'undefined') return;
-
-  try {
-    const key = 'vegTips-outline-depth';
-    const saved = localStorage.getItem(key);
-    const depth = saved && ['2', '3', '4'].includes(saved) ? saved : '2';
-    document.documentElement.dataset.outlineDepth = depth;
-    if (!saved) localStorage.setItem(key, depth);
-  } catch (err) {
-    document.documentElement.dataset.outlineDepth = '2';
-  }
-})();
-`
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   cleanUrls: true,
-  base: process.env.GITHUB_ACTIONS ? '/VegTips/' : '/',
+  base,
   vite: {
     publicDir: '../public'
   },
@@ -306,16 +238,8 @@ export default defineConfig({
   },
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-    [
-      'script',
-      {},
-      languageRedirectScript
-    ],
-    [
-      'script',
-      {},
-      outlineDepthScript
-    ]
+    ['script', { src: base + 'js/lang-redirect.js', defer: '' }],
+    ['script', { src: base + 'js/outline-depth.js', defer: '' }]
   ],
   themeConfig: {
     nav: enNav,
