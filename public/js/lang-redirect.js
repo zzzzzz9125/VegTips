@@ -8,30 +8,45 @@
   const params = new URLSearchParams(search);
   const supported = ['en', 'zh', 'zh-hant', 'ja', 'ko', 'de', 'fr'];
 
-  // Respect VitePress base (GitHub Pages uses /VegTips/, Netlify uses /)
-  const base = (() => {
-    const raw = (window.__VP_SITE_DATA__ && window.__VP_SITE_DATA__.site && window.__VP_SITE_DATA__.site.base) || '/';
-    const withSlash = raw.endsWith('/') ? raw : raw + '/';
-    return withSlash.startsWith('/') ? withSlash : '/' + withSlash;
+  const localeRE = /\/(zh-hant|zh|ja|ko|de|fr)(?:\/|$)/;
+  const localeMatch = path.match(localeRE);
+  const currentLocale = localeMatch ? localeMatch[1] : 'en';
+
+  // prefer base derived from script src to be accurate on GitHub Pages (/VegTips/) and Netlify root
+  const scriptBase = (() => {
+    const scripts = document.getElementsByTagName('script');
+    for (let i = scripts.length - 1; i >= 0; i -= 1) {
+      const src = scripts[i].getAttribute('src') || '';
+      if (src.includes('lang-redirect.js')) {
+        try {
+          const { pathname } = new URL(src, window.location.href);
+          const marker = '/js/lang-redirect.js';
+          const idx = pathname.lastIndexOf(marker);
+          if (idx >= 0) return pathname.slice(0, idx + 1);
+        } catch (e) {
+          return null;
+        }
+      }
+    }
+    return null;
   })();
-  const baseNoSlash = base.endsWith('/') ? base.slice(0, -1) : base;
 
-  const stripBase = (p) => {
-    if (p.startsWith(base)) return p.slice(base.length);
-    if (baseNoSlash && p.startsWith(baseNoSlash)) return p.slice(baseNoSlash.length);
-    return p;
-  };
+  // derive base path with trailing slash
+  const base = (() => {
+    if (scriptBase) return scriptBase;
+    if (localeMatch) return path.slice(0, localeMatch.index + 1);
+    const lastSlash = path.lastIndexOf('/');
+    if (lastSlash >= 0) {
+      const candidate = path.slice(0, lastSlash + 1);
+      return candidate || '/';
+    }
+    return '/';
+  })();
 
-  // Normalize path relative to base for locale detection
-  const relative = stripBase(path);
-  const relWithSlash = relative.startsWith('/') ? relative : '/' + relative;
-
-  // detect current locale from URL path (after base)
-  const match = relWithSlash.match(/^\/(zh-hant|zh|ja|ko|de|fr)(?:\/|$)/);
-  const currentLocale = match ? match[1] : 'en';
-
-  const isRoot = relWithSlash === '/' || relWithSlash === '/index.html';
-  const isLocaleRoot = /^(?:\/(zh-hant|zh|ja|ko|de|fr))(?:\/(?:index\.html)?|\/?$)/.test(relWithSlash);
+  const escapeRE = (s) => s.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+  const baseEscaped = escapeRE(base);
+  const isRoot = new RegExp(`^${baseEscaped}(?:index\\.html)?$`).test(path);
+  const isLocaleRoot = new RegExp(`^${baseEscaped}(?:zh-hant|zh|ja|ko|de|fr)\\/?(?:index\\.html)?$`).test(path);
   const isHome = isRoot || isLocaleRoot;
 
   let preferred = localStorage.getItem(storageKey) || '';
@@ -58,7 +73,7 @@
   if (!isHome) return;
 
   const targetLocale = supported.includes(preferred) ? preferred : 'en';
-  const basePath = base === '/' ? '/' : base;
+  const basePath = base.endsWith('/') ? base : base + '/';
   const targetPath = targetLocale === 'en' ? basePath : basePath + targetLocale + '/';
 
   const needsRedirect = targetLocale !== currentLocale;
