@@ -1,7 +1,5 @@
 import { defineConfig } from 'vitepress'
 
-const base = process.env.GITHUB_ACTIONS ? '/VegTips/' : '/'
-
 const enNav = [
   { text: 'Vegas Troubleshooting', link: '/' },
   { text: 'Video FX List', link: '/videofxlist' },
@@ -124,7 +122,7 @@ const frSidebar = [
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   cleanUrls: true,
-  base,
+  base: process.env.GITHUB_ACTIONS ? '/VegTips/' : '/',
   vite: {
     publicDir: '../public'
   },
@@ -238,8 +236,8 @@ export default defineConfig({
   },
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
-    ['script', { src: base + 'js/lang-redirect.js', defer: '' }],
-    ['script', { src: base + 'js/outline-depth.js', defer: '' }]
+    ['script', { src: '/js/language-redirect.js' }],
+    ['script', { src: '/js/outline-depth.js' }]
   ],
   themeConfig: {
     nav: enNav,
