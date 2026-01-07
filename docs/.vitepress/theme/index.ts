@@ -4,13 +4,15 @@ import type { EnhanceAppContext } from 'vitepress'
 import OutlineDepthToggle from './components/OutlineDepthToggle.vue'
 import VideoFxTable from './components/VideoFxTable.vue'
 import ClickToLoadImage from './components/ClickToLoadImage.vue'
+import GlobalFooterBar from './components/GlobalFooterBar.vue'
 import './style.css'
 
 export default {
   ...DefaultTheme,
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      'aside-outline-before': () => h(OutlineDepthToggle)
+      'aside-outline-before': () => h(OutlineDepthToggle),
+      'layout-bottom': () => h(GlobalFooterBar)
     })
   },
   enhanceApp({ app }: EnhanceAppContext) {

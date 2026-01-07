@@ -39,7 +39,7 @@ For the time being, I do not accept direct private inquiries about specific issu
 
 - When consulting this guide, it is recommended to use the table of contents to find your issue category and utilize the **`Ctrl + F`** search function to search for keywords or error codes for faster resolution. Paths mentioned in this article are generally expressed using environment variables, e.g., **`%localappdata%\VEGAS Pro\`**. **You can copy and paste the path text into the address bar of Windows File Explorer and press `Enter` to quickly navigate.** This article sometimes mentions specific build numbers for certain versions, e.g., `23 build 302`, where `302` is the build number. You can see the current build number on the loading screen when VEGAS starts. Content marked with **<u>underline</u>** contains hyperlinks.
 
-- This article is licensed under the **CC BY-NC-SA 4.0** license. When reproducing, adapting, or using this content in any form, please adhere to the principles of **Attribution, NonCommercial, and ShareAlike**. For details, please read the [Full License Text](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh).
+- This article is licensed under the **CC BY-NC-SA 4.0** license. When reproducing, adapting, or using this content in any form, please adhere to the principles of **Attribution, NonCommercial, and ShareAlike**. For details, please read the [Full License Text](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en).
 
 <br>
 
@@ -219,7 +219,7 @@ If you've tried almost all methods in this article (especially those in the [VEG
 
 Q: How to **localize** the VEGAS software interface (Chinese for example)?
 
-A: The VEGAS program internally includes 9 languages: "English, German, French, Portuguese, Spanish, Polish, Chinese, Japanese, Korean". However, the installer provided on the official website is the International Language version, containing only the first 5 languages listed, **excluding Chinese**. There are three localization paths:
+A: The VEGAS program internally includes 9 languages: `English, German, French, Portuguese, Spanish, Polish, Chinese, Japanese, Korean`. However, the installer provided on the official website is the International Language version, containing only the first 5 languages listed, **excluding Chinese**. There are three localization paths:
 
 1.  **Use a Chinese installer.** Before [purchasing](#xvi-software-purchase-channels), check the language support list to see if Chinese is included. For example, the version on the official website currently does not include Chinese, while versions provided by the Chinese agent and the Steam edition include Chinese. Otherwise, you must try the latter two methods.
 
@@ -252,7 +252,7 @@ Here, `23.0` and `19.0` represent the current VEGAS major version. The first lin
 
 <ImageOnDemand button-text="Load image" alt="Language Registry" src="img/vegtips/image004_language_reg.png" />
 
-If you installed the English version, the default value for `ULangID` is likely `409`. Change it to **`804` for Chinese**.
+If you installed the English version, the default value for `ULangID` is likely the hexadecimal value `409` (decimal `1033`). Change it to **`804` (decimal `2052`) for Chinese**.
 
 <small>
 For other language IDs, see Microsoft's documentation: <a href="https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid">https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid</a><br>
@@ -301,13 +301,13 @@ Q: VEGAS **crashes/freezes** at the "**Initializing GPU-accelerated video proces
 
 A: First, try reinstalling your graphics card drivers. If that doesn't work, try this registry fix. Open Registry Editor, find the value:**`IntelOpenCL64.dll`** under **`HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\OpenCL\Vendors`** and the value **`IntelOpenCL32.dll`** under **`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Khronos\OpenCL\Vendors`**. Change the data for both values **from `0` to `1`**, then restart VEGAS.
 
+
+
+
+
 <br>
 
 Q: VEGAS **crashes/freezes (Error code `0xC06D007F`)** at the "**Video plugin factory...**" step during startup?
-
-
-
-
 
 A: This step loads video plugins. It's often an issue with OFX video plugin scanning. Go to the OFX path: **`C:\Program Files\Common Files\OFX\Plugins\`, move out potentially problematic plugins from this folder, then try starting VEGAS**. Once it starts normally, you can try moving the files back or reinstalling the plugin. If you have specific error details, try to find keywords related to the plugin name.  
 **<small>(Prioritize checking Red Giant Universe plugins, as they cause startup crashes for many users.)</small>**
@@ -576,7 +576,7 @@ A: This happens when `4:3` media is imported into a `16:9` project with certain 
 
 <ImageOnDemand button-text="Load image" alt="Video Profile Button" src="img/vegtips/image010_profile_button.png" />
 
-<p align="center">Note: "Pixel aspect ratio" is a mis-translation; it should be "Pixel width:height ratio".</p>
+
 
 If you get "**Unknown error occurred while trying to save video profile**":
 
@@ -895,7 +895,7 @@ Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--15038
 
 Q: Error when trying to **render m2ts**: **`The COM object could not be initialized.`**
 
-A: Starting with **Win11 24H2**, Microsoft removed the **AC-3 codec** that VEGAS and other software depend on. On a **fresh install of Win11 24H2 or later**, this codec is missing, causing VEGAS to **fail decoding AC-3 audio in m2ts files** and **fail rendering m2ts**. Refer to [**this English tutorial**](https://www.elevenforum.com/t/ac-3-dolby-digital-codec-no-longer-included-with-windows-11-version-24h2.25597/post-459390) to add the AC-3 codec back, or **upgrade to VP22 final (`22 build 250`) or above**, which includes a new AC-3 codec.
+A: Starting with **Win11 24H2**, Microsoft removed the **AC-3 codec** that VEGAS and other software depend on. On a **fresh install of Win11 24H2 or later**, this codec is missing, causing VEGAS to **fail decoding AC-3 audio in m2ts files** and **fail rendering m2ts**. Refer to [**this tutorial**](https://www.elevenforum.com/t/ac-3-dolby-digital-codec-no-longer-included-with-windows-11-version-24h2.25597/post-459390) to add the AC-3 codec back, or **upgrade to VP22 final (`22 build 250`) or above**, which includes a new AC-3 codec.
 
 <small>
 Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--147963/">https://www.vegascreativesoftware.info/us/forum/posts--147963/</a><br>
@@ -1161,11 +1161,8 @@ VEGAS has three main text tools: Titles & Text, (legacy) Text, ProType Titler. `
 Access [Internal Preferences](#accessing-vegas-internal-preferences), search for `Text Media Generator GUID`. Change its value to the GUID of your preferred tool (default is Titles & Text).
 
 GUIDs:
-
 - Titles & Text: `{Svfx:com.vegascreativesoftware:titlesandtext}`
-
 - (legacy) Text: `{0FE8789D-0C47-442A-AFB0-0DAF97669317}`
-
 - ProType Titler: `{53FC0B44-BD58-4716-A90F-3EB43168DE81}`
 
 Knowing the GUID, you can set it to any Media Generator FX's GUID, making "Insert Text Media" create that generator directly.
@@ -1183,9 +1180,7 @@ The VEGAS Pro Video FX List summarizes all available **`Video FX`** in VEGAS Pro
 ### VEGAS Plugin Cache Files
 
 - Scan Cache: `%localappdata%\VEGAS Pro\23.0\svfx_plugin_cache.bin`
-
 - Name Cache: `%localappdata%\VEGAS Pro\23.0\plugin_manager_cache.bin`
-
 - Thumbnail Cache: `%localappdata%\VEGAS Pro\23.0\FX Thumbnails\fx_thumbnail_cache.bin`
 
 Where `23.0` is your VEGAS version. Plugin cache stores scanned plugin/FX info. VEGAS stuck at "Creating video plugin factory..." is **regenerating plugin cache**, scanning for new plugins.
@@ -1195,13 +1190,11 @@ Where `23.0` is your VEGAS version. Plugin cache stores scanned plugin/FX info. 
 ### OFX Related Paths
 
 - **Common OFX Path**: `C:\Program Files\Common Files\OFX\Plugins\`
-
 - **VEGAS-specific OFX Path**: `...<VEGAS install path>\OFX Video Plug-Ins\`
 
 Note: An OFX plugin may consist of the plugin core and the OFX interface files. The OFX path is for the interface files. Without them, VEGAS **won't scan** the plugin. Common OFX path plugins are also scanned by other OFX-supporting software (Premiere Pro, DaVinci Resolve). The VEGAS-specific path is scanned only by that VEGAS version.
 
 OFX interface file structure:
-
 ```
 <OFX Path>/
 ├── xxx.ofx.bundle/
@@ -1553,7 +1546,7 @@ Original project link: https://sr.ht/~mrpapersonic/msvpvf/
 
 This tool modifies the version identifier inside the project file to downgrade it. However, it doesn't adjust the project's structure. Therefore, even if the version identifier is lowered, the file will often show as corrupted and fail to open. The author introduces the concept of "generations", suggesting downgrade compatibility only exists within the same generation: VEGAS projects cannot be downgraded across generations, only within the same generation. Based on the author's concept and my testing, generation boundaries are roughly: `8 - 11 | 12 - 14 | 15 - 16 | 17 | 18 | 19 - 21 build 208 | 21 build 300 - 22 | 23`. <small>(Differences between minor build numbers can create further splits, so this is approximate.)</small> The middle range is quite fragmented, making this tool of limited practical use, though it works for specific version pairs.
 
-My localized/compiled **VEGAS Project File Version Downgrade Tool** download: https://github.com/zzzzzz9125/msvpvf/releases/
+**VEGAS Project File Version Downgrade Tool** compiled by me download link: https://github.com/zzzzzz9125/msvpvf/releases/
 
 The following methods aren't true version downgrades but transfer project content.
 

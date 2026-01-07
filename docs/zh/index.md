@@ -39,7 +39,7 @@ For the time being, I do not accept direct private inquiries about specific issu
 
 - 在查阅本文时，建议参考章节目录分类查询问题，并合理运用 **`Ctrl + F`** 查找功能，搜索问题或报错的关键字和报错码，以便于快速找到解决问题的办法。本文所给出的路径一般以环境变量的方式表示，比如 **`%localappdata%\VEGAS Pro\`**。**将路径文本复制粘贴到 Windows 文件资源管理器的地址栏后按 `Enter` 键，即可实现快速跳转。**本文有时会提及特定版本的特定小版本号，比如 `23 build 302`，此处 `302` 即为小版本号。在 Vegas 的读条启动界面，就可以看到当前版本的小版本号。本文标有 **<u>下划线</u>** 的内容，可以进行超链接跳转。
 
-- 本文采用 **CC BY-NC-SA 4.0** 协议进行授权。转载、演绎或进行任何形式的使用时，请务必遵守 **署名、非商业、相同方式共享** 的原则。详情请阅读 [许可协议全文](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)。
+- 本文采用 **CC BY-NC-SA 4.0** 协议进行授权。转载、演绎或进行任何形式的使用时，请务必遵守 **署名、非商业、相同方式共享** 的原则。详情请阅读 [许可协议全文](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)。
 
 <br>
 
@@ -219,7 +219,7 @@ VEGAS 版本更新历史：https://www.vegascreativesoftware.info/us/forum/posts
 
 Q：Vegas 软件本体**如何汉化**？
 
-A：Vegas 软件程序内部一共自带“英德法葡西波中日韩”9 种语言，但是官网提供的 Vegas 本体安装包，就只有国际语言版，即上述的前 5 种语言，**不含中文**。有以下三种汉化途径：
+A：Vegas 软件程序内部一共自带 `英德法葡西波中日韩` 9 种语言，但是官网提供的 Vegas 本体安装包，就只有国际语言版，即上述的前 5 种语言，**不含中文**。有以下三种汉化途径：
 
 1. **使用中文安装包**。建议在 [入正](#十六软件入正渠道) 前仔细查看语言支持列表，看是否含有中文。比如目前官网提供的版本不包含中文，而国内代理思杰马克丁提供的版本以及 Steam 版均含中文。否则，只能尝试后两种途径。
 
@@ -252,7 +252,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 <ImageOnDemand alt="语言注册表" src="img/zh/vegtips/image004_language_reg.png" />
 
-若之前安装的是英文版，则 `ULangID` 的默认值应该是 `409`。将其**改成中文的 `804`** 即可。
+若之前安装的是英文版，则 `ULangID` 的默认值应该是十六进制的 `409`（十进制 `1033`）。将其**改成中文的十六进制的 `804`（十进制 `2052`）**即可。
 
 <small>
 其他语言编号详见微软的文档：<a href="https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid">https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid</a><br>
@@ -1045,7 +1045,7 @@ A：该 bug 已于 vv19 修复。以下是可供低版本尝试的几种解决�
 
 <br>
 
-Q：渲染模板中，**wav 和 avi 渲染模板的输出格式变成了.wdp**？
+Q：渲染模板中，**`wav` 和 `avi` 渲染模板的输出格式变成了 `.wdp`**？
 
 A：目前已知的有效解决办法只有**通过 Windows 更新工具重装一遍系统**。
 
@@ -1161,12 +1161,9 @@ A：问题在于当前文本框内的**富文本包含多种文本格式（如�
 进入 [内部首选项](#vegas-内部首选项的进入方法)，搜索并找到 `Text Media Generator GUID` 这一栏，将该值修改为三个文本工具所对应的 GUID 值。（默认为“字幕和文字”的 GUID 值）
 
 三个文本工具所对应的 GUID 值如下：
-
-字幕和文字：`{Svfx:com.vegascreativesoftware:titlesandtext}`
-
-(自带)文字：`{0FE8789D-0C47-442A-AFB0-0DAF97669317}`
-
-PTT 字幕：`{53FC0B44-BD58-4716-A90F-3EB43168DE81}`
+- 字幕和文字：`{Svfx:com.vegascreativesoftware:titlesandtext}`
+- (自带)文字：`{0FE8789D-0C47-442A-AFB0-0DAF97669317}`
+- PTT 字幕：`{53FC0B44-BD58-4716-A90F-3EB43168DE81}`
 
 当然，在已知对应 GUID 的情况下，也可以填写任意一个媒体生成器 FX 的 GUID。这样的话，点击“插入文本媒体”按钮时，就能够直接生成其对应的媒体生成器事件。
 
@@ -1183,9 +1180,7 @@ VEGAS Pro 视频效果名称速查表归纳整理了 VEGAS Pro 中的所有可�
 ### Vegas 插件缓存文件
 
 - 扫描缓存：`%localappdata%\VEGAS Pro\23.0\svfx_plugin_cache.bin`
-
 - 名称缓存：`%localappdata%\VEGAS Pro\23.0\plugin_manager_cache.bin`
-
 - 缩略图：`%localappdata%\VEGAS Pro\23.0\FX Thumbnails\fx_thumbnail_cache.bin`
 
 其中 `23.0` 代表当前的 Vegas 版本号。插件缓存是 Vegas 用来存储已扫描的插件和 FX 效果的信息的。Vegas 界面如果卡在 `正在创建视频插件工厂…` 这一步，就表明是在**重新生成插件缓存**，会自动扫描新安装的插件。
@@ -1195,13 +1190,11 @@ VEGAS Pro 视频效果名称速查表归纳整理了 VEGAS Pro 中的所有可�
 ### OFX 相关路径
 
 **公共 OFX 路径**：`C:\Program Files\Common Files\OFX\Plugins\`
-
 **独立 OFX 路径**：`...<Vegas 安装路径>\OFX Video Plug-Ins\`
 
 注意，OFX 插件本身可能会包括两部分：插件本体与 OFX 接口。OFX 路径指的是 OFX 接口文件所存放的路径。如果里面没有对应文件，Vegas 将**扫描不到**对应的插件。公共 OFX 路径里的 OFX 效果，也会被 PR、达芬奇等其他支持 OFX 的软件扫描到；而 Vegas 的独立 OFX 路径，只会被当前版本的 Vegas 扫描到。
 
 OFX 接口文件的路径结构如下：
-
 ```
 <OFX 路径>/
 ├── xxx.ofx.bundle/
@@ -1269,7 +1262,7 @@ A：当安装的插件过多时，低版本 Vegas 一使用插件搜索框就容
 <br>
 
 Q：**使用自带的 AI 效果，提示要安装 VEGAS 深度学习模型组件**？  
-`This plug-in requires additional data. Please log into your Service Center account and download the Deep Learning Models component from the My Products section.`
+`此插件需要其他数据。请登录您的服务中心帐户并从“My Products”部分下载深度学习模型组件。`
 
 A：对于高版本自带的 AI 效果，**需要额外安装对应版本的深度学习模型（Deep Learning Models）**才能使用。
 
@@ -1447,6 +1440,8 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 
 3. 复制该扩展所需的所有 `.dll` 文件，直接粘贴到这个文件夹内。比如：`C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`。
     * 有些脚本和扩展也可能有 `32*32` 的 `.png` 图标文件，通常情况下你可以选择是否放入。图标文件可用于在 Vegas 菜单栏和工具栏中区分不同的脚本和扩展。
+
+4. 如果某些脚本/扩展需要额外的安装包，请根据他们给出的安装步骤来。
 
 <br>
 

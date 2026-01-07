@@ -12,6 +12,36 @@ const zhNav = [
   { text: '超级粘贴! 扩展', link: '/zh/ultrapaste' }
 ]
 
+const zhHantNav = [
+  { text: 'Vegas 疑難雜症', link: '/zh-hant/' },
+  { text: '影片 FX 效果列表', link: '/zh-hant/videofxlist' },
+  { text: 'UltraPaste! 擴充套件', link: '/zh-hant/ultrapaste' }
+]
+
+const jaNav = [
+  { text: 'Vegas トラブルシューティング', link: '/ja/' },
+  { text: 'ビデオ FX リスト', link: '/ja/videofxlist' },
+  { text: 'UltraPaste! 拡張機能', link: '/ja/ultrapaste' }
+]
+
+const koNav = [
+  { text: 'Vegas 문제 해결', link: '/ko/' },
+  { text: 'Video FX 목록', link: '/ko/videofxlist' },
+  { text: 'UltraPaste! 확장', link: '/ko/ultrapaste' }
+]
+
+const deNav = [
+  { text: 'Vegas Fehlerbehebung', link: '/de/' },
+  { text: 'Video‑FX‑Liste', link: '/de/videofxlist' },
+  { text: 'UltraPaste! Erweiterung', link: '/de/ultrapaste' }
+]
+
+const frNav = [
+  { text: 'Vegas Dépannage', link: '/fr/' },
+  { text: 'Liste des FX vidéo', link: '/fr/videofxlist' },
+  { text: 'UltraPaste! Extension', link: '/fr/ultrapaste' }
+]
+
 const enSidebar = [
   {
     text: 'Articles',
@@ -34,6 +64,61 @@ const zhSidebar = [
   }
 ]
 
+const zhHantSidebar = [
+  {
+    text: '文章',
+    items: [
+      { text: 'Vegas 疑難雜症', link: '/zh-hant/' },
+      { text: '影片 FX 效果列表', link: '/zh-hant/videofxlist' },
+      { text: 'UltraPaste! 擴充套件', link: '/zh-hant/ultrapaste' }
+    ]
+  }
+]
+
+const jaSidebar = [
+  {
+    text: '記事',
+    items: [
+      { text: 'Vegas トラブルシューティング', link: '/ja/' },
+      { text: 'Video FX リスト', link: '/ja/videofxlist' },
+      { text: 'UltraPaste! 拡張機能', link: '/ja/ultrapaste' }
+    ]
+  }
+]
+
+const koSidebar = [
+  {
+    text: '문서',
+    items: [
+      { text: 'Vegas 문제 해결', link: '/ko/' },
+      { text: 'Video FX 목록', link: '/ko/videofxlist' },
+      { text: 'UltraPaste! 확장', link: '/ko/ultrapaste' }
+    ]
+  }
+]
+
+const deSidebar = [
+  {
+    text: 'Artikel',
+    items: [
+      { text: 'Vegas Fehlerbehebung', link: '/de/' },
+      { text: 'Video‑FX‑Liste', link: '/de/videofxlist' },
+      { text: 'UltraPaste! Erweiterung', link: '/de/ultrapaste' }
+    ]
+  }
+]
+
+const frSidebar = [
+  {
+    text: 'Articles',
+    items: [
+      { text: 'Vegas Dépannage', link: '/fr/' },
+      { text: 'Liste des FX vidéo', link: '/fr/videofxlist' },
+      { text: 'UltraPaste! Extension', link: '/fr/ultrapaste' }
+    ]
+  }
+]
+
 const languageRedirectScript = `
 (function () {
   if (typeof window === 'undefined') return;
@@ -43,13 +128,20 @@ const languageRedirectScript = `
   const search = window.location.search;
   const hash = window.location.hash;
   const params = new URLSearchParams(search);
-  const isZhPath = path.startsWith('/zh/') || path === '/zh';
-  const isHome = path === '/' || path === '/index.html' || path === '/zh/' || path === '/zh';
+  const supported = ['en', 'zh', 'zh-hant', 'ja', 'ko', 'de', 'fr'];
 
-  let preferred = localStorage.getItem(storageKey);
+  // detect current locale from URL path (base-agnostic)
+  const match = path.match(/\/(zh-hant|zh|ja|ko|de|fr)(?:\/|$)/);
+  const currentLocale = match ? match[1] : 'en';
+
+  const isRoot = /\/(?:index\.html)?$/.test(path);
+  const isLocaleRoot = /\/(zh-hant|zh|ja|ko|de|fr)(?:\/(?:index\.html)?|$)/.test(path) && /\/(zh-hant|zh|ja|ko|de|fr)\/?(?:index\.html)?$/.test(path);
+  const isHome = isRoot || isLocaleRoot;
+
+  let preferred = localStorage.getItem(storageKey) || '';
   const requested = params.get('lang');
 
-  if (requested === 'zh' || requested === 'en') {
+  if (requested && supported.includes(requested)) {
     preferred = requested;
     localStorage.setItem(storageKey, preferred);
     params.delete('lang');
@@ -57,17 +149,22 @@ const languageRedirectScript = `
 
   if (!preferred) {
     const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-    preferred = isZhPath || browserLang.startsWith('zh') ? 'zh' : 'en';
+    if (browserLang.startsWith('zh-hant') || browserLang.startsWith('zh-tw') || browserLang.startsWith('zh-hk') || browserLang.startsWith('zh-mo')) preferred = 'zh-hant';
+    else if (browserLang.startsWith('zh')) preferred = 'zh';
+    else if (browserLang.startsWith('ja')) preferred = 'ja';
+    else if (browserLang.startsWith('ko')) preferred = 'ko';
+    else if (browserLang.startsWith('de')) preferred = 'de';
+    else if (browserLang.startsWith('fr')) preferred = 'fr';
+    else preferred = 'en';
     localStorage.setItem(storageKey, preferred);
   }
 
   if (!isHome) return;
 
-  const targetLocale = preferred === 'zh' ? 'zh' : 'en';
-  const onZh = isZhPath;
-  const targetPath = targetLocale === 'zh' ? '/zh/' : '/';
+  const targetLocale = supported.includes(preferred) ? preferred : 'en';
+  const targetPath = targetLocale === 'en' ? '/' : '/' + targetLocale + '/';
 
-  const needsRedirect = (targetLocale === 'zh' && !onZh) || (targetLocale === 'en' && onZh);
+  const needsRedirect = targetLocale !== currentLocale;
   if (!needsRedirect) return;
 
   const nextSearch = params.toString();
@@ -123,6 +220,86 @@ export default defineConfig({
         docFooter: {
           prev: '上一页',
           next: '下一页'
+        }
+      }
+    },
+    'zh-hant': {
+      label: '繁體中文',
+      lang: 'zh-Hant',
+      title: 'VegTips',
+      description: 'VEGAS Pro 的實用技巧',
+      link: '/zh-hant/',
+      themeConfig: {
+        nav: zhHantNav,
+        sidebar: zhHantSidebar,
+        outlineTitle: '頁面導覽',
+        docFooter: {
+          prev: '上一頁',
+          next: '下一頁'
+        }
+      }
+    },
+    ja: {
+      label: '日本語',
+      lang: 'ja-JP',
+      title: 'VegTips',
+      description: 'VEGAS Pro の実用的なヒント',
+      link: '/ja/',
+      themeConfig: {
+        nav: jaNav,
+        sidebar: jaSidebar,
+        outlineTitle: 'ページナビゲーション',
+        docFooter: {
+          prev: '前へ',
+          next: '次へ'
+        }
+      }
+    },
+    ko: {
+      label: '한국어',
+      lang: 'ko-KR',
+      title: 'VegTips',
+      description: 'VEGAS Pro 실용 팁',
+      link: '/ko/',
+      themeConfig: {
+        nav: koNav,
+        sidebar: koSidebar,
+        outlineTitle: '페이지 탐색',
+        docFooter: {
+          prev: '이전',
+          next: '다음'
+        }
+      }
+    },
+    de: {
+      label: 'Deutsch',
+      lang: 'de-DE',
+      title: 'VegTips',
+      description: 'Praktische Tipps für VEGAS Pro',
+      link: '/de/',
+      themeConfig: {
+        nav: deNav,
+        sidebar: deSidebar,
+        outlineTitle: 'Seitennavigation',
+        docFooter: {
+          prev: 'Zurück',
+          next: 'Weiter'
+        }
+      }
+    },
+    fr: {
+      label: 'Français',
+      lang: 'fr-FR',
+      title: 'VegTips',
+      description: 'Astuces pratiques pour VEGAS Pro',
+      link: '/fr/',
+      themeConfig: {
+        nav: frNav,
+        sidebar: frSidebar,
+        outlineTitle: 'Navigation de page',
+        docFooter: {
+          prev: 'Précédent',
+          next: 'Suivant'
         }
       }
     }

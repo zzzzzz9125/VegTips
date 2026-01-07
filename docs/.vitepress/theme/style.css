@@ -1,3 +1,81 @@
+/* Global font family and weight handling for multilingual support */
+:root {
+  /* Base font family for VitePress */
+  --vp-font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial,
+    /* Pan-Unicode fallback (if installed) */
+    "Noto Sans",
+    /* CJK specific fallbacks to ensure proper glyph + bold availability */
+    "Noto Sans CJK SC", "Noto Sans SC", "PingFang SC", "Microsoft YaHei",
+    "Hiragino Sans", "Noto Sans JP", "Meiryo", "Yu Gothic", "YuGothic",
+    "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic",
+    "WenQuanYi Micro Hei",
+    sans-serif;
+}
+
+/* Prefer platform native CJK per language for better metrics and weight mapping */
+html:lang(zh), body:lang(zh) {
+  --vp-font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial,
+    "PingFang SC", "Noto Sans CJK SC", "Noto Sans SC", "Microsoft YaHei",
+    "WenQuanYi Micro Hei", sans-serif;
+}
+html:lang(ja), body:lang(ja) {
+  --vp-font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial,
+    "Hiragino Sans", "Noto Sans JP", "Meiryo", "Yu Gothic", "YuGothic",
+    sans-serif;
+}
+html:lang(ko), body:lang(ko) {
+  --vp-font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial,
+    "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", "Nanum Gothic",
+    sans-serif;
+}
+
+/* Ensure browser can synthesize missing bold/italic when a face is absent */
+html, body, .vp-doc {
+  font-synthesis: weight style;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Make bold more distinguishable across platforms (esp. some KR stacks) */
+.vp-doc b,
+.vp-doc strong {
+  font-weight: 700;
+}
+
+.global-footer {
+  margin-top: 2rem;
+  padding: 1.25rem 1rem 2rem;
+  border-top: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.global-footer__label {
+  white-space: nowrap;
+}
+
+.global-footer__link {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.global-footer__link:hover {
+  text-decoration: underline;
+}
+
+.global-footer__sep {
+  color: var(--vp-c-text-3, var(--vp-c-text-2));
+}
+
 .outline-depth-toggle {
   display: flex;
   flex-direction: column;

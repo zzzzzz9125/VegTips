@@ -41,8 +41,7 @@ const props = withDefaults(
     buttonText?: string
   }>(),
   {
-    alt: '',
-    buttonText: '点击加载图片'
+    alt: ''
   }
 )
 
@@ -66,7 +65,19 @@ const imageSrc = computed(() => {
   return withBase(normalizedPath)
 })
 
-const buttonLabel = computed(() => props.buttonText || '点击加载图片')
+import { useData } from 'vitepress'
+const { lang } = useData()
+
+const buttonLabel = computed(() => {
+  if (props.buttonText) return props.buttonText
+  const lv = (lang.value || '').toLowerCase()
+  if (lv.startsWith('zh')) return '点击加载图片'
+  if (lv.startsWith('ja')) return '画像を読み込む'
+  if (lv.startsWith('ko')) return '이미지 불러오기'
+  if (lv.startsWith('de')) return 'Bild laden'
+  if (lv.startsWith('fr')) return 'Charger l’image'
+  return 'Load image'
+})
 
 const handleImageError = (event: Event) => {
   const img = event.target as HTMLImageElement

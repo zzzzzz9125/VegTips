@@ -224,10 +224,20 @@ let activeMove: ((e: PointerEvent) => void) | null = null
 let activeStop: (() => void) | null = null
 
 const isZh = computed(() => (lang.value || '').toLowerCase().startsWith('zh'))
+const currentLocale = computed(() => {
+  const lv = (lang.value || '').toLowerCase()
+  if (lv.startsWith('zh')) return 'zh'
+  if (lv.startsWith('ja')) return 'ja'
+  if (lv.startsWith('ko')) return 'ko'
+  if (lv.startsWith('de')) return 'de'
+  if (lv.startsWith('fr')) return 'fr'
+  return 'en'
+})
 
-const messages = computed<Messages>(() =>
-  isZh.value
-    ? {
+const messages = computed<Messages>(() => {
+  switch (currentLocale.value) {
+    case 'zh':
+      return {
         searchLabel: '搜索',
         searchPlaceholder: '按名称 / UID / 分组搜索',
         groupLabel: '大分组',
@@ -259,7 +269,140 @@ const messages = computed<Messages>(() =>
         },
         uidToggle: '显示 UID 列'
       }
-    : {
+    case 'ja':
+      return {
+        searchLabel: '検索',
+        searchPlaceholder: '名前 / UID / グループで検索',
+        groupLabel: 'カテゴリ',
+        allGroups: 'すべてのカテゴリ',
+        typesLabel: 'タイプフィルター',
+        resetFilters: 'フィルターをリセット',
+        loading: '読み込み中…',
+        loadFailed: '読み込みに失敗しました',
+        items: '件',
+        colChineseName: '中国語名',
+        colEnglishName: '英語名',
+        colAlias: '別名',
+        colGroup: 'グループ',
+        colSubGroup: 'サブグループ',
+        colTypes: 'タイプ',
+        colUid: 'UID',
+        unknown: '不明',
+        typeLabels: {
+          videoFx: 'ビデオ FX',
+          transitionFx: 'トランジション FX',
+          generatorFx: 'ジェネレーター FX',
+          compositeFx: 'コンポジット FX'
+        },
+        typeShort: {
+          videoFx: 'V',
+          transitionFx: 'T',
+          generatorFx: 'G',
+          compositeFx: 'C'
+        },
+        uidToggle: 'UID 列を表示'
+      }
+    case 'ko':
+      return {
+        searchLabel: '검색',
+        searchPlaceholder: '이름 / UID / 그룹으로 검색',
+        groupLabel: '카테고리',
+        allGroups: '모든 카테고리',
+        typesLabel: '유형 필터',
+        resetFilters: '필터 초기화',
+        loading: '로드 중…',
+        loadFailed: '로드 실패',
+        items: '개',
+        colChineseName: '중국어 이름',
+        colEnglishName: '영문 이름',
+        colAlias: '별칭',
+        colGroup: '그룹',
+        colSubGroup: '하위 그룹',
+        colTypes: '유형',
+        colUid: 'UID',
+        unknown: '알 수 없음',
+        typeLabels: {
+          videoFx: '비디오 FX',
+          transitionFx: '트랜지션 FX',
+          generatorFx: '제너레이터 FX',
+          compositeFx: '컴포지트 FX'
+        },
+        typeShort: {
+          videoFx: 'V',
+          transitionFx: 'T',
+          generatorFx: 'G',
+          compositeFx: 'C'
+        },
+        uidToggle: 'UID 열 표시'
+      }
+    case 'de':
+      return {
+        searchLabel: 'Suche',
+        searchPlaceholder: 'Suche nach Name / UID / Gruppe',
+        groupLabel: 'Kategorie',
+        allGroups: 'Alle Kategorien',
+        typesLabel: 'Typfilter',
+        resetFilters: 'Filter zurücksetzen',
+        loading: 'Lade Liste…',
+        loadFailed: 'Laden fehlgeschlagen',
+        items: 'Einträge',
+        colChineseName: 'Chinesischer Name',
+        colEnglishName: 'Name',
+        colAlias: 'Alias',
+        colGroup: 'Gruppe',
+        colSubGroup: 'Untergruppe',
+        colTypes: 'Typen',
+        colUid: 'UID',
+        unknown: 'Unbekannt',
+        typeLabels: {
+          videoFx: 'Video FX',
+          transitionFx: 'Transition FX',
+          generatorFx: 'Generator FX',
+          compositeFx: 'Composite FX'
+        },
+        typeShort: {
+          videoFx: 'V',
+          transitionFx: 'T',
+          generatorFx: 'G',
+          compositeFx: 'C'
+        },
+        uidToggle: 'UID-Spalte anzeigen'
+      }
+    case 'fr':
+      return {
+        searchLabel: 'Recherche',
+        searchPlaceholder: 'Rechercher par nom / UID / groupe',
+        groupLabel: 'Catégorie',
+        allGroups: 'Toutes les catégories',
+        typesLabel: 'Filtres de type',
+        resetFilters: 'Réinitialiser les filtres',
+        loading: 'Chargement…',
+        loadFailed: 'Échec du chargement',
+        items: 'éléments',
+        colChineseName: 'Nom chinois',
+        colEnglishName: 'Nom',
+        colAlias: 'Alias',
+        colGroup: 'Groupe',
+        colSubGroup: 'Sous-groupe',
+        colTypes: 'Types',
+        colUid: 'UID',
+        unknown: 'Inconnu',
+        typeLabels: {
+          videoFx: 'FX vidéo',
+          transitionFx: 'FX de transition',
+          generatorFx: 'FX générateur',
+          compositeFx: 'FX composite'
+        },
+        typeShort: {
+          videoFx: 'V',
+          transitionFx: 'T',
+          generatorFx: 'G',
+          compositeFx: 'C'
+        },
+        uidToggle: 'Afficher la colonne UID'
+      }
+    default:
+      return {
         searchLabel: 'Search',
         searchPlaceholder: 'Search by name / UID / group',
         groupLabel: 'Category',
@@ -291,7 +434,8 @@ const messages = computed<Messages>(() =>
         },
         uidToggle: 'Show UID column'
       }
-)
+  }
+})
 
 const groupOptions = computed(() => {
   const set = new Set<string>()
