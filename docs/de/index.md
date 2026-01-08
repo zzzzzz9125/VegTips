@@ -266,7 +266,7 @@ Ein weiteres nützliches Tool: <code>Vegas Language Changer</code>: <a href="htt
 
 Das gleiche Prinzip gilt für andere MAGIX-Software wie ACID Pro.
 
-Nachdem VEGAS erfolgreich gestartet wurde, wenn die Namen der eingebauten Video-FX immer noch auf Englisch sind, können Sie versuchen, den [Plugin-Cache zu löschen](#x-video-plugin-bezogene-q-a).
+Nachdem VEGAS erfolgreich gestartet wurde, wenn die Namen der eingebauten Video-FX immer noch auf Englisch sind, können Sie versuchen, den [Plugin-Cache zu löschen](#video-plugin-q-a).
 
 <br>
 

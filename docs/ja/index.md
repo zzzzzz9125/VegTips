@@ -266,7 +266,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 同じ原理が ACID Pro などの他の MAGIX ソフトウェアにも適用されます。
 
-VEGAS の起動に成功した後、組み込みビデオ FX の名前がまだ英語のままの場合は、[プラグインキャッシュのクリア](#x-ビデオプラグイン関連-q-a) を試みることができます。
+VEGAS の起動に成功した後、組み込みビデオ FX の名前がまだ英語のままの場合は、[プラグインキャッシュのクリア](#ビデオプラグイン-q-a) を試みることができます。
 
 <br>
 
