@@ -108,9 +108,9 @@ Install and use  `Sony Preset Manager`.
 
 ### Accessing VEGAS Internal Preferences
 
-- VP18 and above: Hold **`Shift`**, then go to the top menu **`Options -> Internal`**.
+- VP18+: Hold **`Shift`**, then go to the top menu **`Options -> Internal`**.
 
-- VP18 and below: Hold **`Shift`**, then go to the top menu **`Options -> Preferences`**, switch to the **`Internal`** tab.
+- VP17-: Hold **`Shift`**, then go to the top menu **`Options -> Preferences`**, switch to the **`Internal`** tab.
 
 <br>
 
