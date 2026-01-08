@@ -52,7 +52,7 @@ title: UltraPaste! 拡張機能
 1.  [Releases](https://github.com/zzzzzz9125/UltraPaste/releases) から最新の .zip ファイルをダウンロードし、解凍します。`UltraPaste.dll`<small>（`Sony VEGAS Pro 13` の場合は `UltraPaste_13.dll`）</small>と `UltraPaste.png` を選択し、コピーして拡張機能フォルダに貼り付けます：
   - `C:\ProgramData\Vegas Pro\Application Extensions\`
   - または Sony 版の場合：`C:\ProgramData\Sony\Vegas Pro\Application Extensions\`
-  - 拡張機能のインストール方法がわからない場合は、[こちら](/index#スクリプトまたは拡張機能をインストールする一般的な手順)をクリックしてください。
+  - 拡張機能のインストール方法がわからない場合は、[こちら](/ja/#スクリプトまたは拡張機能をインストールする一般的な手順)をクリックしてください。
 
 2.  インストール後、`ツール -> UltraPaste!` からドッキング可能な拡張機能ウィンドウを見つけることができます。
 

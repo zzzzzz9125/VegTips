@@ -52,7 +52,7 @@ title: 超級貼上 UltraPaste 擴充功能
 1. 前往 [Releases](https://github.com/zzzzzz9125/UltraPaste/releases) 下載最新的壓縮檔並解壓縮。選擇 `UltraPaste.dll`<small>（如果是 `Sony VEGAS Pro 13` 的話就是 `UltraPaste_13.dll`）</small> 和 `UltraPaste.png` 並複製，貼上到擴充功能資料夾：
   - `C:\ProgramData\Vegas Pro\Application Extensions\`  
   - 或是 Sony 版的 `C:\ProgramData\Sony\Vegas Pro\Application Extensions\`
-  - 如果你不知道如何安裝擴充功能的話，點選[這裡](/index#安裝腳本或擴充功能時的一般步驟)
+  - 如果你不知道如何安裝擴充功能的話，點選[這裡](/zh-hant/#安裝腳本或擴充功能時的一般步驟)
 
 2. 安裝完畢後，可透過 `工具 -> 超級貼上!` 中找到可停駐的擴充功能視窗。
 

@@ -52,7 +52,7 @@ title: UltraPaste! 확장
 1.  [릴리스](https://github.com/zzzzzz9125/UltraPaste/releases)에서 최신 .zip 파일을 다운로드하고 압축을 풉니다. `UltraPaste.dll`<small>(`Sony VEGAS Pro 13`의 경우 `UltraPaste_13.dll`)</small>과 `UltraPaste.png`를 선택하여 복사하고, 다음 확장 폴더에 붙여넣습니다:
   - `C:\ProgramData\Vegas Pro\Application Extensions\`
   - 또는 Sony 버전의 경우: `C:\ProgramData\Sony\Vegas Pro\Application Extensions\`
-  - 확장을 설치하는 방법을 모르신다면 [여기](/index#일반적인-스크립트-또는-확장-설치-단계)를 클릭하세요.
+  - 확장을 설치하는 방법을 모르신다면 [여기](/ko/#스크립트-또는-확장-설치-일반-단계)를 클릭하세요.
 
 2.  설치 후, `도구 -> UltraPaste!`에서 도킹 가능한 확장 창을 찾을 수 있습니다.
 

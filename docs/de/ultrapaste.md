@@ -52,7 +52,7 @@ Unterstützte Versionen: Sony Vegas Pro 13 – Magix Vegas Pro 22
 1.  Gehen Sie zu [Releases](https://github.com/zzzzzz9125/UltraPaste/releases), um die neueste .zip-Datei herunterzuladen und zu entpacken. Wählen Sie `UltraPaste.dll` <small>(oder `UltraPaste_13.dll` für `Sony VEGAS Pro 13`)</small> und `UltraPaste.png` aus, kopieren Sie sie und fügen Sie sie in den Erweiterungsordner ein:
   - `C:\ProgramData\Vegas Pro\Application Extensions\`
   - oder für Sony: `C:\ProgramData\Sony\Vegas Pro\Application Extensions\`
-  - Klicken Sie [hier](/index#allgemeine-schritte-zur-installation-eines-skripts-oder-einer-erweiterung), wenn Sie nicht wissen, wie Erweiterungen installiert werden.
+  - Klicken Sie [hier](/de/#allgemeine-schritte-zur-installation-eines-skripts-oder-einer-erweiterung), wenn Sie nicht wissen, wie Erweiterungen installiert werden.
 
 2.  Nach der Installation finden Sie das andockbare Erweiterungsfenster über `Extras -> UltraPaste!`.
 
