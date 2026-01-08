@@ -3,33 +3,7 @@
 
   var storageKey = 'vegTips-lang';
   var path = window.location.pathname;
-
-  function detectBase() {
-    var vpBase = window.__VP_SITE_DATA__ && window.__VP_SITE_DATA__.site && window.__VP_SITE_DATA__.site.base;
-    if (vpBase) return vpBase;
-
-    var current = document.currentScript && document.currentScript.getAttribute('src');
-    if (current) {
-      var m = current.match(/^(?:https?:\/\/[^/]+)?\/(.+?)\/js\/language-redirect\.js$/);
-      if (m && m[1]) return '/' + m[1] + '/';
-      if (current.indexOf('/js/language-redirect.js') === 0) return current.replace(/js\/language-redirect\.js$/, '');
-    }
-
-    var scripts = document.getElementsByTagName('script') || [];
-    for (var i = 0; i < scripts.length; i++) {
-      var src = scripts[i].getAttribute('src');
-      if (!src) continue;
-      if (src.indexOf('language-redirect.js') !== -1) {
-        var m2 = src.match(/^(?:https?:\/\/[^/]+)?\/(.+?)\/js\/language-redirect\.js$/);
-        if (m2 && m2[1]) return '/' + m2[1] + '/';
-        if (src.indexOf('/js/language-redirect.js') === 0) return src.replace(/js\/language-redirect\.js$/, '');
-      }
-    }
-
-    return '/';
-  }
-
-  var siteBase = detectBase();
+  var siteBase = (window.__VP_SITE_DATA__ && window.__VP_SITE_DATA__.site && window.__VP_SITE_DATA__.site.base) || '/';
   var base = siteBase.endsWith('/') ? siteBase : siteBase + '/';
   var basePattern = base === '/' ? null : new RegExp('^' + base.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'));
   var pathWithoutBase = basePattern ? path.replace(basePattern, '/') : path;
