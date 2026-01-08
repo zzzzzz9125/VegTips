@@ -3,17 +3,22 @@
 
   var storageKey = 'vegTips-lang';
   var path = window.location.pathname;
+  var siteBase = (window.__VP_SITE_DATA__ && window.__VP_SITE_DATA__.site && window.__VP_SITE_DATA__.site.base) || '/';
+  var base = siteBase.endsWith('/') ? siteBase : siteBase + '/';
+  var basePattern = base === '/' ? null : new RegExp('^' + base.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'));
+  var pathWithoutBase = basePattern ? path.replace(basePattern, '/') : path;
+
   var search = window.location.search;
   var hash = window.location.hash;
   var params = new URLSearchParams(search);
   var supported = ['en', 'zh', 'zh-hant', 'ja', 'ko', 'de', 'fr'];
 
   // detect current locale from URL path (base-agnostic)
-  var match = path.match(/\/(zh-hant|zh|ja|ko|de|fr)(?:\/|$)/);
+  var match = pathWithoutBase.match(/\/(zh-hant|zh|ja|ko|de|fr)(?:\/|$)/);
   var currentLocale = match ? match[1] : 'en';
 
-  var isRoot = /\/(?:index\.html)?$/.test(path);
-  var isLocaleRoot = /\/(zh-hant|zh|ja|ko|de|fr)(?:\/(?:index\.html)?|$)/.test(path) && /\/(zh-hant|zh|ja|ko|de|fr)\/?(?:index\.html)?$/.test(path);
+  var isRoot = /\/(?:index\.html)?$/.test(pathWithoutBase);
+  var isLocaleRoot = /\/(zh-hant|zh|ja|ko|de|fr)(?:\/(?:index\.html)?|$)/.test(pathWithoutBase) && /\/(zh-hant|zh|ja|ko|de|fr)\/?(?:index\.html)?$/.test(pathWithoutBase);
   var isHome = isRoot || isLocaleRoot;
 
   var preferred = localStorage.getItem(storageKey) || '';
@@ -40,7 +45,7 @@
   if (!isHome) return;
 
   var targetLocale = supported.indexOf(preferred) !== -1 ? preferred : 'en';
-  var targetPath = targetLocale === 'en' ? '/' : '/' + targetLocale + '/';
+  var targetPath = targetLocale === 'en' ? base : base + targetLocale + '/';
 
   var needsRedirect = targetLocale !== currentLocale;
   if (!needsRedirect) return;
