@@ -217,11 +217,11 @@ Si vous avez essayé presque toutes les méthodes de cet article (en particulier
 
 ## IV. FAQ sur le fonctionnement du logiciel VEGAS
 
-Q : Comment **localiser** l'interface logicielle VEGAS (en français par exemple) ?
+Q : Comment **localiser** l'interface logicielle VEGAS (en Chinois par exemple) ?
 
-R : Le programme VEGAS inclut en interne 9 langues : `Anglais, Allemand, Français, Portugais, Espagnol, Polonais, Chinois, Japonais, Coréen`. Cependant, le programme d'installation fourni sur le site officiel est la version Langue Internationale, contenant seulement les 5 premières langues listées, **excluant le Français**. Il existe trois voies de localisation :
+R : Le programme VEGAS inclut en interne 9 langues : `Anglais, Allemand, Français, Portugais, Espagnol, Polonais, Chinois, Japonais, Coréen`. Cependant, le programme d'installation fourni sur le site officiel est la version Langue Internationale, contenant seulement les 5 premières langues listées, **excluant le Chinois**. Il existe trois voies de localisation :
 
-1.  **Utiliser un programme d'installation français.** Avant [l'achat](#xvi-canaux-d-achat-du-logiciel), vérifiez la liste de support des langues pour voir si le français est inclus. Par exemple, la version sur le site officiel n'inclut actuellement pas le français, tandis que les versions fournies par l'agent français et l'édition Steam incluent le français. Sinon, vous devez essayer les deux dernières méthodes.
+1.  **Utiliser un programme d'installation Chinois.** Avant [l'achat](#xvi-canaux-d-achat-du-logiciel), vérifiez la liste de support des langues pour voir si le Chinois est inclus. Par exemple, la version sur le site officiel n'inclut actuellement pas le Chinois, tandis que les versions fournies par l'agent Chinois et l'édition Steam incluent le Chinois. Sinon, vous devez essayer les deux dernières méthodes.
 
 2.  **Utiliser un pack de localisation créé par d'autres utilisateurs.**
 

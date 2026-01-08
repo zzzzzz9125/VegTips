@@ -217,7 +217,7 @@ Wenn Sie fast alle Methoden in diesem Artikel (insbesondere die im Kapitel [VEGA
 
 ## IV. VEGAS Software-Betrieb Q&A
 
-F: Wie **lokalisieren** Sie die VEGAS-Softwareoberfläche (zum Beispiel auf Deutsch)?
+F: Wie **lokalisieren** Sie die VEGAS-Softwareoberfläche (zum Beispiel auf Chinesisch)?
 
 A: Das VEGAS-Programm enthält intern 9 Sprachen: `Englisch, Deutsch, Französisch, Portugiesisch, Spanisch, Polnisch, Chinesisch, Japanisch, Koreanisch`. Das auf der offiziellen Website bereitgestellte Installationsprogramm ist jedoch die internationale Sprachversion, die nur die ersten 5 aufgeführten Sprachen enthält, **Chinesisch ausgeschlossen**. Es gibt drei Lokalisierungswege:
 
