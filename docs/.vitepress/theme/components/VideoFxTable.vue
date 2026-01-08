@@ -329,7 +329,7 @@ const transliterateText = (text: string): string[] => {
   return out
 }
 
-const { lang } = useData()
+const { lang, site } = useData()
 const typeKeys: FxType[] = ['videoFx', 'transitionFx', 'generatorFx', 'compositeFx']
 const allColumns: ColumnDef[] = [
   { key: 'name', labelKey: 'colChineseName', minWidth: 220 },
@@ -828,8 +828,12 @@ const loadCsv = async () => {
   loading.value = true
   error.value = null
 
+  const base = site?.value?.base || '/'
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`
+  const csvUrl = `${normalizedBase}csv/videofx.csv`
+
   try {
-    const response = await fetch('/csv/videofx.csv')
+    const response = await fetch(csvUrl)
     if (!response.ok) throw new Error(`${response.status}`)
     const text = await response.text()
 
