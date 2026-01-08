@@ -39,7 +39,7 @@ For the time being, I do not accept direct private inquiries about specific issu
 
 - 在查閱本文時，建議參考章節目錄分類查詢問題，並合理運用 **`Ctrl + F`** 查找功能，搜尋問題或報錯的關鍵字和報錯碼，以便於快速找到解決問題的辦法。本文所給出的路徑一般以環境變數的方式表示，比如 **`%localappdata%\VEGAS Pro\`**。**將路徑文字複製貼上到 Windows 檔案總管的位址列後按 `Enter` 鍵，即可實現快速跳轉。**本文有時會提及特定版本的特定小版本號，比如 `23 build 302`，此處 `302` 即為小版本號。在 Vegas 的讀條啟動介面，就可以看到目前版本的小版本號。本文標有 **<u>底線</u>** 的內容，可以進行超連結跳轉。
 
-- 本文採用 **CC BY-NC-SA 4.0** 協定進行授權。轉載、演繹或進行任何形式的使用時，請務必遵守 **署名、非商業、相同方式共用** 的原則。詳情請閱讀 [許可協定全文](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans)。
+- 本文採用 **CC BY-NC-SA 4.0** 協定進行授權。轉載、演繹或進行任何形式的使用時，請務必遵守 **署名、非商業、相同方式共用** 的原則。詳情請閱讀 [許可協定全文](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hant)。
 
 <br>
 
@@ -100,7 +100,7 @@ vv13 及以下的版本的快取目錄會帶 Sony 資料夾，如 **`%localappda
 
 2. 如圖所示：
 
-<ImageOnDemand alt="外掛程式鏈" src="img/zh/vegtips/image001_plugin_chain.png" />
+<ImageOnDemand alt="外掛程式鏈" src="vegtips/image001_plugin_chain.png" />
 
 <p align="center">vv 外掛程式預設管理器的使用圖解 0.2 版</p>
 
@@ -128,7 +128,7 @@ vv13 及以下的版本的快取目錄會帶 Sony 資料夾，如 **`%localappda
 
 比較常見的情況是：執行 Vegas 時 / **點選左上角 `檔案 -> 算繪為` 時，直接彈出報錯彈窗**。
 
-<ImageOnDemand alt="問題報告" src="img/zh/vegtips/image002_problem_report.png" />
+<ImageOnDemand alt="問題報告" src="vegtips/image002_problem_report.png" />
 
 **這時候請先務必勾選下方的 `顯示問題詳細資料`（`Show Problem Details`），獲取報錯內容。**
 
@@ -166,7 +166,7 @@ vv13 及以下的版本的快取目錄會帶 Sony 資料夾，如 **`%localappda
 
 首選項的常規辦法：按住 `Ctrl + Shift` 並執行 Vegas，會彈出“是否重設”的選項，勾選 `刪除所有快取的應用程式資料`，點 `是`。
 
-<ImageOnDemand alt="重設" src="img/zh/vegtips/image003_reset.png" />
+<ImageOnDemand alt="重設" src="vegtips/image003_reset.png" />
 
 <p align="center">是否重設？(Y/N)</p>
 
@@ -250,7 +250,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 其中 `23.0` 和 `19.0` 代表當前 Vegas 版本號。第一行是最主要的軟體介面語言設定，不過其他三個也建議同時改。
 
-<ImageOnDemand alt="語言登錄檔" src="img/zh/vegtips/image004_language_reg.png" />
+<ImageOnDemand alt="語言登錄檔" src="vegtips/image004_language_reg.png" />
 
 若之前安裝的是英文版，則 `ULangID` 的預設值應該是十六進位制的 `409`（十進位制 `1033`）。將其**改成中文的十六進位制的 `804`（十進位制 `2052`）**即可。
 
@@ -273,7 +273,7 @@ Magix 旗下的 ACID Pro 等軟體也同理，此處不再贅述。
 Q：錯誤：安裝時提示**電腦需要重啟，才能繼續安裝**？  
 `Setup has detected that the system is currently waiting for a reboot to complete a previous installation or update. To avoid problems, please reboot your system before installing.`
 
-<ImageOnDemand alt="安裝時的重啟問題" src="img/zh/vegtips/image005_install_reboot.png" />
+<ImageOnDemand alt="安裝時的重啟問題" src="vegtips/image005_install_reboot.png" />
 
 A：先試試重啟電腦。若重啟後無法解決，則需要更改登錄檔。開啟登錄檔編輯器，找到 **`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager`** 項，**刪除 `PendingFileRenameOperations`** 這一值，之後重啟電腦。
 
@@ -285,7 +285,7 @@ A：先試試重啟電腦。若重啟後無法解決，則需要更改登錄檔�
 
 Q：錯誤：**`安裝過程中發生 -2147163964。未能註冊模組 xxxxx.dll`**。
 
-<ImageOnDemand alt="安裝時的 dll 註冊問題" src="img/zh/vegtips/image006_install_dll.png" />
+<ImageOnDemand alt="安裝時的 dll 註冊問題" src="vegtips/image006_install_dll.png" />
 
 A：這種情況**重啟一遍電腦再安裝**一般就能解決。仍無法解決時可以**試試安裝其他版本**。
 
@@ -318,7 +318,7 @@ Q：Vegas 在啟動時，“**正在掃描 VST 外掛程式...**”這一步**�
 
 A：可以嘗試**在啟動 Vegas 時禁用 VST 掃描**，方法如下：對著 Vegas 的**捷徑 `右鍵 -> 內容`**，在 **`目標`** 這一欄的最後加上 **` /NOVSTGROVEL`** 命令（**注意要和前面隔開空格**），之後執行這個捷徑。確定能夠正常啟動後，可以將有問題的外掛程式從 [VST 路徑](#vst-相關路徑)裡挪開，單獨存放，等等。
 
-<ImageOnDemand alt="NOVSTGROVEL" src="img/zh/vegtips/image007_novstgrovel.png" />
+<ImageOnDemand alt="NOVSTGROVEL" src="vegtips/image007_novstgrovel.png" />
 
 <br>
 
@@ -348,7 +348,7 @@ A：請到 **`控制台 -> 程式 -> 程式和功能`** 中確認是否安裝過
 
 2. 在安裝過程中，會提示你是否安裝額外的東西，此時轉到 `單個元件`，搜尋 `MSVC`，找到 `MSVC v143 - VS 2022 C++ x64/x86 生成工具(最新)` 並勾選，然後繼續安裝。
 
-<ImageOnDemand alt="MSVC 143 安裝" src="img/zh/vegtips/image008_msvc143.png" />
+<ImageOnDemand alt="MSVC 143 安裝" src="vegtips/image008_msvc143.png" />
 
 3. 安裝成功後，轉到 MSVC 的安裝路徑：`C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\`，其中會有兩個資料夾：`v143` 和 `14.44.35112`（具體取決於你安裝的版本號），形如後者 `14.44.35112` 的是要找的資料夾。
 
@@ -366,7 +366,7 @@ Q：開啟 Vegas 後**出現噪音/沒聲音了/…**？
 
 A：**轉到 `控制台 -> 硬體和聲音 -> 聲音`，開啟當前播放裝置的 `內容`，在 `進階` 選項卡的 `獨佔模式` 中取消勾選 `允許應用程式獨佔控制該裝置`，或者將`預設格式`切換到 `2 通道，24 位，44100Hz`。**如果不行，可以試試**重裝音效卡驅動**。
 
-<ImageOnDemand alt="音訊裝置" src="img/zh/vegtips/image009_sound_device.png" />
+<ImageOnDemand alt="音訊裝置" src="vegtips/image009_sound_device.png" />
 
 <br>
 
@@ -574,7 +574,7 @@ Q：4:3 的影片/圖片媒體檔案匯入進去，**被左右拉伸**成 16:9 �
 
 A：這是由於 `4:3` 的媒體檔案匯入進 `16:9` 的工程裡，可能會因一些特定配置參數而被自動拉伸至 `16:9`。解決辦法是**對著媒體檔案 `右鍵 -> 內容`，切換到 `媒體` 選項卡，找到 `像素高寬比` 這一欄，從 `1.3333` 改到 `1`，然後點選 `流` 一欄右邊的儲存按鈕<sup>（`將設定儲存到影片配置檔案以供將來進行自動檢測`）</sup>，這樣就可以保證之後匯入的 `4:3` 媒體檔案不再被自動拉伸**。同樣地，該屬性也能在 **`專案媒體`** 視窗中，多選媒體檔案後再修改。
 
-<ImageOnDemand alt="影片配置檔案按鈕" src="img/zh/vegtips/image010_profile_button.png" />
+<ImageOnDemand alt="影片配置檔案按鈕" src="vegtips/image010_profile_button.png" />
 
 <p align="center">其實“像素高寬比”的翻譯是錯誤的，應該為“像素寬高比”，即“寬:高”。</p>
 
@@ -590,9 +590,9 @@ A：這是由於 `4:3` 的媒體檔案匯入進 `16:9` 的工程裡，可能會�
 3. 輸入完後不要點選 `確認`，而是按下 **`Ctrl + Shift + Enter`**，這樣就能用管理員許可權開啟該檔案。手動修改 `4:3` 的預設匯入配置，將該檔案裡的 `1.3333333333` 值全改成 `1`，儲存。
   - 注意，不使用管理員許可權開啟檔案會導致記事本無法寫入原檔案，而彈出 `另存為` 視窗。
 
-<ImageOnDemand alt="影片配置檔案編輯 1" src="img/zh/vegtips/image011_profile_edit_1.png" />
+<ImageOnDemand alt="影片配置檔案編輯 1" src="vegtips/image011_profile_edit_1.png" />
 
-<ImageOnDemand alt="影片配置檔案編輯 2" src="img/zh/vegtips/image012_profile_edit_2.png" />
+<ImageOnDemand alt="影片配置檔案編輯 2" src="vegtips/image012_profile_edit_2.png" />
 
 <small>
 參見：<a href="https://www.vegascreativesoftware.info/us/forum/posts--128760/">https://www.vegascreativesoftware.info/us/forum/posts--128760/</a><br>
@@ -604,7 +604,7 @@ A：這是由於 `4:3` 的媒體檔案匯入進 `16:9` 的工程裡，可能會�
 
 Q：**影片預覽視窗怎麼什麼都看不見了**？
 
-<ImageOnDemand alt="修剪器還是預覽？" src="img/zh/vegtips/image013_trimmer_or_preview.png" />
+<ImageOnDemand alt="修剪器還是預覽？" src="vegtips/image013_trimmer_or_preview.png" />
 
 A：請檢查是否切換到了 **`修剪器`** 視窗，若是，請**自行切換回 `影片預覽` 視窗**。如果你想使用類似於舊版（14 及以下）的 `修剪器` 與 `預覽視窗` 分離的視窗佈局，可到選單列的 **`檢視 -> 視窗佈局`** 中選擇 **`源視窗佈局`**。
 
@@ -622,13 +622,13 @@ A：這種情況一般是不小心把視窗拖到 Windows 工作列下方了，�
 
 比較方便的解決辦法是**先點選一下對應的按鈕，之後馬上按 `Alt + 空格`，選擇 `移動`**，然後把視窗拖上來。或者也可以把 Windows 工作列隱藏了再拖上來。實在無法解決，可以試試選單列的 `檢視 -> 恢復預設佈局`。
 
-<ImageOnDemand alt="移動視窗" src="img/zh/vegtips/image014_window_move.gif" />
+<ImageOnDemand alt="移動視窗" src="vegtips/image014_window_move.gif" />
 
 <br>
 
 Q：加了 FX，為什麼在預覽視窗中，**FX 效果顯示不全，像左右分割了一樣**？
 
-<ImageOnDemand alt="分割螢幕檢視" src="img/zh/vegtips/image015_split_screen.png" />
+<ImageOnDemand alt="分割螢幕檢視" src="vegtips/image015_split_screen.png" />
 
 A：如上圖所示，請檢查是否啟用了**`分割螢幕檢視`**功能。
 
@@ -636,7 +636,7 @@ A：如上圖所示，請檢查是否啟用了**`分割螢幕檢視`**功能。
 
 Q：不知點到什麼了，單個影片軌道**被分成了 AB 兩軌**，如何恢復？
 
-<ImageOnDemand alt="AB 軌道" src="img/zh/vegtips/image016_ab_track.png" />
+<ImageOnDemand alt="AB 軌道" src="vegtips/image016_ab_track.png" />
 
 A：一般這種情況下是不小心雙擊了事件邊緣，再**雙擊一遍事件邊緣**就可以解決了。
 
@@ -665,7 +665,7 @@ A：
 
 2. 若安裝該字型後不管用，請轉到 **`控制台 -> 區域 -> 管理 -> 變更系統區域設定`**，確保 **`Beta 版:使用 Unicode UTF-8 提供全球語言支援`** 這個選項保持未勾選狀態，如下圖所示。
 
-<ImageOnDemand alt="Windows Unicode 設定" src="img/zh/vegtips/image017_unicode_settings.png" />
+<ImageOnDemand alt="Windows Unicode 設定" src="vegtips/image017_unicode_settings.png" />
 
 <small>
 參見：<a href="https://www.vegascreativesoftware.info/us/forum/posts--138828/">https://www.vegascreativesoftware.info/us/forum/posts--138828/</a><br>
@@ -675,11 +675,11 @@ A：
 
 Q：專案內容/自定義算繪範本/首選項設定等**視窗太大，沒法顯示完全**，**按不到確認鍵**？
 
-<ImageOnDemand alt="視窗太大" src="img/zh/vegtips/image018_window_too_large.png" />
+<ImageOnDemand alt="視窗太大" src="vegtips/image018_window_too_large.png" />
 
 A：Vegas 視窗大小會根據 Windows 螢幕設定自動縮放，如果 Windows 螢幕 DPI 縮放比例過大，也會導致 Vegas 的視窗變得很大，在特大縮放比例下部分設定視窗顯示不完全。如果只需按“確認”，可以直接按鍵盤上的 **`Enter` 鍵**進行代替。如果必須要完整顯示視窗，就只能提前修改螢幕的 DPI 縮放比例，**在 Windows 設定中將螢幕縮放比例調為 100%**，Vegas 內改完設定後再調回原來的值。或者也可以**單獨將 Vegas 程式的 DPI 縮放改為 100%**，對著 Vegas 主程式或者捷徑進入 `右鍵 -> 內容 -> 相容性 -> 變更高 DPI 設定`，**單獨設定 Vegas 的縮放選項，將 `縮放執行` 改為 `應用程式`。**
 
-<ImageOnDemand alt="高 DPI - 應用程式" src="img/zh/vegtips/image019_high_dpi_application.png" />
+<ImageOnDemand alt="高 DPI - 應用程式" src="vegtips/image019_high_dpi_application.png" />
 
 <br>
 
@@ -697,7 +697,7 @@ A：為人詬病的老問題了，只要是在影片畫面上拖動，就會被�
 
 21 新增了一個 **`旁通懸停擦洗`**（`Bypass Hover Scrub`）的按鈕，啟用後就能保證不會誤操作，不過這樣就無法在游標懸停時預覽影片畫面，只能看到封面縮圖。
 
-<ImageOnDemand alt="旁通懸停擦洗" src="img/zh/vegtips/image020_bypass_hover_scrub.png" />
+<ImageOnDemand alt="旁通懸停擦洗" src="vegtips/image020_bypass_hover_scrub.png" />
 
 <p align="center">其實這個按鈕是 vv20 加的，但是 vv20 按了這個按鈕以後完全沒有效果。</p>
 
@@ -711,7 +711,7 @@ A：Vegas 的“暫停”代表“停止播放，遊標停留在目前位置”�
 
 自 `21 build 187` 更新後，這個選項被移到了**預覽視窗下方的傳輸欄內**，和播放、暫停、停止按鈕放在了一起。如果沒有，請展開右邊的三個點。
 
-<ImageOnDemand alt="遊標傳輸欄" src="img/zh/vegtips/image021_cursor_transport.png" />
+<ImageOnDemand alt="遊標傳輸欄" src="vegtips/image021_cursor_transport.png" />
 
 在 23 大版本更新後，和舊版不同，Vegas 的預設行為已經變成了 **`Enter` 鍵是“停止”，`空格` 鍵是“暫停”**。這個選項也隨之變成了 `使用空格鍵和 F12 進行播放/停止而不是播放/暫停`，並且在 `首選項 -> 常規` 中以及傳輸欄內，都有這個設定選項可以調整。
 
@@ -772,7 +772,7 @@ A：一般此問題出現在**某些版本的 N 卡驅動**中，以下是幾種
 
     開啟 **NVIDIA 控制面板**，點選左側的 **`管理 3D 設定`**，在右側切換到 **`程式設定`** 選項卡。在 `自定義程式` 那一欄中點選 `添加`，選擇 Vegas 主程式並確定，將下方的 **`OpenGL GDI 相容性`** 功能設定，從 `使用全域設定` 更改到 **`優先相容性`**，然後重新執行 Vegas 程式，即可解決此問題。（如果電腦裡有多個 Vegas 版本，則需要分別設定。）
 
-<ImageOnDemand alt="NVIDIA OpenGL GDI 相容性" src="img/zh/vegtips/image022_nvidia_opengl.png" />
+<ImageOnDemand alt="NVIDIA OpenGL GDI 相容性" src="vegtips/image022_nvidia_opengl.png" />
 
 3. 將 N 卡驅動的版本回退至 `522.30` 及以前，或更新至最新版。重裝驅動時，**必須選擇“自訂”安裝**，並且勾選 **`執行清潔安裝`** 選項。此選項會將 N 卡驅動的所有配置選項全部恢復為預設值，因此**不建議使用此辦法**。
 
@@ -788,7 +788,7 @@ A：一般此問題出現在**某些版本的 N 卡驅動**中，以下是幾種
 
 在使用 Vegas 自帶的算繪範本時，我們**通常需要不斷地更改解析度、幀率、位元速率等參數**，使得算繪範本匹配原工程的專案屬性，並且達到預期的位元速率效果。但有這麼一個算繪外掛程式，可以使算繪範本的解析度、幀率等參數**自動匹配專案屬性，並且支援使用更高級的 CRF、CQP 等參數來控制位元速率**，在**不需要太操心算繪參數**的前提下完成算繪操作。這個算繪外掛程式就是 **Voukoder**。
 
-<ImageOnDemand alt="Voukoder Classic" src="img/zh/vegtips/image023_voukoder_classic.png" />
+<ImageOnDemand alt="Voukoder Classic" src="vegtips/image023_voukoder_classic.png" />
 
 Voukoder 一共有兩個版本：Voukoder Classic 和 Voukoder Pro。
 
@@ -827,7 +827,7 @@ Voukoder 一共有兩個版本：Voukoder Classic 和 Voukoder Pro。
 
 3. **算繪範本換編碼器。**
 
-<ImageOnDemand alt="算繪的編碼器" src="img/zh/vegtips/image024_render_encoder.png" />
+<ImageOnDemand alt="算繪的編碼器" src="vegtips/image024_render_encoder.png" />
 
 <p align="center">根據電腦的顯示卡配置，能使用的編碼器可能會有所不同。</p>
 
@@ -847,7 +847,7 @@ Voukoder 一共有兩個版本：Voukoder Classic 和 Voukoder Pro。
 
 9. **算繪影像序列**，哪裡卡住就從哪裡開始重新算繪，**這樣至少能保留已算繪檔案**，最後再**以影像序列的形式匯入進 Vegas 重新算繪一遍**。每算繪完一次影像序列，都記得**輸出到新的資料夾**，否則舊的影像序列會被新的覆蓋，因為 Vegas 總是從 `000000` 開始編號。
 
-<ImageOnDemand alt="匯入影像序列" src="img/zh/vegtips/image025_import_image_sequence.png" />
+<ImageOnDemand alt="匯入影像序列" src="vegtips/image025_import_image_sequence.png" />
 
 <p align="center">匯入影像序列的方法。匯入後相當於一個影片檔案，可自行設定幀率等參數。</p>
 
@@ -907,7 +907,7 @@ Q：算繪到一半**打算停止算繪**，但是**想保留已算繪的影片�
 
 A：**SeMW 擴充**的算繪顯示視窗中有此功能。
 
-<ImageOnDemand alt="SeMW 算繪提示" src="img/zh/vegtips/image026_render_semw.png" />
+<ImageOnDemand alt="SeMW 算繪提示" src="vegtips/image026_render_semw.png" />
 
 SeMW 擴充官網：https://www.semw-software.com/en/extensions/
 
@@ -925,7 +925,7 @@ A：
 
   2. 在選擇算繪範本介面的左側中選擇 `QuickTime`，右邊隨便找一個範本，自定義範本，更改相關參數，如下圖所示：
 
-<ImageOnDemand alt="算繪帶 alpha 通道的 QuickTime" src="img/zh/vegtips/image027_render_alpha_quicktime.png" />
+<ImageOnDemand alt="算繪帶 alpha 通道的 QuickTime" src="vegtips/image027_render_alpha_quicktime.png" />
 
   3. 儲存範本。算繪。
 
@@ -937,7 +937,7 @@ A：
 
   如下圖所示：
 
-<ImageOnDemand alt="算繪帶 alpha 通道的 ProRes" src="img/zh/vegtips/image028_render_alpha_prores.png" />
+<ImageOnDemand alt="算繪帶 alpha 通道的 ProRes" src="vegtips/image028_render_alpha_prores.png" />
 
 - **[Voukoder 算繪外掛程式](#算繪外掛程式-voukoder-推薦) <small>（18 及以上版本，且 Voukoder Classic 版本需在 12.0 及以上。）</small>**
 
@@ -953,7 +953,7 @@ A1：vv17 及以下版本中，由於專案屬性和算繪範本的**色彩空�
 
 1. **使用 [Voukoder 算繪外掛程式](#算繪外掛程式-voukoder-推薦)，用 `濾鏡` 製作能夠轉換色彩空間的範本。**
 
-<ImageOnDemand alt="Voukoder 色彩空間" src="img/zh/vegtips/image040_voukoder_color_space.png" />
+<ImageOnDemand alt="Voukoder 色彩空間" src="vegtips/image040_voukoder_color_space.png" />
 
 2. 升 vv18 及以上版本。舊版的工程在新版 vv 中開啟後，需要在左上角 `檔案-內容` 中將 `像素格式` 這一欄從 `舊版 8 位(影片級別)` 改成 **`8 位(全範圍)`**”，並且算繪時**不要使用舊版 vv 所建立的算繪範本**。
 
@@ -967,9 +967,9 @@ A1：vv17 及以下版本中，由於專案屬性和算繪範本的**色彩空�
 
 A2：若原素材是 **HDR 素材**，請將**專案屬性的 `色彩空間` <sup>圖 1</sup>** 更改至與原素材 <sup>圖 2</sup> 一致。這會將整個專案更改為 10bit 色深，算繪也會比原先的 8bit 色深慢很多。
 
-<ImageOnDemand alt="專案 HDR 色彩空間" src="img/zh/vegtips/image029_color_space_hdr_project.png" />
+<ImageOnDemand alt="專案 HDR 色彩空間" src="vegtips/image029_color_space_hdr_project.png" />
 
-<ImageOnDemand alt="素材 HDR 色彩空間" src="img/zh/vegtips/image030_color_space_hdr_footage.png" />
+<ImageOnDemand alt="素材 HDR 色彩空間" src="vegtips/image030_color_space_hdr_footage.png" />
 
 或者，也可以不改專案的色彩空間，而是給原素材添加轉換色彩空間的 LUT。這裡用自帶的 `LUT 篩選器` FX 或者高版本的 `顏色分級` 功能都可以，重點在於你要找到能將原素材的色彩空間轉換成 `Rec.709` 標準的 LUT 檔案。這樣做會失去原素材的 HDR 細節，所以如果本來就沒打算最終輸出 HDR 影片，建議在一開始錄製素材時就不要錄製 HDR 素材。
 
@@ -977,7 +977,7 @@ A2：若原素材是 **HDR 素材**，請將**專案屬性的 `色彩空間` <su
 
 Q：算繪出來的影片，**怎麼變色了（紅的變紫、藍的變黃等）**？
 
-<ImageOnDemand alt="BGRA 顏色" src="img/zh/vegtips/image031_bgra_color.png" />
+<ImageOnDemand alt="BGRA 顏色" src="vegtips/image031_bgra_color.png" />
 
 A：A 卡驅動的問題。可以嘗試以下幾種方法：
 
@@ -1063,7 +1063,7 @@ A：目前已知的有效解決辦法只有**通過 Windows 更新工具重裝�
 
 Q：【**Win7 vv18 及以上**】**一點`算繪為`就報錯**：**`建立媒體檔案時發生錯誤。錯誤 0x80131501 (訊息缺失)`**
 
-<ImageOnDemand alt="Win7 算繪" src="img/zh/vegtips/image032_render_win7.png" />
+<ImageOnDemand alt="Win7 算繪" src="vegtips/image032_render_win7.png" />
 
 A：正常情況下 Win7 最高**只支援到 vv17**，vv18 以後一點算繪就會彈出此報錯彈窗。
 
@@ -1100,7 +1100,7 @@ A：這個是“字幕和文字”的問題，“字幕和文字”對各種字�
 
 - 在某些情況下，也可能是 Windows Unicode 設定導致的。轉到 **`控制台 -> 區域 -> 管理 -> 變更系統區域設定`**，確保 **`Beta 版: 使用 Unicode UTF-8 提供全球語言支援`** 這個選項保持未勾選狀態，如下圖所示。
 
-<ImageOnDemand alt="Windows Unicode 設定" src="img/zh/vegtips/image017_unicode_settings.png" />
+<ImageOnDemand alt="Windows Unicode 設定" src="vegtips/image017_unicode_settings.png" />
 
 vv20 裡的“字幕和文字”有個新功能是“**一鍵更改同軌道字幕的屬性**”，此新功能也會受到該 bug 的影響，導致部分字型無法正常使用此功能。
 
@@ -1130,17 +1130,17 @@ A：將文字檔案用記事本開啟，**另存為 ANSI 編碼**，再嘗試匯
 
 Q：如圖所示，在高解析度螢幕上使用“**PTT 字幕**”時，**介面錯亂/介面字型小，看不清**？
 
-<ImageOnDemand alt="PPT 字幕 UI 問題" src="img/zh/vegtips/image033_protype_titler_ui_issue.png" />
+<ImageOnDemand alt="PPT 字幕 UI 問題" src="vegtips/image033_protype_titler_ui_issue.png" />
 
 A：DPI 縮放的問題，當系統縮放 DPI >= 150% 時就會出現。可參考下圖，對著 Vegas 主程式或者捷徑進入 `右鍵 -> 內容 -> 相容性 -> 變更高 DPI 設定`，**單獨設定 Vegas 的縮放選項，將 `縮放執行` 改為 `系統(增強)`。**
 
-<ImageOnDemand alt="高 DPI - 系統增強" src="img/zh/vegtips/image034_high_dpi_system_enhanced.png" />
+<ImageOnDemand alt="高 DPI - 系統增強" src="vegtips/image034_high_dpi_system_enhanced.png" />
 
 <br>
 
 Q：【**vv20、21**】**字幕和文字“一鍵更改同軌道字幕的屬性”功能報錯（如下圖）**？
 
-<ImageOnDemand alt="字幕屬性傳輸" src="img/zh/vegtips/image035_subtitles_transfer.png" />
+<ImageOnDemand alt="字幕屬性傳輸" src="vegtips/image035_subtitles_transfer.png" />
 
 A：問題在於當前文字框內的**富文字包含多種文字格式（如字型、字型大小不同等）**，文字格式無法正常轉移。可嘗試**先統一文字格式**後再使用該功能。**21 最終版 build 315 已修復此問題。**舊版（包括 20 以下，沒有這個功能但是想用的）可以用我寫的同類型腳本，沒有這個報錯，不過也不支援多種文字格式的轉移。腳本安裝路徑見 [腳本](#十二、腳本-擴充相關) 章節。
 
@@ -1282,7 +1282,7 @@ Q：**藍寶石外掛程式的某些效果會忽略 alpha 通道，覆蓋掉底�
 
 A：如圖所示，進入該效果的 `幫助`，單獨取消掉該效果的 `GPU`。
 
-<ImageOnDemand alt="藍寶石 alpha 通道問題" src="img/zh/vegtips/image036_sapphire_alpha.png" />
+<ImageOnDemand alt="藍寶石 alpha 通道問題" src="vegtips/image036_sapphire_alpha.png" />
 
 如果沒有用，那只能**關閉 Vegas 自己的 `GPU 加速`**了。
 
@@ -1341,7 +1341,7 @@ A：轉到登錄檔項：
 
 有 `Path 1`、`Path 2`、`Path 3`等項，分別對應 Vegas 首選項中的 VST 路徑。
 
-<ImageOnDemand alt="VST 登錄檔" src="img/zh/vegtips/image037_vst_reg.png" />
+<ImageOnDemand alt="VST 登錄檔" src="vegtips/image037_vst_reg.png" />
 
 `CheckSum` 這個值是 Vegas 用來檢查是否需要重新掃描該路徑的校驗和值，可以忽略掉。重點關注的是 `Path` 值和 `Flags` 值。`Path` 值是該 VST 路徑設定所指向的絕對路徑字串，`Flags` 值則決定了是否掃描該路徑，值為 `3` 是掃描，值為 `0` 是不掃描。可自行修改這些值。
 
@@ -1485,7 +1485,7 @@ Vegas 會每隔 5 分鐘進行一次自動儲存，以便於軟體崩潰後的�
 
 - 可以方便快捷地更改備份間隔。
 
-<ImageOnDemand alt="高級儲存" src="img/zh/vegtips/image038_advanced_save.png" />
+<ImageOnDemand alt="高級儲存" src="vegtips/image038_advanced_save.png" />
 
 <p align="center">選單列的 <b><code>工具 -> 高級儲存</code></b>。</p>
 
@@ -1540,7 +1540,7 @@ Vegas 會每隔 5 分鐘進行一次自動儲存，以便於軟體崩潰後的�
 
 ### 1. Vegas 工程檔案版本降級工具
 
-<ImageOnDemand alt="MSVPVF" src="img/zh/vegtips/image039_msvpvf.png" />
+<ImageOnDemand alt="MSVPVF" src="vegtips/image039_msvpvf.png" />
 
 該工具原項目連結：https://sr.ht/~mrpapersonic/msvpvf/
 

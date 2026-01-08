@@ -100,7 +100,7 @@ VP13 以前のバージョンは、Sony フォルダ内にキャッシュディ�
 
 <!-- 2. As shown in the diagram:
 
-<ImageOnDemand button-text="Load image" alt="Plugin Chain" src="img/vegtips/image001_plugin_chain.png" />
+<ImageOnDemand alt="Plugin Chain" src="vegtips/image001_plugin_chain.png" />
 
 <p align="center">Illustration for using the VEGAS Preset Manager v0.2</p> -->
 
@@ -128,7 +128,7 @@ VP13 以前のバージョンは、Sony フォルダ内にキャッシュディ�
 
 一般的なシナリオ：VEGAS を実行中 / **`ファイル -> 別名でレンダリング`** をクリックすると、すぐにエラーポップアップが表示される。
 
-<ImageOnDemand button-text="Load image" alt="Problem Report" src="img/vegtips/image002_problem_report.png" />
+<ImageOnDemand alt="Problem Report" src="vegtips/image002_problem_report.png" />
 
 **この場合、まず必ず `問題の詳細を表示` にチェックを入れ、エラー内容を取得してください。**
 
@@ -166,7 +166,7 @@ VEGAS の再インストールは、ソフトウェア自体が完全にイン�
 
 標準的な方法： `Ctrl + Shift` を押しながら VEGAS を実行します。「リセット？」プロンプトが表示されます。 `キャッシュされたすべてのアプリケーションデータを削除` にチェックを入れ、 `はい` をクリックします。
 
-<ImageOnDemand button-text="Load image" alt="Reset" src="img/vegtips/image003_reset.png" />
+<ImageOnDemand alt="Reset" src="vegtips/image003_reset.png" />
 
 <p align="center">リセット？ (Y/N)</p>
 
@@ -250,7 +250,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 ここで、`23.0` と `19.0` は現在の VEGAS メジャーバージョンを表します。最初の行がメインインターフェースの言語設定ですが、4 つすべてを変更することをお勧めします。
 
-<ImageOnDemand button-text="Load image" alt="Language Registry" src="img/vegtips/image004_language_reg.png" />
+<ImageOnDemand alt="Language Registry" src="vegtips/image004_language_reg.png" />
 
 英語版をインストールした場合、`ULangID` のデフォルト値はおそらく16進数で `409`（10進数で `1033`）です。日本語に変更するには、**`411`（10進数で `1041`）に変更してください**。
 
@@ -273,7 +273,7 @@ VEGAS の起動に成功した後、組み込みビデオ FX の名前がまだ�
 Q: インストール中にエラー：**PC を再起動してインストールを続行する必要があります**？
 `Setup has detected that the system is currently waiting for a reboot to complete a previous installation or update. To avoid problems, please reboot your system before installing.`
 
-<ImageOnDemand button-text="Load image" alt="Installation Reboot Issue" src="img/vegtips/image005_install_reboot.png" />
+<ImageOnDemand alt="Installation Reboot Issue" src="vegtips/image005_install_reboot.png" />
 
 A: まず、PC を再起動してみてください。それでもダメな場合は、レジストリを変更する必要があります。レジストリエディターを開き、 **`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager`** に移動し、 **`PendingFileRenameOperations`** の値を削除してから、PC を再起動します。
 
@@ -285,7 +285,7 @@ A: まず、PC を再起動してみてください。それでもダメな場�
 
 Q: エラー：**`インストール中にエラーが発生しました -2147163964。モジュール xxxxx.dll を登録できません`**。
 
-<ImageOnDemand button-text="Load image" alt="Installation DLL Registration Issue" src="img/vegtips/image006_install_dll.png" />
+<ImageOnDemand alt="Installation DLL Registration Issue" src="vegtips/image006_install_dll.png" />
 
 A: **PC を再起動して再インストール**するだけで通常は修正されます。それでも続く場合は、**別のバージョンをインストール**してみてください。
 
@@ -318,7 +318,7 @@ Q: VEGAS が起動時の「**VST プラグインをスキャンしています..
 
 A: **起動時の VST スキャンを無効にする**ことを試みてください。VEGAS の**ショートカットを右クリック -> プロパティ**。 **`ターゲット`** フィールドの末尾に **` /NOVSTGROVEL`** を追加します（**スラッシュの前のスペースに注意**）。その後、このショートカットを使用して VEGAS を実行します。正常に起動したら、[VST パス](#xi-オーディオプラグイン関連)から問題のあるプラグインを移動し、別途保存するなどできます。
 
-<ImageOnDemand button-text="Load image" alt="NOVSTGROVEL" src="img/vegtips/image007_novstgrovel.png" />
+<ImageOnDemand alt="NOVSTGROVEL" src="vegtips/image007_novstgrovel.png" />
 
 <br>
 
@@ -348,7 +348,7 @@ A: **`コントロール パネル -> プログラム -> プログラムと機�
 
 2. インストール中、追加コンポーネントを求めるプロンプトが表示されたら、 `個々のコンポーネント` に移動し、`MSVC` を検索し、 **`MSVC v143 - VS 2022 C++ x64/x86 ビルドツール（最新）`** をチェックし、インストールを続行します。
 
-<ImageOnDemand button-text="Load image" alt="MSVC 143 Install" src="img/vegtips/image008_msvc143.png" />
+<ImageOnDemand alt="MSVC 143 Install" src="vegtips/image008_msvc143.png" />
 
 3. インストール後、MSVC インストールパスに移動： `C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\`。 `v143` や `14.44.35112`（インストールしたバージョンによる）のようなフォルダがあるでしょう。 `14.44.35112` のようなものがターゲットです。
 
@@ -366,7 +366,7 @@ Q: VEGAS を開いた後、**ノイズ/音声なし/...** がある？
 
 A: **`コントロール パネル -> ハードウェアとサウンド -> サウンド`** に移動し、現在の再生デバイスの `プロパティ` を開きます。 `詳細設定` タブで、 `排他モード` の下の `アプリケーションがこのデバイスを排他的に制御できるようにする` のチェックを外す、 **または** `既定の形式` を `2 チャンネル、24 ビット、44100 Hz` に変更します。それでもダメな場合は、**サウンドカードドライバーを再インストール**してみてください。
 
-<ImageOnDemand button-text="Load image" alt="Audio Device" src="img/vegtips/image009_sound_device.png" />
+<ImageOnDemand alt="Audio Device" src="vegtips/image009_sound_device.png" />
 
 <br>
 
@@ -574,7 +574,7 @@ Q: 4:3 のビデオ/画像がインポートされると、**水平に引き伸�
 
 A: `4:3` メディアが特定の自動設定を持つ `16:9` プロジェクトにインポートされるときに発生します。修正： **メディアを右クリック -> プロパティ -> メディアタブ**、 `ピクセルアスペクト比` を見つけ、`1.3333` から `1` に変更し、 `ストリーム` セクションの横にある保存ボタンをクリックします<sup>（`設定をビデオプロファイルに保存して将来の自動検出に使用する`）</sup>。これにより、将来の `4:3` インポートが自動的に引き伸ばされなくなります。これは **`プロジェクトメディア`** ウィンドウの複数ファイルに対して行うこともできます。
 
-<ImageOnDemand button-text="Load image" alt="Video Profile Button" src="img/vegtips/image010_profile_button.png" />
+<ImageOnDemand alt="Video Profile Button" src="vegtips/image010_profile_button.png" />
 
 
 
@@ -590,9 +590,9 @@ A: `4:3` メディアが特定の自動設定を持つ `16:9` プロジェクト
 3. `OK` をクリックせずに、 **`Ctrl + Shift + Enter`** を押して管理者権限でファイルを開きます。 `4:3` のデフォルトインポートプロファイルを手動で編集し、すべての `1.3333333333` 値を `1` に変更し、保存します。
   - 注：管理者権限なしで開くと、メモ帳が元のファイルに書き込まず `名前を付けて保存` を促します。
 
-<ImageOnDemand button-text="Load image" alt="Video Profile Edit 1" src="img/vegtips/image011_profile_edit_1.png" />
+<ImageOnDemand alt="Video Profile Edit 1" src="vegtips/image011_profile_edit_1.png" />
 
-<ImageOnDemand button-text="Load image" alt="Video Profile Edit 2" src="img/vegtips/image012_profile_edit_2.png" />
+<ImageOnDemand alt="Video Profile Edit 2" src="vegtips/image012_profile_edit_2.png" />
 
 <small>
 参照： <a href="https://www.vegascreativesoftware.info/us/forum/posts--128760/">https://www.vegascreativesoftware.info/us/forum/posts--128760/</a><br>
@@ -604,7 +604,7 @@ A: `4:3` メディアが特定の自動設定を持つ `16:9` プロジェクト
 
 Q: **ビデオプレビューウィンドウに何も表示されない**？
 
-<ImageOnDemand button-text="Load image" alt="Trimmer or Preview?" src="img/vegtips/image013_trimmer_or_preview.png" />
+<ImageOnDemand alt="Trimmer or Preview?" src="vegtips/image013_trimmer_or_preview.png" />
 
 A: **`トリマー`** ウィンドウに切り替わっていないか確認してください。もしそうなら、 **`ビデオプレビュー` ウィンドウに切り替えてください**。古いバージョン（VP14 以下）のような分離された `トリマー` と `プレビュー` ウィンドウレイアウトを好む場合は、メニュー **`表示 -> ウィンドウレイアウト`** から **`ソースウィンドウレイアウト`** を選択します。
 
@@ -622,13 +622,13 @@ A: 通常、ウィンドウが誤って Windows タスクバーの下にドラ�
 
 簡単な修正： **対応するボタンをクリックし、すぐに `Alt + Space` を押し、 `移動` を選択**し、ウィンドウを上にドラッグします。または、一時的に Windows タスクバーを非表示にしてからドラッグします。最後の手段として、 `表示 -> デフォルトレイアウトを復元` を試みてください。
 
-<ImageOnDemand button-text="Load image" alt="Move Window" src="img/vegtips/image014_window_move.gif" />
+<ImageOnDemand alt="Move Window" src="vegtips/image014_window_move.gif" />
 
 <br>
 
 Q: FX を追加したが、プレビューウィンドウで**FX が完全に表示されず、左右に分割されて表示される**？
 
-<ImageOnDemand button-text="Load image" alt="Split Screen View" src="img/vegtips/image015_split_screen.png" />
+<ImageOnDemand alt="Split Screen View" src="vegtips/image015_split_screen.png" />
 
 A: 図のように、 **`分割画面ビュー`** が有効になっていないか確認してください。
 
@@ -636,7 +636,7 @@ A: 図のように、 **`分割画面ビュー`** が有効になっていない
 
 Q: 何かをクリックしたら、単一のビデオトラックが **A/B トラックに分割された**。元に戻す方法は？
 
-<ImageOnDemand button-text="Load image" alt="AB Track" src="img/vegtips/image016_ab_track.png" />
+<ImageOnDemand alt="AB Track" src="vegtips/image016_ab_track.png" />
 
 A: 通常、これはイベントの端をダブルクリックしたときに発生します。 **イベントの端をもう一度ダブルクリック**すると修正されます。
 
@@ -665,7 +665,7 @@ A:
 
 2. フォントインストールで解決しない場合、 **`コントロール パネル -> 地域 -> 管理 -> システムロケールの変更`** に移動します。 **`ベータ：Unicode UTF-8 を使用して、世界中の言語サポートを提供する`** が**チェックされていない**ことを確認します。下図参照。
 
-<ImageOnDemand button-text="Load image" alt="Windows Unicode Settings" src="img/vegtips/image017_unicode_settings.png" />
+<ImageOnDemand alt="Windows Unicode Settings" src="vegtips/image017_unicode_settings.png" />
 
 <small>
 参照： <a href="https://www.vegascreativesoftware.info/us/forum/posts--138828/">https://www.vegascreativesoftware.info/us/forum/posts--138828/</a><br>
@@ -675,11 +675,11 @@ A:
 
 Q: プロジェクトプロパティ / カスタムレンダーテンプレート / プリファレンスウィンドウが **大きすぎて完全に表示できず、OK をクリックできない**？
 
-<ImageOnDemand button-text="Load image" alt="Window Too Large" src="img/vegtips/image018_window_too_large.png" />
+<ImageOnDemand alt="Window Too Large" src="vegtips/image018_window_too_large.png" />
 
 A: VEGAS ウィンドウサイズは Windows 表示設定に合わせてスケーリングされます。高 DPI スケーリングにより VEGAS ウィンドウが非常に大きくなり、極端なスケールでは表示が切れることがあります。「OK」をクリックするには、 **`Enter` キーを押せます**。ウィンドウ全体を表示する必要がある場合は、ウィンドウを開く前に Windows 設定で **画面の DPI スケーリングを 100% に変更**し、元に戻す必要があります。または、 **VEGAS の DPI スケーリングを個別に 100% に設定**： VEGAS 実行可能ファイルまたはショートカットを右クリック -> `プロパティ -> 互換性 -> 高 DPI 設定の変更`。 **`スケーリングの実行元:` を `アプリケーション` に設定**します。
 
-<ImageOnDemand button-text="Load image" alt="High DPI - Application" src="img/vegtips/image019_high_dpi_application.png" />
+<ImageOnDemand alt="High DPI - Application" src="vegtips/image019_high_dpi_application.png" />
 
 <br>
 
@@ -697,7 +697,7 @@ A: 古い、煩わしい問題：ビデオ画像上でのドラッグが「ト�
 
 VP21 には **`ホバースクラブをバイパス`** ボタンが追加されました。有効にすると誤操作を防げますが、ホバーでビデオをプレビューする機能（サムネイルのみ表示）が失われます。
 
-<ImageOnDemand button-text="Load image" alt="Bypass Hover Scrub" src="img/vegtips/image020_bypass_hover_scrub.png" />
+<ImageOnDemand alt="Bypass Hover Scrub" src="vegtips/image020_bypass_hover_scrub.png" />
 
 <p align="center">実際、このボタンは VP20 で追加されましたが、VP20 では効果がありませんでした。</p>
 
@@ -711,7 +711,7 @@ VP22 以下では、デフォルトで **`Enter` が「一時停止」、`Space`
 
 `21 build 187` 以降、このオプションは**プレビューウィンドウ下のトランスポートバー**に移動しました。再生/一時停止/停止ボタンと並んでいます。表示されていない場合は、右の三点リーダーを展開します。
 
-<ImageOnDemand button-text="Load image" alt="Cursor Transport" src="img/vegtips/image021_cursor_transport.png" />
+<ImageOnDemand alt="Cursor Transport" src="vegtips/image021_cursor_transport.png" />
 
 VP23 更新後、デフォルト動作が変更されました： **`Enter` が「停止」、`Space` が「一時停止」**。オプションは `スペースバーと F12 を再生/一時停止ではなく再生/停止に使用する` になり、 `プリファレンス -> 全般` とトランスポートバーの両方で利用可能です。
 
@@ -772,7 +772,7 @@ A: この問題は**特定の Nvidia ドライバーバージョン**で発生�
 
     **NVIDIA コントロールパネル**を開き、左の **`3D 設定の管理`** をクリックし、右側の **`プログラム設定`** タブに切り替えます。 `追加` をクリックし、VEGAS 実行可能ファイルを選択し、 **`OpenGL GDI 互換性`** を `グローバル設定を使用` から **`互換性を優先`** に変更します。VEGAS を再起動します。（複数の VEGAS バージョンがある場合は、それぞれ個別に設定します。）
 
-<ImageOnDemand button-text="Load image" alt="NVIDIA OpenGL GDI Compatibility" src="img/vegtips/image022_nvidia_opengl.png" />
+<ImageOnDemand alt="NVIDIA OpenGL GDI Compatibility" src="vegtips/image022_nvidia_opengl.png" />
 
 3. Nvidia ドライバーを `522.30` 以前にロールバックするか、最新版に更新します。再インストール時は、 **「カスタム」インストールを選択**し、 **`クリーンインストールを実行する`** をチェックします。これによりすべてのドライバー設定がデフォルトにリセットされるため、**推奨しません**。
 
@@ -788,7 +788,7 @@ A: この問題は**特定の Nvidia ドライバーバージョン**で発生�
 
 VEGAS の組み込みレンダーテンプレートを使用する場合、**解像度、フレームレート、ビットレートなどを常に調整する必要があり**、プロジェクトプロパティに合わせ、望ましい品質を達成する必要があります。しかし、**解像度/フレームレートを自動的にプロジェクトプロパティに一致させ、高度な CRF/CQP パラメーターによるビットレート制御をサポート**し、**手動パラメータ調整を少なくしてレンダリング**できるレンダープラグインがあります。このプラグインは **Voukoder** です。
 
-<ImageOnDemand button-text="Load image" alt="Voukoder Classic" src="img/vegtips/image023_voukoder_classic.png" />
+<ImageOnDemand alt="Voukoder Classic" src="vegtips/image023_voukoder_classic.png" />
 
 2 つのバージョン：Voukoder Classic と Voukoder Pro。
 
@@ -827,7 +827,7 @@ VEGAS の組み込みレンダーテンプレートを使用する場合、**解
 
 3.  **レンダーテンプレートのエンコーダーを変更。**
 
-<ImageOnDemand button-text="Load image" alt="Render Encoder" src="img/vegtips/image024_render_encoder.png" />
+<ImageOnDemand alt="Render Encoder" src="vegtips/image024_render_encoder.png" />
 
 <p align="center">利用可能なエンコーダーは GPU に依存します。</p>
 
@@ -847,7 +847,7 @@ VEGAS の組み込みレンダーテンプレートを使用する場合、**解
 
 9.  **イメージシーケンスレンダリング**。フリーズした場所からレンダリング開始。 **これにより、少なくともレンダリング済みファイルが保持されます。** 最後に、**イメージシーケンスを VEGAS に再インポートし、ビデオとしてレンダリング**。各シーケンスレンダリング後は、**新しいフォルダに出力**し、上書きを避けます。VEGAS は常に `000000` から番号付けを開始するため。
 
-<ImageOnDemand button-text="Load image" alt="Import Image Sequence" src="img/vegtips/image025_import_image_sequence.png" />
+<ImageOnDemand alt="Import Image Sequence" src="vegtips/image025_import_image_sequence.png" />
 
 <p align="center">イメージシーケンスのインポート。ビデオファイルのように動作し、フレームレートを設定できます。</p>
 
@@ -907,7 +907,7 @@ Q: レンダリング途中で**停止したい**が、**部分的にレンダ�
 
 A: **SeMW 拡張機能**のレンダリング表示ウィンドウにこの機能があります。
 
-<ImageOnDemand button-text="Load image" alt="SeMW Render Prompt" src="img/vegtips/image026_render_semw.png" />
+<ImageOnDemand alt="SeMW Render Prompt" src="vegtips/image026_render_semw.png" />
 
 SeMW 拡張機能公式サイト： https://www.semw-software.com/en/extensions/
 
@@ -925,7 +925,7 @@ A:
 
   2.  レンダーテンプレートリストで左側の `QuickTime` を選択します。右側で任意のテンプレートを選択し、`テンプレートのカスタマイズ` をクリックし、以下のようにパラメーターを調整します：
 
-<ImageOnDemand button-text="Load image" alt="Render Alpha QuickTime" src="img/vegtips/image027_render_alpha_quicktime.png" />
+<ImageOnDemand alt="Render Alpha QuickTime" src="vegtips/image027_render_alpha_quicktime.png" />
 
   3.  テンプレートを保存し、レンダリングします。
 
@@ -937,7 +937,7 @@ A:
 
   下図の通り：
 
-<ImageOnDemand button-text="Load image" alt="Render Alpha ProRes" src="img/vegtips/image028_render_alpha_prores.png" />
+<ImageOnDemand alt="Render Alpha ProRes" src="vegtips/image028_render_alpha_prores.png" />
 
 - **[Voukoder](#推奨レンダープラグイン-voukoder) <small>（VP18+、Voukoder Classic バージョン 12.0+。）</small>**
 
@@ -953,7 +953,7 @@ A1: VP17 以下では、プロジェクトプロパティとレンダーテン�
 
 1.  **[Voukoder](#推奨レンダープラグイン-voukoder) を使用し、色空間を変換する `フィルター` を持つテンプレートを作成。**
 
-<ImageOnDemand button-text="Load image" alt="Voukoder Color Space" src="img/vegtips/image040_voukoder_color_space.png" />
+<ImageOnDemand alt="Voukoder Color Space" src="vegtips/image040_voukoder_color_space.png" />
 
 2.  VP18+ にアップグレード。古いプロジェクトを新しい VP で開くとき、 `ファイル->プロパティ` の `ピクセル形式` を `レガシー 8 ビット（ビデオレベル）` から **`8 ビット（フルレンジ）`** に変更し、**古い VP で作成されたレンダーテンプレートを使用しない**。
 
@@ -967,9 +967,9 @@ A1: VP17 以下では、プロジェクトプロパティとレンダーテン�
 
 A2: ソースが **HDR 素材**の場合、**プロジェクトプロパティ `色空間` <sup>図 1</sup>** をソース <sup>図 2</sup> に一致するように変更します。これにより、プロジェクト全体が 10 ビット色深度に切り替わり、8 ビットよりレンダリングが遅くなります。
 
-<ImageOnDemand button-text="Load image" alt="Project HDR Color Space" src="img/vegtips/image029_color_space_hdr_project.png" />
+<ImageOnDemand alt="Project HDR Color Space" src="vegtips/image029_color_space_hdr_project.png" />
 
-<ImageOnDemand button-text="Load image" alt="Footage HDR Color Space" src="img/vegtips/image030_color_space_hdr_footage.png" />
+<ImageOnDemand alt="Footage HDR Color Space" src="vegtips/image030_color_space_hdr_footage.png" />
 
 または、プロジェクト色空間を変更せずに、ソース素材に色空間変換 LUT を適用します。組み込みの `LUT フィルター` FX または新しい `カラーグレーディング` 機能を使用します。鍵は、ソース色空間を `Rec.709` 標準に変換する LUT を見つけることです。これにより HDR ディテールが失われるため、HDR を出力する予定がない場合は、最初から HDR 素材を録画しないようにします。
 
@@ -977,7 +977,7 @@ A2: ソースが **HDR 素材**の場合、**プロジェクトプロパティ `
 
 Q: レンダリングされたビデオに**色ずれ（赤が紫、青が黄など）** がある？
 
-<ImageOnDemand button-text="Load image" alt="BGRA Color" src="img/vegtips/image031_bgra_color.png" />
+<ImageOnDemand alt="BGRA Color" src="vegtips/image031_bgra_color.png" />
 
 A: AMD GPU ドライバーの問題です。試します：
 
@@ -1063,7 +1063,7 @@ A: 既知の効果的な修正は **Windows アップデートツールによる
 
 Q: **[Win7 VP18+]** **`別名でレンダリング` をクリックすると即時エラー**： **`メディアファイルの作成中にエラーが発生しました。エラー 0x80131501 (メッセージなし)`**
 
-<ImageOnDemand button-text="Load image" alt="Win7 Render" src="img/vegtips/image032_render_win7.png" />
+<ImageOnDemand alt="Win7 Render" src="vegtips/image032_render_win7.png" />
 
 A: 通常、Win7 は **VP17 までしかサポートしていません**。Win7 上の VP18+ はこのエラーを投げます。
 
@@ -1100,7 +1100,7 @@ A: これは「タイトルとテキスト」の問題で、フォントの互�
 
 - 場合によっては、Windows Unicode 設定が原因の可能性があります。 **`コントロール パネル -> 地域 -> 管理 -> システムロケールの変更`** に移動し、 **`ベータ：Unicode UTF-8 を使用して、世界中の言語サポートを提供する`** が**チェックされていない**ことを確認します。
 
-<ImageOnDemand button-text="Load image" alt="Windows Unicode Settings" src="img/vegtips/image017_unicode_settings.png" />
+<ImageOnDemand alt="Windows Unicode Settings" src="vegtips/image017_unicode_settings.png" />
 
 VP20 では、「タイトルとテキスト」機能の「**字幕属性の転送**」も影響を受け、一部のフォントがこの機能で使用できなくなることがあります。
 
@@ -1130,17 +1130,17 @@ A: テキストファイルをメモ帳で開き、 **ANSI エンコーディン
 
 Q: 高解像度画面で「**ProType Titler**」を使用すると、**UI グリッチ/非常に小さく読めないテキスト**が発生する？
 
-<ImageOnDemand button-text="Load image" alt="PPT Titler UI Issue" src="img/vegtips/image033_protype_titler_ui_issue.png" />
+<ImageOnDemand alt="PPT Titler UI Issue" src="vegtips/image033_protype_titler_ui_issue.png" />
 
 A: システムスケーリング >= 150% 時の DPI スケーリング問題。VEGAS 実行可能ファイル/ショートカットを右クリック -> `プロパティ -> 互換性 -> 高 DPI 設定の変更`。 **`スケーリングの実行元:` を `システム（拡張）` に設定**。
 
-<ImageOnDemand button-text="Load image" alt="High DPI - System Enhanced" src="img/vegtips/image034_high_dpi_system_enhanced.png" />
+<ImageOnDemand alt="High DPI - System Enhanced" src="vegtips/image034_high_dpi_system_enhanced.png" />
 
 <br>
 
 Q: **[VP20、VP21]** **タイトルとテキストの「字幕属性の転送」機能がエラー（図の通り）**？
 
-<ImageOnDemand button-text="Load image" alt="Subtitle Attributes Transfer" src="img/vegtips/image035_subtitles_transfer.png" />
+<ImageOnDemand alt="Subtitle Attributes Transfer" src="vegtips/image035_subtitles_transfer.png" />
 
 A: テキストボックスに**混合フォーマット（異なるフォント、サイズなど）** が含まれている場合に発生し、転送できません。機能を使用する前に、**テキストフォーマットを統一**してみてください。 **VP21 最終版 build 315 で修正**。古いバージョン（VP20 以前を含む）は、私が書いた類似機能のスクリプトを使用できます。エラーは出ませんが、混合フォーマットの転送もサポートしません。スクリプトのインストールパスは [スクリプト](#xii-スクリプト-拡張機能関連) を参照。
 
@@ -1282,7 +1282,7 @@ Q: **一部の Sapphire プラグイン FX がアルファチャンネルを無�
 
 A: 図のように、FX の `ヘルプ` に入り、個別にその `GPU` アクセラレーションを無効にします。
 
-<ImageOnDemand button-text="Load image" alt="Sapphire Alpha Issue" src="img/vegtips/image036_sapphire_alpha.png" />
+<ImageOnDemand alt="Sapphire Alpha Issue" src="vegtips/image036_sapphire_alpha.png" />
 
 それでもダメな場合、**VEGAS 自体の `GPU アクセラレーション` を無効にします**。
 
@@ -1341,7 +1341,7 @@ A: レジストリキーに移動：
 
 `Path 1`、 `Path 2` などがあり、プリファレンス内の VST パスに対応。
 
-<ImageOnDemand button-text="Load image" alt="VST Registry" src="img/vegtips/image037_vst_reg.png" />
+<ImageOnDemand alt="VST Registry" src="vegtips/image037_vst_reg.png" />
 
 `CheckSum` は VEGAS が再スキャンが必要かチェックするためのものです。無視できます。 `Path`（絶対パス文字列）と `Flags`（`3` = スキャン、`0` = スキャンしない）に注目。必要に応じて変更。
 
@@ -1485,7 +1485,7 @@ VEGAS は 5 分ごとに自動保存し、クラッシュ後の回復を可能�
 
 - バックアップ間隔の調整が容易。
 
-<ImageOnDemand button-text="Load image" alt="Advanced Save" src="img/vegtips/image038_advanced_save.png" />
+<ImageOnDemand alt="Advanced Save" src="vegtips/image038_advanced_save.png" />
 
 <p align="center">メニュー： <b><code>ツール -> 高度な保存</code></b>。</p>
 
@@ -1540,7 +1540,7 @@ VEGAS は 5 分ごとに自動保存し、クラッシュ後の回復を可能�
 
 ### 1. VEGAS プロジェクトファイルバージョンダウングレードツール
 
-<ImageOnDemand button-text="Load image" alt="MSVPVF" src="img/vegtips/image039_msvpvf.png" />
+<ImageOnDemand alt="MSVPVF" src="vegtips/image039_msvpvf.png" />
 
 オリジナルプロジェクトリンク： https://sr.ht/~mrpapersonic/msvpvf/
 

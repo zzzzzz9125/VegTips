@@ -20,9 +20,10 @@
     </figure>
   </div>
   <figure v-else class="image-direct">
-    <img 
-      :src="imageSrc" 
-      :alt="alt" 
+    <img
+      ref="imgRef"
+      :src="currentSrc"
+      :alt="alt"
       class="image-direct__image"
       @error="handleImageError"
     />
@@ -31,8 +32,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed, nextTick, ref } from 'vue'
-import { withBase } from 'vitepress'
+import { computed, nextTick, ref, watch } from 'vue'
+import { useData, withBase } from 'vitepress'
 
 const props = withDefaults(
   defineProps<{
@@ -58,19 +59,44 @@ const useLazyLoad = computed(() => {
   }
 })
 
-// Always use withBase to properly handle base path in all environments
-const imageSrc = computed(() => {
-  // Ensure path starts with / for withBase to work correctly
-  const normalizedPath = props.src.startsWith('/') ? props.src : `/${props.src}`
-  return withBase(normalizedPath)
+// Build locale-aware paths; fall back to default if localized file is missing
+const normalizePath = (path: string) => path.replace(/^\/+/, '')
+const ensureImgPrefix = (path: string) => (path.startsWith('img/') ? path : `img/${path}`)
+
+const { lang } = useData()
+
+const baseRelativePath = computed(() => ensureImgPrefix(normalizePath(props.src)))
+const localePrefix = computed(() => {
+  const lv = (lang.value || '').toLowerCase()
+  if (lv.startsWith('zh')) return 'zh'
+  if (lv.startsWith('ja')) return 'ja'
+  if (lv.startsWith('ko')) return 'ko'
+  if (lv.startsWith('de')) return 'de'
+  if (lv.startsWith('fr')) return 'fr'
+  return ''
 })
 
-import { useData } from 'vitepress'
-const { lang } = useData()
+const localizedRelativePath = computed(() => {
+  if (!localePrefix.value) return null
+  const withoutImg = baseRelativePath.value.replace(/^img\//, '')
+  return `img/${localePrefix.value}/${withoutImg}`
+})
+
+const resolvedDefaultSrc = computed(() => withBase(`/${baseRelativePath.value}`))
+const resolvedLocalizedSrc = computed(() =>
+  localizedRelativePath.value ? withBase(`/${localizedRelativePath.value}`) : null
+)
+
+const currentSrc = ref<string>(resolvedLocalizedSrc.value ?? resolvedDefaultSrc.value)
+
+watch([resolvedLocalizedSrc, resolvedDefaultSrc], ([localized, fallback]) => {
+  currentSrc.value = localized ?? fallback
+})
 
 const buttonLabel = computed(() => {
   if (props.buttonText) return props.buttonText
   const lv = (lang.value || '').toLowerCase()
+  if (lv.startsWith('zh-hant')) return '點擊載入圖片'
   if (lv.startsWith('zh')) return '点击加载图片'
   if (lv.startsWith('ja')) return '画像を読み込む'
   if (lv.startsWith('ko')) return '이미지 불러오기'
@@ -81,6 +107,12 @@ const buttonLabel = computed(() => {
 
 const handleImageError = (event: Event) => {
   const img = event.target as HTMLImageElement
+  // If localized asset 404s, retry with default path
+  if (currentSrc.value === resolvedLocalizedSrc.value && resolvedLocalizedSrc.value) {
+    currentSrc.value = resolvedDefaultSrc.value
+    if (imgRef.value) imgRef.value.src = currentSrc.value
+    return
+  }
   console.error('Image failed to load:', img.src, 'Original:', props.src)
 }
 
@@ -90,7 +122,7 @@ const handleLoad = () => {
   // Set src after DOM update to ensure img element is visible
   nextTick(() => {
     if (imgRef.value) {
-      imgRef.value.src = imageSrc.value
+      imgRef.value.src = currentSrc.value
     }
   })
 }

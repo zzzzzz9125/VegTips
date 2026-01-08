@@ -25,7 +25,7 @@ title: UltraPaste! Extension
 
 # UltraPaste! Extension
 
-<ImageOnDemand button-text="Load image" alt="Icon" src="img/ultrapaste/img001_ultrapaste_icon.png" />
+<ImageOnDemand alt="Icon" src="ultrapaste/img001_ultrapaste_icon.png" />
 
 ## Overview
 
@@ -33,15 +33,15 @@ This extension introduces a **<u>novel</u>** file import method for VEGAS Pro. W
 
 Example of media file import method:
 
-<ImageOnDemand button-text="Load image" alt="Media Import" src="img/ultrapaste/img015_ultrapaste_media_import.gif" />
+<ImageOnDemand alt="Media Import" src="ultrapaste/img015_ultrapaste_media_import.gif" />
 
 Interaction of the `Clipboard Image` feature with your screenshot tool:
 
-<ImageOnDemand button-text="Load image" alt="Screenshot" src="img/ultrapaste/img016_ultrapaste_screenshot.gif" />
+<ImageOnDemand alt="Screenshot" src="ultrapaste/img016_ultrapaste_screenshot.gif" />
 
 Interaction of the `Clipboard Image` feature with PowerPoint:
 
-<ImageOnDemand button-text="Load image" alt="PowerPoint" src="img/ultrapaste/img017_ultrapaste_ppt.gif" />
+<ImageOnDemand alt="PowerPoint" src="ultrapaste/img017_ultrapaste_ppt.gif" />
 
 ## Installation
 
@@ -56,13 +56,13 @@ Supported Versions: Sony Vegas Pro 13 - Magix Vegas Pro 22
 
 2.  After installation, you can find the dockable extension window via `Tools -> UltraPaste!`.
 
-<ImageOnDemand button-text="Load image" alt="Tools Menu" src="img/ultrapaste/img002_ultrapaste_tools_menu.png" />
+<ImageOnDemand alt="Tools Menu" src="ultrapaste/img002_ultrapaste_tools_menu.png" />
 
 ## Usage
 
 First is the topmost `UltraPaste!`. This is the extension's primary feature; almost all operations can be completed using it. You can assign it a keyboard shortcut in `Options -> Customize Keyboard`:
 
-<ImageOnDemand button-text="Load image" alt="Customize Keyboard" src="img/ultrapaste/img003_ultrapaste_keyboard.png" />
+<ImageOnDemand alt="Customize Keyboard" src="ultrapaste/img003_ultrapaste_keyboard.png" />
 
 `Ctrl + Shift + V` is my personal recommendation. You can bind another convenient shortcut as well. It's not recommended to bind `Ctrl + V`, as it would override VEGAS's native paste key.
 
@@ -83,7 +83,7 @@ All this data can be correctly recognized and processed.
 
 ### General
 
-<ImageOnDemand button-text="Load image" alt="General" src="img/ultrapaste/img004_ultrapaste_general.png" />
+<ImageOnDemand alt="General" src="ultrapaste/img004_ultrapaste_general.png" />
 
 Exclude File Types: This option makes the extension exclude files matching specific name patterns. It uses basic DOS expressions. For example, the `*.sfvp0` and `*.sfap0` in the image are VEGAS Pro's video proxy files and audio proxy files, respectively. These proxy files can actually be imported directly into VEGAS, but they are excluded by default to prevent user error. If you don't need to import certain specific files, you can adjust this setting yourself.
 
@@ -91,7 +91,7 @@ Exclude File Types: This option makes the extension exclude files matching speci
 
 ### Clipboard Image
 
-<ImageOnDemand button-text="Load image" alt="Clipboard Image" src="img/ultrapaste/img005_ultrapaste_clipboard_image.png" />
+<ImageOnDemand alt="Clipboard Image" src="ultrapaste/img005_ultrapaste_clipboard_image.png" />
 
 `Start Position`: The starting position for file import. Divided into three categories: `Cursor`, `Playback Cursor`, `Project Start`. The difference between `Cursor` and `Playback Cursor` is that when you play the timeline, the `Cursor` is just the starting point of playback, while the `Playback Cursor` is the real-time playback position of the timeline.
 
@@ -107,7 +107,7 @@ Exclude File Types: This option makes the extension exclude files matching speci
 
 ### REAPER Data
 
-<ImageOnDemand button-text="Load image" alt="Reaper Data" src="img/ultrapaste/img006_ultrapaste_reaper_data.png" />
+<ImageOnDemand alt="Reaper Data" src="ultrapaste/img006_ultrapaste_reaper_data.png" />
 
 This is one of the key features of this extension: complete implementation of REAPER clipboard data import and export. You can select various items or tracks in REAPER, `Ctrl + C`, then directly `Ctrl + Shift + V` paste them into the VEGAS timeline.
 
@@ -122,9 +122,9 @@ In short, everything adaptable has been adapted. You can also select a REAPER pr
 
 You can also export VEGAS events or tracks as REAPER clipboard data, then `Ctrl + V` in REAPER, achieving full interoperability between the software.
 
-<ImageOnDemand button-text="Load image" alt="Reaper Example 1" src="img/ultrapaste/img007_ultrapaste_reaper_1.png" />
+<ImageOnDemand alt="Reaper Example 1" src="ultrapaste/img007_ultrapaste_reaper_1.png" />
 
-<ImageOnDemand button-text="Load image" alt="Reaper Example 2" src="img/ultrapaste/img008_ultrapaste_reaper_2.png" />
+<ImageOnDemand alt="Reaper Example 2" src="ultrapaste/img008_ultrapaste_reaper_2.png" />
 
 Note: Due to scripting API limitations, when the VEGAS version is older than the final version of 15, `VP15B416`, all parameters related to audio event pitch cannot be transferred into VEGAS, nor can they be output to REAPER clipboard data.
 
@@ -136,7 +136,7 @@ Note: Due to scripting API limitations, when the VEGAS version is older than the
 
 ### PSD Images
 
-<ImageOnDemand button-text="Load image" alt="PSD Images" src="img/ultrapaste/img009_ultrapaste_psd.png" />
+<ImageOnDemand alt="PSD Images" src="ultrapaste/img009_ultrapaste_psd.png" />
 
 `Expand All Layers`: When importing a multi-layer PSD image, automatically expand it into separate VEGAS tracks.
 
@@ -146,7 +146,7 @@ Note: Due to scripting API limitations, when the VEGAS version is older than the
 
 ### Subtitles
 
-<ImageOnDemand button-text="Load image" alt="Subtitles" src="img/ultrapaste/img010_ultrapaste_subtitles.png" />
+<ImageOnDemand alt="Subtitles" src="ultrapaste/img010_ultrapaste_subtitles.png" />
 
 Subtitles are another key feature of this extension. You can copy any `Plain Text` / `TXT` file / `SRT` subtitle file / `LRC` subtitle file and paste it into the VEGAS timeline.
 
@@ -168,7 +168,7 @@ For the DXT-type plugins `ProType Titler` and `(Legacy) Text`, only user-saved p
 
 `Default Length`: The default length (in seconds) when importing clipboard plain text or TXT files without timestamps.
 
-<ImageOnDemand button-text="Load image" alt="Subtitle Region" src="img/ultrapaste/img011_ultrapaste_subtitles_region.png" />
+<ImageOnDemand alt="Subtitle Region" src="ultrapaste/img011_ultrapaste_subtitles_region.png" />
 
 <p align="center">Tip: It's more convenient to define a region on the timeline first, then press the shortcut key.</p>
 
@@ -180,7 +180,7 @@ For the DXT-type plugins `ProType Titler` and `(Legacy) Text`, only user-saved p
 
 ### Media
 
-<ImageOnDemand button-text="Load image" alt="Media" src="img/ultrapaste/img012_ultrapaste_media.png" />
+<ImageOnDemand alt="Media" src="ultrapaste/img012_ultrapaste_media.png" />
 
 `Add Method`: Divided into three types: `Across Time`, `Across Tracks`, `As Takes`. Completely consistent with the three file import methods in VEGAS's native right-click drag import menu.
 
@@ -196,7 +196,7 @@ For the DXT-type plugins `ProType Titler` and `(Legacy) Text`, only user-saved p
 
 Media Custom Import:
 
-<ImageOnDemand button-text="Load image" alt="Media Custom Import" src="img/ultrapaste/img013_ultrapaste_media_custom.png" />
+<ImageOnDemand alt="Media Custom Import" src="ultrapaste/img013_ultrapaste_media_custom.png" />
 
 <p align="center">Set import rules for specific media file names</p>
 
@@ -210,7 +210,7 @@ For example, my `1_*(*).wav;1_*(*).flac` here refers to the naming convention of
 
 ### VEGAS Data
 
-<ImageOnDemand button-text="Load image" alt="VEGAS Data" src="img/ultrapaste/img014_ultrapaste_vegas_data.png" />
+<ImageOnDemand alt="VEGAS Data" src="ultrapaste/img014_ultrapaste_vegas_data.png" />
 
 `VEG Import Type`: Divided into three categories: `Open Project File`, `As Nested Project`, `Import Media from Project`.
 

@@ -100,7 +100,7 @@ Installieren und verwenden Sie den `Sony Preset Manager`.
 
 <!-- 2. Wie im Diagramm gezeigt:
 
-<ImageOnDemand button-text="Bild laden" alt="Plugin-Kette" src="img/vegtips/image001_plugin_chain.png" />
+<ImageOnDemand alt="Plugin-Kette" src="vegtips/image001_plugin_chain.png" />
 
 <p align="center">Illustration zur Verwendung des VEGAS Preset Manager v0.2</p> -->
 
@@ -128,7 +128,7 @@ Installieren und verwenden Sie den `Sony Preset Manager`.
 
 Ein häufiges Szenario: Beim Ausführen von VEGAS / **Klicken auf `Datei -> Rendern als`** erscheint sofort ein Fehler-Pop-up.
 
-<ImageOnDemand button-text="Bild laden" alt="Problembericht" src="img/vegtips/image002_problem_report.png" />
+<ImageOnDemand alt="Problembericht" src="vegtips/image002_problem_report.png" />
 
 **Überprüfen Sie in diesem Fall immer zuerst das Kontrollkästchen für `Problemdetails anzeigen`, um den Fehlerinhalt zu erhalten.**
 
@@ -166,7 +166,7 @@ Wenn Sie auf unerklärliche Probleme stoßen, wie **importierten Audio, der komp
 
 Die Standardmethode: Halten Sie `Strg + Umschalt` gedrückt und führen Sie VEGAS aus. Eine "Zurücksetzen?"-Eingabeaufforderung erscheint. Aktivieren Sie `Alle zwischengespeicherten Anwendungsdaten löschen` und klicken Sie auf `Ja`.
 
-<ImageOnDemand button-text="Bild laden" alt="Zurücksetzen" src="img/vegtips/image003_reset.png" />
+<ImageOnDemand alt="Zurücksetzen" src="vegtips/image003_reset.png" />
 
 <p align="center">Zurücksetzen? (J/N)</p>
 
@@ -250,7 +250,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 Hier repräsentieren `23.0` und `19.0` die aktuelle VEGAS-Hauptversion. Die erste Zeile ist die Haupteinstellung für die Oberflächensprache, aber es wird empfohlen, alle vier zu ändern.
 
-<ImageOnDemand button-text="Bild laden" alt="Sprachregistrierung" src="img/vegtips/image004_language_reg.png" />
+<ImageOnDemand alt="Sprachregistrierung" src="vegtips/image004_language_reg.png" />
 
 Wenn Sie die englische Version installiert haben, ist der Standardwert für `ULangID` wahrscheinlich der hexadezimale Wert `409` (dezimal `1033`). Ändern Sie ihn zu **`407` (dezimal `1031`) für Deutsch**.
 
@@ -273,7 +273,7 @@ Nachdem VEGAS erfolgreich gestartet wurde, wenn die Namen der eingebauten Video-
 F: Fehler während der Installation: **PC muss neu starten, um die Installation fortzusetzen**?  
 `Setup hat festgestellt, dass das System derzeit auf einen Neustart wartet, um eine vorherige Installation oder ein vorheriges Update abzuschließen. Um Probleme zu vermeiden, starten Sie Ihr System bitte neu, bevor Sie installieren.`
 
-<ImageOnDemand button-text="Bild laden" alt="Installationsneustart-Problem" src="img/vegtips/image005_install_reboot.png" />
+<ImageOnDemand alt="Installationsneustart-Problem" src="vegtips/image005_install_reboot.png" />
 
 A: Versuchen Sie zuerst, Ihren PC neu zu starten. Wenn das nicht funktioniert, müssen Sie die Registrierung ändern. Öffnen Sie den Registrierungs-Editor, navigieren Sie zu **`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager`**, **löschen Sie den Wert `PendingFileRenameOperations`**, dann starten Sie Ihren PC neu.
 
@@ -285,7 +285,7 @@ Siehe: <a href="https://tieba.baidu.com/p/4339996851">https://tieba.baidu.com/p/
 
 F: Fehler: **`Während der Installation ist ein Fehler aufgetreten -2147163964. Modul xxxxx.dll konnte nicht registriert werden`**.
 
-<ImageOnDemand button-text="Bild laden" alt="Installations-DLL-Registrierungsproblem" src="img/vegtips/image006_install_dll.png" />
+<ImageOnDemand alt="Installations-DLL-Registrierungsproblem" src="vegtips/image006_install_dll.png" />
 
 A: **Neustarten Ihres PCs und Neuinstallation** behebt dies normalerweise. Wenn es bestehen bleibt, versuchen Sie **eine andere Version zu installieren**.
 
@@ -318,7 +318,7 @@ F: VEGAS **hängt/ stürzt ab/ friert ein** beim Schritt "**VST-Plugins werden g
 
 A: Versuchen Sie, **das VST-Scannen beim Start zu deaktivieren**. Klicken Sie mit der rechten Maustaste auf die VEGAS-**Verknüpfung -> Eigenschaften**. Im Feld **`Ziel`** fügen Sie am Ende **` /NOVSTGROVEL`** hinzu (**beachten Sie das Leerzeichen vor dem Schrägstrich**). Führen Sie dann VEGAS über diese Verknüpfung aus. Sobald es normal startet, können Sie problematische Plugins von den [VST-Pfaden](#xi-audio-plugin-bezogene) entfernen, separat speichern usw.
 
-<ImageOnDemand button-text="Bild laden" alt="NOVSTGROVEL" src="img/vegtips/image007_novstgrovel.png" />
+<ImageOnDemand alt="NOVSTGROVEL" src="vegtips/image007_novstgrovel.png" />
 
 <br>
 
@@ -348,7 +348,7 @@ A: Gehen Sie zu **`Systemsteuerung -> Programme -> Programme und Funktionen`** u
 
 2. Während der Installation, wenn Sie nach zusätzlichen Komponenten gefragt werden, gehen Sie zu `Einzelne Komponenten`, suchen Sie nach `MSVC`, aktivieren Sie **`MSVC v143 - VS 2022 C++ x64/x86 Build-Tools (neueste)`**, und setzen Sie die Installation fort.
 
-<ImageOnDemand button-text="Bild laden" alt="MSVC 143 Installieren" src="img/vegtips/image008_msvc143.png" />
+<ImageOnDemand alt="MSVC 143 Installieren" src="vegtips/image008_msvc143.png" />
 
 3. Nach der Installation gehen Sie zum MSVC-Installationspfad: `C:\Programme\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\`. Es werden Ordner wie `v143` und `14.44.35112` (abhängig von der installierten Version) vorhanden sein. Derjenige, der `14.44.35112` ähnelt, ist das Ziel.
 
@@ -366,7 +366,7 @@ F: Nach dem Öffnen von VEGAS gibt es **Rauschen/kein Audio/...**?
 
 A: **Gehen Sie zu `Systemsteuerung -> Hardware und Sound -> Sound`, öffnen Sie `Eigenschaften` für Ihr aktuelles Wiedergabegerät. Auf der Registerkarte `Erweitert`, unter `Exklusivmodus`, deaktivieren Sie `Anwendungen erlauben, exklusive Kontrolle über dieses Gerät zu übernehmen`, ODER ändern Sie das `Standardformat` zu `2 Kanal, 24 Bit, 44100 Hz`.** Wenn das nicht funktioniert, versuchen Sie **Ihre Soundkartentreiber neu zu installieren**.
 
-<ImageOnDemand button-text="Bild laden" alt="Audiogerät" src="img/vegtips/image009_sound_device.png" />
+<ImageOnDemand alt="Audiogerät" src="vegtips/image009_sound_device.png" />
 
 <br>
 
@@ -574,7 +574,7 @@ F: 4:3 Videos/Bilder werden importiert und **horizontal gestreckt** auf 16:9. Wi
 
 A: Dies passiert, wenn `4:3`-Medien in ein `16:9`-Projekt mit bestimmter Autokonfiguration importiert werden. Behebung: **Rechtsklick auf das Medium -> Eigenschaften -> Medien-Tab**, finden Sie `Pixel-Seitenverhältnis`, ändern Sie von `1.3333` zu `1`, dann klicken Sie auf die Speichern-Schaltfläche neben dem `Stream`-Abschnitt<sup>(`Einstellungen im Videoprofil für zukünftige automatische Erkennung speichern`)</sup>. Dies stellt sicher, dass zukünftige `4:3`-Importe nicht automatisch gestreckt werden. Dies kann auch für mehrere Dateien im **`Projektmedien`**-Fenster durchgeführt werden.
 
-<ImageOnDemand button-text="Bild laden" alt="Video-Profil-Schaltfläche" src="img/vegtips/image010_profile_button.png" />
+<ImageOnDemand alt="Video-Profil-Schaltfläche" src="vegtips/image010_profile_button.png" />
 
 
 
@@ -590,9 +590,9 @@ Wenn Sie "**Unbekannter Fehler beim Versuch, Videoprofil zu speichern**" erhalte
 3. Anstatt auf `OK` zu klicken, drücken Sie **`Strg + Umschalt + Eingabe`**, um die Datei mit Administratorrechten zu öffnen. Bearbeiten Sie manuell das Standardimportprofil für `4:3`, ändern Sie alle `1.3333333333`-Werte zu `1`, dann speichern.
   - Hinweis: Das Öffnen ohne Administratorrechte führt dazu, dass Notepad `Speichern unter` anzeigt, anstatt in die Originaldatei zu schreiben.
 
-<ImageOnDemand button-text="Bild laden" alt="Video-Profil-Bearbeitung 1" src="img/vegtips/image011_profile_edit_1.png" />
+<ImageOnDemand alt="Video-Profil-Bearbeitung 1" src="vegtips/image011_profile_edit_1.png" />
 
-<ImageOnDemand button-text="Bild laden" alt="Video-Profil-Bearbeitung 2" src="img/vegtips/image012_profile_edit_2.png" />
+<ImageOnDemand alt="Video-Profil-Bearbeitung 2" src="vegtips/image012_profile_edit_2.png" />
 
 <small>
 Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--128760/">https://www.vegascreativesoftware.info/us/forum/posts--128760/</a><br>
@@ -604,7 +604,7 @@ Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--128760
 
 F: **Video-Vorschaufenster zeigt nichts**?
 
-<ImageOnDemand button-text="Bild laden" alt="Trimmer oder Vorschau?" src="img/vegtips/image013_trimmer_or_preview.png" />
+<ImageOnDemand alt="Trimmer oder Vorschau?" src="vegtips/image013_trimmer_or_preview.png" />
 
 A: Überprüfen Sie, ob Sie zum **`Trimmer`**-Fenster gewechselt haben. Wenn ja, **wechseln Sie zurück zum `Video-Vorschau`-Fenster**. Wenn Sie das getrennte `Trimmer`- und `Vorschau`-Fensterlayout von älteren Versionen (VP14 und darunter) bevorzugen, gehen Sie zum Menü **`Ansicht -> Fensterlayout`** und wählen Sie **`Quellfensterlayout`**.
 
@@ -622,13 +622,13 @@ A: Normalerweise wurde das Fenster versehentlich unter die Windows-Taskleiste ge
 
 Einfache Lösung: **Klicken Sie auf die entsprechende Schaltfläche, dann sofort `Alt + Leertaste` drücken, wählen Sie `Verschieben`**, und ziehen Sie das Fenster hoch. Alternativ verstecken Sie vorübergehend die Windows-Taskleiste, dann ziehen. Als letzten Ausweg versuchen Sie `Ansicht -> Standardlayout wiederherstellen`.
 
-<ImageOnDemand button-text="Bild laden" alt="Fenster verschieben" src="img/vegtips/image014_window_move.gif" />
+<ImageOnDemand alt="Fenster verschieben" src="vegtips/image014_window_move.gif" />
 
 <br>
 
 F: FX hinzugefügt, aber im Vorschaufenster wird das **FX nicht vollständig angezeigt, erscheint links/rechts geteilt**?
 
-<ImageOnDemand button-text="Bild laden" alt="Geteilte Bildschirmansicht" src="img/vegtips/image015_split_screen.png" />
+<ImageOnDemand alt="Geteilte Bildschirmansicht" src="vegtips/image015_split_screen.png" />
 
 A: Wie gezeigt, überprüfen Sie, ob **`Geteilte Bildschirmansicht`** aktiviert ist.
 
@@ -636,7 +636,7 @@ A: Wie gezeigt, überprüfen Sie, ob **`Geteilte Bildschirmansicht`** aktiviert 
 
 F: Etwas angeklickt, und eine einzelne Videospur **teilt sich in A/B-Spuren**. Wie rückgängig machen?
 
-<ImageOnDemand button-text="Bild laden" alt="AB-Spur" src="img/vegtips/image016_ab_track.png" />
+<ImageOnDemand alt="AB-Spur" src="vegtips/image016_ab_track.png" />
 
 A: Normalerweise passiert dies durch Doppelklicken auf den Rand eines Events. **Doppelklicken Sie erneut auf den Event-Rand**, um es zu beheben.
 
@@ -665,7 +665,7 @@ A:
 
 2. Wenn das Installieren der Schriftart nicht hilft, gehen Sie zu **`Systemsteuerung -> Region -> Verwaltung -> Systemgebietsschema ändern`**. Stellen Sie sicher, dass **`Beta: Unicode UTF-8 für weltweite Sprachunterstützung verwenden`** **NICHT** aktiviert ist, wie unten gezeigt.
 
-<ImageOnDemand button-text="Bild laden" alt="Windows Unicode-Einstellungen" src="img/vegtips/image017_unicode_settings.png" />
+<ImageOnDemand alt="Windows Unicode-Einstellungen" src="vegtips/image017_unicode_settings.png" />
 
 <small>
 Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--138828/">https://www.vegascreativesoftware.info/us/forum/posts--138828/</a><br>
@@ -675,11 +675,11 @@ Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--138828
 
 F: Projekteigenschaften / Benutzerdefinierte Render-Vorlage / Einstellungsfenster sind **zu groß, können nicht vollständig angezeigt werden, OK kann nicht geklickt werden**?
 
-<ImageOnDemand button-text="Bild laden" alt="Fenster zu groß" src="img/vegtips/image018_window_too_large.png" />
+<ImageOnDemand alt="Fenster zu groß" src="vegtips/image018_window_too_large.png" />
 
 A: VEGAS-Fenstergröße skaliert mit Windows-Anzeigeeinstellungen. Hohe DPI-Skalierung kann VEGAS-Fenster sehr groß machen, was bei extremen Skalierungen zu abgeschnittenen Anzeigen führt. Um "OK" zu klicken, können Sie die **`Eingabe`-Taste** drücken. Wenn Sie das vollständige Fenster angezeigt benötigen, müssen Sie **die Bildschirm-DPI-Skalierung in Windows-Einstellungen auf 100% ändern**, bevor Sie das Fenster öffnen, dann wieder zurückändern. Alternativ **setzen Sie die DPI-Skalierung von VEGAS einzeln auf 100%**: Rechtsklick auf die VEGAS ausführbare Datei oder Verknüpfung -> `Eigenschaften -> Kompatibilität -> Hohe DPI-Einstellungen ändern`. **Setzen Sie `Skalierung durch:` auf `Anwendung`**.
 
-<ImageOnDemand button-text="Bild laden" alt="Hohe DPI - Anwendung" src="img/vegtips/image019_high_dpi_application.png" />
+<ImageOnDemand alt="Hohe DPI - Anwendung" src="vegtips/image019_high_dpi_application.png" />
 
 <br>
 
@@ -697,7 +697,7 @@ Standardlösung: **Drücken Sie `Strg + Z`, um rückgängig zu machen, dann zieh
 
 VP21 fügte eine **`Hover-Scrub umgehen`**-Schaltfläche hinzu. Aktivieren verhindert Fehlbedienung, aber Sie verlieren die Fähigkeit, Video durch Schweben zu vorschauen (nur Miniaturbild sehen).
 
-<ImageOnDemand button-text="Bild laden" alt="Hover-Scrub umgehen" src="img/vegtips/image020_bypass_hover_scrub.png" />
+<ImageOnDemand alt="Hover-Scrub umgehen" src="vegtips/image020_bypass_hover_scrub.png" />
 
 <p align="center">Eigentlich wurde diese Schaltfläche in VP20 hinzugefügt, aber in VP20 hatte sie keine Wirkung.</p>
 
@@ -711,7 +711,7 @@ In VP22 und darunter ist standardmäßig **`Eingabe` "Pause", `Leertaste` "Stopp
 
 Seit `21 Build 187` wurde diese Option zur **Transportleiste unter dem Vorschaufenster** verschoben, neben Wiedergabe/Pause/Stopp-Schaltflächen. Wenn nicht sichtbar, erweitern Sie die drei Punkte rechts.
 
-<ImageOnDemand button-text="Bild laden" alt="Cursor-Transport" src="img/vegtips/image021_cursor_transport.png" />
+<ImageOnDemand alt="Cursor-Transport" src="vegtips/image021_cursor_transport.png" />
 
 Nach dem VP23-Update änderte sich das Standardverhalten: **`Eingabe` ist "Stopp", `Leertaste` ist "Pause"**. Die Option wurde zu `Leertaste und F12 für Wiedergabe/Stopp anstelle von Wiedergabe/Pause verwenden`, verfügbar in beiden `Einstellungen -> Allgemein` und der Transportleiste.
 
@@ -772,7 +772,7 @@ A: Dieses Problem erscheint mit **bestimmten Nvidia-Treiberversionen**. Hier sin
 
     Öffnen Sie **NVIDIA Systemsteuerung**, klicken Sie links auf **`3D-Einstellungen verwalten`**, wechseln Sie rechts zum Tab **`Programmeinstellungen`**. Klicken Sie `Hinzufügen`, wählen Sie die VEGAS ausführbare Datei, und ändern Sie **`OpenGL GDI-Kompatibilität`** von `Globale Einstellung verwenden` zu **`Kompatibilität bevorzugen`**. Starten Sie VEGAS neu. (Wenn Sie mehrere VEGAS-Versionen haben, setzen Sie jede separat.)
 
-<ImageOnDemand button-text="Bild laden" alt="NVIDIA OpenGL GDI-Kompatibilität" src="img/vegtips/image022_nvidia_opengl.png" />
+<ImageOnDemand alt="NVIDIA OpenGL GDI-Kompatibilität" src="vegtips/image022_nvidia_opengl.png" />
 
 3. Nvidia-Treiber auf `522.30` oder früher zurückrollen, oder auf die neueste aktualisieren. Bei Neuinstallation **wählen Sie "Benutzerdefiniert" Installation** und aktivieren **`Saubere Installation durchführen`**. Dies setzt alle Treibereinstellungen auf Standard zurück, daher **nicht empfohlen**.
 
@@ -788,7 +788,7 @@ Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--138196
 
 Bei der Verwendung der eingebauten Render-Vorlagen von VEGAS müssen wir **ständig Auflösung, Framerate, Bitrate usw. anpassen**, um die Projekt-Eigenschaften abzugleichen und die gewünschte Qualität zu erreichen. Es gibt jedoch ein Render-Plugin, das **Auflösung/Framerate automatisch an Projekteigenschaften anpasst und erweiterte CRF/CQP-Parameter für Bitratenkontrolle unterstützt**, was das Rendering **mit weniger manueller Parameteranpassung** ermöglicht. Dieses Plugin ist **Voukoder**.
 
-<ImageOnDemand button-text="Bild laden" alt="Voukoder Classic" src="img/vegtips/image023_voukoder_classic.png" />
+<ImageOnDemand alt="Voukoder Classic" src="vegtips/image023_voukoder_classic.png" />
 
 Zwei Versionen: Voukoder Classic und Voukoder Pro.
 
@@ -827,7 +827,7 @@ Andere ähnliche Plugins sind [DebugMode FrameServer](http://www.debugmode.com/f
 
 3.  **Encoder in Render-Vorlage ändern.**
 
-<ImageOnDemand button-text="Bild laden" alt="Render-Encoder" src="img/vegtips/image024_render_encoder.png" />
+<ImageOnDemand alt="Render-Encoder" src="vegtips/image024_render_encoder.png" />
 
 <p align="center">Verfügbare Encoder hängen von Ihrer GPU ab.</p>
 
@@ -847,7 +847,7 @@ Andere ähnliche Plugins sind [DebugMode FrameServer](http://www.debugmode.com/f
 
 9.  **Bildsequenz rendern**. Beginnen Sie von dort zu rendern, wo es einfror. **Dies bewahrt zumindest gerenderte Dateien.** Schließlich **importieren Sie die Bildsequenz zurück in VEGAS und rendern sie als Video**. Nach jeder Sequenzrender **ausgeben in einen neuen Ordner**, um Überschreiben zu vermeiden, da VEGAS immer von `000000` beginnt.
 
-<ImageOnDemand button-text="Bild laden" alt="Bildsequenz importieren" src="img/vegtips/image025_import_image_sequence.png" />
+<ImageOnDemand alt="Bildsequenz importieren" src="vegtips/image025_import_image_sequence.png" />
 
 <p align="center">Importieren einer Bildsequenz. Verhält sich wie eine Videodatei; Sie können Framerate setzen.</p>
 
@@ -907,7 +907,7 @@ F: Möchte **Rendering mitten drin stoppen**, aber **teilweise gerenderte Videod
 
 A: Das **SeMW-Erweiterung** Render-Anzeigefenster hat diese Funktion.
 
-<ImageOnDemand button-text="Bild laden" alt="SeMW Render-Eingabeaufforderung" src="img/vegtips/image026_render_semw.png" />
+<ImageOnDemand alt="SeMW Render-Eingabeaufforderung" src="vegtips/image026_render_semw.png" />
 
 SeMW-Erweiterung offizielle Seite: https://www.semw-software.com/en/extensions/
 
@@ -925,7 +925,7 @@ A:
 
   2.  In Render-Vorlagenliste wählen Sie links `QuickTime`. Wählen Sie rechts eine beliebige Vorlage, klicken Sie `Vorlage anpassen`, passen Sie Parameter wie gezeigt an:
 
-<ImageOnDemand button-text="Bild laden" alt="Render-Alpha QuickTime" src="img/vegtips/image027_render_alpha_quicktime.png" />
+<ImageOnDemand alt="Render-Alpha QuickTime" src="vegtips/image027_render_alpha_quicktime.png" />
 
   3.  Vorlage speichern und rendern.
 
@@ -937,7 +937,7 @@ A:
 
   Wie gezeigt:
 
-<ImageOnDemand button-text="Bild laden" alt="Render-Alpha ProRes" src="img/vegtips/image028_render_alpha_prores.png" />
+<ImageOnDemand alt="Render-Alpha ProRes" src="vegtips/image028_render_alpha_prores.png" />
 
 - **[Voukoder](#empfohlenes-render-plugin-voukoder) <small>(VP18+, Voukoder Classic Version 12.0+.)</small>**
 
@@ -953,7 +953,7 @@ Drei Lösungen:
 
 1.  **Verwenden Sie [Voukoder](#empfohlenes-render-plugin-voukoder), erstellen Sie eine Vorlage mit `Filtern`, um Farbraum zu konvertieren.**
 
-<ImageOnDemand button-text="Bild laden" alt="Voukoder Farbraum" src="img/vegtips/image040_voukoder_color_space.png" />
+<ImageOnDemand alt="Voukoder Farbraum" src="vegtips/image040_voukoder_color_space.png" />
 
 2.  Upgrade auf VP18+. Wenn ein altes Projekt in neuem VP geöffnet wird, ändern Sie `Pixelformat` in `Datei->Eigenschaften` von `Legacy 8-Bit (Videostufen)` zu **`8-Bit (Vollbereich)`**, und **verwenden Sie keine Render-Vorlagen, die in altem VP erstellt wurden**.
 
@@ -967,9 +967,9 @@ Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--142942
 
 A2: Wenn Quelle **HDR-Material** ist, ändern Sie die **Projekteigenschaften `Farbraum` <sup>Abb. 1</sup>**, um der Quelle <sup>Abb. 2</sup> zu entsprechen. Dies schaltet das gesamte Projekt auf 10-Bit-Farbtiefe um, macht Rendering langsamer als 8-Bit.
 
-<ImageOnDemand button-text="Bild laden" alt="Projekt HDR-Farbraum" src="img/vegtips/image029_color_space_hdr_project.png" />
+<ImageOnDemand alt="Projekt HDR-Farbraum" src="vegtips/image029_color_space_hdr_project.png" />
 
-<ImageOnDemand button-text="Bild laden" alt="Material HDR-Farbraum" src="img/vegtips/image030_color_space_hdr_footage.png" />
+<ImageOnDemand alt="Material HDR-Farbraum" src="vegtips/image030_color_space_hdr_footage.png" />
 
 Alternativ halten Sie Projektfarbraum unverändert und wenden eine Farbraumkonvertierungs-LUT auf das Quellenmaterial an. Verwenden Sie den eingebauten `LUT-Filter` FX oder die neuere `Farbkorrektur`-Funktion. Der Schlüssel ist, eine LUT zu finden, die den Quellfarbraum in `Rec.709`-Standard konvertiert. Dies verliert HDR-Details, also wenn Sie nicht planen, HDR auszugeben, vermeiden Sie von Anfang an die Aufnahme von HDR-Material.
 
@@ -977,7 +977,7 @@ Alternativ halten Sie Projektfarbraum unverändert und wenden eine Farbraumkonve
 
 F: Gerenderte Videos haben **Farbverschiebungen (Rot wird Lila, Blau wird Gelb, usw.)**?
 
-<ImageOnDemand button-text="Bild laden" alt="BGRA Farbe" src="img/vegtips/image031_bgra_color.png" />
+<ImageOnDemand alt="BGRA Farbe" src="vegtips/image031_bgra_color.png" />
 
 A: AMD-GPU-Treiberproblem. Versuchen Sie:
 
@@ -1063,7 +1063,7 @@ Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--83436/
 
 F: **[Win7 VP18+]** **Klicken auf `Rendern als` sofort Fehler**: **`Beim Erstellen der Mediendatei ist ein Fehler aufgetreten. Fehler 0x80131501 (Nachricht fehlt)`**
 
-<ImageOnDemand button-text="Bild laden" alt="Win7 Render" src="img/vegtips/image032_render_win7.png" />
+<ImageOnDemand alt="Win7 Render" src="vegtips/image032_render_win7.png" />
 
 A: Normalerweise unterstützt Win7 nur **bis VP17**. VP18+ auf Win7 wirft diesen Fehler.
 
@@ -1100,7 +1100,7 @@ Lösungen:
 
 - In einigen Fällen könnten Windows Unicode-Einstellungen die Ursache sein. Gehen Sie zu **`Systemsteuerung -> Region -> Verwaltung -> Systemgebietsschema ändern`**, stellen Sie sicher, dass **`Beta: Unicode UTF-8 für weltweite Sprachunterstützung verwenden`** **NICHT** aktiviert ist.
 
-<ImageOnDemand button-text="Bild laden" alt="Windows Unicode-Einstellungen" src="img/vegtips/image017_unicode_settings.png" />
+<ImageOnDemand alt="Windows Unicode-Einstellungen" src="vegtips/image017_unicode_settings.png" />
 
 In VP20 ist die "Titel & Text"-Funktion "**Untertitelattribute übertragen**" ebenfalls betroffen, macht einige Schriftarten mit dieser Funktion unbrauchbar.
 
@@ -1130,17 +1130,17 @@ A: Öffnen Sie die Textdatei im Editor, **Speichern unter mit ANSI-Kodierung**, 
 
 F: Auf hochauflösenden Bildschirmen verursacht die Verwendung von "**ProType Titler**" **UI-Verzerrungen/winziger unlesbarer Text**?
 
-<ImageOnDemand button-text="Bild laden" alt="PPT Titler UI-Problem" src="img/vegtips/image033_protype_titler_ui_issue.png" />
+<ImageOnDemand alt="PPT Titler UI-Problem" src="vegtips/image033_protype_titler_ui_issue.png" />
 
 A: DPI-Skalierungsproblem, wenn Systemskalierung >= 150%. Rechtsklick auf VEGAS ausführbare Datei/Verknüpfung -> `Eigenschaften -> Kompatibilität -> Hohe DPI-Einstellungen ändern`. **Setzen Sie `Skalierung durch:` auf `System (Erweitert)`**.
 
-<ImageOnDemand button-text="Bild laden" alt="Hohe DPI - System erweitert" src="img/vegtips/image034_high_dpi_system_enhanced.png" />
+<ImageOnDemand alt="Hohe DPI - System erweitert" src="vegtips/image034_high_dpi_system_enhanced.png" />
 
 <br>
 
 F: **[VP20, VP21]** **"Untertitelattribute übertragen"-Funktion in Titel & Text fehlerhaft (wie gezeigt)**?
 
-<ImageOnDemand button-text="Bild laden" alt="Untertitelattribute Übertragung" src="img/vegtips/image035_subtitles_transfer.png" />
+<ImageOnDemand alt="Untertitelattribute Übertragung" src="vegtips/image035_subtitles_transfer.png" />
 
 A: Das Problem tritt auf, wenn das Textfeld **gemischte Formatierung (verschiedene Schriftarten, Größen usw.)** enthält, die nicht übertragen werden können. Versuchen Sie **zuerst die Textformatierung zu vereinheitlichen**, bevor Sie die Funktion verwenden. **VP21 final Build 315 hat dies behoben.** Ältere Versionen (einschließlich vor VP20) können ein von mir geschriebenes Skript mit ähnlicher Funktionalität verwenden, kein Fehler, unterstützt aber auch keine gemischte Formatierung Übertragung. Skript-Installationspfad siehe [Skripte](#xii-scripts-erweiterungen-bezogene).
 
@@ -1282,7 +1282,7 @@ F: **Einige Sapphire-Plugin-FX ignorieren Alphakanal, bedecken den darunterliege
 
 A: Wie gezeigt, geben Sie das FX `Hilfe` ein und deaktivieren Sie seine `GPU`-Beschleunigung einzeln.
 
-<ImageOnDemand button-text="Bild laden" alt="Sapphire Alpha-Problem" src="img/vegtips/image036_sapphire_alpha.png" />
+<ImageOnDemand alt="Sapphire Alpha-Problem" src="vegtips/image036_sapphire_alpha.png" />
 
 Wenn das nicht funktioniert, **deaktivieren Sie VEGAS' eigene `GPU-Beschleunigung`**.
 
@@ -1341,7 +1341,7 @@ A: Gehen Sie zum Registrierungsschlüssel:
 
 Es gibt `Path 1`, `Path 2`, usw., entsprechend VST-Pfaden in Einstellungen.
 
-<ImageOnDemand button-text="Bild laden" alt="VST-Registrierung" src="img/vegtips/image037_vst_reg.png" />
+<ImageOnDemand alt="VST-Registrierung" src="vegtips/image037_vst_reg.png" />
 
 `CheckSum` ist für VEGAS zu überprüfen, ob Rescan benötigt wird; Sie können es ignorieren. Konzentrieren Sie sich auf `Path` (absoluter Pfadstring) und `Flags` (`3` = scan, `0` = nicht scan). Ändern Sie nach Bedarf.
 
@@ -1485,7 +1485,7 @@ Vorteile:
 
 - Einfache Anpassung der Backup-Intervalle.
 
-<ImageOnDemand button-text="Bild laden" alt="Erweitertes Speichern" src="img/vegtips/image038_advanced_save.png" />
+<ImageOnDemand alt="Erweitertes Speichern" src="vegtips/image038_advanced_save.png" />
 
 <p align="center">Menü: <b><code>Werkzeuge -> Erweitertes Speichern</code></b>.</p>
 
@@ -1540,7 +1540,7 @@ Normalerweise können neuere VEGAS ältere Projektdateien mit guter Kompatibilit
 
 ### 1. VEGAS-Projektdatei-Version-Downgrade-Tool
 
-<ImageOnDemand button-text="Bild laden" alt="MSVPVF" src="img/vegtips/image039_msvpvf.png" />
+<ImageOnDemand alt="MSVPVF" src="vegtips/image039_msvpvf.png" />
 
 Original-Projektlink: https://sr.ht/~mrpapersonic/msvpvf/
 

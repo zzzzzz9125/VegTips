@@ -100,7 +100,7 @@ VP13 및 이전 버전은 Sony 폴더 내에 캐시 디렉토리가 있습니다
 
 <!-- 2. 그림과 같이:
 
-<ImageOnDemand button-text="Load image" alt="플러그인 체인" src="img/vegtips/image001_plugin_chain.png" />
+<ImageOnDemand button-text="Load image" alt="플러그인 체인" src="vegtips/image001_plugin_chain.png" />
 
 <p align="center">VEGAS 프리셋 관리자 v0.2 사용 예시</p> -->
 
@@ -128,7 +128,7 @@ VP13 및 이전 버전은 Sony 폴더 내에 캐시 디렉토리가 있습니다
 
 일반적인 시나리오: VEGAS 실행 시 / **`파일 -> 렌더링`** 클릭 시 즉시 오류 팝업이 나타납니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="문제 보고" src="img/vegtips/image002_problem_report.png" />
+<ImageOnDemand button-text="이미지 로드" alt="문제 보고" src="vegtips/image002_problem_report.png" />
 
 **이 경우 항상 먼저 `문제 세부 정보 표시`를 선택하여 오류 내용을 확인하십시오.**
 
@@ -166,7 +166,7 @@ VEGAS 재설치는 소프트웨어 자체가 완전히 설치되지 않았거나
 
 표준 방법: `Ctrl + Shift`를 누른 상태로 VEGAS를 실행합니다. "재설정하시겠습니까?" 프롬프트가 나타납니다. `모든 캐시된 애플리케이션 데이터 삭제`를 선택하고 `예`를 클릭합니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="재설정" src="img/vegtips/image003_reset.png" />
+<ImageOnDemand button-text="이미지 로드" alt="재설정" src="vegtips/image003_reset.png" />
 
 <p align="center">재설정하시겠습니까? (Y/N)</p>
 
@@ -249,7 +249,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 여기서 `23.0` 및 `19.0`은 현재 VEGAS 메이저 버전을 나타냅니다. 첫 번째 줄이 주 인터페이스 언어 설정이지만 네 가지 모두 변경하는 것이 좋습니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="언어 레지스트리" src="img/vegtips/image004_language_reg.png" />
+<ImageOnDemand button-text="이미지 로드" alt="언어 레지스트리" src="vegtips/image004_language_reg.png" />
 
 영어 버전을 설치한 경우, `ULangID`의 기본값은 16진수 `409`(10진수 `1033`)일 가능성이 높습니다. 한국어로 변경하려면 **16진수 `412`(10진수 `1042`)**로 변경하십시오.
 
@@ -272,7 +272,7 @@ VEGAS를 성공적으로 시작한 후 내장 비디오 FX의 이름이 여전�
 Q: 설치 중 오류: **설치를 계속하려면 PC를 다시 시작해야 합니까**?
 `Setup has detected that the system is currently waiting for a reboot to complete a previous installation or update. To avoid problems, please reboot your system before installing.`
 
-<ImageOnDemand button-text="이미지 로드" alt="설치 재부팅 문제" src="img/vegtips/image005_install_reboot.png" />
+<ImageOnDemand button-text="이미지 로드" alt="설치 재부팅 문제" src="vegtips/image005_install_reboot.png" />
 
 A: 먼저 PC를 다시 시작해 보십시오. 작동하지 않으면 레지스트리를 수정해야 합니다. 레지스트리 편집기를 열고 **`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager`** 로 이동하여 **`PendingFileRenameOperations`** 값을 **삭제**한 후 PC를 다시 시작하십시오.
 
@@ -285,7 +285,7 @@ A: 먼저 PC를 다시 시작해 보십시오. 작동하지 않으면 레지스�
 
 Q: 오류: **`설치 중 오류 발생 -2147163964. 모듈 xxxxx.dll을 등록할 수 없음`**.
 
-<ImageOnDemand button-text="이미지 로드" alt="설치 DLL 등록 문제" src="img/vegtips/image006_install_dll.png" />
+<ImageOnDemand button-text="이미지 로드" alt="설치 DLL 등록 문제" src="vegtips/image006_install_dll.png" />
 
 A: **PC를 다시 시작하고 다시 설치**하면 일반적으로 해결됩니다. 지속되면 **다른 버전을 설치**해 보십시오.
 
@@ -318,7 +318,7 @@ Q: VEGAS 시작 시 "**VST 플러그인 스캔 중...**" 단계에서 **정지/�
 
 A: **시작 시 VST 스캔 비활성화**를 시도해 보십시오. VEGAS **바로가기 -> 속성**을 마우스 오른쪽 버튼으로 클릭합니다. **`대상`** 필드 끝에 **` /NOVSTGROVEL`** 을 추가합니다(**슬래시 앞 공백에 주의**). 그런 다음 이 바로가기를 사용하여 VEGAS를 실행합니다. 정상적으로 시작되면 [VST 경로](#xi-오디오-플러그인-관련)에서 문제가 있는 플러그인을 이동하고 별도로 저장할 수 있습니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="NOVSTGROVEL" src="img/vegtips/image007_novstgrovel.png" />
+<ImageOnDemand button-text="이미지 로드" alt="NOVSTGROVEL" src="vegtips/image007_novstgrovel.png" />
 
 <br>
 
@@ -348,7 +348,7 @@ A: **`제어판 -> 프로그램 -> 프로그램 및 기능`** 으로 이동하�
 
 2. 설치 중에 추가 구성 요소에 대한 프롬프트가 표시되면 `개별 구성 요소`로 이동하고 `MSVC`를 검색하여 **`MSVC v143 - VS 2022 C++ x64/x86 빌드 도구(최신)`** 을 선택하고 계속 설치합니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="MSVC 143 설치" src="img/vegtips/image008_msvc143.png" />
+<ImageOnDemand button-text="이미지 로드" alt="MSVC 143 설치" src="vegtips/image008_msvc143.png" />
 
 3. 설치 후 MSVC 설치 경로로 이동합니다: `C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\`. `v143` 및 `14.44.35112`와 같은 폴더가 있을 것입니다(설치한 버전에 따라 다름). `14.44.35112`와 비슷한 것이 대상입니다.
 
@@ -366,7 +366,7 @@ Q: VEGAS를 연 후 **잡음/소리 없음/...** 이 있습니까?
 
 A: **`제어판 -> 하드웨어 및 소리 -> 소리`** 로 이동하여 현재 재생 장치에 대한 `속성`을 엽니다. `고급` 탭의 `독점 모드` 아래에서 `응용 프로그램이 이 장치를 독점적으로 제어할 수 있도록 허용`을 선택 취소하거나, `기본 형식`을 `2 채널, 24비트, 44100Hz`로 변경하십시오. 작동하지 않으면 **사운드 카드 드라이버를 다시 설치**해 보십시오.
 
-<ImageOnDemand button-text="이미지 로드" alt="오디오 장치" src="img/vegtips/image009_sound_device.png" />
+<ImageOnDemand button-text="이미지 로드" alt="오디오 장치" src="vegtips/image009_sound_device.png" />
 
 <br>
 
@@ -574,7 +574,7 @@ Q: 4:3 비디오/이미지 가져오기 **가로로 늘어남** 16:9. 수정 방
 
 A: `4:3` 미디어가 특정 자동 구성으로 `16:9` 프로젝트로 가져올 때 발생합니다. 수정: **미디어 마우스 오른쪽 버튼 클릭 -> 속성 -> 미디어 탭**, `픽셀 종횡비` 찾기, `1.3333`에서 `1`로 변경한 후 `스트림` 섹션 옆의 저장 버튼<sup>(`향후 자동 감지를 위해 비디오 프로필에 설정 저장`)</sup>을 클릭합니다. 이렇게 하면 향후 `4:3` 가져오기가 자동으로 늘어나지 않습니다. **`프로젝트 미디어`** 창에서 여러 파일에 대해 수행할 수도 있습니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="비디오 프로필 버튼" src="img/vegtips/image010_profile_button.png" />
+<ImageOnDemand button-text="이미지 로드" alt="비디오 프로필 버튼" src="vegtips/image010_profile_button.png" />
 
 
 
@@ -590,9 +590,9 @@ A: `4:3` 미디어가 특정 자동 구성으로 `16:9` 프로젝트로 가져�
 3. `확인`을 클릭하지 말고 **`Ctrl + Shift + Enter`** 를 눌러 관리자 권한으로 파일을 엽니다. `4:3`의 기본 가져오기 프로필을 수동으로 편집하여 모든 `1.3333333333` 값을 `1`로 변경한 후 저장합니다.
   - 참고: 관리자 권한 없이 열면 메모장이 원본 파일에 쓰는 대신 `다른 이름으로 저장`을 프롬프트합니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="비디오 프로필 편집 1" src="img/vegtips/image011_profile_edit_1.png" />
+<ImageOnDemand button-text="이미지 로드" alt="비디오 프로필 편집 1" src="vegtips/image011_profile_edit_1.png" />
 
-<ImageOnDemand button-text="이미지 로드" alt="비디오 프로필 편집 2" src="img/vegtips/image012_profile_edit_2.png" />
+<ImageOnDemand button-text="이미지 로드" alt="비디오 프로필 편집 2" src="vegtips/image012_profile_edit_2.png" />
 
 <small>
 참조: <a href="https://www.vegascreativesoftware.info/us/forum/posts--128760/">https://www.vegascreativesoftware.info/us/forum/posts--128760/</a><br>
@@ -604,7 +604,7 @@ A: `4:3` 미디어가 특정 자동 구성으로 `16:9` 프로젝트로 가져�
 
 Q: **비디오 미리보기 창에 아무것도 표시되지 않음**?
 
-<ImageOnDemand button-text="이미지 로드" alt="트리머 또는 미리보기?" src="img/vegtips/image013_trimmer_or_preview.png" />
+<ImageOnDemand button-text="이미지 로드" alt="트리머 또는 미리보기?" src="vegtips/image013_trimmer_or_preview.png" />
 
 A: **`트리머`** 창으로 전환했는지 확인하십시오. 그렇다면 **`비디오 미리보기` 창으로 다시 전환하십시오**. 이전 버전(VP14 이하)의 분리된 `트리머` 및 `미리보기` 창 레이아웃을 선호하는 경우 메뉴 **`보기 -> 창 레이아웃`** 으로 이동하여 **`소스 창 레이아웃`** 을 선택하십시오.
 
@@ -622,13 +622,13 @@ A: 일반적으로 창이 실수로 Windows 작업 표시줄 아래로 드래그
 
 쉬운 수정: **해당 버튼을 클릭한 후 즉시 `Alt + 스페이스바`를 누르고 `이동`을 선택한 후 창을 위로 드래그하십시오**. 또는 Windows 작업 표시줄을 일시적으로 숨긴 후 드래그하십시오. 마지막 수단으로 `보기 -> 기본 레이아웃 복원`을 시도해 보십시오.
 
-<ImageOnDemand button-text="이미지 로드" alt="창 이동" src="img/vegtips/image014_window_move.gif" />
+<ImageOnDemand button-text="이미지 로드" alt="창 이동" src="vegtips/image014_window_move.gif" />
 
 <br>
 
 Q: FX를 추가했지만 미리보기 창에서 **FX가 완전히 표시되지 않고 왼쪽/오른쪽으로 분할되어 나타남**?
 
-<ImageOnDemand button-text="이미지 로드" alt="분할 화면 보기" src="img/vegtips/image015_split_screen.png" />
+<ImageOnDemand button-text="이미지 로드" alt="분할 화면 보기" src="vegtips/image015_split_screen.png" />
 
 A: 그림과 같이 **`분할 화면 보기`** 가 활성화되었는지 확인하십시오.
 
@@ -636,7 +636,7 @@ A: 그림과 같이 **`분할 화면 보기`** 가 활성화되었는지 확인�
 
 Q: 무언가를 클릭했고 단일 비디오 트랙이 **A/B 트랙으로 분할됨**. 어떻게 복원합니까?
 
-<ImageOnDemand button-text="이미지 로드" alt="AB 트랙" src="img/vegtips/image016_ab_track.png" />
+<ImageOnDemand button-text="이미지 로드" alt="AB 트랙" src="vegtips/image016_ab_track.png" />
 
 A: 일반적으로 이는 이벤트 가장자리를 두 번 클릭할 때 발생합니다. **이벤트 가장자리를 다시 두 번 클릭**하여 수정하십시오.
 
@@ -665,7 +665,7 @@ A:
 
 2. 글꼴 설치가 도움이 되지 않으면 **`제어판 -> 지역 -> 관리 -> 시스템 로캘 변경`** 으로 이동하십시오. **`베타: 전 세계 언어 지원을 위해 Unicode UTF-8 사용`** 이 **선택되지 않았는지** 확인하십시오. 아래 그림과 같이.
 
-<ImageOnDemand button-text="이미지 로드" alt="Windows Unicode 설정" src="img/vegtips/image017_unicode_settings.png" />
+<ImageOnDemand button-text="이미지 로드" alt="Windows Unicode 설정" src="vegtips/image017_unicode_settings.png" />
 
 <small>
 참조: <a href="https://www.vegascreativesoftware.info/us/forum/posts--138828/">https://www.vegascreativesoftware.info/us/forum/posts--138828/</a><br>
@@ -675,11 +675,11 @@ A:
 
 Q: 프로젝트 속성 / 사용자 정의 렌더링 템플릿 / 환경설정 창이 **너무 커서 완전히 표시되지 않고 확인을 클릭할 수 없음**?
 
-<ImageOnDemand button-text="이미지 로드" alt="창 너무 큼" src="img/vegtips/image018_window_too_large.png" />
+<ImageOnDemand button-text="이미지 로드" alt="창 너무 큼" src="vegtips/image018_window_too_large.png" />
 
 A: VEGAS 창 크기는 Windows 표시 설정에 따라 확대/축소됩니다. 높은 DPI 확대/축소는 VEGAS 창을 매우 크게 만들어 극단적인 확대/축소에서 잘려 나간 표시를 유발할 수 있습니다. "확인"을 클릭하려면 **`Enter` 키**를 누를 수 있습니다. 전체 창을 표시해야 하는 경우 창을 열기 전에 Windows 설정에서 **화면 DPI 확대/축소를 100%로 변경**한 후 다시 변경해야 합니다. 또는 **VEGAS의 DPI 확대/축소를 개별적으로 100%로 설정**: VEGAS 실행 파일 또는 바로가기 마우스 오른쪽 버튼 클릭 -> `속성 -> 호환성 -> 높은 DPI 설정 변경`. **`확대/축소 수행:`을 `응용 프로그램`으로 설정**.
 
-<ImageOnDemand button-text="이미지 로드" alt="높은 DPI - 응용 프로그램" src="img/vegtips/image019_high_dpi_application.png" />
+<ImageOnDemand button-text="이미지 로드" alt="높은 DPI - 응용 프로그램" src="vegtips/image019_high_dpi_application.png" />
 
 <br>
 
@@ -697,7 +697,7 @@ A: 오래된 성가신 문제: 비디오 이미지에서 드래그하면 "트리
 
 VP21에 **`호버 스크럽 우회`** 버튼이 추가되었습니다. 활성화하면 오작동을 방지할 수 있지만 호버로 비디오를 미리 보는 기능(썸네일만 보기)을 잃게 됩니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="호버 스크럽 우회" src="img/vegtips/image020_bypass_hover_scrub.png" />
+<ImageOnDemand button-text="이미지 로드" alt="호버 스크럽 우회" src="vegtips/image020_bypass_hover_scrub.png" />
 
 <p align="center">사실 이 버튼은 VP20에 추가되었지만 VP20에서는 효과가 없었습니다.</p>
 
@@ -711,7 +711,7 @@ VP22 이하에서는 기본적으로 **`Enter`는 "일시 정지", `스페이스
 
 `21 build 187` 이후 이 옵션은 미리보기 창 아래의 **전송 표시줄**로 이동했으며 재생/일시 정지/중지 버튼과 함께 있습니다. 표시되지 않으면 오른쪽의 세 점을 확장하십시오.
 
-<ImageOnDemand button-text="이미지 로드" alt="커서 전송" src="img/vegtips/image021_cursor_transport.png" />
+<ImageOnDemand button-text="이미지 로드" alt="커서 전송" src="vegtips/image021_cursor_transport.png" />
 
 VP23 업데이트 이후 기본 동작이 변경되었습니다: **`Enter`는 "중지", `스페이스바`는 "일시 정지"** 입니다. 옵션은 `재생/일시 정지 대신 재생/중지에 스페이스바 및 F12 사용`이 되었으며 `환경설정 -> 일반` 및 전송 표시줄 모두에서 사용할 수 있습니다.
 
@@ -772,7 +772,7 @@ A: 이 문제는 **특정 Nvidia 드라이버 버전**에서 나타납니다. �
 
     **NVIDIA 제어판**을 열고 왼쪽에서 **`3D 설정 관리`** 를 클릭하고 오른쪽에서 **`프로그램 설정`** 탭으로 전환합니다. `추가`를 클릭하고 VEGAS 실행 파일을 선택하고 **`OpenGL GDI 호환성`** 을 `전역 설정 사용`에서 **`호환성 우선`** 으로 변경합니다. VEGAS를 다시 시작합니다. (여러 VEGAS 버전이 있는 경우 각각 별도로 설정하십시오.)
 
-<ImageOnDemand button-text="이미지 로드" alt="NVIDIA OpenGL GDI 호환성" src="img/vegtips/image022_nvidia_opengl.png" />
+<ImageOnDemand button-text="이미지 로드" alt="NVIDIA OpenGL GDI 호환성" src="vegtips/image022_nvidia_opengl.png" />
 
 3. Nvidia 드라이버를 `522.30` 이하로 롤백하거나 최신으로 업데이트하십시오. 다시 설치할 때 **"사용자 정의" 설치를 선택**하고 **`깨끗한 설치 수행`** 을 선택하십시오. 이렇게 하면 모든 드라이버 설정이 기본값으로 재설정되므로 **권장되지 않습니다**.
 
@@ -788,7 +788,7 @@ A: 이 문제는 **특정 Nvidia 드라이버 버전**에서 나타납니다. �
 
 VEGAS의 내장 렌더링 템플릿을 사용할 때 **해상도, 프레임 속도, 비트레이트 등을 지속적으로 조정해야 하는 경우가 많습니다**. 프로젝트 속성과 일치시키고 원하는 품질을 얻기 위해서입니다. 그러나 **해상도/프레임 속도를 프로젝트 속성에 자동으로 일치시키고 비트레이트 제어를 위한 고급 CRF/CQP 매개변수를 지원하는** 렌더링 플러그인이 있어 **수동 매개변수 조정을 덜 신경쓰면서** 렌더링할 수 있습니다. 이 플러그인은 **Voukoder**입니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="Voukoder Classic" src="img/vegtips/image023_voukoder_classic.png" />
+<ImageOnDemand button-text="이미지 로드" alt="Voukoder Classic" src="vegtips/image023_voukoder_classic.png" />
 
 두 버전: Voukoder Classic 및 Voukoder Pro.
 
@@ -827,7 +827,7 @@ VEGAS의 내장 렌더링 템플릿을 사용할 때 **해상도, 프레임 속�
 
 3.  **렌더링 템플릿에서 인코더 변경.**
 
-<ImageOnDemand button-text="이미지 로드" alt="렌더링 인코더" src="img/vegtips/image024_render_encoder.png" />
+<ImageOnDemand button-text="이미지 로드" alt="렌더링 인코더" src="vegtips/image024_render_encoder.png" />
 
 <p align="center">사용 가능한 인코더는 GPU에 따라 다릅니다.</p>
 
@@ -847,7 +847,7 @@ VEGAS의 내장 렌더링 템플릿을 사용할 때 **해상도, 프레임 속�
 
 9.  **이미지 시퀀스 렌더링**. 정지된 지점에서 렌더링을 시작합니다. **이렇게 하면 적어도 렌더링된 파일이 보존됩니다.** 마지막으로 **이미지 시퀀스를 VEGAS로 다시 가져와 비디오로 렌더링**합니다. 각 시퀀스 렌더링 후 **새 폴더에 출력**하여 덮어쓰지 않도록 합니다. VEGAS는 항상 `000000`부터 번호를 매기기 시작합니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="이미지 시퀀스 가져오기" src="img/vegtips/image025_import_image_sequence.png" />
+<ImageOnDemand button-text="이미지 로드" alt="이미지 시퀀스 가져오기" src="vegtips/image025_import_image_sequence.png" />
 
 <p align="center">이미지 시퀀스 가져오기. 비디오 파일처럼 작동하며 프레임 속도를 설정할 수 있습니다.</p>
 
@@ -907,7 +907,7 @@ Q: 렌더링 중간에 **중지하고 싶지만 부분적으로 렌더링된 비
 
 A: **SeMW 확장** 렌더링 표시 창에 이 기능이 있습니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="SeMW 렌더링 프롬프트" src="img/vegtips/image026_render_semw.png" />
+<ImageOnDemand button-text="이미지 로드" alt="SeMW 렌더링 프롬프트" src="vegtips/image026_render_semw.png" />
 
 SeMW 확장 공식 사이트: https://www.semw-software.com/en/extensions/
 
@@ -925,7 +925,7 @@ A:
 
   2.  렌더링 템플릿 목록에서 왼쪽에 `QuickTime`을 선택합니다. 오른쪽에서 임의의 템플릿을 선택하고 `템플릿 사용자 정의`를 클릭하고 그림과 같이 매개변수를 조정합니다:
 
-<ImageOnDemand button-text="이미지 로드" alt="알파 QuickTime 렌더링" src="img/vegtips/image027_render_alpha_quicktime.png" />
+<ImageOnDemand button-text="이미지 로드" alt="알파 QuickTime 렌더링" src="vegtips/image027_render_alpha_quicktime.png" />
 
   3.  템플릿 저장 및 렌더링.
 
@@ -937,7 +937,7 @@ A:
 
   그림과 같이:
 
-<ImageOnDemand button-text="이미지 로드" alt="알파 ProRes 렌더링" src="img/vegtips/image028_render_alpha_prores.png" />
+<ImageOnDemand button-text="이미지 로드" alt="알파 ProRes 렌더링" src="vegtips/image028_render_alpha_prores.png" />
 
 - **[Voukoder](#권장-렌더링-플러그인-voukoder)<small>(VP18+, Voukoder Classic 버전 12.0+.)</small>**
 
@@ -953,7 +953,7 @@ A1: VP17 이하에서는 프로젝트 속성 및 렌더링 템플릿의 **색상
 
 1.  **[Voukoder](#권장-렌더링-플러그인-voukoder) 사용, 색상 공간을 변환하는 `필터`가 있는 템플릿 생성.**
 
-<ImageOnDemand button-text="이미지 로드" alt="Voukoder 색상 공간" src="img/vegtips/image040_voukoder_color_space.png" />
+<ImageOnDemand button-text="이미지 로드" alt="Voukoder 색상 공간" src="vegtips/image040_voukoder_color_space.png" />
 
 2.  VP18+로 업그레이드합니다. 새 VP에서 이전 프로젝트를 열 때 `파일->속성`의 `픽셀 형식`을 `레거시 8비트(비디오 레벨)`에서 **`8비트(전체 범위)`** 로 변경하고 **이전 VP에서 생성된 렌더링 템플릿을 사용하지 마십시오**.
 
@@ -967,9 +967,9 @@ A1: VP17 이하에서는 프로젝트 속성 및 렌더링 템플릿의 **색상
 
 A2: 소스가 **HDR 영상**인 경우 **프로젝트 속성 `색상 공간` <sup>그림 1</sup>** 을 소스 <sup>그림 2</sup>와 일치하도록 변경하십시오. 이렇게 하면 전체 프로젝트가 10비트 색상 깊이로 전환되어 렌더링이 8비트보다 느려집니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="프로젝트 HDR 색상 공간" src="img/vegtips/image029_color_space_hdr_project.png" />
+<ImageOnDemand button-text="이미지 로드" alt="프로젝트 HDR 색상 공간" src="vegtips/image029_color_space_hdr_project.png" />
 
-<ImageOnDemand button-text="이미지 로드" alt="영상 HDR 색상 공간" src="img/vegtips/image030_color_space_hdr_footage.png" />
+<ImageOnDemand button-text="이미지 로드" alt="영상 HDR 색상 공간" src="vegtips/image030_color_space_hdr_footage.png" />
 
 또는 프로젝트 색상 공간을 변경하지 않고 소스 영상에 색상 공간 변환 LUT를 적용합니다. 내장 `LUT 필터` FX 또는 새로운 `색상 등급` 기능을 사용합니다. 핵심은 소스 색상 공간을 `Rec.709` 표준으로 변환하는 LUT를 찾는 것입니다. 이렇게 하면 HDR 디테일이 손실되므로 HDR 출력을 계획하지 않았다면 처음부터 HDR 영상을 녹화하지 마십시오.
 
@@ -977,7 +977,7 @@ A2: 소스가 **HDR 영상**인 경우 **프로젝트 속성 `색상 공간` <su
 
 Q: 렌더링된 비디오에 **색상 변화(빨강이 보라, 파랑이 노랑 등)** 가 있습니까?
 
-<ImageOnDemand button-text="이미지 로드" alt="BGRA 색상" src="img/vegtips/image031_bgra_color.png" />
+<ImageOnDemand button-text="이미지 로드" alt="BGRA 색상" src="vegtips/image031_bgra_color.png" />
 
 A: AMD GPU 드라이버 문제입니다. 시도해 보십시오:
 
@@ -1063,7 +1063,7 @@ A: 알려진 유일한 효과적인 수정은 **Windows 업데이트 도구를 �
 
 Q: **[Win7 VP18+]** **`다른 이름으로 렌더링` 클릭 즉시 오류**: **`미디어 파일 생성 중 오류 발생. 오류 0x80131501 (메시지 누락)`**
 
-<ImageOnDemand button-text="이미지 로드" alt="Win7 렌더링" src="img/vegtips/image032_render_win7.png" />
+<ImageOnDemand button-text="이미지 로드" alt="Win7 렌더링" src="vegtips/image032_render_win7.png" />
 
 A: 일반적으로 Win7은 **최대 VP17까지만 지원**합니다. Win7의 VP18+는 이 오류를 발생시킵니다.
 
@@ -1100,7 +1100,7 @@ A: 이는 "타이틀 및 텍스트" 문제입니다. 글꼴 호환성이 좋지 
 
 - 일부 경우 Windows Unicode 설정이 원인일 수 있습니다. **`제어판 -> 지역 -> 관리 -> 시스템 로캘 변경`** 으로 이동하여 **`베타: 전 세계 언어 지원을 위해 Unicode UTF-8 사용`** 이 **선택되지 않았는지** 확인하십시오.
 
-<ImageOnDemand button-text="이미지 로드" alt="Windows Unicode 설정" src="img/vegtips/image017_unicode_settings.png" />
+<ImageOnDemand button-text="이미지 로드" alt="Windows Unicode 설정" src="vegtips/image017_unicode_settings.png" />
 
 VP20에서 "타이틀 및 텍스트" 기능 "**자막 속성 전송**"도 영향을 받아 이 기능을 사용할 수 없는 일부 글꼴이 있습니다.
 
@@ -1130,17 +1130,17 @@ A: 텍스트 파일을 메모장으로 열고 **ANSI 인코딩으로 다른 이�
 
 Q: 고해상도 화면에서 "**ProType Titler**" 사용 시 **UI 오류/읽을 수 없을 정도로 작은 텍스트**가 발생합니까?
 
-<ImageOnDemand button-text="이미지 로드" alt="PPT Titler UI 문제" src="img/vegtips/image033_protype_titler_ui_issue.png" />
+<ImageOnDemand button-text="이미지 로드" alt="PPT Titler UI 문제" src="vegtips/image033_protype_titler_ui_issue.png" />
 
 A: 시스템 확대/축소 >= 150%일 때 DPI 확대/축소 문제. VEGAS 실행 파일/바로가기 마우스 오른쪽 버튼 클릭 -> `속성 -> 호환성 -> 높은 DPI 설정 변경`. **`확대/축소 수행:`을 `시스템(고급)`으로 설정**.
 
-<ImageOnDemand button-text="이미지 로드" alt="높은 DPI - 시스템 고급" src="img/vegtips/image034_high_dpi_system_enhanced.png" />
+<ImageOnDemand button-text="이미지 로드" alt="높은 DPI - 시스템 고급" src="vegtips/image034_high_dpi_system_enhanced.png" />
 
 <br>
 
 Q: **[VP20, VP21]** 타이틀 및 텍스트의 **"자막 속성 전송" 기능 오류(그림과 같이)**?
 
-<ImageOnDemand button-text="이미지 로드" alt="자막 속성 전송" src="img/vegtips/image035_subtitles_transfer.png" />
+<ImageOnDemand button-text="이미지 로드" alt="자막 속성 전송" src="vegtips/image035_subtitles_transfer.png" />
 
 A: 이 문제는 텍스트 상자에 **혼합 형식(다른 글꼴, 크기 등)이 포함되어** 전송할 수 없는 경우 발생합니다. **먼저 텍스트 형식을 통일**한 후 기능을 사용해 보십시오. **VP21 최종 빌드 315에서 이 문제가 수정되었습니다.** 이전 버전(VP20 이전 포함)은 유사한 기능을 가진 제가 작성한 스크립트를 사용할 수 있으며 오류가 없지만 혼합 형식 전송도 지원하지 않습니다. 스크립트 설치 경로는 [스크립트](#xii-스크립트-확장-관련)를 참조하십시오.
 
@@ -1282,7 +1282,7 @@ Q: **일부 Sapphire 플러그인 FX가 알파 채널을 무시하고 아래 배
 
 A: 그림과 같이 FX의 `도움말`에 들어가 개별적으로 `GPU` 가속을 비활성화하십시오.
 
-<ImageOnDemand button-text="이미지 로드" alt="Sapphire 알파 문제" src="img/vegtips/image036_sapphire_alpha.png" />
+<ImageOnDemand button-text="이미지 로드" alt="Sapphire 알파 문제" src="vegtips/image036_sapphire_alpha.png" />
 
 작동하지 않으면 **VEGAS 자체의 `GPU 가속`을 비활성화**하십시오.
 
@@ -1341,7 +1341,7 @@ A: 레지스트리 키로 이동:
 
 `Path 1`, `Path 2` 등이 있으며 환경설정의 VST 경로에 해당합니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="VST 레지스트리" src="img/vegtips/image037_vst_reg.png" />
+<ImageOnDemand button-text="이미지 로드" alt="VST 레지스트리" src="vegtips/image037_vst_reg.png" />
 
 `CheckSum`은 VEGAS가 재스캔이 필요한지 확인하는 용도입니다. 무시해도 됩니다. `Path`(절대 경로 문자열) 및 `Flags`(`3` = 스캔, `0` = 스캔 안 함)에 집중하십시오. 필요에 따라 수정하십시오.
 
@@ -1485,7 +1485,7 @@ VEGAS는 크래시 복구를 위해 5분마다 자동 저장합니다.
 
 - 백업 간격을 쉽게 조정할 수 있습니다.
 
-<ImageOnDemand button-text="이미지 로드" alt="고급 저장" src="img/vegtips/image038_advanced_save.png" />
+<ImageOnDemand button-text="이미지 로드" alt="고급 저장" src="vegtips/image038_advanced_save.png" />
 
 <p align="center">메뉴: <b><code>도구 -> 고급 저장</code></b>.</p>
 
@@ -1540,7 +1540,7 @@ VP18부터 제공되는 증분 저장, 단축키 **`Ctrl + Alt + S`**. 다른 �
 
 ### 1. VEGAS 프로젝트 파일 버전 다운그레이드 도구
 
-<ImageOnDemand button-text="이미지 로드" alt="MSVPVF" src="img/vegtips/image039_msvpvf.png" />
+<ImageOnDemand button-text="이미지 로드" alt="MSVPVF" src="vegtips/image039_msvpvf.png" />
 
 원본 프로젝트 링크: https://sr.ht/~mrpapersonic/msvpvf/
 

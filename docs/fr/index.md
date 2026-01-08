@@ -100,7 +100,7 @@ Installez et utilisez `Sony Preset Manager`.
 
 <!-- 2. As shown in the diagram:
 
-<ImageOnDemand button-text="Load image" alt="Plugin Chain" src="img/vegtips/image001_plugin_chain.png" />
+<ImageOnDemand alt="Plugin Chain" src="vegtips/image001_plugin_chain.png" />
 
 <p align="center">Illustration pour l'utilisation du VEGAS Preset Manager v0.2</p> -->
 
@@ -128,7 +128,7 @@ Installez et utilisez `Sony Preset Manager`.
 
 Un scénario courant : Lors de l'exécution de VEGAS / **clic sur `Fichier -> Rendre sous`**, une fenêtre d'erreur apparaît immédiatement.
 
-<ImageOnDemand button-text="Load image" alt="Problem Report" src="img/vegtips/image002_problem_report.png" />
+<ImageOnDemand alt="Problem Report" src="vegtips/image002_problem_report.png" />
 
 **Dans ce cas, cochez toujours la case `Afficher les détails du problème` pour obtenir le contenu de l'erreur.**
 
@@ -166,7 +166,7 @@ Rencontrer des problèmes inexplicables, comme **l'audio importé étant complè
 
 La méthode standard : Maintenez `Ctrl + Maj` et exécutez VEGAS. Une invite "Réinitialiser ?" apparaîtra. Cochez `Supprimer toutes les données d'application mises en cache` et cliquez `Oui`.
 
-<ImageOnDemand button-text="Load image" alt="Reset" src="img/vegtips/image003_reset.png" />
+<ImageOnDemand alt="Reset" src="vegtips/image003_reset.png" />
 
 <p align="center">Réinitialiser ? (Oui/Non)</p>
 
@@ -250,7 +250,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 Ici, `23.0` et `19.0` représentent la version majeure VEGAS actuelle. La première ligne est le paramètre de langue de l'interface principale, mais il est recommandé de changer les quatre.
 
-<ImageOnDemand button-text="Load image" alt="Language Registry" src="img/vegtips/image004_language_reg.png" />
+<ImageOnDemand alt="Language Registry" src="vegtips/image004_language_reg.png" />
 
 Si vous avez installé la version anglaise, la valeur par défaut de `ULangID` est probablement la valeur hexadécimale `409` (décimal `1033`). Changez-la en **`40c` (décimal `1036`) pour le français**.
 
@@ -273,7 +273,7 @@ Après avoir démarré VEGAS avec succès, si les noms des FX vidéo intégrés 
 Q : Erreur lors de l'installation : **PC doit redémarrer pour continuer l'installation** ?  
 `Le programme d'installation a détecté que le système attend actuellement un redémarrage pour terminer une installation ou une mise à jour précédente. Pour éviter les problèmes, veuillez redémarrer votre système avant d'installer.`
 
-<ImageOnDemand button-text="Load image" alt="Installation Reboot Issue" src="img/vegtips/image005_install_reboot.png" />
+<ImageOnDemand alt="Installation Reboot Issue" src="vegtips/image005_install_reboot.png" />
 
 R : Tout d'abord, essayez de redémarrer votre PC. Si cela ne fonctionne pas, vous devez modifier le registre. Ouvrez l'Éditeur du Registre, naviguez vers **`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager`**, **supprimez la valeur `PendingFileRenameOperations`**, puis redémarrez votre PC.
 
@@ -285,7 +285,7 @@ R : Tout d'abord, essayez de redémarrer votre PC. Si cela ne fonctionne pas, vo
 
 Q : Erreur : **`Une erreur s'est produite lors de l'installation -2147163964. Impossible d'enregistrer le module xxxxx.dll`**.
 
-<ImageOnDemand button-text="Load image" alt="Installation DLL Registration Issue" src="img/vegtips/image006_install_dll.png" />
+<ImageOnDemand alt="Installation DLL Registration Issue" src="vegtips/image006_install_dll.png" />
 
 R : **Redémarrer votre PC et réinstaller** résout généralement ce problème. Si cela persiste, essayez **d'installer une version différente**.
 
@@ -318,7 +318,7 @@ Q : VEGAS **se bloque/plante/se fige** à l'étape "**Scan des plugins VST...**"
 
 R : Essayez **de désactiver le scan VST au démarrage**. Faites un clic droit sur le **raccourci VEGAS -> Propriétés**. Dans le champ **`Cible`**, ajoutez **` /NOVSTGROVEL`** à la fin (**notez l'espace avant la barre oblique**). Puis exécutez VEGAS en utilisant ce raccourci. Une fois démarré normalement, vous pouvez déplacer les plugins problématiques des [chemins VST](#xi-faq-concernant-les-plugins-audio), les stocker séparément, etc.
 
-<ImageOnDemand button-text="Load image" alt="NOVSTGROVEL" src="img/vegtips/image007_novstgrovel.png" />
+<ImageOnDemand alt="NOVSTGROVEL" src="vegtips/image007_novstgrovel.png" />
 
 <br>
 
@@ -348,7 +348,7 @@ R : Allez dans **`Panneau de configuration -> Programmes -> Programmes et foncti
 
 2. Pendant l'installation, lorsque vous êtes invité à des composants supplémentaires, allez dans `Composants individuels`, recherchez `MSVC`, cochez **`MSVC v143 - Outils de build C++ x64/x86 VS 2022 (dernière)`**, et poursuivez l'installation.
 
-<ImageOnDemand button-text="Load image" alt="MSVC 143 Install" src="img/vegtips/image008_msvc143.png" />
+<ImageOnDemand alt="MSVC 143 Install" src="vegtips/image008_msvc143.png" />
 
 3. Après l'installation, allez dans le chemin d'installation MSVC : `C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\`. Il y aura des dossiers comme `v143` et `14.44.35112` (selon la version que vous avez installée). Celui qui ressemble à `14.44.35112` est la cible.
 
@@ -366,7 +366,7 @@ Q : Après avoir ouvert VEGAS, il y a **du bruit/pas d'audio/...** ?
 
 R : **Allez dans `Panneau de configuration -> Matériel et audio -> Son`, ouvrez `Propriétés` pour votre périphérique de lecture actuel. Sous l'onglet `Avancé`, sous `Mode exclusif`, décochez `Autoriser les applications à prendre le contrôle exclusif de ce périphérique`, OU changez le `Format par défaut` en `2 canaux, 24 bits, 44100 Hz`.** Si cela ne fonctionne pas, essayez **de réinstaller les pilotes de votre carte son**.
 
-<ImageOnDemand button-text="Load image" alt="Audio Device" src="img/vegtips/image009_sound_device.png" />
+<ImageOnDemand alt="Audio Device" src="vegtips/image009_sound_device.png" />
 
 <br>
 
@@ -574,7 +574,7 @@ Q : Les vidéos/images 4:3 importées sont **étirées horizontalement** en 16:9
 
 R : Cela se produit lorsque des médias `4:3` sont importés dans un projet `16:9` avec certaines configurations automatiques. Réparation : **Clic droit sur le média -> Propriétés -> Onglet Média**, trouvez `Ratio d'aspect des pixels`, changez de `1.3333` à `1`, puis cliquez sur le bouton de sauvegarde à côté de la section `Flux`<sup>(`Enregistrer les paramètres dans le profil vidéo pour la détection automatique future`)</sup>. Cela garantit que les futures importations `4:3` ne seront pas automatiquement étirées. Cela peut aussi être fait pour plusieurs fichiers dans la fenêtre **`Médias du projet`**.
 
-<ImageOnDemand button-text="Load image" alt="Video Profile Button" src="img/vegtips/image010_profile_button.png" />
+<ImageOnDemand alt="Video Profile Button" src="vegtips/image010_profile_button.png" />
 
 
 
@@ -590,9 +590,9 @@ Si vous obtenez "**Une erreur inconnue s'est produite lors de la tentative d'enr
 3. Au lieu de cliquer `OK`, appuyez sur **`Ctrl + Maj + Entrée`** pour ouvrir le fichier avec les privilèges d'administrateur. Modifiez manuellement le profil d'importation par défaut pour `4:3`, changez toutes les valeurs `1.3333333333` en `1`, puis enregistrez.
   - Note : Ouvrir sans privilèges d'administrateur fera que le Bloc-notes demandera `Enregistrer sous` au lieu d'écrire dans le fichier original.
 
-<ImageOnDemand button-text="Load image" alt="Video Profile Edit 1" src="img/vegtips/image011_profile_edit_1.png" />
+<ImageOnDemand alt="Video Profile Edit 1" src="vegtips/image011_profile_edit_1.png" />
 
-<ImageOnDemand button-text="Load image" alt="Video Profile Edit 2" src="img/vegtips/image012_profile_edit_2.png" />
+<ImageOnDemand alt="Video Profile Edit 2" src="vegtips/image012_profile_edit_2.png" />
 
 <small>
 Référence : <a href="https://www.vegascreativesoftware.info/us/forum/posts--128760/">https://www.vegascreativesoftware.info/us/forum/posts--128760/</a><br>
@@ -604,7 +604,7 @@ Référence : <a href="https://www.vegascreativesoftware.info/us/forum/posts--12
 
 Q : **La fenêtre d'aperçu vidéo ne montre rien** ?
 
-<ImageOnDemand button-text="Load image" alt="Trimmer or Preview?" src="img/vegtips/image013_trimmer_or_preview.png" />
+<ImageOnDemand alt="Trimmer or Preview?" src="vegtips/image013_trimmer_or_preview.png" />
 
 R : Vérifiez si vous êtes passé à la fenêtre **`Rogneuse`**. Si oui, **rebasculer vers la fenêtre `Aperçu vidéo`**. Si vous préférez la disposition de fenêtre séparée `Rogneuse` et `Aperçu` des anciennes versions (VP14 et moins), allez dans le menu **`Affichage -> Disposition des fenêtres`** et sélectionnez **`Disposition de la fenêtre source`**.
 
@@ -622,13 +622,13 @@ R : Généralement, la fenêtre a été accidentellement glissée sous la barre 
 
 Solution facile : **Cliquez sur le bouton correspondant, puis immédiatement appuyez sur `Alt + Espace`, choisissez `Déplacer`**, et glissez la fenêtre vers le haut. Alternativement, masquez temporairement la barre des tâches Windows, puis glissez. En dernier recours, essayez `Affichage -> Restaurer la disposition par défaut`.
 
-<ImageOnDemand button-text="Load image" alt="Move Window" src="img/vegtips/image014_window_move.gif" />
+<ImageOnDemand alt="Move Window" src="vegtips/image014_window_move.gif" />
 
 <br>
 
 Q : Ajouté un FX, mais dans la fenêtre Aperçu, le **FX n'est pas entièrement affiché, apparaissant divisé gauche/droite** ?
 
-<ImageOnDemand button-text="Load image" alt="Split Screen View" src="img/vegtips/image015_split_screen.png" />
+<ImageOnDemand alt="Split Screen View" src="vegtips/image015_split_screen.png" />
 
 R : Comme montré, vérifiez si **`Vue écran partagé`** est activé.
 
@@ -636,7 +636,7 @@ R : Comme montré, vérifiez si **`Vue écran partagé`** est activé.
 
 Q : Cliqué sur quelque chose, et une piste vidéo unique **s'est divisée en pistes A/B**. Comment revenir en arrière ?
 
-<ImageOnDemand button-text="Load image" alt="AB Track" src="img/vegtips/image016_ab_track.png" />
+<ImageOnDemand alt="AB Track" src="vegtips/image016_ab_track.png" />
 
 R : Généralement, cela se produit en double-cliquant sur le bord d'un événement. **Double-cliquez à nouveau sur le bord de l'événement** pour le réparer.
 
@@ -665,7 +665,7 @@ R :
 
 2. Si l'installation de la police n'aide pas, allez dans **`Panneau de configuration -> Région -> Administration -> Changer les paramètres régionaux du système`**. Assurez-vous que **`Bêta : Utiliser Unicode UTF-8 pour la prise en charge linguistique mondiale`** est **NON** coché, comme montré ci-dessous.
 
-<ImageOnDemand button-text="Load image" alt="Windows Unicode Settings" src="img/vegtips/image017_unicode_settings.png" />
+<ImageOnDemand alt="Windows Unicode Settings" src="vegtips/image017_unicode_settings.png" />
 
 <small>
 Référence : <a href="https://www.vegascreativesoftware.info/us/forum/posts--138828/">https://www.vegascreativesoftware.info/us/forum/posts--138828/</a><br>
@@ -675,11 +675,11 @@ Référence : <a href="https://www.vegascreativesoftware.info/us/forum/posts--13
 
 Q : Les fenêtres Propriétés du projet / Modèle de rendu personnalisé / Préférences sont **trop grandes, ne peuvent pas s'afficher complètement, ne peuvent pas cliquer sur OK** ?
 
-<ImageOnDemand button-text="Load image" alt="Window Too Large" src="img/vegtips/image018_window_too_large.png" />
+<ImageOnDemand alt="Window Too Large" src="vegtips/image018_window_too_large.png" />
 
 R : La taille des fenêtres VEGAS s'adapte aux paramètres d'affichage Windows. Une mise à l'échelle DPI élevée peut rendre les fenêtres VEGAS très grandes, provoquant des affichages tronqués à des échelles extrêmes. Pour cliquer "OK", vous pouvez appuyer sur la **touche `Entrée`**. Si vous avez besoin que la fenêtre entière s'affiche, vous devez **changer la mise à l'échelle DPI de l'écran à 100%** dans les Paramètres Windows avant d'ouvrir la fenêtre, puis la remettre. Alternativement, **définir la mise à l'échelle DPI de VEGAS individuellement à 100%** : Clic droit sur l'exécutable ou le raccourci VEGAS -> `Propriétés -> Compatibilité -> Modifier les paramètres DPI élevés`. **Définissez `Mise à l'échelle effectuée par :` sur `Application`**.
 
-<ImageOnDemand button-text="Load image" alt="High DPI - Application" src="img/vegtips/image019_high_dpi_application.png" />
+<ImageOnDemand alt="High DPI - Application" src="vegtips/image019_high_dpi_application.png" />
 
 <br>
 
@@ -697,7 +697,7 @@ Correction standard : **Appuyez sur `Ctrl + Z` pour annuler, puis glissez par le
 
 VP21 a ajouté un bouton **`Contourner l'exploration au survol`**. L'activer empêche les erreurs de manipulation, mais vous perdez la capacité de prévisualiser la vidéo en survol (vous ne voyez que la miniature).
 
-<ImageOnDemand button-text="Load image" alt="Bypass Hover Scrub" src="img/vegtips/image020_bypass_hover_scrub.png" />
+<ImageOnDemand alt="Bypass Hover Scrub" src="vegtips/image020_bypass_hover_scrub.png" />
 
 <p align="center">En fait, ce bouton a été ajouté dans VP20, mais dans VP20 il n'avait aucun effet.</p>
 
@@ -711,7 +711,7 @@ Dans VP22 et moins, par défaut, **`Entrée` est "Pause", `Espace` est "Stop"**.
 
 Depuis `21 build 187`, cette option a été déplacée vers la **barre de transport sous la fenêtre Aperçu**, à côté des boutons lecture/pause/stop. Si elle n'est pas visible, développez les trois points à droite.
 
-<ImageOnDemand button-text="Load image" alt="Cursor Transport" src="img/vegtips/image021_cursor_transport.png" />
+<ImageOnDemand alt="Cursor Transport" src="vegtips/image021_cursor_transport.png" />
 
 Après la mise à jour VP23, le comportement par défaut a changé : **`Entrée` est "Stop", `Espace` est "Pause"**. L'option est devenue `Utiliser la barre d'espace et F12 pour lecture/stop au lieu de lecture/pause`, disponible à la fois dans `Préférences -> Général` et la barre de transport.
 
@@ -772,7 +772,7 @@ R : Ce problème apparaît avec **certaines versions de pilotes Nvidia**. Voici 
 
     Ouvrez **Panneau de configuration NVIDIA**, cliquez sur **`Gérer les paramètres 3D`** à gauche, passez à l'onglet **`Paramètres du programme`** à droite. Cliquez `Ajouter`, sélectionnez l'exécutable VEGAS, et changez **`Compatibilité OpenGL GDI`** de `Utiliser le paramètre global` à **`Préférer la compatibilité`**. Redémarrez VEGAS. (Si vous avez plusieurs versions VEGAS, définissez chacune séparément.)
 
-<ImageOnDemand button-text="Load image" alt="NVIDIA OpenGL GDI Compatibility" src="img/vegtips/image022_nvidia_opengl.png" />
+<ImageOnDemand alt="NVIDIA OpenGL GDI Compatibility" src="vegtips/image022_nvidia_opengl.png" />
 
 3. Revenir au pilote Nvidia `522.30` ou antérieur, ou mettre à jour vers le plus récent. Lors de la réinstallation, **choisissez l'installation "Personnalisée"** et cochez **`Effectuer une installation propre`**. Cela réinitialise tous les paramètres du pilote par défaut, donc **non recommandé**.
 
@@ -788,7 +788,7 @@ Référence : <a href="https://www.vegascreativesoftware.info/us/forum/posts--13
 
 Lors de l'utilisation des modèles de rendu intégrés de VEGAS, nous **devons souvent constamment ajuster la résolution, le taux de trame, le débit, etc.**, pour correspondre aux propriétés du projet et atteindre la qualité souhaitée. Cependant, il existe un plugin de rendu qui **correspond automatiquement la résolution/taux de trame aux propriétés du projet et supporte les paramètres CRF/CQP avancés pour le contrôle du débit**, permettant le rendu **avec moins d'ajustements manuels de paramètres**. Ce plugin est **Voukoder**.
 
-<ImageOnDemand button-text="Load image" alt="Voukoder Classic" src="img/vegtips/image023_voukoder_classic.png" />
+<ImageOnDemand alt="Voukoder Classic" src="vegtips/image023_voukoder_classic.png" />
 
 Deux versions : Voukoder Classic et Voukoder Pro.
 
@@ -827,7 +827,7 @@ D'autres plugins similaires incluent [DebugMode FrameServer](http://www.debugmod
 
 3.  **Changer l'encodeur dans le modèle de rendu.**
 
-<ImageOnDemand button-text="Load image" alt="Render Encoder" src="img/vegtips/image024_render_encoder.png" />
+<ImageOnDemand alt="Render Encoder" src="vegtips/image024_render_encoder.png" />
 
 <p align="center">Les encodeurs disponibles dépendent de votre GPU.</p>
 
@@ -847,7 +847,7 @@ D'autres plugins similaires incluent [DebugMode FrameServer](http://www.debugmod
 
 9.  **Rendu séquence d'images**. Commencez le rendu là où il s'est bloqué. **Cela préserve au moins les fichiers rendus.** Finalement, **importez la séquence d'images dans VEGAS et rendez-la en vidéo**. Après chaque rendu de séquence, **sortez vers un nouveau dossier** pour éviter l'écrasement, car VEGAS commence toujours la numérotation à `000000`.
 
-<ImageOnDemand button-text="Load image" alt="Import Image Sequence" src="img/vegtips/image025_import_image_sequence.png" />
+<ImageOnDemand alt="Import Image Sequence" src="vegtips/image025_import_image_sequence.png" />
 
 <p align="center">Importation d'une séquence d'images. Elle se comporte comme un fichier vidéo ; vous pouvez définir le taux de trame.</p>
 
@@ -907,7 +907,7 @@ Q : Veut **arrêter le rendu à mi-chemin** mais **garder la vidéo partiellemen
 
 R : La fenêtre d'affichage de rendu de l'**extension SeMW** a cette fonctionnalité.
 
-<ImageOnDemand button-text="Load image" alt="SeMW Render Prompt" src="img/vegtips/image026_render_semw.png" />
+<ImageOnDemand alt="SeMW Render Prompt" src="vegtips/image026_render_semw.png" />
 
 Site officiel de l'extension SeMW : https://www.semw-software.com/en/extensions/
 
@@ -925,7 +925,7 @@ R :
 
   2.  Dans la liste des modèles de rendu, sélectionnez `QuickTime` à gauche. Choisissez n'importe quel modèle à droite, cliquez `Personnaliser le modèle`, ajustez les paramètres comme montré :
 
-<ImageOnDemand button-text="Load image" alt="Render Alpha QuickTime" src="img/vegtips/image027_render_alpha_quicktime.png" />
+<ImageOnDemand alt="Render Alpha QuickTime" src="vegtips/image027_render_alpha_quicktime.png" />
 
   3.  Sauvegardez le modèle et rendez.
 
@@ -937,7 +937,7 @@ R :
 
   Comme montré :
 
-<ImageOnDemand button-text="Load image" alt="Render Alpha ProRes" src="img/vegtips/image028_render_alpha_prores.png" />
+<ImageOnDemand alt="Render Alpha ProRes" src="vegtips/image028_render_alpha_prores.png" />
 
 - **[Voukoder](#plugin-de-rendu-recommandé-voukoder)<small>(VP18+, Voukoder Classic version 12.0+.)</small>**
 
@@ -953,7 +953,7 @@ Trois solutions :
 
 1.  **Utilisez [Voukoder](#plugin-de-rendu-recommandé-voukoder), créez un modèle avec `Filtres` pour convertir l'espace colorimétrique.**
 
-<ImageOnDemand button-text="Load image" alt="Voukoder Color Space" src="img/vegtips/image040_voukoder_color_space.png" />
+<ImageOnDemand alt="Voukoder Color Space" src="vegtips/image040_voukoder_color_space.png" />
 
 2.  Mettez à niveau vers VP18+. Lors de l'ouverture d'un ancien projet dans le nouveau VP, changez `Format de pixel` dans `Fichier->Propriétés` de `8-bit hérité (niveaux vidéo)` à **`8-bit (gamme complète)`**, et **n'utilisez pas les modèles de rendu créés dans l'ancien VP**.
 
@@ -967,9 +967,9 @@ Référence : <a href="https://www.vegascreativesoftware.info/us/forum/posts--14
 
 A2 : Si la source est une **séquence HDR**, changez **`Espace colorimétrique` des Propriétés du projet <sup>Fig 1</sup>** pour correspondre à la source <sup>Fig 2</sup>. Cela basculera l'ensemble du projet en profondeur de couleur 10 bits, rendant le rendu plus lent que 8 bits.
 
-<ImageOnDemand button-text="Load image" alt="Project HDR Color Space" src="img/vegtips/image029_color_space_hdr_project.png" />
+<ImageOnDemand alt="Project HDR Color Space" src="vegtips/image029_color_space_hdr_project.png" />
 
-<ImageOnDemand button-text="Load image" alt="Footage HDR Color Space" src="img/vegtips/image030_color_space_hdr_footage.png" />
+<ImageOnDemand alt="Footage HDR Color Space" src="vegtips/image030_color_space_hdr_footage.png" />
 
 Alternativement, gardez l'espace colorimétrique du projet inchangé et appliquez une LUT de conversion d'espace colorimétrique à la séquence source. Utilisez le FX intégré `Filtre LUT` ou la fonctionnalité plus récente `Étalonnage couleur`. La clé est de trouver une LUT qui convertit l'espace colorimétrique source en standard `Rec.709`. Cela perd les détails HDR, donc si vous ne prévoyez pas de sortie HDR, évitez d'enregistrer des séquences HDR initialement.
 
@@ -977,7 +977,7 @@ Alternativement, gardez l'espace colorimétrique du projet inchangé et applique
 
 Q : La vidéo rendue a **des décalages de couleur (rouge devient violet, bleu devient jaune, etc.)** ?
 
-<ImageOnDemand button-text="Load image" alt="BGRA Color" src="img/vegtips/image031_bgra_color.png" />
+<ImageOnDemand alt="BGRA Color" src="vegtips/image031_bgra_color.png" />
 
 R : Problème de pilote GPU AMD. Essayez :
 
@@ -1063,7 +1063,7 @@ Référence : <a href="https://www.vegascreativesoftware.info/us/forum/posts--83
 
 Q : **[Win7 VP18+]** **Cliquer sur `Rendre sous` erreur immédiate** : **`Une erreur s'est produite lors de la création du fichier média. Erreur 0x80131501 (Message manquant)`**
 
-<ImageOnDemand button-text="Load image" alt="Win7 Render" src="img/vegtips/image032_render_win7.png" />
+<ImageOnDemand alt="Win7 Render" src="vegtips/image032_render_win7.png" />
 
 R : Normalement, Win7 ne supporte que **jusqu'à VP17**. VP18+ sur Win7 donne cette erreur.
 
@@ -1100,7 +1100,7 @@ Solutions :
 
 - Dans certains cas, les paramètres Unicode Windows pourraient être la cause. Allez dans **`Panneau de configuration -> Région -> Administration -> Changer les paramètres régionaux du système`**, assurez-vous que **`Bêta : Utiliser Unicode UTF-8 pour la prise en charge linguistique mondiale`** est **NON** coché.
 
-<ImageOnDemand button-text="Load image" alt="Windows Unicode Settings" src="img/vegtips/image017_unicode_settings.png" />
+<ImageOnDemand alt="Windows Unicode Settings" src="vegtips/image017_unicode_settings.png" />
 
 Dans VP20, la fonctionnalité "**Transfert des attributs de sous-titre**" de "Titres et texte" est aussi affectée, rendant certaines polices inutilisables avec cette fonction.
 
@@ -1130,17 +1130,17 @@ R : Ouvrez le fichier texte dans le Bloc-notes, **Enregistrer sous avec encodage
 
 Q : Sur les écrans haute résolution, utiliser "**Titrage ProType**" provoque des **bugs d'interface/texte minuscule illisible** ?
 
-<ImageOnDemand button-text="Load image" alt="PPT Titler UI Issue" src="img/vegtips/image033_protype_titler_ui_issue.png" />
+<ImageOnDemand alt="PPT Titler UI Issue" src="vegtips/image033_protype_titler_ui_issue.png" />
 
 R : Problème de mise à l'échelle DPI lorsque la mise à l'échelle système >= 150%. Clic droit sur l'exécutable/raccourci VEGAS -> `Propriétés -> Compatibilité -> Modifier les paramètres DPI élevés`. **Définissez `Mise à l'échelle effectuée par :` sur `Système (Amélioré)`**.
 
-<ImageOnDemand button-text="Load image" alt="High DPI - System Enhanced" src="img/vegtips/image034_high_dpi_system_enhanced.png" />
+<ImageOnDemand alt="High DPI - System Enhanced" src="vegtips/image034_high_dpi_system_enhanced.png" />
 
 <br>
 
 Q : **[VP20, VP21]** **La fonction "Transfert des attributs de sous-titre" dans Titres et texte erreur (comme montré)** ?
 
-<ImageOnDemand button-text="Load image" alt="Subtitle Attributes Transfer" src="img/vegtips/image035_subtitles_transfer.png" />
+<ImageOnDemand alt="Subtitle Attributes Transfer" src="vegtips/image035_subtitles_transfer.png" />
 
 R : Le problème se produit lorsque la zone de texte contient **une mise en forme mixte (polices, tailles différentes, etc.)** qui ne peut pas être transférée. Essayez d'**unifier d'abord le format du texte** avant d'utiliser la fonction. **VP21 final build 315 a corrigé cela.** Les anciennes versions (y compris pré-VP20) peuvent utiliser un script que j'ai écrit avec une fonctionnalité similaire, pas d'erreur, mais ne supporte pas non plus le transfert de mise en forme mixte. Chemin d'installation du script voir [Scripts](#xii-faq-concernant-les-scripts-extensions).
 
@@ -1282,7 +1282,7 @@ Q : **Certains FX de plugin Sapphire ignorent le canal alpha, couvrant l'arrièr
 
 R : Comme montré, entrez dans `Aide` du FX et désactivez son accélération `GPU` individuellement.
 
-<ImageOnDemand button-text="Load image" alt="Sapphire Alpha Issue" src="img/vegtips/image036_sapphire_alpha.png" />
+<ImageOnDemand alt="Sapphire Alpha Issue" src="vegtips/image036_sapphire_alpha.png" />
 
 Si cela ne fonctionne pas, **désactivez l'`Accélération GPU` propre à VEGAS**.
 
@@ -1341,7 +1341,7 @@ R : Allez à la clé de registre :
 
 Il y a `Path 1`, `Path 2`, etc., correspondant aux chemins VST dans les préférences.
 
-<ImageOnDemand button-text="Load image" alt="VST Registry" src="img/vegtips/image037_vst_reg.png" />
+<ImageOnDemand alt="VST Registry" src="vegtips/image037_vst_reg.png" />
 
 `CheckSum` est pour que VEGAS vérifie si un rescan est nécessaire ; vous pouvez l'ignorer. Concentrez-vous sur `Path` (chaîne de chemin absolu) et `Flags` (`3` = scanner, `0` = ne pas scanner). Modifiez selon les besoins.
 
@@ -1485,7 +1485,7 @@ Avantages :
 
 - Ajustement facile des intervalles de sauvegarde.
 
-<ImageOnDemand button-text="Load image" alt="Advanced Save" src="img/vegtips/image038_advanced_save.png" />
+<ImageOnDemand alt="Advanced Save" src="vegtips/image038_advanced_save.png" />
 
 <p align="center">Menu : <b><code>Outils -> Sauvegarde avancée</code></b>.</p>
 
@@ -1540,7 +1540,7 @@ Normalement, les nouvelles VEGAS peuvent ouvrir d'anciens fichiers de projet ave
 
 ### 1. Outil de rétrogradation de version de fichier de projet VEGAS
 
-<ImageOnDemand button-text="Load image" alt="MSVPVF" src="img/vegtips/image039_msvpvf.png" />
+<ImageOnDemand alt="MSVPVF" src="vegtips/image039_msvpvf.png" />
 
 Lien du projet original : https://sr.ht/~mrpapersonic/msvpvf/
 

@@ -129,7 +129,8 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, watchEffect } from 'vue'
+import { computed, onBeforeUnmount, onMounted, ref, watch, watchEffect } from 'vue'
+import { pinyin } from 'pinyin-pro'
 import { useData } from 'vitepress'
 
 type FxType = 'videoFx' | 'transitionFx' | 'generatorFx' | 'compositeFx'
@@ -192,6 +193,142 @@ type HeaderMap = {
   uid: number
 }
 
+type PreparedRecord = VideoFxRecord & { haystack: string }
+
+const hiraBaseMap: Record<string, string> = {
+  あ: 'a', い: 'i', う: 'u', え: 'e', お: 'o',
+  か: 'ka', き: 'ki', く: 'ku', け: 'ke', こ: 'ko',
+  さ: 'sa', し: 'shi', す: 'su', せ: 'se', そ: 'so',
+  た: 'ta', ち: 'chi', つ: 'tsu', て: 'te', と: 'to',
+  な: 'na', に: 'ni', ぬ: 'nu', ね: 'ne', の: 'no',
+  は: 'ha', ひ: 'hi', ふ: 'fu', へ: 'he', ほ: 'ho',
+  ま: 'ma', み: 'mi', む: 'mu', め: 'me', も: 'mo',
+  や: 'ya', ゆ: 'yu', よ: 'yo',
+  ら: 'ra', り: 'ri', る: 'ru', れ: 're', ろ: 'ro',
+  わ: 'wa', を: 'o', ん: 'n',
+  が: 'ga', ぎ: 'gi', ぐ: 'gu', げ: 'ge', ご: 'go',
+  ざ: 'za', じ: 'ji', ず: 'zu', ぜ: 'ze', ぞ: 'zo',
+  だ: 'da', ぢ: 'ji', づ: 'zu', で: 'de', ど: 'do',
+  ば: 'ba', び: 'bi', ぶ: 'bu', べ: 'be', ぼ: 'bo',
+  ぱ: 'pa', ぴ: 'pi', ぷ: 'pu', ぺ: 'pe', ぽ: 'po',
+  ゔ: 'vu'
+}
+
+const yoonPrefix: Record<string, string> = {
+  shi: 'sh', chi: 'ch', ji: 'j',
+  hi: 'h', mi: 'm', ni: 'n', ri: 'r', ki: 'k', gi: 'g', bi: 'b', pi: 'p'
+}
+
+const sokuonSet = new Set(['っ', 'ッ'])
+const longVowel = 'ー'
+
+const toHiragana = (char: string) => {
+  const code = char.codePointAt(0) || 0
+  if (code >= 0x30a1 && code <= 0x30f6) return String.fromCodePoint(code - 0x60)
+  return char
+}
+
+const kanaToRomaji = (input: string): string => {
+  let result = ''
+  let pendingSokuon = false
+
+  for (let i = 0; i < input.length; i += 1) {
+    let char = toHiragana(input[i])
+
+    if (sokuonSet.has(char)) {
+      pendingSokuon = true
+      continue
+    }
+
+    if (char === longVowel && result.length) {
+      const last = result[result.length - 1]
+      if ('aeiou'.includes(last)) result += last
+      continue
+    }
+
+    const base = hiraBaseMap[char]
+    if (!base) {
+      result += char
+      continue
+    }
+
+    const next = toHiragana(input[i + 1] || '')
+    const isSmallYoon = next === 'ゃ' || next === 'ゅ' || next === 'ょ'
+    let romaji = base
+
+    if (isSmallYoon) {
+      const vowel = next === 'ゃ' ? 'a' : next === 'ゅ' ? 'u' : 'o'
+      const prefix = yoonPrefix[base] ?? base.replace(/i$/, '')
+      romaji = `${prefix}${vowel}`
+      i += 1
+    }
+
+    if (pendingSokuon) {
+      const consMatch = romaji.match(/^[bcdfghjklmnpqrstvwxyz]+/)
+      if (consMatch) romaji = `${consMatch[0][0]}${romaji}`
+      pendingSokuon = false
+    }
+
+    result += romaji
+  }
+
+  return result
+}
+
+const HANGUL_BASE = 0xac00
+const HANGUL_LAST = 0xd7a3
+const CHOSEONG = ['g', 'kk', 'n', 'd', 'tt', 'r', 'm', 'b', 'pp', 's', 'ss', '', 'j', 'jj', 'ch', 'k', 't', 'p', 'h']
+const JUNGSEONG = ['a', 'ae', 'ya', 'yae', 'eo', 'e', 'yeo', 'ye', 'o', 'wa', 'wae', 'oe', 'yo', 'u', 'wo', 'we', 'wi', 'yu', 'eu', 'ui', 'i']
+const JONGSEONG = ['', 'k', 'k', 'ks', 'n', 'nj', 'nh', 't', 'l', 'lk', 'lm', 'lb', 'ls', 'lt', 'lp', 'lh', 'm', 'p', 'ps', 't', 't', 'ng', 't', 't', 'k', 't', 'p', 't']
+
+const hangulToRomaja = (input: string): string => {
+  let out = ''
+
+  for (const char of input) {
+    const code = char.codePointAt(0) ?? 0
+    if (code < HANGUL_BASE || code > HANGUL_LAST) {
+      out += char
+      continue
+    }
+
+    const idx = code - HANGUL_BASE
+    const choseongIndex = Math.floor(idx / 588)
+    const jungseongIndex = Math.floor((idx % 588) / 28)
+    const jongseongIndex = idx % 28
+
+    out += `${CHOSEONG[choseongIndex]}${JUNGSEONG[jungseongIndex]}${JONGSEONG[jongseongIndex]}`
+  }
+
+  return out
+}
+
+const safePinyin = (input: string): string => {
+  try {
+    return pinyin(input, { toneType: 'none', type: 'string', nonZh: 'consecutive' })
+  } catch (err) {
+    console.error('pinyin conversion failed', err)
+    return ''
+  }
+}
+
+const transliterateText = (text: string): string[] => {
+  if (!text) return []
+  const out: string[] = []
+  if (/[\u4e00-\u9fff]/u.test(text)) {
+    const py = safePinyin(text)
+    if (py) out.push(py)
+  }
+  if (/[\u3040-\u30ff]/u.test(text)) {
+    const roma = kanaToRomaji(text)
+    if (roma) out.push(roma)
+  }
+  if (/[\uac00-\ud7a3]/u.test(text)) {
+    const roma = hangulToRomaja(text)
+    if (roma) out.push(roma)
+  }
+  return out
+}
+
 const { lang } = useData()
 const typeKeys: FxType[] = ['videoFx', 'transitionFx', 'generatorFx', 'compositeFx']
 const allColumns: ColumnDef[] = [
@@ -210,9 +347,37 @@ const defaultWidths: Record<ColumnKey, number> = allColumns.reduce((acc, col) =>
 }, {} as Record<ColumnKey, number>)
 
 const records = ref<VideoFxRecord[]>([])
+const preparedRecords = computed<PreparedRecord[]>(() =>
+  records.value.map((item) => {
+    const fields = [
+      item.name,
+      item.englishName,
+      item.aliasZh,
+      item.aliasEn,
+      item.bigGroupZh,
+      item.bigGroupEn,
+      item.subGroupZh,
+      item.subGroupEn,
+      item.uid
+    ].filter(Boolean)
+
+    const transliterated = fields.flatMap(transliterateText)
+    // Also index a compact variant without spaces/hyphens/apostrophes for phonetic queries like "wenzi"
+    const transliteratedCompact = transliterated.map((s) => s.replace(/[\s'\-]/g, ''))
+
+    return {
+      ...item,
+      haystack: [...fields, ...transliterated, ...transliteratedCompact]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase()
+    }
+  })
+)
 const loading = ref(true)
 const error = ref<string | null>(null)
 const searchTerm = ref('')
+const searchTermDebounced = ref('')
 const selectedGroup = ref<'all' | string>('all')
 const selectedTypes = ref<FxType[]>([])
 const showUid = ref(false)
@@ -475,10 +640,10 @@ const sortValue = (item: VideoFxRecord, key: ColumnKey): string => {
 }
 
 const filteredRecords = computed(() => {
-  const term = searchTerm.value.trim().toLowerCase()
+  const term = searchTermDebounced.value
   const activeTypes = selectedTypes.value
 
-  const filtered = records.value.filter((item) => {
+  const filtered = preparedRecords.value.filter((item) => {
     const group = groupFor(item)
     if (selectedGroup.value !== 'all' && group !== selectedGroup.value) return false
 
@@ -489,18 +654,7 @@ const filteredRecords = computed(() => {
 
     if (!term) return true
 
-    const haystack = [
-      item.name,
-      item.englishName,
-      aliasFor(item),
-      groupFor(item),
-      subGroupFor(item),
-      item.uid
-    ]
-      .join(' ')
-      .toLowerCase()
-
-    return haystack.includes(term)
+    return item.haystack.includes(term)
   })
 
   return filtered.sort((a, b) => {
@@ -555,6 +709,18 @@ const resetFilters = () => {
   selectedGroup.value = 'all'
   selectedTypes.value = []
 }
+
+watch(
+  searchTerm,
+  (value, _old, onCleanup) => {
+    const normalized = value.trim().toLowerCase()
+    const handle = setTimeout(() => {
+      searchTermDebounced.value = normalized
+    }, 140)
+    onCleanup(() => clearTimeout(handle))
+  },
+  { immediate: true }
+)
 
 const parseCsvLine = (line: string): string[] => {
   const cells: string[] = []
