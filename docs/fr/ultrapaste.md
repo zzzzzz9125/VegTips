@@ -25,7 +25,7 @@ title: Extension UltraPaste!
 
 # Extension UltraPaste!
 
-<ImageOnDemand button-text="Charger l'image" alt="Icône" src="ultrapaste/img001_ultrapaste_icon.png" />
+<ImageOnDemand alt="Icône" src="ultrapaste/img001_ultrapaste_icon.png" />
 
 ## Aperçu
 
@@ -33,15 +33,15 @@ Cette extension introduit une méthode d'importation de fichiers **<u>novatrice<
 
 Exemple de la méthode d'importation de fichiers multimédias :
 
-<ImageOnDemand button-text="Charger l'image" alt="Importation Média" src="ultrapaste/img015_ultrapaste_media_import.gif" />
+<ImageOnDemand alt="Importation Média" src="ultrapaste/img015_ultrapaste_media_import.gif" />
 
 Interaction de la fonction `Image du presse-papiers` avec votre outil de capture d'écran :
 
-<ImageOnDemand button-text="Charger l'image" alt="Capture d'écran" src="ultrapaste/img016_ultrapaste_screenshot.gif" />
+<ImageOnDemand alt="Capture d'écran" src="ultrapaste/img016_ultrapaste_screenshot.gif" />
 
 Interaction de la fonction `Image du presse-papiers` avec PowerPoint :
 
-<ImageOnDemand button-text="Charger l'image" alt="PowerPoint" src="ultrapaste/img017_ultrapaste_ppt.gif" />
+<ImageOnDemand alt="PowerPoint" src="ultrapaste/img017_ultrapaste_ppt.gif" />
 
 ## Installation
 
@@ -56,13 +56,13 @@ Versions supportées : Sony Vegas Pro 13 - Magix Vegas Pro 22
 
 2.  Après l'installation, vous pouvez trouver la fenêtre d'extension ancrable via `Outils -> UltraPaste!`.
 
-<ImageOnDemand button-text="Charger l'image" alt="Menu Outils" src="ultrapaste/img002_ultrapaste_tools_menu.png" />
+<ImageOnDemand alt="Menu Outils" src="ultrapaste/img002_ultrapaste_tools_menu.png" />
 
 ## Utilisation
 
 Tout d'abord, l'élément principal `UltraPaste!`. C'est la fonction principale de l'extension ; presque toutes les opérations peuvent être réalisées avec celle-ci. Vous pouvez lui attribuer un raccourci clavier dans `Options -> Personnaliser le clavier` :
 
-<ImageOnDemand button-text="Charger l'image" alt="Personnaliser le clavier" src="ultrapaste/img003_ultrapaste_keyboard.png" />
+<ImageOnDemand alt="Personnaliser le clavier" src="ultrapaste/img003_ultrapaste_keyboard.png" />
 
 `Ctrl + Maj + V` est ma recommandation personnelle. Vous pouvez également lier un autre raccourci pratique. Il n'est pas recommandé de lier `Ctrl + V`, car cela écraserait la touche de collage native de VEGAS.
 
@@ -83,7 +83,7 @@ Toutes ces données peuvent être correctement reconnues et traitées.
 
 ### Général
 
-<ImageOnDemand button-text="Charger l'image" alt="Général" src="ultrapaste/img004_ultrapaste_general.png" />
+<ImageOnDemand alt="Général" src="ultrapaste/img004_ultrapaste_general.png" />
 
 Exclure les types de fichiers : Cette option fait que l'extension exclut les fichiers correspondant à des modèles de noms spécifiques. Elle utilise des expressions DOS basiques. Par exemple, les `*.sfvp0` et `*.sfap0` sur l'image sont respectivement les fichiers proxy vidéo et audio de VEGAS Pro. Ces fichiers proxy peuvent en fait être importés directement dans VEGAS, mais ils sont exclus par défaut pour éviter les erreurs de l'utilisateur. Si vous n'avez pas besoin d'importer certains fichiers spécifiques, vous pouvez ajuster ce paramètre vous-même.
 
@@ -91,7 +91,7 @@ Exclure les types de fichiers : Cette option fait que l'extension exclut les fic
 
 ### Image du presse-papiers
 
-<ImageOnDemand button-text="Charger l'image" alt="Image du presse-papiers" src="ultrapaste/img005_ultrapaste_clipboard_image.png" />
+<ImageOnDemand alt="Image du presse-papiers" src="ultrapaste/img005_ultrapaste_clipboard_image.png" />
 
 `Position de départ` : La position de départ pour l'importation de fichiers. Divisée en trois catégories : `Curseur`, `Curseur de lecture`, `Début du projet`. La différence entre `Curseur` et `Curseur de lecture` est que lorsque vous lisez la timeline, le `Curseur` est juste le point de départ de la lecture, tandis que le `Curseur de lecture` est la position de lecture en temps réel de la timeline.
 
@@ -107,7 +107,7 @@ Exclure les types de fichiers : Cette option fait que l'extension exclut les fic
 
 ### Données REAPER
 
-<ImageOnDemand button-text="Charger l'image" alt="Données Reaper" src="ultrapaste/img006_ultrapaste_reaper_data.png" />
+<ImageOnDemand alt="Données Reaper" src="ultrapaste/img006_ultrapaste_reaper_data.png" />
 
 C'est l'une des fonctionnalités clés de cette extension : une implémentation complète de l'importation et de l'exportation des données du presse-papiers REAPER. Vous pouvez sélectionner divers éléments ou pistes dans REAPER, faire `Ctrl + C`, puis directement `Ctrl + Maj + V` pour les coller dans la timeline VEGAS.
 
@@ -122,9 +122,9 @@ En bref, tout ce qui peut être adapté l'a été. Vous pouvez également sélec
 
 Vous pouvez également exporter des événements ou des pistes VEGAS vers des données du presse-papiers REAPER, puis faire `Ctrl + V` dans REAPER, réalisant ainsi une interopérabilité totale entre les logiciels.
 
-<ImageOnDemand button-text="Charger l'image" alt="Exemple Reaper 1" src="ultrapaste/img007_ultrapaste_reaper_1.png" />
+<ImageOnDemand alt="Exemple Reaper 1" src="ultrapaste/img007_ultrapaste_reaper_1.png" />
 
-<ImageOnDemand button-text="Charger l'image" alt="Exemple Reaper 2" src="ultrapaste/img008_ultrapaste_reaper_2.png" />
+<ImageOnDemand alt="Exemple Reaper 2" src="ultrapaste/img008_ultrapaste_reaper_2.png" />
 
 Note : En raison des limitations de l'API de script, lorsque la version de VEGAS est antérieure à la version finale 15, `VP15B416`, tous les paramètres liés à la hauteur des événements audio ne peuvent pas être transférés dans VEGAS, ni être exportés vers les données du presse-papiers REAPER.
 
@@ -136,7 +136,7 @@ Note : En raison des limitations de l'API de script, lorsque la version de VEGAS
 
 ### Images PSD
 
-<ImageOnDemand button-text="Charger l'image" alt="Images PSD" src="ultrapaste/img009_ultrapaste_psd.png" />
+<ImageOnDemand alt="Images PSD" src="ultrapaste/img009_ultrapaste_psd.png" />
 
 `Développer tous les calques` : Lors de l'importation d'une image PSD multicouche, la développe automatiquement en pistes VEGAS séparées.
 
@@ -146,7 +146,7 @@ Note : En raison des limitations de l'API de script, lorsque la version de VEGAS
 
 ### Sous-titres
 
-<ImageOnDemand button-text="Charger l'image" alt="Sous-titres" src="ultrapaste/img010_ultrapaste_subtitles.png" />
+<ImageOnDemand alt="Sous-titres" src="ultrapaste/img010_ultrapaste_subtitles.png" />
 
 Les sous-titres sont une autre fonctionnalité clé de cette extension. Vous pouvez copier n'importe quel fichier `Texte brut` / `TXT` / `SRT` / `LRC` et le coller dans la timeline VEGAS.
 
@@ -168,7 +168,7 @@ Pour les plugins de type DXT `ProType Titler` et `(Legacy) Text`, seuls les pré
 
 `Longueur par défaut` : La longueur par défaut (en secondes) lors de l'importation de texte brut du presse-papiers ou de fichiers TXT sans horodatage.
 
-<ImageOnDemand button-text="Charger l'image" alt="Région de sous-titres" src="ultrapaste/img011_ultrapaste_subtitles_region.png" />
+<ImageOnDemand alt="Région de sous-titres" src="ultrapaste/img011_ultrapaste_subtitles_region.png" />
 
 <p align="center">Astuce : Il est plus pratique de définir d'abord une région sur la timeline, puis d'appuyer sur la touche de raccourci.</p>
 
@@ -180,7 +180,7 @@ Pour les plugins de type DXT `ProType Titler` et `(Legacy) Text`, seuls les pré
 
 ### Média
 
-<ImageOnDemand button-text="Charger l'image" alt="Média" src="ultrapaste/img012_ultrapaste_media.png" />
+<ImageOnDemand alt="Média" src="ultrapaste/img012_ultrapaste_media.png" />
 
 `Méthode d'ajout` : Divisée en trois types : `Dans le temps`, `Sur les pistes`, `Comme prises`. Complètement cohérent avec les trois méthodes d'importation de fichiers dans le menu d'importation par glisser-déposer clic droit natif de VEGAS.
 
@@ -196,7 +196,7 @@ Pour les plugins de type DXT `ProType Titler` et `(Legacy) Text`, seuls les pré
 
 Importation personnalisée des médias :
 
-<ImageOnDemand button-text="Charger l'image" alt="Importation personnalisée des médias" src="ultrapaste/img013_ultrapaste_media_custom.png" />
+<ImageOnDemand alt="Importation personnalisée des médias" src="ultrapaste/img013_ultrapaste_media_custom.png" />
 
 <p align="center">Définir des règles d'importation pour des noms de fichiers multimédias spécifiques</p>
 
@@ -210,7 +210,7 @@ Par exemple, mon `1_*(*).wav;1_*(*).flac` ici fait référence à la convention 
 
 ### Données VEGAS
 
-<ImageOnDemand button-text="Charger l'image" alt="Données VEGAS" src="ultrapaste/img014_ultrapaste_vegas_data.png" />
+<ImageOnDemand alt="Données VEGAS" src="ultrapaste/img014_ultrapaste_vegas_data.png" />
 
 `Type d'importation VEG` : Divisée en trois catégories : `Ouvrir le fichier projet`, `Comme projet imbriqué`, `Importer le média du projet`.
 
