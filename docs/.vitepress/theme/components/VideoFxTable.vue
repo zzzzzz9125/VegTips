@@ -673,6 +673,30 @@ const sortValue = (item: VideoFxRecord, key: ColumnKey): string => {
   }
 }
 
+const matchesSearchTerm = (haystack: string, term: string): boolean => {
+  if (!term) return true
+
+  // Split search term by semicolon (both ; and ；)
+  const queries = term
+    .split(/[;；]/)
+    .map((q) => q.trim())
+    .filter((q) => q.length > 0)
+
+  if (!queries.length) return true
+
+  // Check if any query matches (union)
+  return queries.some((query) => {
+    try {
+      // Try to compile as regex
+      const regex = new RegExp(query, 'i')
+      return regex.test(haystack)
+    } catch {
+      // Fallback to simple substring match if regex is invalid
+      return haystack.includes(query)
+    }
+  })
+}
+
 const filteredRecords = computed(() => {
   const term = searchTermDebounced.value
   const activeTypes = selectedTypes.value
@@ -686,9 +710,7 @@ const filteredRecords = computed(() => {
       if (!matchesAll) return false
     }
 
-    if (!term) return true
-
-    return item.haystack.includes(term)
+    return matchesSearchTerm(item.haystack, term)
   })
 
   return filtered.sort((a, b) => {
