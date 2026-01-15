@@ -54,6 +54,7 @@ const labels = computed(() => {
   if (lv.startsWith('ko')) return { depth: '개요 깊이', autoExpand: '자동 펼치기' }
   if (lv.startsWith('de')) return { depth: 'Gliederungstiefe', autoExpand: 'Automatisch erweitern' }
   if (lv.startsWith('fr')) return { depth: 'Profondeur du plan', autoExpand: 'Dépliage automatique' }
+  if (lv.startsWith('ru')) return { depth: 'Глубина оглавления', autoExpand: 'Авторазворачивание' }
   return { depth: 'Outline depth', autoExpand: 'Auto expand' }
 })
 

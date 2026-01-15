@@ -31,7 +31,7 @@ This page is AI-translated from the [Chinese original](/zh/) and has not been fu
 For the time being, I do not accept direct private inquiries about specific issues related to VEGAS Pro. If you have any questions, please post them on [other public forums](#xvii-vegas-communities-forums) for help. I may collect some good solutions from other forums and summarize them here.
 ::: -->
 
-## 0. Preface
+## N. Preface
 
 - This article is not a basic tutorial for beginners. It is a guide for troubleshooting various issues in VEGAS Pro and therefore will not extensively cover basic software operations. This article supports the use of licensed software. For information on purchasing a legitimate license, see the [Software Purchase Channels](#xvi-software-purchase-channels) section at the end.
 
@@ -85,6 +85,10 @@ Other directories containing VEGAS-related settings and preset files for manual 
 - Saved OFX plugin FX presets: `%userprofile%\Documents\OFX Presets\`  
   i.e., `C:\Users\<Username>\Documents\OFX Presets\`  
   or OneDrive path: `C:\Users\<Username>\OneDrive\Documents\OFX Presets\`
+
+- Additionally, if your Vegas frequently crashes, it is recommended to check: `%localappdata%\CrashDumps\`  
+  i.e., `C:\Users\<Username>\AppData\Local\CrashDumps\`  
+  Windows saves crash information `.dmp` files here. These crash information files take up a lot of space and are not useful for ordinary users, so they can be deleted directly.
 
 VP13 and earlier versions have cache directories within a Sony folder, e.g., **`%localappdata%\Sony\VEGAS Pro\`**, etc.
 
@@ -796,7 +800,8 @@ Two versions: Voukoder Classic and Voukoder Pro.
 
   User backups on GitHub:
   - [https://github.com/FORARTfe/voukoderFREE](https://github.com/FORARTfe/voukoderFREE)
-  - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)  
+  - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)
+
   Requires installing both the Voukoder core (e.g., `Voukoder 13.4.1`) and the connector (e.g., `connector-vegas22-1.0.0.msi`).
 - Voukoder Pro is currently paid. Official site: [https://www.voukoder.org/](https://www.voukoder.org/).
   - Voukoder Pro 1 was once free, but Voukoder Pro 2 became paid, with each major version requiring a separate purchase.
@@ -877,15 +882,20 @@ If that fails, try temporarily moving all folders from the codec path **`...<VEG
 
 <br>
 
-Q: Immediate render error: **`An error occurred creating media file xxx.mp4. Unable to determine the cause of the error.`**
+Q: Immediate render error: **`An error occurred while creating media file xxx.mp4. The reason for the error could not be determined.`**
 
-A: In custom render template, **uncheck `Enable progressive download`**. Or try **[Voukoder](#recommended-render-plugin-voukoder)**.
+A: In `Customize Render Template`, **uncheck `Enable progressive download`**. Or try **[Voukoder](#recommended-render-plugin-voukoder)**.
 
 <br>
 
-Q: Immediate render error: **`An error occurred creating media file xxx.mp4. Error 0x80660008 (Message missing)`**
+Q: Immediate render error: **`An error occurred while creating media file xxx.mp4. Error 0x80660008 (Message missing)`**
 
-A: If you are using **NVIDIA NVENC encoder** and your **graphics driver version is > `590`**, then **built-in render templates in VP22 and below cannot call NVENC**, **forcing you to choose templates with other encoders**. Current solutions: **downgrade driver to `581.57` or below**, or **upgrade VEGAS to VP23 or above**. You can also use **[Voukoder's](#recommended-render-plugin-voukoder)** NVENC encoder without error.
+A: If you are using **NVIDIA NVENC encoder** and your **graphics driver version is > `590`**, then **built-in render templates in VP22 and below cannot call NVENC**. Current solutions:
+
+- **Choose templates with other encoders than `NVENC`**.
+- **Downgrade NVIDIA driver to `581.57` or below**.
+- **Upgrade VEGAS to VP23 or above**.
+- Use **[Voukoder's](#recommended-render-plugin-voukoder)** NVENC encoder without error.
 
 <small>
 Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--150382/">https://www.vegascreativesoftware.info/us/forum/posts--150382/</a><br>

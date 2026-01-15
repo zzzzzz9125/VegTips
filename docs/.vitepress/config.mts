@@ -44,6 +44,12 @@ const frNav = [
   { text: 'UltraPaste! Extension', link: '/fr/ultrapaste' }
 ]
 
+const ruNav = [
+  { text: 'Vegas Устранение неполадок', link: '/ru/' },
+  { text: 'Список видеоэффектов', link: '/ru/videofxlist' },
+  { text: 'Расширение UltraPaste!', link: '/ru/ultrapaste' }
+]
+
 const enSidebar = [
   {
     text: 'Articles',
@@ -117,6 +123,17 @@ const frSidebar = [
       { text: 'Vegas Dépannage', link: '/fr/' },
       { text: 'Liste des FX vidéo', link: '/fr/videofxlist' },
       { text: 'UltraPaste! Extension', link: '/fr/ultrapaste' }
+    ]
+  }
+]
+
+const ruSidebar = [
+  {
+    text: 'Материалы',
+    items: [
+      { text: 'Vegas Устранение неполадок', link: '/ru/' },
+      { text: 'Список видеоэффектов', link: '/ru/videofxlist' },
+      { text: 'Расширение UltraPaste!', link: '/ru/ultrapaste' }
     ]
   }
 ]
@@ -232,6 +249,22 @@ export default defineConfig({
         docFooter: {
           prev: 'Précédent',
           next: 'Suivant'
+        }
+      }
+    },
+    ru: {
+      label: 'Русский',
+      lang: 'ru-RU',
+      title: 'VegTips',
+      description: 'Практические советы для VEGAS Pro',
+      link: '/ru/',
+      themeConfig: {
+        nav: ruNav,
+        sidebar: ruSidebar,
+        outlineTitle: 'Навигация по странице',
+        docFooter: {
+          prev: 'Назад',
+          next: 'Далее'
         }
       }
     }

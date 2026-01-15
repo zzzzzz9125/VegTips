@@ -37,14 +37,14 @@
   var search = window.location.search;
   var hash = window.location.hash;
   var params = new URLSearchParams(search);
-  var supported = ['en', 'zh', 'zh-hant', 'ja', 'ko', 'de', 'fr'];
+  var supported = ['en', 'zh', 'zh-hant', 'ja', 'ko', 'de', 'fr', 'ru'];
 
   // detect current locale from URL path (base-agnostic)
-  var match = pathWithoutBase.match(/\/(zh-hant|zh|ja|ko|de|fr)(?:\/|$)/);
+  var match = pathWithoutBase.match(/\/(zh-hant|zh|ja|ko|de|fr|ru)(?:\/|$)/);
   var currentLocale = match ? match[1] : 'en';
 
   var isRoot = /\/(?:index\.html)?$/.test(pathWithoutBase);
-  var isLocaleRoot = /\/(zh-hant|zh|ja|ko|de|fr)(?:\/(?:index\.html)?|$)/.test(pathWithoutBase) && /\/(zh-hant|zh|ja|ko|de|fr)\/?(?:index\.html)?$/.test(pathWithoutBase);
+  var isLocaleRoot = /\/(zh-hant|zh|ja|ko|de|fr|ru)(?:\/(?:index\.html)?|$)/.test(pathWithoutBase) && /\/(zh-hant|zh|ja|ko|de|fr|ru)\/?(?:index\.html)?$/.test(pathWithoutBase);
   var isHome = isRoot || isLocaleRoot;
 
   var preferred = localStorage.getItem(storageKey) || '';
@@ -64,6 +64,7 @@
     else if (browserLang.indexOf('ko') === 0) preferred = 'ko';
     else if (browserLang.indexOf('de') === 0) preferred = 'de';
     else if (browserLang.indexOf('fr') === 0) preferred = 'fr';
+    else if (browserLang.indexOf('ru') === 0) preferred = 'ru';
     else preferred = 'en';
     localStorage.setItem(storageKey, preferred);
   }

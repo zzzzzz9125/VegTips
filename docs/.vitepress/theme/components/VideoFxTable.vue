@@ -396,6 +396,7 @@ const currentLocale = computed(() => {
   if (lv.startsWith('ko')) return 'ko'
   if (lv.startsWith('de')) return 'de'
   if (lv.startsWith('fr')) return 'fr'
+  if (lv.startsWith('ru')) return 'ru'
   return 'en'
 })
 
@@ -565,6 +566,39 @@ const messages = computed<Messages>(() => {
           compositeFx: 'C'
         },
         uidToggle: 'Afficher la colonne UID'
+      }
+    case 'ru':
+      return {
+        searchLabel: 'Поиск',
+        searchPlaceholder: 'Поиск по имени / UID / группе',
+        groupLabel: 'Категория',
+        allGroups: 'Все категории',
+        typesLabel: 'Фильтр типов',
+        resetFilters: 'Сбросить фильтры',
+        loading: 'Загрузка списка…',
+        loadFailed: 'Не удалось загрузить',
+        items: 'записей',
+        colChineseName: 'Китайское название',
+        colEnglishName: 'Название',
+        colAlias: 'Псевдоним',
+        colGroup: 'Группа',
+        colSubGroup: 'Подгруппа',
+        colTypes: 'Типы',
+        colUid: 'UID',
+        unknown: 'Неизвестно',
+        typeLabels: {
+          videoFx: 'Видео FX',
+          transitionFx: 'Переход FX',
+          generatorFx: 'Генератор FX',
+          compositeFx: 'Композитный FX'
+        },
+        typeShort: {
+          videoFx: 'В',
+          transitionFx: 'П',
+          generatorFx: 'Г',
+          compositeFx: 'К'
+        },
+        uidToggle: 'Показать столбец UID'
       }
     default:
       return {

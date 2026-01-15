@@ -76,15 +76,19 @@ For the time being, I do not accept direct private inquiries about specific issu
 
 其他的跟 Vegas 有关的一些设置和预设文件目录，可供自行备份：
 
-- 自己保存的 FX 预设、插件链预设、FX 收藏夹、渲染模板等：`%appdata%\VEGAS\`  
-  即：`C:\Users\<用户名>\AppData\Roaming\VEGAS\`
+- 自己保存的 FX 预设、插件链预设、FX 收藏夹、渲染模板等：`%appdata%\VEGAS\`
+  - 即：`C:\Users\<用户名>\AppData\Roaming\VEGAS\`
 
-- Vegas 的窗口布局设置、键盘设置等：`%appdata%\VEGAS Pro\`  
-  即：`C:\Users\<用户名>\AppData\Roaming\VEGAS Pro\`
+- Vegas 的窗口布局设置、键盘设置等：`%appdata%\VEGAS Pro\`
+  - 即：`C:\Users\<用户名>\AppData\Roaming\VEGAS Pro\`
 
-- 自己保存的 OFX 插件的 FX 预设：`%userprofile%\Documents\OFX Presets\`  
-  即：`C:\Users\<用户名>\Documents\OFX Presets\`  
-  或者 OneDrive 路径：`C:\Users\<用户名>\OneDrive\Documents\OFX Presets\`
+- 自己保存的 OFX 插件的 FX 预设：`%userprofile%\Documents\OFX Presets\`
+  - 即：`C:\Users\<用户名>\Documents\OFX Presets\`
+  - 或者 OneDrive 路径：`C:\Users\<用户名>\OneDrive\Documents\OFX Presets\`
+
+- 另外，如果你的 Vegas 时常发生崩溃，建议检查：`%localappdata%\CrashDumps\`
+  - 即：`C:\Users\<用户名>\AppData\Local\CrashDumps\`
+  - Windows 会在这里保存崩溃信息 `.dmp` 文件。这种崩溃信息文件占用比较大，并且对普通用户来说没有什么用，可以直接删除。
 
 vv13 及以下的版本的缓存目录会带 Sony 文件夹，如 **`%localappdata%\Sony\VEGAS Pro\`** 等。
 
@@ -796,7 +800,8 @@ Voukoder 一共有两个版本：Voukoder Classic 和 Voukoder Pro。
 
   有其他用户做了 GitHub 仓库备份：
   - [https://github.com/FORARTfe/voukoderFREE](https://github.com/FORARTfe/voukoderFREE)
-  - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)  
+  - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)
+
   需要同时安装 Voukoder 本体（比如 `Voukoder 13.4.1`）和 Voukoder 连接器（比如 `connector-vegas22-1.0.0.msi`）。
 - Voukoder Pro 目前是付费的，官网链接为：[https://www.voukoder.org/](https://www.voukoder.org/)。
   - Voukoder Pro 1 曾经宣称免费，但自 Voukoder Pro 2 开始转为付费软件，并且每一个大版本都需要额外付钱。
@@ -879,13 +884,18 @@ A：有**报错弹窗**时，先试试上文中的**[关闭报错弹窗](#2-关�
 
 Q：渲染立即报错：**`创建媒体文件 xxx.mp4 时发生错误。无法确定错误的原因。`**
 
-A：自定义渲染模板，**取消勾选 `启用渐进式下载` 选项**。或者试试看 **[Voukoder 渲染插件](#渲染插件-voukoder-推荐)**。
+A：`自定义渲染模板`，**取消勾选 `启用渐进式下载` 选项**。或者试试看 **[Voukoder 渲染插件](#渲染插件-voukoder-推荐)**。
 
 <br>
 
 Q：渲染立即报错：**`创建媒体文件 xxx.mp4 时发生错误。错误 0x80660008 (消息缺失)`**
 
-A：如果你正在使用 **N 卡的 NVENC 编码器**，且你的**显卡驱动版本大于 `590`**，则 **22 及以下版本的 Vegas** 中自带的渲染模板，**无法调用 NVENC 编码器**，**只能选择调用其他编码器的渲染模板进行渲染**。目前的解决办法只有**降级显卡驱动版本到 `581.57` 及以下**，或者**升级 Vegas 版本到 23 及以上**。也可以用 **[Voukoder 渲染插件](#渲染插件-voukoder-推荐)** 的 NVENC 编码器进行渲染，不会报错。
+A：如果你正在使用 **N 卡的 NVENC 编码器**，且你的**显卡驱动版本大于 `590`**，则 **22 及以下版本的 Vegas** 中自带的渲染模板，**无法调用 NVENC 编码器**。解决办法有：
+
+- **选择调用除 `NVENC` 的其他编码器的渲染模板进行渲染**。
+- **降级显卡驱动版本到 `581.57` 及以下**。
+- **升级 Vegas 版本到 23 及以上**。
+- 用 **[Voukoder 渲染插件](#渲染插件-voukoder-推荐)** 的 NVENC 编码器进行渲染，不会报错。
 
 <small>
 参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--150382/">https://www.vegascreativesoftware.info/us/forum/posts--150382/</a><br>
@@ -1439,7 +1449,7 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 2. 检查 `Application Extensions` 文件夹是否存在。若不存在，手动创建一个，并保证名称完全一致。进入该文件夹。
 
 3. 复制该扩展所需的所有 `.dll` 文件，直接粘贴到这个文件夹内。比如：`C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`。
-    * 有些脚本和扩展也可能有 `32*32` 的 `.png` 图标文件，通常情况下你可以选择是否放入。图标文件可用于在 Vegas 菜单栏和工具栏中区分不同的脚本和扩展。
+    * 有些脚本和扩展也可能有 `16*16` 的 `.png` 图标文件，通常情况下你可以选择是否放入。图标文件可用于在 Vegas 菜单栏和工具栏中区分不同的脚本和扩展。
 
 4. 如果某些脚本/扩展需要额外的安装包，请根据他们给出的安装步骤来。
 

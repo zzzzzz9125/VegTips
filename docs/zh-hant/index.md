@@ -76,15 +76,19 @@ For the time being, I do not accept direct private inquiries about specific issu
 
 其他的跟 Vegas 有關的一些設定和預設檔案目錄，可供自行備份：
 
-- 自己儲存的 FX 預設、外掛程式鏈預設、FX 收藏夾、算繪範本等：`%appdata%\VEGAS\`  
-  即：`C:\Users\<使用者名稱>\AppData\Roaming\VEGAS\`
+- 自己儲存的 FX 預設、外掛程式鏈預設、FX 收藏夾、算繪範本等：`%appdata%\VEGAS\`
+  - 即：`C:\Users\<使用者名稱>\AppData\Roaming\VEGAS\`
 
-- Vegas 的視窗佈局設定、鍵盤設定等：`%appdata%\VEGAS Pro\`  
-  即：`C:\Users\<使用者名稱>\AppData\Roaming\VEGAS Pro\`
+- Vegas 的視窗佈局設定、鍵盤設定等：`%appdata%\VEGAS Pro\`
+  - 即：`C:\Users\<使用者名稱>\AppData\Roaming\VEGAS Pro\`
 
 - 自己儲存的 OFX 外掛程式的 FX 預設：`%userprofile%\Documents\OFX Presets\`  
-  即：`C:\Users\<使用者名稱>\Documents\OFX Presets\`  
+  - 即：`C:\Users\<使用者名稱>\Documents\OFX Presets\`
   或者 OneDrive 路徑：`C:\Users\<使用者名稱>\OneDrive\Documents\OFX Presets\`
+
+- 另外，如果你的 Vegas 經常發生崩潰，建議檢查：`%localappdata%\CrashDumps\`
+  - 即：`C:\Users\<使用者名稱>\AppData\Local\CrashDumps\`
+  - Windows 會在這裡儲存崩潰資訊 `.dmp` 檔案。這種崩潰資訊檔案佔用空間比較大，並且對一般使用者來說沒有什麼用，可以直接刪除。
 
 vv13 及以下的版本的快取目錄會帶 Sony 資料夾，如 **`%localappdata%\Sony\VEGAS Pro\`** 等。
 
@@ -796,7 +800,8 @@ Voukoder 一共有兩個版本：Voukoder Classic 和 Voukoder Pro。
 
   有其他使用者做了 GitHub 倉庫備份：
   - [https://github.com/FORARTfe/voukoderFREE](https://github.com/FORARTfe/voukoderFREE)
-  - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)  
+  - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)
+
   需要同時安裝 Voukoder 本體（比如 `Voukoder 13.4.1`）和 Voukoder 連接器（比如 `connector-vegas22-1.0.0.msi`）。
 - Voukoder Pro 目前是付費的，官網連結為：[https://www.voukoder.org/](https://www.voukoder.org/)。
   - Voukoder Pro 1 曾經宣稱免費，但自 Voukoder Pro 2 開始轉為付費軟體，並且每一個大版本都需要額外付錢。
@@ -879,13 +884,18 @@ A：有**報錯彈窗**時，先試試上文中的**[關閉報錯彈窗](#2-關�
 
 Q：算繪立即報錯：**`建立媒體檔案 xxx.mp4 時發生錯誤。無法確定錯誤的原因。`**
 
-A：自定義算繪範本，**取消勾選 `啟用漸進式下載` 選項**。或者試試看 **[Voukoder 算繪外掛程式](#算繪外掛程式-voukoder-推薦)**。
+A：`自定義算繪範本`，**取消勾選 `啟用漸進式下載` 選項**。或者試試看 **[Voukoder 算繪外掛程式](#算繪外掛程式-voukoder-推薦)**。
 
 <br>
 
 Q：算繪立即報錯：**`建立媒體檔案 xxx.mp4 時發生錯誤。錯誤 0x80660008 (訊息缺失)`**
 
-A：如果你正在使用 **N 卡的 NVENC 編碼器**，且你的**顯示卡驅動版本大於 `590`**，則 **22 及以下版本的 Vegas** 中自帶的算繪範本，**無法呼叫 NVENC 編碼器**，**只能選擇呼叫其他編碼器的算繪範本進行算繪**。目前的解決辦法只有**降級顯示卡驅動版本到 `581.57` 及以下**，或者**升級 Vegas 版本到 23 及以上**。也可以用 **[Voukoder 算繪外掛程式](#算繪外掛程式-voukoder-推薦)**的 NVENC 編碼器進行算繪，不會報錯。
+A：如果你正在使用 **N 卡的 NVENC 編碼器**，且你的**顯示卡驅動版本大於 `590`**，則 **22 及以下版本的 Vegas** 中自帶的算繪範本，**無法呼叫 NVENC 編碼器**。目前的解決辦法：
+
+- **選擇呼叫除 `NVENC` 的其他編碼器的算繪範本進行算繪**。
+- **降級顯示卡驅動版本到 `581.57` 及以下**。
+- **升級 Vegas 版本到 23 及以上**。
+- 用 **[Voukoder 算繪外掛程式](#算繪外掛程式-voukoder-推薦)**的 NVENC 編碼器進行算繪，不會報錯。
 
 <small>
 參見：<a href="https://www.vegascreativesoftware.info/us/forum/posts--150382/">https://www.vegascreativesoftware.info/us/forum/posts--150382/</a><br>
@@ -1439,7 +1449,7 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 2. 檢查 `Application Extensions` 資料夾是否存在。若不存在，手動建立一個，並保證名稱完全一致。進入該資料夾。
 
 3. 複製該擴充所需的所有 `.dll` 檔案，直接貼上到這個資料夾內。比如：`C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`。
-    * 有些腳本和擴充也可能有 `32*32` 的 `.png` 圖示檔案，通常情況下你可以選擇是否放入。圖示檔案可用於在 Vegas 選單列和工具列中區分不同的腳本和擴充。
+    * 有些腳本和擴充也可能有 `16*16` 的 `.png` 圖示檔案，通常情況下你可以選擇是否放入。圖示檔案可用於在 Vegas 選單列和工具列中區分不同的腳本和擴充。
 
 4. 如果某些腳本/擴充需要額外的安裝包，請根據他們給出的安裝步驟來。
 

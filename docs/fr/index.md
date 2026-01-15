@@ -31,7 +31,7 @@ Cette page est traduite automatiquement depuis [la version originale chinoise](/
 Pour le moment, je n'accepte pas de demandes privées directes concernant des problèmes spécifiques liés à VEGAS Pro. Si vous avez des questions, veuillez les publier sur [d'autres forums publics](#xvii-communautés-forums-vegas) pour obtenir de l'aide. Je pourrai collecter de bonnes solutions provenant d'autres forums et les résumer ici.
 :::
 
-## 0. Préface
+## N. Préface
 
 - Cet article n'est pas un tutoriel de base pour débutants. C'est un guide pour résoudre divers problèmes dans VEGAS Pro et n'abordera donc pas extensivement les opérations logicielles de base. Cet article soutient l'utilisation de logiciels sous licence. Pour les informations sur l'achat d'une licence légitime, voir la section [Canaux d'achat du logiciel](#xvi-canaux-d-achat-du-logiciel) à la fin.
 
@@ -76,15 +76,19 @@ Pour les préférences VEGAS :
 
 Autres répertoires contenant des paramètres et des fichiers de préréglages VEGAS pour sauvegarde manuelle :
 
-- Préréglages FX enregistrés, préréglages de chaînes de plugins, FX favoris, modèles de rendu, etc. : `%appdata%\VEGAS\`  
-  C'est-à-dire `C:\Users\<NomUtilisateur>\AppData\Roaming\VEGAS\`
+- Préréglages FX enregistrés, préréglages de chaînes de plugins, FX favoris, modèles de rendu, etc. : `%appdata%\VEGAS\`
+  - C'est-à-dire `C:\Users\<NomUtilisateur>\AppData\Roaming\VEGAS\`
 
-- Dispositions de fenêtres VEGAS, paramètres clavier, etc. : `%appdata%\VEGAS Pro\`  
-  C'est-à-dire `C:\Users\<NomUtilisateur>\AppData\Roaming\VEGAS Pro\`
+- Dispositions de fenêtres VEGAS, paramètres clavier, etc. : `%appdata%\VEGAS Pro\`
+  - C'est-à-dire `C:\Users\<NomUtilisateur>\AppData\Roaming\VEGAS Pro\`
 
-- Préréglages FX de plugins OFX enregistrés : `%userprofile%\Documents\OFX Presets\`  
-  C'est-à-dire `C:\Users\<NomUtilisateur>\Documents\OFX Presets\`  
+- Préréglages FX de plugins OFX enregistrés : `%userprofile%\Documents\OFX Presets\`
+  - C'est-à-dire `C:\Users\<NomUtilisateur>\Documents\OFX Presets\`
   ou chemin OneDrive : `C:\Users\<NomUtilisateur>\OneDrive\Documents\OFX Presets\`
+
+- De plus, si votre VEGAS plante fréquemment, il est recommandé de vérifier : `%localappdata%\CrashDumps\`
+  - C'est-à-dire : `C:\Users\<Nom d'utilisateur>\AppData\Local\CrashDumps\`
+  - Windows enregistre ici les fichiers d'informations de plantage `.dmp`. Ces fichiers d'informations de plantage prennent beaucoup de place et ne sont pas utiles pour les utilisateurs ordinaires, ils peuvent donc être supprimés directement.
 
 VP13 et versions antérieures ont des répertoires de cache dans un dossier Sony, par ex. **`%localappdata%\Sony\VEGAS Pro\`**, etc.
 
@@ -796,7 +800,8 @@ Deux versions : Voukoder Classic et Voukoder Pro.
 
   Sauvegardes utilisateur sur GitHub :
   - [https://github.com/FORARTfe/voukoderFREE](https://github.com/FORARTfe/voukoderFREE)
-  - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)  
+  - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)
+
   Nécessite d'installer à la fois le noyau Voukoder (par ex. `Voukoder 13.4.1`) et le connecteur (par ex. `connector-vegas22-1.0.0.msi`).
 - Voukoder Pro est actuellement payant. Site officiel : [https://www.voukoder.org/](https://www.voukoder.org/).
   - Voukoder Pro 1 a été gratuit, mais Voukoder Pro 2 est devenu payant, chaque version majeure nécessitant un achat séparé.
@@ -877,15 +882,20 @@ Si cela échoue, essayez de déplacer temporairement tous les dossiers du chemin
 
 <br>
 
-Q : Erreur de rendu immédiate : **`Une erreur s'est produite lors de la création du fichier média xxx.mp4. Impossible de déterminer la cause de l'erreur.`**
+Q : Erreur de rendu immédiat : **`Une erreur s'est produite lors de la création du fichier média xxx.mp4. La raison de l'erreur n'a pas pu être déterminée.`**
 
-R : Dans le modèle de rendu personnalisé, **décochez `Activer le téléchargement progressif`**. Ou essayez **[Voukoder](#plugin-de-rendu-recommandé-voukoder)**.
+R : Dans `Personnaliser le modèle de rendu`, **décochez `"Activer le téléchargement progressif"`**. Ou essayez **[Voukoder](#plugin-de-rendu-recommandé-voukoder)**.
 
 <br>
 
-Q : Erreur de rendu immédiate : **`Une erreur s'est produite lors de la création du fichier média xxx.mp4. Erreur 0x80660008 (Message manquant)`**
+Q : Erreur de rendu immédiat : **`Une erreur s'est produite lors de la création du fichier média xxx.mp4. Erreur 0x80660008 (message manquant)`**
 
-R : Si vous utilisez l'**encodeur NVIDIA NVENC** et votre **version de pilote graphique est > `590`**, alors **les modèles de rendu intégrés dans VP22 et moins ne peuvent pas appeler NVENC**, **vous forçant à choisir des modèles avec d'autres encodeurs**. Solutions actuelles : **revenir au pilote `581.57` ou moins**, ou **mettre à niveau VEGAS vers VP23 ou plus**. Vous pouvez aussi utiliser l'encodeur NVENC de **[Voukoder](#plugin-de-rendu-recommandé-voukoder)** sans erreur.
+R : Si vous utilisez l'**encodeur NVIDIA NVENC** et que **votre version de pilote graphique est > `590`**, alors **les modèles de rendu intégrés dans VP22 et inférieurs ne peuvent pas appeler NVENC**. Solutions actuelles :
+
+- **Choisissez des modèles avec d'autres encodeurs que `NVENC`**.
+- **Rétrogradez le pilote NVIDIA à `581.57` ou inférieur**.
+- **Mettez à niveau VEGAS vers VP23 ou supérieur**.
+- Utilisez l'encodeur NVENC de **[Voukoder](#plugin-de-rendu-recommandé-voukoder)** sans erreur.
 
 <small>
 Référence : <a href="https://www.vegascreativesoftware.info/us/forum/posts--150382/">https://www.vegascreativesoftware.info/us/forum/posts--150382/</a><br>

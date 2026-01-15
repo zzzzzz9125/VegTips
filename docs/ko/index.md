@@ -31,7 +31,7 @@ layout: doc
 당분간 VEGAS Pro 관련 구체적인 문제에 대한 직접적인 개인 문의는 받지 않습니다. 질문이 있으면 [다른 공개 포럼](#xvii-vegas-커뮤니티-및-포럼)에 올려 도움을 받으십시오. 다른 포럼의 좋은 해결책을 수집하여 여기에 정리할 수도 있습니다.
 :::
 
-## 0. 머리말
+## N. 머리말
 
 - 이 글은 초보자를 위한 기본 튜토리얼이 아닙니다. VEGAS Pro의 다양한 문제를 해결하기 위한 안내서이므로 기본적인 소프트웨어 조작법을 광범위하게 다루지 않습니다. 이 글은 정식 라이선스 소프트웨어 사용을 지지합니다. 합법적 라이선스 구매 정보는 문서 끝의 [소프트웨어 구매 경로](#xvi-소프트웨어-구매-경로) 섹션을 참조하십시오.
 
@@ -77,14 +77,18 @@ VEGAS 환경설정의 경우:
 VEGAS 관련 설정 및 수동 백업을 위한 프리셋 파일이 포함된 다른 디렉토리:
 
 - 저장된 FX 프리셋, 플러그인 체인 프리셋, FX 즐겨찾기, 렌더링 템플릿 등: `%appdata%\VEGAS\`
-  즉, `C:\Users\<사용자 이름>\AppData\Roaming\VEGAS\`
+  - 즉, `C:\Users\<사용자 이름>\AppData\Roaming\VEGAS\`
 
 - VEGAS 창 레이아웃, 키보드 설정 등: `%appdata%\VEGAS Pro\`
-  즉, `C:\Users\<사용자 이름>\AppData\Roaming\VEGAS Pro\`
+  - 즉, `C:\Users\<사용자 이름>\AppData\Roaming\VEGAS Pro\`
 
 - 저장된 OFX 플러그인 FX 프리셋: `%userprofile%\Documents\OFX Presets\`
-  즉, `C:\Users\<사용자 이름>\Documents\OFX Presets\`
-  또는 OneDrive 경로: `C:\Users\<사용자 이름>\OneDrive\Documents\OFX Presets\`
+  - 즉, `C:\Users\<사용자 이름>\Documents\OFX Presets\`
+  - 또는 OneDrive 경로: `C:\Users\<사용자 이름>\OneDrive\Documents\OFX Presets\`
+
+- 또한 VEGAS가 자주 충돌하는 경우 다음을 확인하는 것이 좋습니다: `%localappdata%\CrashDumps\`
+  - 즉, `C:\Users\<사용자 이름>\AppData\Local\CrashDumps\`
+  - Windows는 여기에 크래시 정보 `.dmp` 파일을 저장합니다. 이러한 크래시 정보 파일은 용량이 크며 일반 사용자에게는 거의 쓸모가 없으므로 직접 삭제할 수 있습니다.
 
 VP13 및 이전 버전은 Sony 폴더 내에 캐시 디렉토리가 있습니다(예: **`%localappdata%\Sony\VEGAS Pro\`** 등).
 
@@ -797,6 +801,7 @@ VEGAS의 내장 렌더링 템플릿을 사용할 때 **해상도, 프레임 속�
   GitHub의 사용자 백업:
   - [https://github.com/FORARTfe/voukoderFREE](https://github.com/FORARTfe/voukoderFREE)
   - [https://github.com/FORARTfe/voukoder-connectorsFREE](https://github.com/FORARTfe/voukoder-connectorsFREE)
+
   Voukoder 코어(예: `Voukoder 13.4.1`)와 커넥터(예: `connector-vegas22-1.0.0.msi`)를 모두 설치해야 합니다.
 - Voukoder Pro는 현재 유료입니다. 공식 사이트: [https://www.voukoder.org/](https://www.voukoder.org/).
   - Voukoder Pro 1은 한때 무료였지만 Voukoder Pro 2는 유료가 되었으며 각 메이저 버전마다 별도로 구매해야 합니다.
@@ -877,15 +882,20 @@ A: **오류 팝업**이 있는 경우 먼저 **[오류 보고 비활성화](#2-v
 
 <br>
 
-Q: 즉시 렌더링 오류: **`미디어 파일 xxx.mp4 생성 중 오류 발생. 오류 원인을 확인할 수 없습니다.`**
+Q: 즉시 렌더링 오류: **`미디어 파일 xxx.mp4 생성 중 오류가 발생했습니다. 오류의 원인을 확인할 수 없습니다.`**
 
-A: 사용자 정의 렌더링 템플릿에서 **`점진적 다운로드 활성화`** 선택 취소. 또는 **[Voukoder](#권장-렌더링-플러그인-voukoder)** 를 시도해 보십시오.
+A: `렌더링 템플릿 사용자 지정`에서 **`"점진적 다운로드 활성화"의 선택을 해제하세요`**. 또는 **[Voukoder](#권장-렌더링-플러그인-voukoder)**를 시도해 보십시오.
 
 <br>
 
-Q: 즉시 렌더링 오류: **`미디어 파일 xxx.mp4 생성 중 오류 발생. 오류 0x80660008 (메시지 누락)`**
+Q: 즉시 렌더링 오류: **`미디어 파일 xxx.mp4 생성 중 오류 발생. 오류 0x80660008 (메시지 없음)`**
 
-A: **NVIDIA NVENC 인코더**를 사용 중이고 **그래픽 드라이버 버전이 > `590`** 이면 **VP22 이하의 내장 렌더링 템플릿이 NVENC를 호출할 수 없으며**, **다른 인코더가 있는 템플릿을 선택해야 합니다**. 현재 해결책: **드라이버를 `581.57` 이하로 다운그레이드**하거나 **VEGAS를 VP23 이상으로 업그레이드**하십시오. **[Voukoder의](#권장-렌더링-플러그인-voukoder)** NVENC 인코더를 사용해도 오류가 발생하지 않습니다.
+A: **NVIDIA NVENC 인코더**를 사용 중이고 **그래픽 드라이버 버전이 `590` 초과**인 경우, **VP22 이하의 내장 렌더 템플릿은 NVENC를 호출할 수 없습니다**. 현재 해결 방법:
+
+- **`NVENC` 이외의 인코더를 사용하는 템플릿을 선택하세요**.
+- **NVIDIA 드라이버를 `581.57` 이하로 다운그레이드하세요**.
+- **VEGAS를 VP23 이상으로 업그레이드하세요**.
+- 오류 없이 **[Voukoder](#권장-렌더링-플러그인-voukoder)**의 NVENC 인코더를 사용하세요.
 
 <small>
 참조: <a href="https://www.vegascreativesoftware.info/us/forum/posts--150382/">https://www.vegascreativesoftware.info/us/forum/posts--150382/</a><br>

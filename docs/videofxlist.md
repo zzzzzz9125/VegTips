@@ -26,6 +26,7 @@ title: Video FX List
 # VEGAS Pro Video FX List
 
 ## Notes
+
 1. This page summarizes all available **`Video FX`** in VEGAS Pro, including their **`Names`**, **`Groups`**, **`UIDs`**, and other information, making it easy to search and browse online.
 
 2. By default, the FX are sorted in ascending order by **`Name`**. Using the filter, sort, and search functions at the top of the table, you can set conditions to filter and search for specific FX entries.
@@ -37,4 +38,3 @@ title: Video FX List
 ## Table
 
 <VideoFxTable />
-

@@ -35,6 +35,7 @@ const labels = computed(() => {
   if (lv.startsWith('ko')) return { hosted: '호스팅:' }
   if (lv.startsWith('de')) return { hosted: 'Gehostet bei' }
   if (lv.startsWith('fr')) return { hosted: 'Hébergé sur' }
+  if (lv.startsWith('ru')) return { hosted: 'Размещено на' }
   return { hosted: 'Hosted on' }
 })
 </script>

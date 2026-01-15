@@ -73,6 +73,7 @@ const localePrefix = computed(() => {
   if (lv.startsWith('ko')) return 'ko'
   if (lv.startsWith('de')) return 'de'
   if (lv.startsWith('fr')) return 'fr'
+  if (lv.startsWith('ru')) return 'ru'
   return ''
 })
 
@@ -102,6 +103,7 @@ const buttonLabel = computed(() => {
   if (lv.startsWith('ko')) return '이미지 불러오기'
   if (lv.startsWith('de')) return 'Bild laden'
   if (lv.startsWith('fr')) return 'Charger l’image'
+  if (lv.startsWith('ru')) return 'Загрузить изображение'
   return 'Load image'
 })
 
