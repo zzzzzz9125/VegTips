@@ -68,6 +68,7 @@ const { lang } = useData()
 const baseRelativePath = computed(() => ensureImgPrefix(normalizePath(props.src)))
 const localePrefix = computed(() => {
   const lv = (lang.value || '').toLowerCase()
+  if (lv.startsWith('zh-hant')) return 'zh-hant'
   if (lv.startsWith('zh')) return 'zh'
   if (lv.startsWith('ja')) return 'ja'
   if (lv.startsWith('ko')) return 'ko'
