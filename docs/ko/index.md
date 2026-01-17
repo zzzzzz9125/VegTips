@@ -549,7 +549,7 @@ A: 먼저 QT Lite 또는 QuickTime이 설치되어 있는지 확인하십시오.
 
 참고: Apple의 `QuickTime 7.7.9`를 설치하는 경우 설치 중 `QuickTime 플러그인`이 선택되었는지 확인하십시오.
 
-**VP23 이후 VEGAS는 실질적으로 QuickTime 호환성을 포기했으며 QuickTime 인코딩된 mov 파일을 더 이상 가져오거나 렌더링할 수 없습니다.**
+**VP23 이후 VEGAS는 실질적으로 QuickTime 호환성을 포기했으며 QuickTime 인코딩된 mov 파일을 더 이상 가져오거나 렌더링할 수 없습니다. 호환성을 위해 ProRes 코덱으로 인코딩된 mov 파일을 사용하는 것이 좋습니다.**
 
 <br>
 

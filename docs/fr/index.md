@@ -549,7 +549,7 @@ R : Premièrement, assurez-vous d'avoir installé QT Lite ou QuickTime. **QT Lit
 
 Note : Si vous installez `QuickTime 7.7.9` d'Apple, assurez-vous que `QuickTime plug-in` est sélectionné pendant l'installation.
 
-**Depuis VP23, VEGAS a effectivement abandonné la compatibilité QuickTime et ne peut plus importer ou rendre des fichiers mov encodés en QuickTime.**
+**Depuis VP23, VEGAS a effectivement abandonné la compatibilité QuickTime et ne peut plus importer ou rendre des fichiers mov encodés en QuickTime. Pour des raisons de compatibilité, il est recommandé d'utiliser des fichiers mov encodés avec le codec ProRes.**
 
 <br>
 

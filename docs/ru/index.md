@@ -549,7 +549,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 Примечание: Если устанавливаете `QuickTime 7.7.9` от Apple, убедитесь, что `Плагин QuickTime (QuickTime plug-in)` выбран во время установки.
 
-**С VP23 VEGAS фактически отказался от совместимости с QuickTime и больше не может импортировать или рендерить файлы mov, закодированные QuickTime.**
+**С VP23 VEGAS фактически отказался от совместимости с QuickTime и больше не может импортировать или рендерить файлы mov, закодированные QuickTime. Для совместимости рекомендуется использовать MOV-файлы с кодировкой ProRes.**
 
 <br>
 

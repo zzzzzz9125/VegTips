@@ -549,7 +549,7 @@ A：首先你要確保已經安裝了 QT Lite 或者 QuickTime。一般推薦安
 
 注意，如果你安裝的是 Apple 官網的 `QuickTime 7.7.9`，請在安裝時勾選 `QuickTime 外掛程式`。
 
-**自 23 大版本以來，Vegas 已經實質上地放棄了對 QuickTime 的相容，再也無法匯入和算繪 QuickTime 編碼的 mov 檔案。**
+**自 23 大版本以來，Vegas 已經實質上地放棄了對 QuickTime 的相容，再也無法匯入和算繪 QuickTime 編碼的 mov 檔案。為了相容性，建議使用 ProRes 編碼的 mov 檔案。**
 
 <br>
 
