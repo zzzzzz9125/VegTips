@@ -1444,7 +1444,7 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 
 拡張機能を例に、スクリプトも同様です。他のパスは [上記リスト](#十二、スクリプト-拡張機能関連) 参照。
 
-1.  `C:\ProgramData\VEGAS Pro\` をコピーし、エクスプローラーのアドレスバーに貼り付けて移動。
+1.  `C:\ProgramData\VEGAS Pro\`（または Sony 版の場合は `C:\ProgramData\Sony\VEGAS Pro\`）をコピーし、エクスプローラーのアドレスバーに貼り付けて移動。
 
 2.  `Application Extensions` フォルダが存在するか確認。存在しない場合は、正確な名前で作成します。フォルダに入ります。
 

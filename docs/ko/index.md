@@ -1444,7 +1444,7 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 
 예를 들어 확장을 사용합니다. 스크립트도 유사합니다. 다른 경로는 [위 목록](#xii-스크립트-확장-관련)을 참조하십시오.
 
-1.  `C:\ProgramData\VEGAS Pro\`를 복사하여 파일 탐색기의 주소 표시줄에 붙여넣어 이동합니다.
+1.  `C:\ProgramData\VEGAS Pro\`(또는 Sony 버전의 경우 `C:\ProgramData\Sony\VEGAS Pro\`)를 복사하여 파일 탐색기의 주소 표시줄에 붙여넣어 이동합니다.
 
 2.  `Application Extensions` 폴더가 존재하는지 확인합니다. 없으면 정확한 이름으로 생성합니다. 폴더에 들어갑니다.
 

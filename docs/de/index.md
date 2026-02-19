@@ -1444,7 +1444,7 @@ Aufgrund von API-Änderungen in der Geschichte sind Skripte/Erweiterungen für S
 
 Verwenden von Erweiterungen als Beispiel; ähnlich für Skripte. Für andere Pfade siehe die [Listen oben](#xii-scripts-erweiterungen-bezogene).
 
-1.  Kopieren Sie `C:\ProgramData\VEGAS Pro\` und fügen Sie in die Adressleiste des Datei-Explorers ein, um dorthin zu navigieren.
+1.  Kopieren Sie `C:\ProgramData\VEGAS Pro\` (oder bei Sony-Versionen `C:\ProgramData\Sony\VEGAS Pro\`) und fügen Sie in die Adressleiste des Datei-Explorers ein, um dorthin zu navigieren.
 
 2.  Überprüfen Sie, ob der Ordner `Application Extensions` existiert. Wenn nicht, erstellen Sie ihn mit exakt dem Namen. Betreten Sie den Ordner.
 

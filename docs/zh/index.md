@@ -1444,7 +1444,7 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 
 以扩展为例，脚本也同理。其他安装路径见 [上方列表](#十二、脚本-扩展相关)。
 
-1. 先复制 `C:\ProgramData\VEGAS Pro\` 并粘贴到你的文件资源管理器的地址栏中，跳转至该目录。
+1. 先复制 `C:\ProgramData\VEGAS Pro\`（或者 Sony 版的 `C:\ProgramData\Sony\VEGAS Pro\`）并粘贴到你的文件资源管理器的地址栏中，跳转至该目录。
 
 2. 检查 `Application Extensions` 文件夹是否存在。若不存在，手动创建一个，并保证名称完全一致。进入该文件夹。
 

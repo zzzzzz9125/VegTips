@@ -1444,7 +1444,7 @@ En raison des changements d'API dans l'histoire, les scripts/extensions pour VEG
 
 En utilisant les extensions comme exemple ; similaire pour les scripts. Pour d'autres chemins, voir les [listes ci-dessus](#xii-faq-concernant-les-scripts-extensions).
 
-1.  Copiez `C:\ProgramData\VEGAS Pro\` et collez dans la barre d'adresse de l'Explorateur de fichiers pour naviguer.
+1.  Copiez `C:\ProgramData\VEGAS Pro\` (ou, pour les versions Sony, `C:\ProgramData\Sony\VEGAS Pro\`) et collez dans la barre d'adresse de l'Explorateur de fichiers pour naviguer.
 
 2.  Vérifiez si le dossier `Application Extensions` existe. Sinon, créez-le avec le nom exact. Entrez dans le dossier.
 

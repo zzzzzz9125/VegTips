@@ -1444,7 +1444,7 @@ Due to API changes in history, scripts/extensions for SonicFoundry-era, Sony-era
 
 Using extensions as an example; similar for scripts. For other paths, see the [lists above](#xii-scripts-extensions-related).
 
-1.  Copy `C:\ProgramData\VEGAS Pro\` and paste into File Explorer's address bar to navigate.
+1.  Copy `C:\ProgramData\VEGAS Pro\` (or, for Sony editions, `C:\ProgramData\Sony\VEGAS Pro\`) and paste into File Explorer's address bar to navigate.
 
 2.  Check if the `Application Extensions` folder exists. If not, create it with the exact name. Enter the folder.
 

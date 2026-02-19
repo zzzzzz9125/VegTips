@@ -3,7 +3,7 @@
   publish = "docs/.vitepress/dist"
 
 [build.environment]
-  VITE_ENABLE_LAZY_IMAGES = "true"
+  VITE_ENABLE_LAZY_IMAGES = "false"
 
 [[redirects]]
   from = "/*"

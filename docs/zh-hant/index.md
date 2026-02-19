@@ -1444,7 +1444,7 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 
 以擴充為例，腳本也同理。其他安裝路徑見 [上方列表](#十二、腳本-擴充相關)。
 
-1. 先複製 `C:\ProgramData\VEGAS Pro\` 並貼上到你的檔案總管的位址列中，跳轉至該目錄。
+1. 先複製 `C:\ProgramData\VEGAS Pro\`（或者 Sony 版的 `C:\ProgramData\Sony\VEGAS Pro\`）並貼上到你的檔案總管的位址列中，跳轉至該目錄。
 
 2. 檢查 `Application Extensions` 資料夾是否存在。若不存在，手動建立一個，並保證名稱完全一致。進入該資料夾。
 
