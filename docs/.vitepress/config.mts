@@ -272,7 +272,8 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg` }],
     ['script', { src: `${base}js/language-redirect.js` }],
-    ['script', { src: `${base}js/outline-depth.js` }]
+    ['script', { src: `${base}js/outline-depth.js` }],
+    ['script', { src: `${base}js/hash-stabilizer.js` }]
   ],
   themeConfig: {
     nav: enNav,

@@ -967,7 +967,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 2.  Обновитесь до VP18+. При открытии старого проекта в новом VP измените `Формат пикселей (Pixel format)` в `Файл->Свойства (File->Properties)` с `Устаревший 8-битный (видеоуровни) (Legacy 8-bit (video levels))` на **`8-битный (полный диапазон) (8-bit (full range))`**, и **не используйте шаблоны рендеринга, созданные в старом VP**.
 
-3.  Примените к медиафайлам предустановку FX **`Уровни (Levels)`** **`Компьютер RGB в студийный RGB (Computer RGB to Studio RGB)`**.
+3.  Примените к медиафайлам предустановку FX **`Уровни (Levels)`** **`Студийный RGB в компьютерный RGB (Studio RGB to Computer RGB)`**.
 
 <small>
 Ссылка: <a href="https://www.vegascreativesoftware.info/us/forum/posts--142942/">https://www.vegascreativesoftware.info/us/forum/posts--142942/</a><br>

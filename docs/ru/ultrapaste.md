@@ -52,7 +52,7 @@ title: Расширение UltraPaste!
 1.  Перейдите в [Releases](https://github.com/zzzzzz9125/UltraPaste/releases), чтобы скачать последний .zip-файл и распаковать его. Выберите `UltraPaste.dll` <small>(или `UltraPaste_13.dll` для `Sony VEGAS Pro 13`)</small> и `UltraPaste.png`, скопируйте их и вставьте в папку расширений:
   - `C:\ProgramData\Vegas Pro\Application Extensions\`
   - или для Sony: `C:\ProgramData\Sony\Vegas Pro\Application Extensions\`
-  - Нажмите [здесь](/index#общие-шаги-для-установки-скрипта-или-расширения), если вы не знаете, как установить расширения.
+  - Нажмите [здесь](/ru/#общие-шаги-для-установки-скрипта-или-расширения), если вы не знаете, как установить расширения.
 
 2.  После установки вы можете найти докируемое окно расширения через `Инструменты -> UltraPaste!`.
 

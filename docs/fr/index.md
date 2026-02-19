@@ -967,7 +967,7 @@ Trois solutions :
 
 2.  Mettez à niveau vers VP18+. Lors de l'ouverture d'un ancien projet dans le nouveau VP, changez `Format de pixel` dans `Fichier->Propriétés` de `8-bit hérité (niveaux vidéo)` à **`8-bit (gamme complète)`**, et **n'utilisez pas les modèles de rendu créés dans l'ancien VP**.
 
-3.  Appliquez le préréglage FX **`Levels`** **`RGB ordinateur vers RGB studio`** aux fichiers multimédias.
+3.  Appliquez le préréglage FX **`Levels`** **`RGB studio vers RGB ordinateur`** aux fichiers multimédias.
 
 <small>
 Référence : <a href="https://www.vegascreativesoftware.info/us/forum/posts--142942/">https://www.vegascreativesoftware.info/us/forum/posts--142942/</a><br>

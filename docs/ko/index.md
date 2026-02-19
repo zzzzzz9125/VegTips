@@ -967,7 +967,7 @@ A1: VP17 이하에서는 프로젝트 속성 및 렌더링 템플릿의 **색상
 
 2.  VP18+로 업그레이드합니다. 새 VP에서 이전 프로젝트를 열 때 `파일->속성`의 `픽셀 형식`을 `레거시 8비트(비디오 레벨)`에서 **`8비트(전체 범위)`** 로 변경하고 **이전 VP에서 생성된 렌더링 템플릿을 사용하지 마십시오**.
 
-3.  미디어 파일에 `레벨` FX 프리셋 **`컴퓨터 RGB에서 스튜디오 RGB로`** 를 적용합니다.
+3.  미디어 파일에 `레벨` FX 프리셋 **`스튜디오 RGB에서 컴퓨터 RGB로`** 를 적용합니다.
 
 <small>
 참조: <a href="https://www.vegascreativesoftware.info/us/forum/posts--142942/">https://www.vegascreativesoftware.info/us/forum/posts--142942/</a><br>

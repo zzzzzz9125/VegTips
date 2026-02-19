@@ -967,7 +967,7 @@ Three solutions:
 
 2.  Upgrade to VP18+. When opening an old project in new VP, change `Pixel format` in `File->Properties` from `Legacy 8-bit (video levels)` to **`8-bit (full range)`**, and **don't use render templates created in old VP**.
 
-3.  Apply the `Levels` FX preset **`Computer RGB to Studio RGB`** to media files.
+3.  Apply the `Levels` FX preset **`Studio RGB to Computer RGB`** to media files.
 
 <small>
 Reference: <a href="https://www.vegascreativesoftware.info/us/forum/posts--142942/">https://www.vegascreativesoftware.info/us/forum/posts--142942/</a><br>

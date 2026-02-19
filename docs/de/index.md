@@ -967,7 +967,7 @@ Drei Lösungen:
 
 2.  Upgrade auf VP18+. Wenn ein altes Projekt in neuem VP geöffnet wird, ändern Sie `Pixelformat` in `Datei->Eigenschaften` von `Legacy 8-Bit (Videostufen)` zu **`8-Bit (Vollbereich)`**, und **verwenden Sie keine Render-Vorlagen, die in altem VP erstellt wurden**.
 
-3.  Wenden Sie den `Pegel` FX-Voreinstellung **`Computer-RGB zu Studio-RGB`** auf Mediendateien an.
+3.  Wenden Sie den `Pegel` FX-Voreinstellung **`Studio-RGB zu Computer-RGB`** auf Mediendateien an.
 
 <small>
 Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--142942/">https://www.vegascreativesoftware.info/us/forum/posts--142942/</a><br>

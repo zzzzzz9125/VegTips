@@ -967,7 +967,7 @@ A1：vv17 及以下版本中，由於專案屬性和算繪範本的**色彩空�
 
 2. 升 vv18 及以上版本。舊版的工程在新版 vv 中開啟後，需要在左上角 `檔案-內容` 中將 `像素格式` 這一欄從 `舊版 8 位(影片級別)` 改成 **`8 位(全範圍)`**”，並且算繪時**不要使用舊版 vv 所建立的算繪範本**。
 
-3. 給媒體檔案套用 `色階` FX 的 **`計算機 RGB 到演播室級 RGB`** 預設。
+3. 給媒體檔案套用 `色階` FX 的 **`演播室級 RGB 到計算機 RGB`** 預設。
 
 <small>
 參見：<a href="https://www.vegascreativesoftware.info/us/forum/posts--142942/">https://www.vegascreativesoftware.info/us/forum/posts--142942/</a><br>

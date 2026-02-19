@@ -967,7 +967,7 @@ A1：vv17 及以下版本中，由于项目属性和渲染模板的**色彩空�
 
 2. 升 vv18 及以上版本。旧版的工程在新版 vv 中打开后，需要在左上角 `文件-属性` 中将 `像素格式` 这一栏从 `旧版 8 位(视频级别)` 改成 **`8 位(全范围)`**”，并且渲染时**不要使用旧版 vv 所创建的渲染模板**。
 
-3. 给媒体文件套用 `色阶` FX 的 **`计算机 RGB 到演播室级 RGB`** 预设。
+3. 给媒体文件套用 `色阶` FX 的 **`演播室级 RGB 到计算机 RGB`** 预设。
 
 <small>
 参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--142942/">https://www.vegascreativesoftware.info/us/forum/posts--142942/</a><br>
