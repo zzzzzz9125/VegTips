@@ -3,6 +3,7 @@ import { h } from 'vue'
 import type { EnhanceAppContext } from 'vitepress'
 import OutlineDepthToggle from './components/OutlineDepthToggle.vue'
 import VideoFxTable from './components/VideoFxTable.vue'
+import ScriptApiExplorer from './components/ScriptApiExplorer.vue'
 import ClickToLoadImage from './components/ClickToLoadImage.vue'
 import GlobalFooterBar from './components/GlobalFooterBar.vue'
 import './style.css'
@@ -17,6 +18,7 @@ export default {
   },
   enhanceApp({ app }: EnhanceAppContext) {
     app.component('VideoFxTable', VideoFxTable)
+    app.component('ScriptApiExplorer', ScriptApiExplorer)
     app.component('ImageOnDemand', ClickToLoadImage)
   }
 }

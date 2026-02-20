@@ -258,6 +258,221 @@ img {
   gap: 0.5rem;
 }
 
+.scriptapi {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.scriptapi__controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.9rem;
+  align-items: end;
+  background: var(--vp-c-bg-soft);
+  padding: 0.75rem 0.8rem;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 12px;
+}
+
+.scriptapi__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.scriptapi__field--wide {
+  grid-column: 1 / -1;
+}
+
+.scriptapi__field--switch {
+  align-items: flex-start;
+}
+
+.scriptapi__label {
+  font-size: 0.92rem;
+  color: var(--vp-c-text-2);
+}
+
+.scriptapi__select {
+  border: 1px solid var(--vp-c-border);
+  border-radius: 8px;
+  padding: 0.65rem 0.8rem;
+  background: var(--vp-c-bg-alt);
+  color: var(--vp-c-text-1);
+}
+
+.scriptapi__select:focus {
+  outline: 2px solid var(--vp-c-brand-1);
+  border-color: transparent;
+}
+
+.scriptapi__status {
+  grid-column: 1 / -1;
+  color: var(--vp-c-text-2);
+  font-size: 0.95rem;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.scriptapi__sep {
+  color: var(--vp-c-text-3);
+}
+
+.scriptapi__error {
+  color: var(--vp-c-danger-1);
+}
+
+.scriptapi__table-wrap {
+  border: 1px solid var(--vp-c-border);
+  border-radius: 12px;
+  overflow: auto;
+  background: var(--vp-c-bg);
+  box-shadow: inset 0 1px 0 var(--vp-c-bg-soft);
+}
+
+.scriptapi__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.scriptapi__col-class {
+  width: 168px;
+  max-width: 168px;
+}
+
+.scriptapi__table th,
+.scriptapi__table td {
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 0.48rem 0.52rem;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.35;
+}
+
+.scriptapi__table th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.scriptapi__table tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--vp-c-bg-soft) 55%, var(--vp-c-bg) 45%);
+}
+
+.scriptapi__table tbody tr:hover {
+  background: var(--vp-c-brand-soft);
+}
+
+.scriptapi__kind {
+  white-space: nowrap;
+}
+
+.scriptapi__class-cell {
+  white-space: normal;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  background: color-mix(in srgb, var(--vp-c-bg-soft) 75%, var(--vp-c-bg) 25%);
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.scriptapi__class-value {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.scriptapi__member {
+  font-family: var(--vp-font-family-mono);
+  word-break: break-all;
+}
+
+.scriptapi__diff-cell {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.scriptapi__status-tag {
+  white-space: nowrap;
+}
+
+.scriptapi__status-tag[data-status='added'] {
+  color: var(--vp-c-green-1);
+}
+
+.scriptapi__status-tag[data-status='removed'] {
+  color: var(--vp-c-danger-1);
+}
+
+.scriptapi__status-tag[data-status='changed'] {
+  color: var(--vp-c-brand-1);
+}
+
+.scriptapi__diff {
+  border: 1px solid var(--vp-c-border);
+  border-radius: 12px;
+  padding: 0.75rem 0.8rem;
+  background: var(--vp-c-bg-soft);
+}
+
+.scriptapi__diff h3 {
+  margin: 0 0 0.75rem;
+}
+
+.scriptapi__switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+
+.scriptapi__switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.scriptapi__switch-slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-border);
+  transition: 0.2s;
+  border-radius: 34px;
+}
+
+.scriptapi__switch-slider:before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 2px;
+  background-color: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.scriptapi__switch input:checked + .scriptapi__switch-slider {
+  background-color: var(--vp-c-brand-soft);
+  border-color: var(--vp-c-brand-1);
+}
+
+.scriptapi__switch input:checked + .scriptapi__switch-slider:before {
+  transform: translateX(16px);
+  border-color: var(--vp-c-brand-1);
+}
+
 .vfxtable__chip {
   border: 1px solid var(--vp-c-border);
   background: var(--vp-c-bg);

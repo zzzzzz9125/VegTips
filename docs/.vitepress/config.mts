@@ -5,49 +5,57 @@ const base = process.env.GITHUB_ACTIONS ? '/VegTips/' : '/'
 const enNav = [
   { text: 'Vegas Troubleshooting', link: '/' },
   { text: 'Video FX List', link: '/videofxlist' },
-  { text: 'UltraPaste! Extension', link: '/ultrapaste' }
+  { text: 'UltraPaste! Extension', link: '/ultrapaste' },
+  { text: 'Script API', link: '/scriptapi' }
 ]
 
 const zhNav = [
   { text: 'Vegas 疑难杂症', link: '/zh/' },
   { text: '视频 FX 效果列表', link: '/zh/videofxlist' },
-  { text: '超级粘贴! 扩展', link: '/zh/ultrapaste' }
+  { text: '超级粘贴! 扩展', link: '/zh/ultrapaste' },
+  { text: '脚本 API', link: '/zh/scriptapi' }
 ]
 
 const zhHantNav = [
   { text: 'Vegas 疑難雜症', link: '/zh-hant/' },
   { text: '影片 FX 效果列表', link: '/zh-hant/videofxlist' },
-  { text: 'UltraPaste! 擴充套件', link: '/zh-hant/ultrapaste' }
+  { text: 'UltraPaste! 擴充套件', link: '/zh-hant/ultrapaste' },
+  { text: '指令碼 API', link: '/zh-hant/scriptapi' }
 ]
 
 const jaNav = [
   { text: 'Vegas トラブルシューティング', link: '/ja/' },
   { text: 'ビデオ FX リスト', link: '/ja/videofxlist' },
-  { text: 'UltraPaste! 拡張機能', link: '/ja/ultrapaste' }
+  { text: 'UltraPaste! 拡張機能', link: '/ja/ultrapaste' },
+  { text: 'スクリプト API', link: '/ja/scriptapi' }
 ]
 
 const koNav = [
   { text: 'Vegas 문제 해결', link: '/ko/' },
   { text: 'Video FX 목록', link: '/ko/videofxlist' },
-  { text: 'UltraPaste! 확장', link: '/ko/ultrapaste' }
+  { text: 'UltraPaste! 확장', link: '/ko/ultrapaste' },
+  { text: '스크립트 API', link: '/ko/scriptapi' }
 ]
 
 const deNav = [
   { text: 'Vegas Fehlerbehebung', link: '/de/' },
   { text: 'Video‑FX‑Liste', link: '/de/videofxlist' },
-  { text: 'UltraPaste! Erweiterung', link: '/de/ultrapaste' }
+  { text: 'UltraPaste! Erweiterung', link: '/de/ultrapaste' },
+  { text: 'Skript-API', link: '/de/scriptapi' }
 ]
 
 const frNav = [
   { text: 'Vegas Dépannage', link: '/fr/' },
   { text: 'Liste des FX vidéo', link: '/fr/videofxlist' },
-  { text: 'UltraPaste! Extension', link: '/fr/ultrapaste' }
+  { text: 'UltraPaste! Extension', link: '/fr/ultrapaste' },
+  { text: 'API de script', link: '/fr/scriptapi' }
 ]
 
 const ruNav = [
   { text: 'Vegas Устранение неполадок', link: '/ru/' },
   { text: 'Список видеоэффектов', link: '/ru/videofxlist' },
-  { text: 'Расширение UltraPaste!', link: '/ru/ultrapaste' }
+  { text: 'Расширение UltraPaste!', link: '/ru/ultrapaste' },
+  { text: 'Скриптовый API', link: '/ru/scriptapi' }
 ]
 
 const enSidebar = [
@@ -56,7 +64,8 @@ const enSidebar = [
     items: [
       { text: 'Vegas Troubleshooting', link: '/' },
       { text: 'Video FX List', link: '/videofxlist' },
-      { text: 'UltraPaste! Extension', link: '/ultrapaste' }
+      { text: 'UltraPaste! Extension', link: '/ultrapaste' },
+      { text: 'Script API', link: '/scriptapi' }
     ]
   }
 ]
@@ -67,7 +76,8 @@ const zhSidebar = [
     items: [
       { text: 'Vegas 疑难杂症', link: '/zh/' },
       { text: '视频 FX 效果列表', link: '/zh/videofxlist' },
-      { text: '超级粘贴! 扩展', link: '/zh/ultrapaste' }
+      { text: '超级粘贴! 扩展', link: '/zh/ultrapaste' },
+      { text: '脚本 API', link: '/zh/scriptapi' }
     ]
   }
 ]
@@ -78,7 +88,8 @@ const zhHantSidebar = [
     items: [
       { text: 'Vegas 疑難雜症', link: '/zh-hant/' },
       { text: '影片 FX 效果列表', link: '/zh-hant/videofxlist' },
-      { text: 'UltraPaste! 擴充套件', link: '/zh-hant/ultrapaste' }
+      { text: 'UltraPaste! 擴充套件', link: '/zh-hant/ultrapaste' },
+      { text: '指令碼 API', link: '/zh-hant/scriptapi' }
     ]
   }
 ]
@@ -89,7 +100,8 @@ const jaSidebar = [
     items: [
       { text: 'Vegas トラブルシューティング', link: '/ja/' },
       { text: 'Video FX リスト', link: '/ja/videofxlist' },
-      { text: 'UltraPaste! 拡張機能', link: '/ja/ultrapaste' }
+      { text: 'UltraPaste! 拡張機能', link: '/ja/ultrapaste' },
+      { text: 'スクリプト API', link: '/ja/scriptapi' }
     ]
   }
 ]
@@ -100,7 +112,8 @@ const koSidebar = [
     items: [
       { text: 'Vegas 문제 해결', link: '/ko/' },
       { text: 'Video FX 목록', link: '/ko/videofxlist' },
-      { text: 'UltraPaste! 확장', link: '/ko/ultrapaste' }
+      { text: 'UltraPaste! 확장', link: '/ko/ultrapaste' },
+      { text: '스크립트 API', link: '/ko/scriptapi' }
     ]
   }
 ]
@@ -111,7 +124,8 @@ const deSidebar = [
     items: [
       { text: 'Vegas Fehlerbehebung', link: '/de/' },
       { text: 'Video‑FX‑Liste', link: '/de/videofxlist' },
-      { text: 'UltraPaste! Erweiterung', link: '/de/ultrapaste' }
+      { text: 'UltraPaste! Erweiterung', link: '/de/ultrapaste' },
+      { text: 'Skript-API', link: '/de/scriptapi' }
     ]
   }
 ]
@@ -122,7 +136,8 @@ const frSidebar = [
     items: [
       { text: 'Vegas Dépannage', link: '/fr/' },
       { text: 'Liste des FX vidéo', link: '/fr/videofxlist' },
-      { text: 'UltraPaste! Extension', link: '/fr/ultrapaste' }
+      { text: 'UltraPaste! Extension', link: '/fr/ultrapaste' },
+      { text: 'API de script', link: '/fr/scriptapi' }
     ]
   }
 ]
@@ -133,7 +148,8 @@ const ruSidebar = [
     items: [
       { text: 'Vegas Устранение неполадок', link: '/ru/' },
       { text: 'Список видеоэффектов', link: '/ru/videofxlist' },
-      { text: 'Расширение UltraPaste!', link: '/ru/ultrapaste' }
+      { text: 'Расширение UltraPaste!', link: '/ru/ultrapaste' },
+      { text: 'Скриптовый API', link: '/ru/scriptapi' }
     ]
   }
 ]
