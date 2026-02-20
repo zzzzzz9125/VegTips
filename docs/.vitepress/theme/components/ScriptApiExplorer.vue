@@ -107,6 +107,7 @@
 
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
+import { useData } from 'vitepress'
 
 type Kind = 'T' | 'P' | 'M' | 'F' | 'E' | 'N'
 
@@ -174,6 +175,7 @@ const selectedClass = ref('all')
 const loading = ref(false)
 const error = ref('')
 const cache = new Map<string, ApiMember[]>()
+const { site } = useData()
 
 const messageMap: Record<string, MessageSet> = {
   en: {
@@ -442,7 +444,11 @@ const extractMembers = (xmlText: string): ApiMember[] => {
 const loadVersion = async (version: string): Promise<ApiMember[]> => {
   if (cache.has(version)) return cache.get(version) || []
 
-  const res = await fetch(`/scriptapi/${version}/ScriptPortal.Vegas.xml`)
+  const base = site?.value?.base || '/'
+  const normalizedBase = base.endsWith('/') ? base : `${base}/`
+  const xmlUrl = `${normalizedBase}scriptapi/${version}/ScriptPortal.Vegas.xml`
+
+  const res = await fetch(xmlUrl)
   if (!res.ok) throw new Error(`HTTP ${res.status}`)
 
   const text = await res.text()
