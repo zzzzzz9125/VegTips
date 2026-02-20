@@ -378,9 +378,9 @@ const t = computed(() => messageMap[props.locale || 'en'] ?? messageMap.en)
 
 const versionBOptions = computed(() => versions.filter((v) => v !== versionA.value))
 
-watch(versionA, () => {
-  if (versionA.value === versionB.value) {
-    versionB.value = versionBOptions.value[0] || versions[0]
+watch(versionA, (nextVersion, previousVersion) => {
+  if (nextVersion === versionB.value) {
+    versionB.value = previousVersion
   }
 })
 
