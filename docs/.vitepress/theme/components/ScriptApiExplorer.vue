@@ -72,7 +72,7 @@
     </div>
 
     <div v-if="!loading && !error && compareEnabled" class="scriptapi__diff">
-      <h3>{{ t.diffTitle(versionA, versionB) }}</h3>
+      <h3>{{ t.diffTitle(versionB, versionA) }}</h3>
 
       <div class="scriptapi__table-wrap">
         <table class="scriptapi__table scriptapi__table--diff">
@@ -81,21 +81,34 @@
               <th class="scriptapi__col-class">{{ t.colClass }}</th>
               <th>{{ t.colKind }}</th>
               <th>{{ t.colMember }}</th>
-              <th>Status</th>
-              <th>{{ versionA }}</th>
+              <th class="scriptapi__col-status">Status</th>
               <th>{{ versionB }}</th>
+              <th>{{ versionA }}</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="row in diffRows" :key="`diff:${row.rawName}`">
-              <td class="scriptapi__class-value scriptapi__col-class">{{ row.className }}</td>
+            <tr v-for="row in diffDisplayRows" :key="`diff:${row.rawName}`">
+              <td
+                v-if="row.showClass"
+                :rowspan="row.classRowspan"
+                class="scriptapi__class-cell scriptapi__class-value scriptapi__col-class"
+              >
+                {{ row.className }}
+              </td>
               <td class="scriptapi__kind">{{ kindLabel(row.kind) }}</td>
               <td class="scriptapi__member">{{ row.memberName }}</td>
-              <td class="scriptapi__status-tag" :data-status="row.status">{{ diffStatusLabel(row.status) }}</td>
-              <td class="scriptapi__diff-cell">{{ detailText(row.left) }}</td>
+              <td
+                class="scriptapi__status-tag scriptapi__col-status"
+                :data-status="row.status"
+                :title="diffStatusMeaning(row.status)"
+                :aria-label="diffStatusMeaning(row.status)"
+              >
+                {{ diffStatusLabel(row.status) }}
+              </td>
               <td class="scriptapi__diff-cell">{{ detailText(row.right) }}</td>
+              <td class="scriptapi__diff-cell">{{ detailText(row.left) }}</td>
             </tr>
-            <tr v-if="!diffRows.length">
+            <tr v-if="!diffDisplayRows.length">
               <td colspan="6">No diff under current filter.</td>
             </tr>
           </tbody>
@@ -136,6 +149,11 @@ type DiffRow = {
   status: DiffStatus
   left: ApiMember | null
   right: ApiMember | null
+}
+
+type DiffDisplayRow = DiffRow & {
+  showClass: boolean
+  classRowspan: number
 }
 
 type MessageSet = {
@@ -193,8 +211,8 @@ const messageMap: Record<string, MessageSet> = {
     colClass: 'Class',
     colMember: 'Member',
     colSummary: 'Summary',
-    added: 'Added in compare version',
-    removed: 'Removed from compare version',
+    added: 'Added in base version',
+    removed: 'Removed from base version',
     changed: 'Changed docs/signature',
     kindNames: { T: 'Type', P: 'Property', M: 'Method', F: 'Field', E: 'Event', N: 'Other' },
     diffTitle: (a, b) => `Diff: ${a} → ${b}`,
@@ -215,8 +233,8 @@ const messageMap: Record<string, MessageSet> = {
     colClass: '类',
     colMember: '成员',
     colSummary: '说明',
-    added: '对比版本新增',
-    removed: '对比版本移除',
+    added: '基准版本新增',
+    removed: '基准版本移除',
     changed: '文档/签名变化',
     kindNames: { T: '类型', P: '属性', M: '方法', F: '字段', E: '事件', N: '其他' },
     diffTitle: (a, b) => `差异：${a} → ${b}`,
@@ -237,8 +255,8 @@ const messageMap: Record<string, MessageSet> = {
     colClass: '類別',
     colMember: '成員',
     colSummary: '說明',
-    added: '對比版本新增',
-    removed: '對比版本移除',
+    added: '基準版本新增',
+    removed: '基準版本移除',
     changed: '文件/簽章變更',
     kindNames: { T: '型別', P: '屬性', M: '方法', F: '欄位', E: '事件', N: '其他' },
     diffTitle: (a, b) => `差異：${a} → ${b}`,
@@ -259,8 +277,8 @@ const messageMap: Record<string, MessageSet> = {
     colClass: 'クラス',
     colMember: 'メンバー',
     colSummary: '概要',
-    added: '比較先で追加',
-    removed: '比較先で削除',
+    added: '基準バージョンで追加',
+    removed: '基準バージョンで削除',
     changed: 'ドキュメント/シグネチャ変更',
     kindNames: { T: '型', P: 'プロパティ', M: 'メソッド', F: 'フィールド', E: 'イベント', N: 'その他' },
     diffTitle: (a, b) => `差分: ${a} → ${b}`,
@@ -281,8 +299,8 @@ const messageMap: Record<string, MessageSet> = {
     colClass: '클래스',
     colMember: '멤버',
     colSummary: '요약',
-    added: '비교 버전에 추가됨',
-    removed: '비교 버전에서 제거됨',
+    added: '기준 버전에 추가됨',
+    removed: '기준 버전에서 제거됨',
     changed: '문서/시그니처 변경',
     kindNames: { T: '형식', P: '속성', M: '메서드', F: '필드', E: '이벤트', N: '기타' },
     diffTitle: (a, b) => `차이: ${a} → ${b}`,
@@ -303,8 +321,8 @@ const messageMap: Record<string, MessageSet> = {
     colClass: 'Klasse',
     colMember: 'Member',
     colSummary: 'Zusammenfassung',
-    added: 'In Vergleichsversion hinzugefügt',
-    removed: 'In Vergleichsversion entfernt',
+    added: 'In Basisversion hinzugefügt',
+    removed: 'Aus Basisversion entfernt',
     changed: 'Dokumentation/Signatur geändert',
     kindNames: { T: 'Typ', P: 'Eigenschaft', M: 'Methode', F: 'Feld', E: 'Ereignis', N: 'Sonstiges' },
     diffTitle: (a, b) => `Diff: ${a} → ${b}`,
@@ -325,8 +343,8 @@ const messageMap: Record<string, MessageSet> = {
     colClass: 'Classe',
     colMember: 'Membre',
     colSummary: 'Résumé',
-    added: 'Ajoutés dans la version comparée',
-    removed: 'Supprimés dans la version comparée',
+    added: 'Ajoutés dans la version de base',
+    removed: 'Supprimés de la version de base',
     changed: 'Documentation/signature modifiée',
     kindNames: { T: 'Type', P: 'Propriété', M: 'Méthode', F: 'Champ', E: 'Événement', N: 'Autre' },
     diffTitle: (a, b) => `Diff : ${a} → ${b}`,
@@ -347,8 +365,8 @@ const messageMap: Record<string, MessageSet> = {
     colClass: 'Класс',
     colMember: 'Член',
     colSummary: 'Описание',
-    added: 'Добавлено в сравниваемой версии',
-    removed: 'Удалено в сравниваемой версии',
+    added: 'Добавлено в базовой версии',
+    removed: 'Удалено из базовой версии',
     changed: 'Изменения документации/сигнатуры',
     kindNames: { T: 'Тип', P: 'Свойство', M: 'Метод', F: 'Поле', E: 'Событие', N: 'Прочее' },
     diffTitle: (a, b) => `Разница: ${a} → ${b}`,
@@ -544,12 +562,12 @@ const diffRows = computed<DiffRow[]>(() => {
     const right = compareMap.value.get(rawName) || null
 
     let status: DiffStatus | null = null
-    if (!left && right) status = 'added'
-    else if (left && !right) status = 'removed'
+    if (left && !right) status = 'added'
+    else if (!left && right) status = 'removed'
     else if (left && right && sameMemberChanged(left, right)) status = 'changed'
     if (!status) return null
 
-    const source = right || left
+    const source = left || right
     if (!source) return null
 
     if (selectedKind.value !== 'all' && source.kind !== selectedKind.value) return null
@@ -575,11 +593,38 @@ const diffRows = computed<DiffRow[]>(() => {
   })
 })
 
+const diffDisplayRows = computed<DiffDisplayRow[]>(() => {
+  const rows = diffRows.value.map((item) => ({
+    ...item,
+    showClass: false,
+    classRowspan: 1
+  }))
+
+  for (let index = 0; index < rows.length; ) {
+    const cls = rows[index].className
+    let end = index + 1
+    while (end < rows.length && rows[end].className === cls) {
+      end += 1
+    }
+    rows[index].showClass = true
+    rows[index].classRowspan = end - index
+    index = end
+  }
+
+  return rows
+})
+
 const addedCount = computed(() => diffRows.value.filter((row) => row.status === 'added').length)
 const removedCount = computed(() => diffRows.value.filter((row) => row.status === 'removed').length)
 const changedCount = computed(() => diffRows.value.filter((row) => row.status === 'changed').length)
 
 const diffStatusLabel = (status: DiffStatus) => {
+  if (status === 'added') return '+'
+  if (status === 'removed') return '−'
+  return 'Δ'
+}
+
+const diffStatusMeaning = (status: DiffStatus) => {
   if (status === 'added') return t.value.added
   if (status === 'removed') return t.value.removed
   return t.value.changed
