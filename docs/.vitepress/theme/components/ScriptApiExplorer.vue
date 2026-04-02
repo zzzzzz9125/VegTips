@@ -183,7 +183,7 @@ const props = withDefaults(defineProps<{ locale?: string }>(), {
   locale: 'en'
 })
 
-const versions = ['21.0.0.208', '21.0.0.315', '22.0.0.250', '23.0.0.302']
+const versions = ['21.0.0.208', '21.0.0.315', '22.0.0.250', '23.0.0.302', '2026.0.0.66']
 const versionA = ref(versions[versions.length - 1])
 const versionB = ref(versions[versions.length - 2])
 const compareEnabled = ref(false)

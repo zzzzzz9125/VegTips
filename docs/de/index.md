@@ -1,4 +1,4 @@
----
+﻿---
 layout: doc
 ---
 
@@ -23,7 +23,7 @@ layout: doc
 </style>
 
 # VEGAS Pro Fehlerbehebungsleitfaden: Häufige Probleme und Lösungen
-<p align="right"><strong>Version: 2026.01&ensp;&ensp;Autor: <a href="https://github.com/zzzzzz9125">zzzzzz9125</a></strong></p>
+<p align="right"><strong>Version: 2026.04&ensp;&ensp;Autor: <a href="https://github.com/zzzzzz9125">zzzzzz9125</a></strong></p>
 
 ::: warning
 Diese Seite wurde automatisch aus dem [chinesischen Original](/zh/) übersetzt und noch nicht vollständig von Menschen überprüft. Wenn etwas unklar erscheint, können Sie dies auf der [Issues](https://github.com/zzzzzz9125/VegTips/issues)-Seite des Projekts melden oder Korrekturen vornehmen und mir einen Pull Request senden.
@@ -35,7 +35,7 @@ Vorübergehend nehme ich keine direkten privaten Anfragen zu spezifischen Proble
 
 - Dieser Artikel ist kein Basistutorial für Anfänger. Es ist ein Leitfaden zur Fehlerbehebung bei verschiedenen Problemen in VEGAS Pro und behandelt daher nicht ausführlich die Grundfunktionen der Software. Dieser Artikel unterstützt die Nutzung lizenzierter Software. Informationen zum Kauf einer legalen Lizenz finden Sie im Abschnitt [Software-Kaufkanäle](#xvi-software-kaufkanäle) am Ende.
 
-- Dieser Artikel umfasst über 10.000 Wörter und behandelt häufige Probleme und Lösungen für VEGAS Pro. Er wurde zuerst auf der chinesischen Website Bilibili veröffentlicht und später zu diesem Dokument zusammengefasst und übersetzt, um online betrachtet zu werden. Wenn Sie Fehler oder Auslassungen finden, können Sie diese [in diesem Beitrag](https://www.vegascreativesoftware.info/us/forum/posts--150586/) melden.
+- Dieser Artikel umfasst über 10.000 Wörter und behandelt häufige Probleme und Lösungen für VEGAS Pro. Er wurde zuerst auf der chinesischen Website Bilibili veröffentlicht und später zu diesem Dokument zusammengefasst und übersetzt, um online betrachtet zu werden. Wenn Sie Fehler oder Auslassungen finden, können Sie diese [in diesem Beitrag](https://forum.borisfx.com/t/vegas-pro-troubleshooting-guide-common-issues-and-solutions/21231) melden.
 
 - Bei der Nutzung dieses Leitfadens wird empfohlen, das Inhaltsverzeichnis zu verwenden, um Ihre Problemkategorie zu finden, und die **`Strg + F`**-Suchfunktion zu nutzen, um nach Schlüsselwörtern oder Fehlercodes zu suchen, um Probleme schneller zu lösen. In diesem Artikel erwähnte Pfade werden im Allgemeinen mit Umgebungsvariablen ausgedrückt, z. B. **`%localappdata%\VEGAS Pro\`**. **Sie können den Pfadtext in die Adressleiste des Windows-Explorers kopieren, einfügen und `Enter` drücken, um schnell dorthin zu navigieren.** Dieser Artikel erwähnt manchmal bestimmte Build-Nummern für bestimmte Versionen, z. B. `23 Build 302`, wobei `302` die Build-Nummer ist. Die aktuelle Build-Nummer können Sie auf dem Ladebildschirm sehen, wenn VEGAS startet. Inhalte, die mit **<u>Unterstreichung</u>** markiert sind, enthalten Hyperlinks.
 
@@ -47,7 +47,7 @@ Vorübergehend nehme ich keine direkten privaten Anfragen zu spezifischen Proble
 
 **"Optimierungsleitfäden" werden hier nicht mehr aufgelistet, da nicht garantiert werden kann, dass sie eine positive Optimierung für VEGAS Pro bieten, und einige Informationen möglicherweise veraltet und irreführend sind.**
 
-**Laut MAGIX ist es am besten, die Standardeinstellungen beizubehalten, da diese für den durchschnittlichen Benutzer als optimal angesehen werden.**
+**Laut offiziellen Angaben ist es am besten, die Standardeinstellungen beizubehalten, da diese für den durchschnittlichen Benutzer als optimal angesehen werden.**
 
 **Es gibt keine Einstellung, die für alle passt. Selbst wenn Sie anderswo sogenannte "Optimierungsleitfäden" finden, passen Sie diese an Ihre spezifische Situation an.**
 
@@ -92,7 +92,7 @@ Andere Verzeichnisse mit VEGAS-bezogenen Einstellungen und Voreinstellungsdateie
 
 VP13 und frühere Versionen haben Cache-Verzeichnisse innerhalb eines Sony-Ordners, z. B. **`%localappdata%\Sony\VEGAS Pro\`**, usw.
 
-**Für andere wichtige Pfade siehe: [https://www.vegascreativesoftware.info/us/tutorials/posts--139290/](https://www.vegascreativesoftware.info/us/tutorials/posts--139290/)**
+**Für andere wichtige Pfade siehe: [https://web.archive.org/web/https://www.vegascreativesoftware.info/us/tutorials/backup-locations-for-all-vegas-pro-templates-presets-and-settings--139290/](https://web.archive.org/web/https://www.vegascreativesoftware.info/us/tutorials/backup-locations-for-all-vegas-pro-templates-presets-and-settings--139290/)**
 
 <br>
 
@@ -192,7 +192,7 @@ Microsoft Visual C++ Redistributables: https://learn.microsoft.com/cpp/windows/l
 
 Die stabilste Version wird allgemein als VP13 angesehen. Für einen Ausgleich zwischen Stabilität und Funktionen wird **VP18** empfohlen. Neuere Versionen sind nicht garantiert stabil. Seit dem Video-Engine-Update in `21 Build 300` werden VEGAS' Probleme mit langsamer Videodekodierung und -wiedergabe schrittweise behoben. Diese Verbesserung setzt sich bis zur endgültigen Version von VP22 fort. **Derzeit empfehle ich am meisten die VP22-Endversion (`22 Build 250`), da sie erhebliche Verbesserungen aufweist.** Die neueste VP23 ist immer noch nicht sehr stabil.
 
-VEGAS Pro / VEGAS Post Veröffentlichungsgeschichte: https://www.vegascreativesoftware.info/us/forum/posts--104998/
+VEGAS Pro / VEGAS Post Veröffentlichungsgeschichte: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-vegas-post-release-history--104998/
 
 <br>
 
@@ -235,8 +235,15 @@ A: Das VEGAS-Programm enthält intern 9 Sprachen: `Englisch, Deutsch, Französis
 
 **Nachdem VEGAS bereits installiert ist**, drücken Sie `Win + R`, geben Sie `regedit` ein, um den Registrierungs-Editor zu öffnen. VEGAS-Spracheinstellungen befinden sich im `ULangID`-Wert der folgenden Registrierungsschlüssel:
 
-- VP20 und höher:
+- Boris FX VEGAS Pro 2026+:
+```text
+HKEY_CURRENT_USER\Software\VEGAS Creative Software\VEGAS Pro\2026.0\Lang
+HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\VEGAS Creative Software Video Plug-In Pack\1.0\Lang
+HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\VEGAS Creative Software OFX GPU Video Plug-in Pack\1.0\Lang
+HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\Error Reporting Client\1.0\Lang
+```
 
+- Magix VEGAS Pro 20 ~ 23:
 ```text
 HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\VEGAS Pro\23.0\Lang
 HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\VEGAS Creative Software Video Plug-In Pack\1.0\Lang
@@ -244,7 +251,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\VEGAS Creative Software OFX 
 HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\Error Reporting Client\1.0\Lang
 ```
 
-- VP19 und niedriger:
+- Magix VEGAS Pro 19 und niedriger:
 ```text
 HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\VEGAS Pro\19.0\Lang
 HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Sony Vegas Video Plug-In Pack\1.0\Lang
@@ -252,7 +259,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Sony Vegas OFX GPU Video Plug
 HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\Lang
 ```
 
-Hier repräsentieren `23.0` und `19.0` die aktuelle VEGAS-Hauptversion. Die erste Zeile ist die Haupteinstellung für die Oberflächensprache, aber es wird empfohlen, alle vier zu ändern.
+Hier repräsentieren `2026.0` 、`23.0` und `19.0` die aktuelle VEGAS-Hauptversion. Die erste Zeile ist die Haupteinstellung für die Oberflächensprache, aber es wird empfohlen, alle vier zu ändern.
 
 <ImageOnDemand alt="Sprachregistrierung" src="vegtips/image004_language_reg.png" />
 
@@ -262,13 +269,11 @@ Wenn Sie die englische Version installiert haben, ist der Standardwert für `ULa
 Für andere Sprach-IDs siehe die Microsoft-Dokumentation: <a href="https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid">https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid</a><br>
 </small>
 
-Wenn **nach dem Ändern der Registrierung VEGAS mit `Fehlercode: -1` nicht startet**, navigieren Sie zum `language`-Ordner im VEGAS-Installationsverzeichnis (Standard: `C:\Programme\VEGAS\VEGAS Pro 23.0\language\`, wobei `23.0` die Version ist). **Benennen Sie jede `local_xx_XX.cfg`-Datei** (z. B. `local_en_US.cfg` für US-Englisch) **in `local_de_DE.cfg` um**.
+Für höhere MAGIX VEGAS Pro-Versionen, wenn **nach dem Ändern der Registrierung VEGAS mit `Fehlercode: -1` nicht startet**, navigieren Sie zum `language`-Ordner im VEGAS-Installationsverzeichnis (Standard: `C:\Programme\VEGAS\VEGAS Pro 23.0\language\`, wobei `23.0` die Version ist). **Benennen Sie jede `local_xx_XX.cfg`-Datei** (z. B. `local_en_US.cfg` für US-Englisch) **in `local_de_DE.cfg` um**.
 
 <small>
 Ein weiteres nützliches Tool: <code>Vegas Language Changer</code>: <a href="https://github.com/IZH318/Vegas-Language-Changer">https://github.com/IZH318/Vegas-Language-Changer</a>
 </small>
-
-Das gleiche Prinzip gilt für andere MAGIX-Software wie ACID Pro.
 
 Nachdem VEGAS erfolgreich gestartet wurde, wenn die Namen der eingebauten Video-FX immer noch auf Englisch sind, können Sie versuchen, den [Plugin-Cache zu löschen](#video-plugin-q-a).
 
@@ -361,7 +366,7 @@ A: Gehen Sie zu **`Systemsteuerung -> Programme -> Programme und Funktionen`** u
 <small>
 Download-Link für <code>x64</code> <code>vcomp140.dll</code>: <a href="/downloads/fixes/vcomp140.dll">vcomp140.dll</a><br>
 Wenn Sie <code>ARM</code> Windows verwenden, wählen Sie den <code>ARM</code>-Ordner, nicht <code>x64</code>. Wenn Sie nicht wissen, was <code>ARM</code> ist, sind Sie wahrscheinlich ein <code>x64</code>-Benutzer; verwenden Sie die <code>x64</code>-Version.<br>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--149890/#ca943290">https://www.vegascreativesoftware.info/us/forum/posts--149890/#ca943290</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290</a><br>
 </small>
 
 <br>
@@ -389,14 +394,14 @@ F: **Das Öffnen mehrerer VEGAS-Instanzen verursacht Abstürze**?
 A: Dies kann in allen VEGAS-Versionen aufgrund eines spezifischen Fensterlayouts auftreten. Es ist wahrscheinlicher, wenn das Vorschaufenster **ausgekoppelt (schwebend)** ist. Eine vorübergehende Lösung: **Bevor Sie eine neue VEGAS-Instanz öffnen, schließen oder docken Sie das Vorschaufenster der alten Instanz an**, um potenzielle Abstürze zu vermeiden.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--148817/">https://www.vegascreativesoftware.info/us/forum/posts--148817/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/</a><br>
 </small>
 
 <br>
 
 F: **Nachdem VEGAS startet, gibt es einen WebView-Fehler (`msedgewebview2.exe`, oder `WebView2-Initialisierung fehlgeschlagen`, usw.)**?
 
-A: Die VEGAS Hub-Funktion verwendet Microsoft Edge WebView. Wenn Sie **den Hub nicht benötigen, schließen Sie einfach sein Fenster über das Menü `Ansicht -> Fenster`**. Sie können auch versuchen, den `WebView2`-Ordner im [VEGAS-Cache-Verzeichnis](#vegas-einstellungen-und-cache-verzeichnis) zu löschen: **`%localappdata%\VEGAS Pro\23.0\WebView2`** (wobei `23.0` Ihre VEGAS-Version ist).
+A: Die MAGIX VEGAS Hub-Funktion verwendet Microsoft Edge WebView. Wenn Sie **den Hub nicht benötigen, schließen Sie einfach sein Fenster über das Menü `Ansicht -> Fenster`**. Sie können auch versuchen, den `WebView2`-Ordner im [VEGAS-Cache-Verzeichnis](#vegas-einstellungen-und-cache-verzeichnis) zu löschen: **`%localappdata%\VEGAS Pro\23.0\WebView2`** (wobei `23.0` Ihre VEGAS-Version ist).
 
 <br>
 
@@ -405,7 +410,7 @@ F: **[VP19]** Nachdem eine Weile gearbeitet wurde, wird das VEGAS-Fenster plötz
 A: Dies ist ein **VP19-spezifisches Problem in älteren Builds (z. B. `19 Build 341`)**. **Aktualisieren Sie auf `19 Build 651`**, um es zu beheben.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--131391/">https://www.vegascreativesoftware.info/us/forum/posts--131391/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/</a><br>
 </small>
 
 <br>
@@ -427,17 +432,17 @@ A: Ein Windows-Update-Problem. Laden Sie und führen Sie vc_redist.x86.exe und v
 Feedback deutet darauf hin, dass möglicherweise auch andere Software (wie OBS) aktualisiert werden muss.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--147255/">https://www.vegascreativesoftware.info/us/forum/posts--147255/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/</a><br>
 </small>
 
 <br>
 
 F: <sup>**Französische Version**</sup> Die französische Version von VEGAS Pro stürzt beim Start ab?
 
-A: Dies ist ein Problem, **spezifisch für die französische Version**. Die einzige Lösung ist **Deinstallation und Neuinstallation der englischen Version**. MAGIX beabsichtigte, es zu beheben, hat aber keine klare Lösung. Benutzer, die dieses Problem reproduzieren können, werden ermutigt, den MAGIX-Support zu kontaktieren.
+A: Dies ist ein Problem, **spezifisch für die französische Version**. Die einzige Lösung ist **Deinstallation und Neuinstallation der englischen Version**. Die VEGAS-Offiziellen beabsichtigten, es zu beheben, haben aber keine klare Lösung. Benutzer, die dieses Problem reproduzieren können, werden ermutigt, die VEGAS-Offiziellen zu kontaktieren.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--147150/#ca926950">https://www.vegascreativesoftware.info/us/forum/posts--147150/#ca926950</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950</a><br>
 </small>
 
 <br>
@@ -538,7 +543,7 @@ F: Von **OBS** aufgenommenes Video wird in VEGAS importiert mit **falscher, sehr
 A: Dies passiert, wenn OBS fragmentiertes MP4 für die Aufnahme verwendet, das VEGAS nicht richtig decodieren kann. **Ändern Sie das Ausgabeformat in den OBS-Einstellungen**. Für bestehendes Material verwenden Sie die Kopierstrommethode, z. B. `ffmpeg -i input.mp4 -c copy output.mp4`.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--144992/">https://www.vegascreativesoftware.info/us/forum/posts--144992/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/</a><br>
 </small>
 
 <br>
@@ -569,7 +574,7 @@ F: Direkt von **Webplattformen wie TikTok** mit Tools wie IDM heruntergeladene V
 A: Dies ist **vollständig ein VEGAS-Software-Bug**, und bis zur neuesten Version (`23 Build 302`) nicht behoben. **Tests zeigen, dass alle vorherigen Methoden scheitern. Die einzige Lösung ist, das Audio zu extrahieren/neu zu enkodieren und separat zu importieren.** Über die TikTok-App heruntergeladene Videos sind nicht betroffen.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--140457/#ca884682">https://www.vegascreativesoftware.info/us/forum/posts--140457/#ca884682</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682</a><br>
 </small>
 
 <br>
@@ -587,6 +592,7 @@ Wenn Sie "**Unbekannter Fehler beim Versuch, Videoprofil zu speichern**" erhalte
 1. Drücken Sie **`Win + R`** für `Ausführen`.
 
 2. Geben Sie ein (wobei `23.0` Ihre VEGAS-Version ist; schließen Sie den Pfad in englische Anführungszeichen `""` ein):
+  - **`notepad "C:\ProgramData\BorisFX\Vegas Pro 2026\Vegas profiles.ini"`** <sup>2026+</sup>
   - **`notepad "C:\ProgramData\VEGAS Pro\23.0\Vegas profiles.ini"`** <sup>VP17+</sup>
   - **`notepad "C:\ProgramData\VEGAS\VEGAS Pro\16.0\Vegas profiles.ini"`** <sup>VP14+</sup>
   - **`notepad "C:\ProgramData\Sony\Vegas Pro\13.0\Vegas profiles.ini"`** <sup>VP13-</sup>
@@ -599,7 +605,7 @@ Wenn Sie "**Unbekannter Fehler beim Versuch, Videoprofil zu speichern**" erhalte
 <ImageOnDemand alt="Video-Profil-Bearbeitung 2" src="vegtips/image012_profile_edit_2.png" />
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--128760/">https://www.vegascreativesoftware.info/us/forum/posts--128760/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773</a><br>
 </small>
 
 <br>
@@ -672,7 +678,7 @@ A:
 <ImageOnDemand alt="Windows Unicode-Einstellungen" src="vegtips/image017_unicode_settings.png" />
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--138828/">https://www.vegascreativesoftware.info/us/forum/posts--138828/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/</a><br>
 </small>
 
 <br>
@@ -728,7 +734,7 @@ A: Ein Windows 11-Update-Problem. **Upgrade auf `22 Build 250`** behebt es.
 - Vorübergehende Lösung für älteres VEGAS: **Rechtsklick auf VEGAS ausführbare Datei/Verknüpfung -> `Eigenschaften -> Kompatibilität`, unter `Kompatibilitätsmodus` wählen Sie `Windows 8`**.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--148746/">https://www.vegascreativesoftware.info/us/forum/posts--148746/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/</a><br>
 </small>
 
 <br>
@@ -781,7 +787,7 @@ A: Dieses Problem erscheint mit **bestimmten Nvidia-Treiberversionen**. Hier sin
 3. Nvidia-Treiber auf `522.30` oder früher zurückrollen, oder auf die neueste aktualisieren. Bei Neuinstallation **wählen Sie "Benutzerdefiniert" Installation** und aktivieren **`Saubere Installation durchführen`**. Dies setzt alle Treibereinstellungen auf Standard zurück, daher **nicht empfohlen**.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--138196/">https://www.vegascreativesoftware.info/us/forum/posts--138196/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problems-with-nvidia-driver-526-98--138196/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problems-with-nvidia-driver-526-98--138196/</a><br>
 </small>
 
 <br>
@@ -898,7 +904,7 @@ A: Wenn Sie den **NVIDIA NVENC-Encoder** verwenden und Ihre **Grafiktreiberversi
 - Verwenden Sie den NVENC-Encoder von **[Voukoder](#empfohlenes-render-plugin-voukoder)** ohne Fehler.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--150382/">https://www.vegascreativesoftware.info/us/forum/posts--150382/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/rendering-issues-after-gpu-replacement-nvenc--150382/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/rendering-issues-after-gpu-replacement-nvenc--150382/</a><br>
 </small>
 
 <br>
@@ -908,7 +914,7 @@ F: Fehler beim Versuch, **m2ts zu rendern**: **`COM-Objekt konnte nicht initiali
 A: Beginnend mit **Win11 24H2** entfernte Microsoft den **AC-3-Codec**, von dem VEGAS und andere Software abhängen. Bei einer **Neuinstallation von Win11 24H2 oder später** fehlt dieser Codec, was dazu führt, dass VEGAS **AC-3-Audio in m2ts-Dateien nicht decodieren kann** und **m2ts nicht rendern kann**. Siehe [**dieses englische Tutorial**](https://www.elevenforum.com/t/ac-3-dolby-digital-codec-no-longer-included-with-windows-11-version-24h2.25597/post-459390), um den AC-3-Codec wieder hinzuzufügen, oder **upgraden Sie auf VP22 final (`22 Build 250`) oder höher**, das einen neuen AC-3-Codec enthält.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--147963/">https://www.vegascreativesoftware.info/us/forum/posts--147963/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/no-audio-and-no-rendering-possible-with-m2ts-files-in-win11-24h2--147963/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/no-audio-and-no-rendering-possible-with-m2ts-files-in-win11-24h2--147963/</a><br>
 </small>
 
 <br>
@@ -970,7 +976,7 @@ Drei Lösungen:
 3.  Wenden Sie den `Pegel` FX-Voreinstellung **`Studio-RGB zu Computer-RGB`** auf Mediendateien an.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--142942/">https://www.vegascreativesoftware.info/us/forum/posts--142942/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/why-magix-avc-mp4-encoder-changes-the-color-of-the-original-video--142942/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/why-magix-avc-mp4-encoder-changes-the-color-of-the-original-video--142942/</a><br>
 </small>
 
 <br>
@@ -997,7 +1003,7 @@ A: AMD-GPU-Treiberproblem. Versuchen Sie:
 - **Vor dem Rendern** fügen Sie den eingebauten **`Kanal-Mischen` FX zum Video-Ausgangs-Bus hinzu, wählen Sie Voreinstellung `RGBA -> BGRA`**.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--142292/">https://www.vegascreativesoftware.info/us/forum/posts--142292/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-with-rendering--142292/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-with-rendering--142292/</a><br>
 </small>
 
 <br>
@@ -1021,7 +1027,7 @@ Hier ist eine "Bug-Ausnutzungs"-Methode mit nativen Vorlagen:
 - Hinweis: Diese Methode kann die maximale Grenze des Encoders nicht überschreiten (z. B. `4096*4096` für NVENC).
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--149413/#ca939692">https://www.vegascreativesoftware.info/us/forum/posts--149413/#ca939692</a><br>
+Referenz: <a href="https://www.reddit.com/r/VegasPro/comments/wo1wpr/solution_to_max_height_reverting_back_to_2304/">https://www.reddit.com/r/VegasPro/comments/wo1wpr/solution_to_max_height_reverting_back_to_2304/</a><br>
 </small>
 
 <br>
@@ -1045,12 +1051,12 @@ A: Dieser Bug wurde in VP19 behoben. Für ältere Versionen versuchen Sie diese 
 1.  Installieren/Neuinstallieren HEIF-Bilderweiterungen: [https://apps.microsoft.com/detail/9pmmsr1cgpwg](https://apps.microsoft.com/detail/9pmmsr1cgpwg).
 
 2.  Verwenden Sie das Bildsequenz-Render-Skript.
-  - Download-Link: https://www.vegascreativesoftware.info/us/forum/posts--133068/?page=3#ca863786
+  - Download-Link: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-19-missing-image-sequence-as-a-render-option--133068/?page=3#ca863786
 
 3.  In ein anderes Format rendern (`.mov`), dann mit [FFmpeg](https://ffmpeg.org/) konvertieren.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--133068/">https://www.vegascreativesoftware.info/us/forum/posts--133068/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/image-sequence-rendering-option-gone-on-vegas-18--147113/#ca950963">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/image-sequence-rendering-option-gone-on-vegas-18--147113/#ca950963</a><br>
 </small>
 
 <br>
@@ -1066,7 +1072,7 @@ Aktualisiert Ihr System auf die neueste Version, dauert Stunden. Diese Methode b
 Das genaue Reparaturprinzip ist unklar.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--83436/">https://www.vegascreativesoftware.info/us/forum/posts--83436/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/avi-files-rendering-as-wdp-in-vegas-pro-10--83436/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/avi-files-rendering-as-wdp-in-vegas-pro-10--83436/</a><br>
 </small>
 
 <br>
@@ -1082,7 +1088,7 @@ Es gibt eine Problemumgehung: Ersetzen Sie die Rendering-Komponenten-DLL im neue
 Dies kann die Stabilität beeinflussen, daher wird ein Upgrade auf Win10 empfohlen.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--128221/">https://www.vegascreativesoftware.info/us/forum/posts--128221/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/win-7-rendering-issue-with-the-magix-vegas-482-version--128221/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/win-7-rendering-issue-with-the-magix-vegas-482-version--128221/</a><br>
 </small>
 
 Download-Link für `18 Build 284` `RenderAsDialog.dll`: [RenderAsDialog.dll](/downloads/fixes/RenderAsDialog.dll)
@@ -1121,7 +1127,7 @@ F: Klicken auf Menü **`Einfügen -> Untertitel aus Datei`** **öffnet das Einf�
 A: Ein relativ seltener Bug, scheinbar ungefixt. Es könnte einen Tag funktionieren und am nächsten aufhören. Derzeit ist die einzige bekannte Behebung **[Einstellungen zurücksetzen](#5-einstellungen-zurücksetzen)**.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--137861/">https://www.vegascreativesoftware.info/us/forum/posts--137861/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/</a><br>
 </small>
 
 <br>
@@ -1159,7 +1165,7 @@ A: Das Problem tritt auf, wenn das Textfeld **gemischte Formatierung (verschiede
   - Verwendung: Wählen Sie ein einzelnes "Titel & Text"-Event auf einer Spur, führen Sie das Skript aus, um andere Untertitel-Events auf derselben Spur an seine Attribute anzupassen.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--145461/">https://www.vegascreativesoftware.info/us/forum/posts--145461/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/</a><br>
 </small>
 
 <br>
@@ -1237,7 +1243,7 @@ Benutzer-gespeicherte OFX-Plugin-FX-Voreinstellungen: `%userprofile%\Documents\O
 
 - **Eingebauter DXT-Pfad**: `...<VEGAS Installationspfad>\Video Plug-Ins\`
 
-Streng genommen haben DXT-Plugins keinen vorgeschriebenen Ordner wie OFX. Sie sind DLL-Dateien, die Registrierung via `regsvr32 xxx.dll` benötigen. Dies ermöglicht, externe DXT-Plugins überall zu platzieren und für VEGAS zu registrieren. Nützlich für manuelle Registrierungs-Plugins wie [Route Animation](https://www.vegascreativesoftware.info/us/forum/posts--105615/) (`RouteAnimationX64.dll`).
+Streng genommen haben DXT-Plugins keinen vorgeschriebenen Ordner wie OFX. Sie sind DLL-Dateien, die Registrierung via `regsvr32 xxx.dll` benötigen. Dies ermöglicht, externe DXT-Plugins überall zu platzieren und für VEGAS zu registrieren. Nützlich für manuelle Registrierungs-Plugins wie [Route Animation](https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/my-vegas-pro-utilities-tools--105615/) (`RouteAnimationX64.dll`).
 
 <br>
 
@@ -1277,7 +1283,7 @@ F: **Verwenden eingebauter AI-FX fordert Installation von VEGAS Deep Learning Mo
 A: Für neuere eingebaute AI-FX **müssen Sie die entsprechende Version von Deep Learning Models** separat installieren.
 
 <small>
-Offizielle AI Deep Learning Models Download: <a href="https://www.vegascreativesoftware.info/us/forum/posts--104782/">https://www.vegascreativesoftware.info/us/forum/posts--104782/<br></a>
+Offizielle AI Deep Learning Models Download: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/<br></a>
 </small>
 
 <br>
@@ -1309,7 +1315,7 @@ F: **[VP21]** Hinzufügen von **`3D LUT Creator`-Plugin** verursacht **Absturz/E
 A: Sie können dieses FX als Plugin-Kette in einer älteren VEGAS-Version speichern, dann die Kette in VP21 anwenden. Dieser Bug wurde in VP22 behoben.
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--144354/">https://www.vegascreativesoftware.info/us/forum/posts--144354/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/</a><br>
 </small>
 
 <br>
@@ -1328,7 +1334,7 @@ VEGAS-Audio-Plugins fallen in zwei Kategorien: DirectX-Plugins (älter) und VST-
 Wenn andere Software den allgemeinen VST-Pfad geändert hat, folgt VEGAS dem. Sie können den Registrierungsschlüssel <code>HKEY_LOCAL_MACHINE\SOFTWARE\VST</code>, Wert <code>VSTPluginsPath</code> überprüfen.
 </small>
 
-- **VEGAS-spezifischer VST-Pfad (VP16+)**: `...<VEGAS Installationspfad>\MAGIX Plugins\`
+- **VEGAS-spezifischer VST-Pfad**: `...<VEGAS Installationspfad>\MAGIX Plugins\` <sup>**MAGIX 16 und höher**</sup> oder `...<Vegas-Installationspfad>\Vegas Plugins\` <sup>**Boris FX 2026 und höher**</sup>
 
 <br>
 
@@ -1378,7 +1384,7 @@ F: **DirectX-Plugins werden in Audio-FX-Liste nicht angezeigt**/**angezeigt aber
 A: **Deinstallieren Sie VEGAS**, dann löschen Sie alle Dateien in **`C:\Programme (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`** (für VP13-: `C:\Programme (x86)\Sony\Shared Plug-Ins\Audio_x64\`), dann **neuinstallieren Sie VEGAS**. (Wenn mehrere VEGAS-Versionen, Deinstallation einer reicht; die Deinstallation ist nur, um Neuinstallation später zu ermöglichen.)
 
 <small>
-Referenz: <a href="https://www.vegascreativesoftware.info/us/forum/posts--143986/">https://www.vegascreativesoftware.info/us/forum/posts--143986/</a><br>
+Referenz: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/</a><br>
 </small>
 
 <br>
@@ -1398,7 +1404,7 @@ VEGAS unterstützt benutzerdefinierte Skripte in `C#` (oder `JScript`, `Visual B
 - **Erweiterung**: Kann automatisch laufen, wenn VEGAS startet. Ermöglicht komplexere Funktionen, wie das Erstellen von andockbaren Fenstern innerhalb VEGAS.
 
 <small>
-Dieser Abschnitt behandelt nur Installationsprobleme. Für Tutorials siehe: <a href="https://www.vegascreativesoftware.info/us/forum/posts--104563/">https://www.vegascreativesoftware.info/us/forum/posts--104563/</a><br>
+Dieser Abschnitt behandelt nur Installationsprobleme. Für Tutorials siehe: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</a><br>
 </small>
 
 <br>
@@ -1436,7 +1442,7 @@ Wobei `23.0` Ihre VEGAS-Version ist. Der erste Pfad (`C:\ProgramData\...`) ist m
 
 <br>
 
-Aufgrund von API-Änderungen in der Geschichte sind Skripte/Erweiterungen für SonicFoundry-Ära, Sony-Ära (VP13-) und MAGIX-Ära (VP14+) VEGAS nicht direkt kompatibel. Sehr alte SonicFoundry-Ära verwendet `SonicFoundry.Vegas`-Namespace; relativ alte Sony-Ära verwendet `Sony.Vegas`; moderne MAGIX-Ära verwendet `ScriptPortal.Vegas`. Für Quellcodedateien (`.cs`, `.js`, `.vb`) können Sie den Namespace manuell in einem Texteditor bearbeiten. Für vorkompilierte `.dll`-Dateien müssen Sie das Quellprojekt modifizieren und neu kompilieren.
+Aufgrund von API-Änderungen in der Geschichte sind Skripte/Erweiterungen für SonicFoundry-Ära, Sony-Ära (VP13-) und MAGIX-Ära / Boris-FX-Ära (VP14+) VEGAS nicht direkt kompatibel. Sehr alte SonicFoundry-Ära verwendet `SonicFoundry.Vegas`-Namespace; relativ alte Sony-Ära verwendet `Sony.Vegas`; moderne MAGIX-Ära / Boris-FX-Ära verwendet `ScriptPortal.Vegas`. Für Quellcodedateien (`.cs`, `.js`, `.vb`) können Sie den Namespace manuell in einem Texteditor bearbeiten. Für vorkompilierte `.dll`-Dateien müssen Sie das Quellprojekt modifizieren und neu kompilieren.
 
 <br>
 
@@ -1611,9 +1617,9 @@ Auch, für Info zu <code>.sfk</code>, <code>.sfl</code>, <code>.sfap0</code>, <c
 
 1.  VEGAS Offizielle Website: https://www.vegascreativesoftware.com/us/
 
-  - Verkauft nur die neueste Version. Zwei Haupteditionen: Standard (kein Suffix, früher `Edit`) und `Suite` (enthält zusätzliche Software/Plugins). Verfügbar als Dauerlizenz (Einmalkauf) oder Abonnement (365 Tage). Unterstützt auch Upgrade-Rabatte, wenn Sie eine ältere Lizenz besitzen. Eine Lizenz aktiviert zwei Geräte; Sie können Geräte in Ihrem MAGIX-Konto deaktivieren (mit Abkühlzeit).
+  - Vegas Pro ist jetzt unter der Flagge von Boris FX und wird von Boris FX entwickelt und verwaltet. Die offizielle Website von Boris FX verkauft nur die neueste Version von Vegas. Bei den Preisbündeln gibt es derzeit drei Editionen: die Standard Edition (`Vegas Pro`), die Plus Edition (`Vegas Pro Plus`) und die Ultimate Edition (`Vegas Pro Ultimate`). Die Standard Edition enthält die Vegas Pro-Software selbst sowie einen Teil der Boris FX Continuum-Plugins, während die Plus- und Ultimate-Editionen zusätzliche Software und Plugins enthalten. Darüber hinaus gibt es für die Standard- und Plus-Editionen auch eine permanente Version (`Permanent`) und eine Abonnement-Version (`Subscription`). Die von Boris FX angebotenen Versionen müssen über den Boris FX Hub installiert werden. Bei der Installation wird möglicherweise nicht die gewünschte Sprachversion installiert, aber Sie können das Installationsprogramm finden, deinstallieren und dann erneut installieren. Das eigenständige Installationsprogramm bietet Sprachoptionen.
 
-  - Offizielle Installer-Links: https://www.vegascreativesoftware.info/us/forum/posts--104782/
+  - Offizielle Installer-Links (Magix): https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/
 
 
 
@@ -1629,14 +1635,12 @@ Auch, für Info zu <code>.sfk</code>, <code>.sfl</code>, <code>.sfap0</code>, <c
 
   - Preis um $20-30. Typischerweise enthält VEGAS Pro Version **zwei Versionen hinter der aktuell neuesten**, plus gebündelte Inhalte. Qualifiziert sich auch für offizielle Upgrade-Rabatte. Zum Beispiel, wenn neueste 21 ist, verkaufen sie 19. Verkäufe sind unregelmäßig und kurz, mit variierenden Bundle-Inhalten.
 
-Alle Kanäle haben zufällige Rabatte. Für aktuelle Angebote folgen Sie diesem Thread: https://www.vegascreativesoftware.info/us/forum/posts--109642/
-
 <br>
 
 ## XVII. VEGAS Communities/Foren
 
 
 
-VEGAS Pro Offizielles Forum: [https://www.vegascreativesoftware.info/us/vegas-pro-forum/](https://www.vegascreativesoftware.info/us/vegas-pro-forum/)
+VEGAS Pro Offizielles Forum: [https://forum.borisfx.com/c/vegas-pro/55](https://forum.borisfx.com/c/vegas-pro/55)
 
 VEGAS Pro Reddit: [https://www.reddit.com/r/VegasPro/](https://www.reddit.com/r/VegasPro/)

@@ -23,7 +23,7 @@ layout: doc
 </style>
 
 # VEGAS Pro 各种疑难杂症及其解决方案的整理
-<p align="right"><strong>版本号：2026.01&ensp;&ensp;作者：<a href="https://space.bilibili.com/12355745/">zzzzzz9125</a></strong></p>
+<p align="right"><strong>版本号：2026.04&ensp;&ensp;作者：<a href="https://space.bilibili.com/12355745/">zzzzzz9125</a></strong></p>
 
 <!-- ::: warning
 This page is AI-translated from the [Chinese original](/zh/) and has not been fully human-reviewed yet. If anything seems ambiguous, you can point them out on the project's [Issues](https://github.com/zzzzzz9125/VegTips/issues) page, or you can make the corrections and submit a pull request to me.
@@ -47,7 +47,7 @@ For the time being, I do not accept direct private inquiries about specific issu
 
 **这里不再列出所谓的“优化方案”，因为这些“优化方案”是没法保证一定对 VEGAS Pro 有正面优化的，并且有些信息可能已经过时，具有误导性。**
 
-**根据 Magix 官方的说法，请尽量保持默认设置，默认设置是他们认为最适合普通用户的。**
+**根据官方的说法，请尽量保持默认设置，默认设置是他们认为最适合普通用户的。**
 
 **不存在能够适配所有电脑的首选项设置，所以即使你在其他地方找到了那些所谓的“优化方案”，也请根据你的具体情况更改。**
 
@@ -92,7 +92,7 @@ For the time being, I do not accept direct private inquiries about specific issu
 
 vv13 及以下的版本的缓存目录会带 Sony 文件夹，如 **`%localappdata%\Sony\VEGAS Pro\`** 等。
 
-**有关其他重要位置路径，可参考：[https://www.vegascreativesoftware.info/us/tutorials/posts--139290/](https://www.vegascreativesoftware.info/us/tutorials/posts--139290/)**
+**有关其他重要位置路径，可参考：[https://web.archive.org/web/https://www.vegascreativesoftware.info/us/tutorials/backup-locations-for-all-vegas-pro-templates-presets-and-settings--139290/](https://web.archive.org/web/https://www.vegascreativesoftware.info/us/tutorials/backup-locations-for-all-vegas-pro-templates-presets-and-settings--139290/)**
 
 <br>
 
@@ -192,7 +192,7 @@ Microsoft Visual C++ 运行库：https://learn.microsoft.com/cpp/windows/latest-
 
 公认最稳定的版本应该是 vv13，追求稳定性和功能性兼顾的建议用 **vv18**，新版不保证一定会很稳。自 `21 build 300` 的视频引擎更新以来，Vegas 的视频解码和渲染慢的问题正在逐步得到解决，这一更新会一直持续到 22 最终版。**目前我最推荐用 22 最终版（`22 build 250`），有很大的改进。**最新版的 23 仍然不是很稳定。
 
-VEGAS 版本更新历史：https://www.vegascreativesoftware.info/us/forum/posts--104998/
+VEGAS 版本更新历史：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-vegas-post-release-history--104998/
 
 <br>
 
@@ -235,8 +235,15 @@ A：Vegas 软件程序内部一共自带 `英德法葡西波中日韩` 9 种语�
 
 在**确保已安装 Vegas 本体**的前提下，按 `Win + R` 键打开“运行”，输入 `regedit` 打开注册表编辑器。Vegas 的语言设置保存在以下注册表项的 `ULangID` 值内：
 
-- 20 及以上：
+- Boris FX Vegas Pro 2026 及以上：
+```text
+HKEY_CURRENT_USER\Software\VEGAS Creative Software\VEGAS Pro\2026.0\Lang
+HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\VEGAS Creative Software Video Plug-In Pack\1.0\Lang
+HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\VEGAS Creative Software OFX GPU Video Plug-in Pack\1.0\Lang
+HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\Error Reporting Client\1.0\Lang
+```
 
+- Magix VEGAS Pro 20 ~ 23：
 ```text
 HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\VEGAS Pro\23.0\Lang
 HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\VEGAS Creative Software Video Plug-In Pack\1.0\Lang
@@ -244,7 +251,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\VEGAS Creative Software OFX 
 HKEY_LOCAL_MACHINE\SOFTWARE\VEGAS Creative Software\Error Reporting Client\1.0\Lang
 ```
 
-- 19 及以下：
+- Magix VEGAS Pro 19 及以下：
 ```text
 HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\VEGAS Pro\19.0\Lang
 HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Sony Vegas Video Plug-In Pack\1.0\Lang
@@ -252,7 +259,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Sony Vegas OFX GPU Video Plug
 HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\Lang
 ```
 
-其中 `23.0` 和 `19.0` 代表当前 Vegas 版本号。第一行是最主要的软件界面语言设置，不过其他三个也建议同时改。
+其中 `2026.0` 、`23.0` 和 `19.0` 均代表当前 Vegas 版本号。第一行是最主要的软件界面语言设置，不过其他三个也建议同时改。
 
 <ImageOnDemand alt="语言注册表" src="vegtips/image004_language_reg.png" />
 
@@ -262,13 +269,11 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 其他语言编号详见微软的文档：<a href="https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid">https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid</a><br>
 </small>
 
-如果**改完语言注册表以后重新启动 Vegas，显示 `错误代码: -1`，无法正常启动**，可转到 Vegas 的安装目录中的 `language` 文件夹（默认为 `C:\Program Files\VEGAS\VEGAS Pro 23.0\language\`，其中 `23.0` 是版本号），将其中任意一个 `local_xx_XX.cfg` 文件（比如美式英语的 `local_en_US.cfg`）**重命名成 `local_zh_CN.cfg`**。
+对于 Magix VEGAS Pro 的较高版本，如果**改完语言注册表以后重新启动 Vegas，显示 `错误代码: -1`，无法正常启动**，可转到 Vegas 的安装目录中的 `language` 文件夹（默认为 `C:\Program Files\VEGAS\VEGAS Pro 23.0\language\`，其中 `23.0` 是版本号），将其中任意一个 `local_xx_XX.cfg` 文件（比如美式英语的 `local_en_US.cfg`）**重命名成 `local_zh_CN.cfg`**。
 
 <small>
 另一个有用的工具 <code>Vegas Language Changer</code>：<a href="https://github.com/IZH318/Vegas-Language-Changer">https://github.com/IZH318/Vegas-Language-Changer</a>
 </small>
-
-Magix 旗下的 ACID Pro 等软件也同理，此处不再赘述。
 
 成功启动 Vegas 后，若发现自带视频插件的效果名称仍然为英文，可以尝试 [清理插件缓存](#视频插件相关的-q-a)。
 
@@ -361,7 +366,7 @@ A：请到 **`控制面板 -> 程序 -> 程序和功能`** 中确认是否安装
 <small>
 <code>x64</code> 版 <code>vcomp140.dll</code> 下载链接：<a href="/downloads/fixes/vcomp140.dll">vcomp140.dll</a><br>
 如果你正在使用 <code>ARM</code> 版 Windows，请选择 <code>ARM</code> 文件夹，而不是 <code>x64</code> 文件夹。如果你不知道 <code>ARM</code> 是什么，那你应该是 <code>x64</code> 用户，请使用 <code>x64</code> 版。<br>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--149890/#ca943290">https://www.vegascreativesoftware.info/us/forum/posts--149890/#ca943290</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290</a><br>
 </small>
 
 <br>
@@ -389,14 +394,14 @@ Q：**Vegas 多开进程后会导致崩溃**？
 A：这个问题会发生在所有的 Vegas 版本中，是特定的界面布局导致的。当预览窗口处于**未停靠（悬浮）状态**时，容易发生这样的情况。临时的解决办法是**在打开新的 Vegas 进程前，把旧的 Vegas 进程的预览窗口关闭或者停靠**，以避免可能的崩溃问题。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--148817/">https://www.vegascreativesoftware.info/us/forum/posts--148817/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/</a><br>
 </small>
 
 <br>
 
 Q：**Vegas 启动后，报 WebView 错误（`msedgewebview2.exe`，或 `WebView2 初始化失败`等）**？
 
-A：VEGAS Hub 相关功能是基于微软的 Edge WebView 的。如果**不需要用 Hub 功能，只需到菜单栏的 `视图 -> 窗口` 中把 VEGAS Hub 窗口关闭**即可。也可以尝试删除 [Vegas 缓存目录](#vegas-首选项和缓存目录)里的 `WebView2` 文件夹，即 **`%localappdata%\VEGAS Pro\23.0\WebView2`** 这个路径，其中 `23.0` 代表当前的 Vegas 版本号。
+A：Magix VEGAS Hub 相关功能是基于微软的 Edge WebView 的。如果**不需要用 Hub 功能，只需到菜单栏的 `视图 -> 窗口` 中把 VEGAS Hub 窗口关闭**即可。也可以尝试删除 [Vegas 缓存目录](#vegas-首选项和缓存目录)里的 `WebView2` 文件夹，即 **`%localappdata%\VEGAS Pro\23.0\WebView2`** 这个路径，其中 `23.0` 代表当前的 Vegas 版本号。
 
 <br>
 
@@ -405,7 +410,7 @@ Q：<sup>**vv19**</sup> 工程做了一会儿，Vegas 窗口突然**随机出现
 A：这个是 **vv19 旧版（如 `19 build 341`）**特有的花屏问题，**更新到 `19 build 651`** 可解决。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--131391/">https://www.vegascreativesoftware.info/us/forum/posts--131391/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/</a><br>
 </small>
 
 <br>
@@ -427,17 +432,17 @@ A：Windows 更新的问题，下载并运行 vc_redist.x86.exe 和 vc_redist.x6
 据反馈，也可能需要更新其他软件（如 OBS 等）。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--147255/">https://www.vegascreativesoftware.info/us/forum/posts--147255/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/</a><br>
 </small>
 
 <br>
 
 Q：<sup>**法语版**</sup> 法语版本的 VEGAS Pro 在启动时崩溃？
 
-A：这是**法语版本特有**的问题，只能**卸载后重装为英语版本**。Magix 打算修复它，但毫无头绪。如果有其他能够复现的用户，可以联系 Magix。
+A：这是**法语版本特有**的问题，只能**卸载后重装为英语版本**。Vegas 官方打算修复它，但毫无头绪。如果有其他能够复现的用户，可以联系 Vegas 官方。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--147150/#ca926950">https://www.vegascreativesoftware.info/us/forum/posts--147150/#ca926950</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950</a><br>
 </small>
 
 <br>
@@ -538,7 +543,7 @@ Q：由**OBS**录制的视频导入进 Vegas，**视频长度有问题，特别�
 A：原因在于 OBS 中使用了分片 MP4 作为录制保存文件，而 Vegas 无法正常解码。可以**在 OBS 设置中改为其他输出格式**。如果已经这样录制了素材，则可以使用上述的复制流办法，比如 `ffmpeg -i input.mp4 -c copy output.mp4`，这样也能正常导入进 Vegas。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--144992/">https://www.vegascreativesoftware.info/us/forum/posts--144992/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/</a><br>
 </small>
 
 <br>
@@ -569,7 +574,7 @@ Q：在**网页端抖音等平台**，直接用 IDM 等下载工具下载得到�
 A：这个**完完全全是 Vegas 软件的 bug**，并且截至目前的最新版（`23 build 302`）仍未修复。**经过测试，上述其他所有办法均无效，只能通过转码出音频文件后再导入进 Vegas 来解决。**通过抖音 APP 下载的视频不会受到影响。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--140457/#ca884682">https://www.vegascreativesoftware.info/us/forum/posts--140457/#ca884682</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682</a><br>
 </small>
 
 <br>
@@ -587,6 +592,7 @@ A：这是由于 `4:3` 的媒体文件导入进 `16:9` 的工程里，可能会�
 1. 按下 **`Win + R`** 进入 `运行`。
 
 2. 输入（`23.0` 等数字指 Vegas 版本号，文件路径外边要带英文半角引号 `""`）：
+  - **`notepad "C:\ProgramData\BorisFX\Vegas Pro 2026\Vegas profiles.ini"`** <sup>2026 及以上</sup>
   - **`notepad "C:\ProgramData\VEGAS Pro\23.0\Vegas profiles.ini"`** <sup>17 及以上</sup>
   - **`notepad "C:\ProgramData\VEGAS\VEGAS Pro\16.0\Vegas profiles.ini"`** <sup>14 及以上</sup>
   - **`notepad "C:\ProgramData\Sony\Vegas Pro\13.0\Vegas profiles.ini"`** <sup>13 及以下</sup>
@@ -599,7 +605,7 @@ A：这是由于 `4:3` 的媒体文件导入进 `16:9` 的工程里，可能会�
 <ImageOnDemand alt="视频配置文件编辑 2" src="vegtips/image012_profile_edit_2.png" />
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--128760/">https://www.vegascreativesoftware.info/us/forum/posts--128760/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773</a><br>
 </small>
 
 <br>
@@ -672,7 +678,7 @@ A：
 <ImageOnDemand alt="Windows Unicode 设置" src="vegtips/image017_unicode_settings.png" />
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--138828/">https://www.vegascreativesoftware.info/us/forum/posts--138828/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/</a><br>
 </small>
 
 <br>
@@ -728,7 +734,7 @@ A：Windows 11 更新的问题，**升级到 `22 build 250`** 可以解决。
 - 旧版 Vegas 可以使用临时解决办法：**右键 Vegas 程序或者快捷方式进入 `属性`，切换到 `兼容性`，在 `兼容模式` 这一栏选择 `Windows 8`**。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--148746/">https://www.vegascreativesoftware.info/us/forum/posts--148746/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/</a><br>
 </small>
 
 <br>
@@ -781,7 +787,7 @@ A：一般此问题出现在**某些版本的 N 卡驱动**中，以下是几种
 3. 将 N 卡驱动的版本回退至 `522.30` 及以前，或更新至最新版。重装驱动时，**必须选择“自定义”安装**，并且勾选 **`执行清洁安装`** 选项。此选项会将 N 卡驱动的所有配置选项全部恢复为默认值，因此**不建议使用此办法**。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--138196/">https://www.vegascreativesoftware.info/us/forum/posts--138196/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problems-with-nvidia-driver-526-98--138196/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problems-with-nvidia-driver-526-98--138196/</a><br>
 </small>
 
 <br>
@@ -898,7 +904,7 @@ A：如果你正在使用 **N 卡的 NVENC 编码器**，且你的**显卡驱动
 - 用 **[Voukoder 渲染插件](#渲染插件-voukoder-推荐)** 的 NVENC 编码器进行渲染，不会报错。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--150382/">https://www.vegascreativesoftware.info/us/forum/posts--150382/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/rendering-issues-after-gpu-replacement-nvenc--150382/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/rendering-issues-after-gpu-replacement-nvenc--150382/</a><br>
 </small>
 
 <br>
@@ -908,7 +914,7 @@ Q：尝试**渲染 m2ts 视频文件**报错：**`COM 对象无法初始化。`(
 A：从 **Win11 24H2 版**开始，微软移除了 Vegas 及其他软件所依赖的 **AC-3 编解码器**。如果用户正在**使用全新安装的 Win11 24H2 或更高版本**，则系统中不会包含这个编解码器，导致 Vegas **无法解码 m2ts 视频文件的 AC-3 音频编码音频**，也导致**渲染 m2ts 视频文件时报错**。可以参考 [**这篇英文教程**](https://www.elevenforum.com/t/ac-3-dolby-digital-codec-no-longer-included-with-windows-11-version-24h2.25597/post-459390) 重新添加 AC-3 编解码器，或者也可以**升级到 22 最终版（`22 build 250`）及以上版本**，已包含新的 AC-3 编解码器。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--147963/">https://www.vegascreativesoftware.info/us/forum/posts--147963/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/no-audio-and-no-rendering-possible-with-m2ts-files-in-win11-24h2--147963/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/no-audio-and-no-rendering-possible-with-m2ts-files-in-win11-24h2--147963/</a><br>
 </small>
 
 <br>
@@ -970,7 +976,7 @@ A1：vv17 及以下版本中，由于项目属性和渲染模板的**色彩空�
 3. 给媒体文件套用 `色阶` FX 的 **`演播室级 RGB 到计算机 RGB`** 预设。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--142942/">https://www.vegascreativesoftware.info/us/forum/posts--142942/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/why-magix-avc-mp4-encoder-changes-the-color-of-the-original-video--142942/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/why-magix-avc-mp4-encoder-changes-the-color-of-the-original-video--142942/</a><br>
 </small>
 
 <br>
@@ -997,12 +1003,12 @@ A：A 卡驱动的问题。可以尝试以下几种方法：
 - **在渲染前**，给视频输出总线加一个自带的 **`通道混合` FX，预设选 `RGBA -> BGRA`**。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--142292/">https://www.vegascreativesoftware.info/us/forum/posts--142292/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-with-rendering--142292/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-with-rendering--142292/</a><br>
 </small>
 
 <br>
 
-Q：【**vv18 及以下**】**无法渲染高度大于 `2304` 的视频（想渲染竖屏 4K）**？
+Q：【**18 及以下**】**无法渲染高度大于 `2304` 的视频（想渲染竖屏 4K）**？
 
 A：对于旧版，如果你尝试自定义原生的渲染模板时，将高度更改为 `2304` 以上的值，会自动恢复为 `2304`，不让修改，也就是无法渲染竖屏 4K。最方便的办法还是**将项目属性改为你想要的值以后，使用 [Voukoder 渲染插件](#渲染插件-voukoder-推荐)**，而不是用原生渲染模板。
 
@@ -1021,7 +1027,7 @@ A：对于旧版，如果你尝试自定义原生的渲染模板时，将高度�
 - 注意：这个办法无法超过编码器的最大限制。比如对于 `NVENC` 编码器来说，最大限制是 `4096*4096`。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--149413/#ca939692">https://www.vegascreativesoftware.info/us/forum/posts--149413/#ca939692</a><br>
+参见：<a href="https://www.reddit.com/r/VegasPro/comments/wo1wpr/solution_to_max_height_reverting_back_to_2304/">https://www.reddit.com/r/VegasPro/comments/wo1wpr/solution_to_max_height_reverting_back_to_2304/</a><br>
 </small>
 
 <br>
@@ -1042,15 +1048,15 @@ Q：**自带渲染模板没有图像序列**？
 
 A：该 bug 已于 vv19 修复。以下是可供低版本尝试的几种解决办法，不保证一定有效：
 
-1. 安装（卸载重装）HEIF 图像扩展：[https://apps.microsoft.com/detail/9pmmsr1cgpwg](https://apps.microsoft.com/detail/9pmmsr1cgpwg)。
+1. 安装（卸载重装）HEIF 和 JPEG XL 图像扩展：[https://apps.microsoft.com/detail/9pmmsr1cgpwg](https://apps.microsoft.com/detail/9pmmsr1cgpwg)、[https://apps.microsoft.com/detail/9mzprth5c0tb](https://apps.microsoft.com/detail/9mzprth5c0tb)。
 
 2. 使用图像序列渲染脚本。
-  - 下载链接：https://www.vegascreativesoftware.info/us/forum/posts--133068/?page=3#ca863786
+  - 下载链接：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-19-missing-image-sequence-as-a-render-option--133068/?page=3#ca863786
 
 3. 先渲染为其他格式（`.mov` 等），再用 [FFmpeg](https://ffmpeg.org/) 进行转换。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--133068/">https://www.vegascreativesoftware.info/us/forum/posts--133068/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/image-sequence-rendering-option-gone-on-vegas-18--147113/#ca950963">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/image-sequence-rendering-option-gone-on-vegas-18--147113/#ca950963</a><br>
 </small>
 
 <br>
@@ -1066,7 +1072,7 @@ A：目前已知的有效解决办法只有**通过 Windows 更新工具重装�
 暂不清楚具体的修复原理。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--83436/">https://www.vegascreativesoftware.info/us/forum/posts--83436/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/avi-files-rendering-as-wdp-in-vegas-pro-10--83436/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/avi-files-rendering-as-wdp-in-vegas-pro-10--83436/</a><br>
 </small>
 
 <br>
@@ -1082,7 +1088,7 @@ A：正常情况下 Win7 最高**只支持到 vv17**，vv18 以后一点渲染�
 但这种办法不一定能保证软件本身的稳定性，所以还是建议能升级 win10 的就升级吧。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--128221/">https://www.vegascreativesoftware.info/us/forum/posts--128221/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/win-7-rendering-issue-with-the-magix-vegas-482-version--128221/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/win-7-rendering-issue-with-the-magix-vegas-482-version--128221/</a><br>
 </small>
 
 `18 build 284` 版 `RenderAsDialog.dll` 下载链接：[RenderAsDialog.dll](/downloads/fixes/RenderAsDialog.dll)
@@ -1121,7 +1127,7 @@ Q：点击菜单栏的 **`插入 -> 从文件插入字幕`**，**不能弹出插
 A：这个是比较少见的 bug，并且到目前为止似乎仍未修复。甚至可能之前一直能正常使用这个功能的，突然间就用不了了。目前已知能够解决此问题的办法只有**[重置首选项](#5-重置首选项)**。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--137861/">https://www.vegascreativesoftware.info/us/forum/posts--137861/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/</a><br>
 </small>
 
 <br>
@@ -1159,7 +1165,7 @@ A：问题在于当前文本框内的**富文本包含多种文本格式（如�
   - 使用方法：选中轨道上的单个“字幕和文字”事件以后运行脚本，可以自动将该轨道其他字幕事件的属性与该事件匹配。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--145461/">https://www.vegascreativesoftware.info/us/forum/posts--145461/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/</a><br>
 </small>
 
 <br>
@@ -1237,7 +1243,7 @@ OFX 接口文件的路径结构如下：
 
 **自带 DXT 路径**：`...<Vegas 安装路径>\Video Plug-Ins\`
 
-准确地说，DXT 插件并没有像 OFX 那样强制规定了存放的文件夹。它们是单独的 dll 文件，需要依赖于 dll 注册。所以，我们可以把其他外置的 DXT 插件存放到任意文件夹，之后运行 `regsvr32 xxx.dll` 注册，这样 Vegas 就能识别到这个 DXT 插件了。这对于一些需要手动注册的 DXT 插件很有用，比如 [Route Animation](https://www.vegascreativesoftware.info/us/forum/posts--105615/) (`RouteAnimationX64.dll`)。
+准确地说，DXT 插件并没有像 OFX 那样强制规定了存放的文件夹。它们是单独的 dll 文件，需要依赖于 dll 注册。所以，我们可以把其他外置的 DXT 插件存放到任意文件夹，之后运行 `regsvr32 xxx.dll` 注册，这样 Vegas 就能识别到这个 DXT 插件了。这对于一些需要手动注册的 DXT 插件很有用，比如 [Route Animation](https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/my-vegas-pro-utilities-tools--105615/) (`RouteAnimationX64.dll`)。
 
 <br>
 
@@ -1277,7 +1283,7 @@ Q：**使用自带的 AI 效果，提示要安装 VEGAS 深度学习模型组件
 A：对于高版本自带的 AI 效果，**需要额外安装对应版本的深度学习模型（Deep Learning Models）**才能使用。
 
 <small>
-官方 AI 深度学习模型下载链接：<a href="https://www.vegascreativesoftware.info/us/forum/posts--104782/">https://www.vegascreativesoftware.info/us/forum/posts--104782/<br></a>
+官方 AI 深度学习模型下载链接：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/<br></a>
 </small>
 
 <br>
@@ -1309,7 +1315,7 @@ Q：**vv21** 一添加 **`3D LUT Creator` 插件**就**崩溃/闪退**？
 A：可在旧版中通过插件链保存这个 FX，然后使用时应用该插件链。此 bug 已在 22 中修复。
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--144354/">https://www.vegascreativesoftware.info/us/forum/posts--144354/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/</a><br>
 </small>
 
 <br>
@@ -1328,7 +1334,7 @@ Vegas 的音频插件一共分两类。一类是 DirectX 插件，是比较旧�
 如果其他软件改了公共 VST 路径，则会按照改过的来。可自行查询注册表项 <code>HKEY_LOCAL_MACHINE\SOFTWARE\VST</code> 的 <code>VSTPluginsPath</code> 值所对应的路径字符串数据。
 </small>
 
-- **独立 VST 路径（16 及以上）**：`...<Vegas 安装路径>\MAGIX Plugins\`
+- **独立 VST 路径**：`...<Vegas 安装路径>\MAGIX Plugins\` <sup>**MAGIX 16 及以上**</sup> 或 `...<Vegas 安装路径>\Vegas Plugins\` <sup>**Boris FX 2026 及以上**</sup>
 
 <br>
 
@@ -1378,7 +1384,7 @@ Q：**DirectX 插件没有在音频 FX 列表中显示**/**有但是添加时显
 A：**卸载 Vegas**后，删除 **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`**（vv13 及以下为 `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`）里的所有文件，再**重装 Vegas**。（如果有多个版本的 Vegas，只需卸载一个，提前卸载只是为了之后能够安装上。）
 
 <small>
-参见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--143986/">https://www.vegascreativesoftware.info/us/forum/posts--143986/</a><br>
+参见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/</a><br>
 </small>
 
 <br>
@@ -1398,7 +1404,7 @@ Vegas 支持用户以 `C#`（或 `JScript`、`Visual Basic`）语言编写自定
 - 扩展（`Extention`）：可以在 Vegas 程序启动时就一同运行。能实现更复杂的功能，比如在 Vegas 内创建可停靠窗口等。
 
 <small>
-本文只介绍脚本/扩展安装时遇到的某些问题。如需基础教程，可见：<a href="https://www.vegascreativesoftware.info/us/forum/posts--104563/">https://www.vegascreativesoftware.info/us/forum/posts--104563/</a><br>
+本文只介绍脚本/扩展安装时遇到的某些问题。如需基础教程，可见：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</a><br>
 </small>
 
 <br>
@@ -1436,7 +1442,7 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 
 <br>
 
-由于对于脚本 API 的更改，SonicFoundry 版、Sony 版（13 以前）和 Magix 版（14 至今）的脚本和扩展是不直接兼容的。十分远古的 SonicFoundry 版使用 `SonicFoundry.Vegas` 命名空间，比较远古的 Sony 版使用 `Sony.Vegas` 命名空间，现代的 Magix 版使用 `ScriptPortal.Vegas` 命名空间。对于现成的脚本代码文件（`.cs`、`.js` 或 `.vb`），可以手动用记事本编辑其中的文件内容，使其兼容。对于已经编译成 `.dll` 的脚本或扩展文件，只能修改原项目以后重新编译。
+由于对于脚本 API 的更改，SonicFoundry 版、Sony 版（13 以前）和 Magix / Boris FX 版（14 至今）的脚本和扩展是不直接兼容的。十分远古的 SonicFoundry 版使用 `SonicFoundry.Vegas` 命名空间，比较远古的 Sony 版使用 `Sony.Vegas` 命名空间，现代的 Magix / Boris FX 版使用 `ScriptPortal.Vegas` 命名空间。对于现成的脚本代码文件（`.cs`、`.js` 或 `.vb`），可以手动用记事本编辑其中的文件内容，使其兼容。对于已经编译成 `.dll` 的脚本或扩展文件，只能修改原项目以后重新编译。
 
 <br>
 
@@ -1578,7 +1584,7 @@ Vegas 本身是支持软件多开的，软件多开以后可以将事件跨工�
 
 - 更新的新功能。比如 21 的调整事件，降级到低版本以后会变成空白事件；20 升级了 VST 引擎，20 及以后的工程内的所有 VST 效果，降级到低版本以后也无法正常识别，等等情况。
 
-- 内部 API 或者 GUID 变化。比如 vv13 和 vv14 之间就是一个分界线，前者是 Sony 的，后者是 Magix 的，两者无法跨工程复制粘贴。又比如 vv17 将所有自带的 OFX 效果的 GUID 从 `sonycreativesoftware` 改成了 `vegascreativesoftware`，因此涉及到改动的效果带到低版本中也通通无法正常识别。
+- 内部 API 或者 GUID 变化。比如 13 和 14 之间就是一个分界线，前者是 Sony 的，后者是 Magix 的，两者无法跨工程复制粘贴。又比如 17 将所有自带的 OFX 效果的 GUID 从 `sonycreativesoftware` 改成了 `vegascreativesoftware`，因此涉及到改动的效果带到低版本中也通通无法正常识别。
 
 版本升级则基本不会发生上述情况。
 
@@ -1611,25 +1617,23 @@ A：如果**媒体文件被放在了需要管理员权限的文件夹**，会导
 
 1. Vegas 官网：https://www.vegascreativesoftware.com/us/
 
-  - 官网只售卖最新版本的 Vegas，且不支持国内支付方式。目前官网在定价捆绑包上一共有两个版本，即普通版（不含任何后缀，旧称 `Edit` 版）和套装版（`Suite`）。其中普通版仅包含 Vegas Pro 软件本体，套装版则包含额外软件和插件。在此基础上，还分买断版（`Lifetime` / `Perpetual`）和 365 订阅版（`Subscription`）。官网也支持以旧换新，拥有旧版序列号时购买最新版可以打折。官网提供的安装包并不包含中文版，但可以手动修改注册表来改成中文界面。一个 Vegas 本体序列号能够同时激活两台设备，并且设备不用时，可以在 Magix 账号内解绑，解绑有时间冷却。
+  - Vegas Pro 现已在 Boris FX 旗下，由 Boris FX 进行开发和管理。Boris FX 官网只售卖最新版本的 Vegas。在定价捆绑包上，目前一共有 3 个版本，即标准版（`Vegas Pro`）、增强版（`Vegas Pro Plus`）和终极版（`Vegas Pro Ultimate`）。其中标准版包含 Vegas Pro 软件本体和 Boris FX Continuum 插件的一部分，增强版和终极版则包含更多的额外软件和插件。在此基础上，对于标准版和增强版，还分永久版（`Permanent`）和订阅版（`Subscription`）。Boris FX 提供的版本需要通过 Boris FX Hub 进行安装。在安装时，可能不会安装成你想要的语言版本，但你可以找到安装包程序，卸载后重新安装一遍，单独的安装包程序提供语言选项，包含中文。
 
-  - 官方各版安装包链接：https://www.vegascreativesoftware.info/us/forum/posts--104782/
+  - Magix 版各版安装包链接：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/
 
 2. 国区代理：https://vegaschina.cn/
   - 注意，国内代理商思杰马克丁有风评问题，建议自行考虑是否通过该渠道入正。
-  - **国区代理的序列号只能激活国区代理所提供的安装包。激活后可获得能够绑定在 Magix 账号上的官网版序列号。官网版序列号支持激活官网版安装包，也支持官网的以旧换新优惠。**
+  - **国区代理的序列号只能激活国区代理所提供的安装包。激活后可获得能够绑定在 Magix 账号上的 Magix 版序列号。Magix 版序列号支持激活 Magix 版安装包。**
 
 3. 其他区代理，如日区：https://www.sourcenext.com/product/vegas/video/vegas-edit/
   - 不支持国内支付方式。日区代理相较于官网版更便宜，但似乎不支持改注册表来换成中文界面。
 
 4. Steam 版：https://store.steampowered.com/app/4006040/
-  - vv23 国区定价￥678，自带官方中文（Steam 商店里的语言列表有误）。但 Steam 版有不允许软件多开的问题，且不支持自行修改注册表，也不支持新版的文字转语音/语音转文字和 Vegas Hub 等云服务功能。
+  - 23 国区定价￥678，自带官方中文（Steam 商店里的语言列表有误）。但 Steam 版有不允许软件多开的问题，且不支持自行修改注册表，也不支持新版的文字转语音/语音转文字和 Vegas Hub 等云服务功能。
 
 5. [Humble Bundle](https://www.humblebundle.com/)、[Fanatical](https://www.fanatical.com/) 等优惠网站的不定期的骨折优惠捆绑包。
 
   - 价格在 20-30 美元不等，支持支付宝，可以买到比当前最新 Vegas 版本低两个版本号的软件本体以及捆绑的其他内容，同时也支持官网的以旧换新优惠。比如最新是 21，就会给 19 打骨折，然后在优惠网站上销售。每年只有不定期的几次短暂促销，且每次促销的链接和捆绑包内容也各不相同。
-
-以上入正渠道均会随机触发打折优惠活动，详情可实时关注该帖子：https://www.vegascreativesoftware.info/us/forum/posts--109642/
 
 <br>
 
@@ -1637,6 +1641,6 @@ A：如果**媒体文件被放在了需要管理员权限的文件夹**，会导
 
 夜__晓的 Vegas Pro 交流 QQ 群：[570497914](https://qm.qq.com/cgi-bin/qm/qr?k=vByv4vz64zLaygZW7AgX8-2QReEXjL0a) / [650370844](http://qm.qq.com/cgi-bin/qm/qr?k=ueSwAdOLZl7EvMaGXJu_U5o59fZQ_afi)
 
-Vegas Pro 官方论坛：[https://www.vegascreativesoftware.info/us/vegas-pro-forum/](https://www.vegascreativesoftware.info/us/vegas-pro-forum/)
+Vegas Pro 官方论坛：[https://forum.borisfx.com/c/vegas-pro/55](https://forum.borisfx.com/c/vegas-pro/55)
 
 Vegas Pro Reddit 讨论区：[https://www.reddit.com/r/VegasPro/](https://www.reddit.com/r/VegasPro/)

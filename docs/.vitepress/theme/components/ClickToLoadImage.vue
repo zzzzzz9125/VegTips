@@ -15,6 +15,7 @@
         :alt="alt"
         loading="lazy"
         class="click-to-load__image"
+        @error="handleImageError"
       />
       <figcaption v-if="alt" class="click-to-load__caption">{{ alt }}</figcaption>
     </figure>
@@ -32,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, nextTick, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { useData, withBase } from 'vitepress'
 
 const props = withDefaults(
@@ -90,9 +91,11 @@ const resolvedLocalizedSrc = computed(() =>
 )
 
 const currentSrc = ref<string>(resolvedLocalizedSrc.value ?? resolvedDefaultSrc.value)
+const hasTriedDefaultFallback = ref(false)
 
 watch([resolvedLocalizedSrc, resolvedDefaultSrc], ([localized, fallback]) => {
   currentSrc.value = localized ?? fallback
+  hasTriedDefaultFallback.value = false
 })
 
 const buttonLabel = computed(() => {
@@ -111,7 +114,12 @@ const buttonLabel = computed(() => {
 const handleImageError = (event: Event) => {
   const img = event.target as HTMLImageElement
   // If localized asset 404s, retry with default path
-  if (currentSrc.value === resolvedLocalizedSrc.value && resolvedLocalizedSrc.value) {
+  if (
+    !hasTriedDefaultFallback.value &&
+    currentSrc.value === resolvedLocalizedSrc.value &&
+    resolvedLocalizedSrc.value
+  ) {
+    hasTriedDefaultFallback.value = true
     currentSrc.value = resolvedDefaultSrc.value
     if (imgRef.value) imgRef.value.src = currentSrc.value
     return
@@ -129,6 +137,27 @@ const handleLoad = () => {
     }
   })
 }
+
+onMounted(() => {
+  // Initial localized image load can fail before Vue binds @error during hydration.
+  // Detect a broken image and perform one-time fallback to default asset.
+  nextTick(() => {
+    const img = imgRef.value
+    if (!img) return
+
+    const shouldFallback =
+      !hasTriedDefaultFallback.value &&
+      currentSrc.value === resolvedLocalizedSrc.value &&
+      !!resolvedLocalizedSrc.value
+    const isBroken = img.complete && img.naturalWidth === 0
+
+    if (shouldFallback && isBroken) {
+      hasTriedDefaultFallback.value = true
+      currentSrc.value = resolvedDefaultSrc.value
+      img.src = currentSrc.value
+    }
+  })
+})
 </script>
 
 <style scoped>
