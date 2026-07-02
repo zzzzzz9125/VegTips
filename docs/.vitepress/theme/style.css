@@ -11,6 +11,18 @@
     "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Nanum Gothic",
     "WenQuanYi Micro Hei",
     sans-serif;
+
+  /* Keep Read the Docs Addons aligned with the active VitePress theme. */
+  --readthedocs-font-size: 0.9rem;
+  --readthedocs-flyout-background-color: var(--vp-c-bg-soft);
+  --readthedocs-flyout-color: var(--vp-c-text-1);
+  --readthedocs-flyout-current-version-color: var(--vp-c-brand-1);
+  --readthedocs-flyout-font-family: var(--vp-font-family-base);
+  --readthedocs-flyout-font-size: 0.9rem;
+  --readthedocs-flyout-header-font-size: 0.8rem;
+  --readthedocs-flyout-item-link-color: var(--vp-c-text-1);
+  --readthedocs-flyout-link-color: var(--vp-c-brand-1);
+  --readthedocs-flyout-section-heading-color: var(--vp-c-text-2);
 }
 
 /* Prefer platform native CJK per language for better metrics and weight mapping */

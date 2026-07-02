@@ -8,6 +8,3 @@ docs/.vitepress/dist/
 docs/.vitepress/cache/
 docs/out/
 docs/output/
-
-# Local Netlify folder
-.netlify

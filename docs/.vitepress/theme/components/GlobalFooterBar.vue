@@ -3,11 +3,11 @@
     <span class="global-footer__label">{{ labels.hosted }}</span>
     <a
       class="global-footer__link"
-      href="https://vegtips.netlify.app/"
+      href="https://vegtips.readthedocs.io/"
       target="_blank"
       rel="noreferrer"
     >
-      Netlify
+      Read the Docs
     </a>
     <span class="global-footer__sep">/</span>
     <a
