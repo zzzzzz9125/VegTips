@@ -50,6 +50,14 @@
   --readthedocs-search-badge-color: var(--vp-c-brand-1);
 }
 
+:root[data-scheme~='dark'] {
+  color-scheme: dark;
+}
+
+:root[data-scheme~='light'] {
+  color-scheme: light;
+}
+
 html.dark {
   --readthedocs-search-backdrop-color: rgba(0, 0, 0, 0.68);
   --readthedocs-search-content-background-color: var(--vp-c-bg-alt);

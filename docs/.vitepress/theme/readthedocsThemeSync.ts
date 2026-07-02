@@ -1,57 +1,14 @@
 const THEME_SYNC_FLAG = '__vpReadTheDocsThemeSyncInitialized'
-const SHADOW_SYNC_FLAG = '__vpReadTheDocsShadowSyncObserver'
-const HOST_SELECTOR = 'readthedocs-flyout, readthedocs-search'
+const DATA_SCHEME_ATTR = 'data-scheme'
 
 function isDarkTheme() {
   return document.documentElement.classList.contains('dark')
 }
 
-function styleReadTheDocsImages(root: ShadowRoot, darkTheme: boolean) {
-  const images = root.querySelectorAll('img')
-
-  for (const image of images) {
-    const htmlImage = image as HTMLImageElement
-    const altText = (htmlImage.getAttribute('alt') || '').toLowerCase()
-    const source = htmlImage.getAttribute('src') || ''
-
-    if (!altText.includes('read the docs') && !source.includes('data:image/svg+xml')) {
-      continue
-    }
-
-    if (darkTheme) {
-      htmlImage.style.filter = 'brightness(0) invert(1)'
-      htmlImage.style.opacity = '0.96'
-    } else {
-      htmlImage.style.filter = ''
-      htmlImage.style.opacity = ''
-    }
-  }
-}
-
-function syncHost(host: Element, darkTheme: boolean) {
-  const shadowRoot = (host as HTMLElement).shadowRoot
-  if (!shadowRoot) {
-    return false
-  }
-
-  styleReadTheDocsImages(shadowRoot, darkTheme)
-
-  if (!(host as HTMLElement)[SHADOW_SYNC_FLAG]) {
-    const observer = new MutationObserver(() => {
-      styleReadTheDocsImages(shadowRoot, isDarkTheme())
-    })
-
-    observer.observe(shadowRoot, {
-      childList: true,
-      subtree: true,
-      attributes: true,
-      attributeFilter: ['src', 'class', 'style']
-    })
-
-    ;(host as HTMLElement)[SHADOW_SYNC_FLAG] = observer
-  }
-
-  return true
+function updateRootThemeState(darkTheme: boolean) {
+  const html = document.documentElement
+  html.dataset.scheme = darkTheme ? 'dark' : 'light'
+  html.setAttribute(DATA_SCHEME_ATTR, darkTheme ? 'dark' : 'light')
 }
 
 export function initReadTheDocsThemeSync() {
@@ -71,12 +28,7 @@ export function initReadTheDocsThemeSync() {
   globalWindow[THEME_SYNC_FLAG] = true
 
   const syncAll = () => {
-    const darkTheme = isDarkTheme()
-    const hosts = document.querySelectorAll(HOST_SELECTOR)
-
-    for (const host of hosts) {
-      syncHost(host, darkTheme)
-    }
+    updateRootThemeState(isDarkTheme())
   }
 
   const scheduleSync = () => {
