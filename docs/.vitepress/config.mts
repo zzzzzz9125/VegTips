@@ -1,6 +1,26 @@
 import { defineConfig } from 'vitepress'
 
-const base = process.env.GITHUB_ACTIONS ? '/VegTips/' : '/'
+const readTheDocsCanonicalUrl = process.env.READTHEDOCS_CANONICAL_URL
+
+function getReadTheDocsBase() {
+  if (!readTheDocsCanonicalUrl) {
+    return undefined
+  }
+
+  try {
+    const pathname = new URL(readTheDocsCanonicalUrl).pathname
+    if (!pathname || pathname === '/') {
+      return '/'
+    }
+
+    return pathname.endsWith('/') ? pathname : `${pathname}/`
+  } catch {
+    return undefined
+  }
+}
+
+const isReadTheDocs = Boolean(process.env.READTHEDOCS)
+const base = process.env.GITHUB_ACTIONS ? '/VegTips/' : (getReadTheDocsBase() ?? '/')
 
 const enNav = [
   { text: 'Vegas Troubleshooting', link: '/' },
@@ -156,7 +176,8 @@ const ruSidebar = [
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  cleanUrls: true,
+  // Read the Docs static hosting does not guarantee rewrite rules for extensionless URLs.
+  cleanUrls: !isReadTheDocs,
   base,
   vite: {
     publicDir: '../public'
