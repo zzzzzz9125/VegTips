@@ -23,6 +23,55 @@
   --readthedocs-flyout-item-link-color: var(--vp-c-text-1);
   --readthedocs-flyout-link-color: var(--vp-c-brand-1);
   --readthedocs-flyout-section-heading-color: var(--vp-c-text-2);
+
+  --readthedocs-search-backdrop-color: rgba(17, 24, 39, 0.36);
+  --readthedocs-search-color: var(--vp-c-text-1);
+  --readthedocs-search-link-color: var(--vp-c-text-1);
+  --readthedocs-search-content-background-color: var(--vp-c-bg-soft);
+  --readthedocs-search-content-border-color: var(--vp-c-divider);
+  --readthedocs-search-filters-border-color: var(--vp-c-divider);
+  --readthedocs-search-footer-background-color: var(--vp-c-bg-alt);
+  --readthedocs-search-footer-code-background-color: var(--vp-c-bg-soft);
+  --readthedocs-search-footer-code-border-color: var(--vp-c-divider);
+  --readthedocs-search-input-background-color: var(--vp-c-bg-alt);
+  --readthedocs-search-result-active-background-color: var(--vp-c-bg-alt);
+  --readthedocs-search-result-background-color: transparent;
+  --readthedocs-search-result-border-color: var(--vp-c-divider);
+  --readthedocs-search-result-color: var(--vp-c-text-1);
+  --readthedocs-search-result-heading-color: var(--vp-c-text-1);
+  --readthedocs-search-result-highlight-color: var(--vp-c-brand-1);
+  --readthedocs-search-result-icon-color: var(--vp-c-text-2);
+  --readthedocs-search-result-section-border-color: var(--vp-c-divider);
+  --readthedocs-search-result-section-color: var(--vp-c-text-2);
+  --readthedocs-search-result-section-highlight-color: var(--vp-c-brand-1);
+  --readthedocs-search-result-section-subheading-color: var(--vp-c-text-2);
+  --readthedocs-search-result-subheading-color: var(--vp-c-text-2);
+  --readthedocs-search-badge-background-color: var(--vp-c-brand-soft);
+  --readthedocs-search-badge-color: var(--vp-c-brand-1);
+}
+
+html.dark {
+  --readthedocs-search-backdrop-color: rgba(0, 0, 0, 0.68);
+  --readthedocs-search-content-background-color: var(--vp-c-bg-alt);
+  --readthedocs-search-content-border-color: var(--vp-c-divider);
+  --readthedocs-search-filters-border-color: var(--vp-c-divider);
+  --readthedocs-search-footer-background-color: var(--vp-c-bg-soft);
+  --readthedocs-search-footer-code-background-color: var(--vp-c-bg-soft);
+  --readthedocs-search-footer-code-border-color: var(--vp-c-divider);
+  --readthedocs-search-input-background-color: var(--vp-c-bg-soft);
+  --readthedocs-search-result-active-background-color: rgba(255, 255, 255, 0.06);
+  --readthedocs-search-result-border-color: var(--vp-c-divider);
+  --readthedocs-search-result-color: var(--vp-c-text-1);
+  --readthedocs-search-result-heading-color: var(--vp-c-text-1);
+  --readthedocs-search-result-highlight-color: var(--vp-c-brand-1);
+  --readthedocs-search-result-icon-color: var(--vp-c-text-2);
+  --readthedocs-search-result-section-border-color: var(--vp-c-divider);
+  --readthedocs-search-result-section-color: var(--vp-c-text-2);
+  --readthedocs-search-result-section-highlight-color: var(--vp-c-brand-1);
+  --readthedocs-search-result-section-subheading-color: var(--vp-c-text-2);
+  --readthedocs-search-result-subheading-color: var(--vp-c-text-2);
+  --readthedocs-search-badge-background-color: rgba(97, 175, 239, 0.18);
+  --readthedocs-search-badge-color: var(--vp-c-brand-1);
 }
 
 /* Prefer platform native CJK per language for better metrics and weight mapping */
