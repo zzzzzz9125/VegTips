@@ -6,7 +6,6 @@ import VideoFxTable from './components/VideoFxTable.vue'
 import ScriptApiExplorer from './components/ScriptApiExplorer.vue'
 import ImageDirect from './components/ImageDirect.vue'
 import GlobalFooterBar from './components/GlobalFooterBar.vue'
-import ThemeSync from './components/ThemeSync.vue'
 import './style.css'
 
 export default {
@@ -14,8 +13,7 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       'aside-outline-before': () => h(OutlineDepthToggle),
-      'layout-bottom': () => h(GlobalFooterBar),
-      'layout-top': () => h(ThemeSync)
+      'layout-bottom': () => h(GlobalFooterBar)
     })
   },
   enhanceApp({ app }: EnhanceAppContext) {

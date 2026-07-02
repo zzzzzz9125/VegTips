@@ -13,21 +13,6 @@
     sans-serif;
 }
 
-/*
- * Explicitly declare the active color-scheme so Read the Docs Addons
- * and other third‑party controls automatically follow VitePress's
- * light/dark toggle instead of falling back to the OS preference.
- * VitePress's built‑in CSS already sets "color-scheme: dark" when
- * html.dark is present; this ensures "color-scheme: light" is also
- * unambiguous in light mode.
- */
-html:not(.dark) {
-  color-scheme: light;
-}
-html.dark {
-  color-scheme: dark;
-}
-
 /* Prefer platform native CJK per language for better metrics and weight mapping */
 html:lang(zh), body:lang(zh) {
   --vp-font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
