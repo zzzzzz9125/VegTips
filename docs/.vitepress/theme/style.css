@@ -13,6 +13,28 @@
     sans-serif;
 }
 
+/**
+ * Component: Read the Docs Flyout
+ *
+ * CSS custom properties set on the <readthedocs-flyout> host element are
+ * inherited by its Shadow DOM, allowing the flyout to pick up VitePress's
+ * current theme colors.  The flyout's own defaults are dark‑theme, so
+ * without these overrides the flyout would stay dark even when the page
+ * is in light mode.
+ *
+ * This matches the implementation in otomad/OtomadHelper.
+ */
+readthedocs-flyout {
+  --readthedocs-flyout-color: var(--vp-c-text-2);
+  --readthedocs-flyout-background-color: var(--vp-c-bg-soft);
+  --readthedocs-flyout-current-version-color: var(--vp-c-brand-1);
+  --readthedocs-flyout-section-heading-color: var(--vp-c-text-2);
+  --readthedocs-flyout-item-link-color: var(--vp-c-text-1);
+  --readthedocs-flyout-divider-color: var(--vp-c-divider);
+  --readthedocs-flyout-link-color: var(--vp-c-brand-1);
+  --readthedocs-flyout-line-height: 1.5em;
+}
+
 /* Prefer platform native CJK per language for better metrics and weight mapping */
 html:lang(zh), body:lang(zh) {
   --vp-font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
