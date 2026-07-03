@@ -3397,14 +3397,14 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr   En raison de la mauvaise compatibilité, le format QuickTime est listé sous `Fonctions dépréciées`. Les tests montrent que l'importation de nombreux fichiers mov QuickTime dans VEGAS peut causer des problèmes (échecs de lecture, lenteur). Aussi, le canal alpha n'est pas affiché par défaut à l'importation ; nécessite un changement manuel. Pour la compatibilité, Apple ProRes est recommandé.
 @ru   Из-за плохой совместимости формат QuickTime указан в `Устаревшие функции`. Тестирование показывает, что импорт многих файлов mov QuickTime в VEGAS может вызвать проблемы (сбои чтения, задержки). Кроме того, альфа-канал не отображается по умолчанию при импорте; требует ручного изменения. Для совместимости рекомендуется Apple ProRes.
 
-@en   **Since VP23, VEGAS has effectively dropped QuickTime compatibility and can no longer import or render QuickTime-encoded mov files.**
-@zh   **自 23 大版本以来，Vegas 已经实质上地放弃了对 QuickTime 的兼容，再也无法导入和渲染 QuickTime 编码的 mov 文件。**
-@zh-hant   **自 23 大版本以來，Vegas 已經實質上地放棄了對 QuickTime 的相容，再也無法匯入和算繪 QuickTime 編碼的 mov 檔案。**
-@ja   **VP23 以降、VEGAS は事実上 QuickTime 互換性を放棄し、QuickTime エンコードされた mov ファイルをインポートまたはレンダリングできなくなりました。**
-@ko   **VP23 이후 VEGAS는 실질적으로 QuickTime 호환성을 포기했으며 QuickTime 인코딩된 mov 파일을 더 이상 가져오거나 렌더링할 수 없습니다.**
-@de   **Seit VP23 hat VEGAS die QuickTime-Kompatibilität effektiv aufgegeben und kann keine QuickTime-enkodierten mov-Dateien mehr importieren oder rendern.**
-@fr   **Depuis VP23, VEGAS a effectivement abandonné la compatibilité QuickTime et ne peut plus importer ou rendre des fichiers mov encodés en QuickTime.**
-@ru   **С VP23 VEGAS фактически отказался от совместимости с QuickTime и больше не может импортировать или рендерить файлы mov, закодированные QuickTime.**
+@en   **The VP23 update broke QuickTime compatibility, preventing the import and rendering of QuickTime-encoded mov files. The 2026 build 143 fixed the inability to import QuickTime-encoded files, but rendering QuickTime mov files is still not supported.**
+@zh   **23 大版本更新破坏了对 QuickTime 的兼容，无法导入和渲染 QuickTime 编码的 mov 文件。2026 build 143 版本，修复了 QuickTime 编码无法导入的问题，但仍然不支持渲染 QuickTime mov 文件。**
+@zh-hant   **23 大版本更新破壞了對 QuickTime 的相容，無法匯入和算繪 QuickTime 編碼的 mov 檔案。2026 build 143 版本修復了無法匯入 QuickTime 編碼檔案的問題，但仍然不支援算繪 QuickTime mov 檔案。**
+@ja   **VP23 のメジャーアップデートにより QuickTime 互換性が破壊され、QuickTime エンコードの mov ファイルのインポートおよびレンダリングができなくなりました。2026 年のビルド 143 では QuickTime エンコードのファイルがインポートできない問題が修正されましたが、QuickTime mov ファイルのレンダリングは引き続きサポートされていません。**
+@ko   **VP23 주요 업데이트로 QuickTime 호환성이 손상되어 QuickTime 인코딩된 mov 파일을 가져오거나 렌더링할 수 없게 되었습니다. 2026 빌드 143에서 QuickTime 인코딩 파일을 가져올 수 없는 문제가 해결되었지만 QuickTime mov 파일 렌더링은 여전히 지원되지 않습니다.**
+@de   **Das VP23-Update hat die QuickTime-Kompatibilität zerstört, sodass QuickTime-kodierte mov-Dateien nicht mehr importiert oder gerendert werden können. Mit Build 143 von 2026 wurde das Problem des Imports von QuickTime-kodierten Dateien behoben, das Rendern von QuickTime-mov-Dateien wird jedoch weiterhin nicht unterstützt.**
+@fr   **La mise à jour VP23 a cassé la compatibilité QuickTime, rendant impossible l'importation et le rendu des fichiers mov encodés en QuickTime. La version build 143 de 2026 a corrigé le problème d'importation des fichiers encodés en QuickTime, mais le rendu des fichiers mov QuickTime n'est toujours pas pris en charge.**
+@ru   **Обновление VP23 нарушило совместимость с QuickTime, из-за чего импорт и рендеринг файлов mov, закодированных QuickTime, стали невозможны. В сборке 143 2026 года исправлена проблема с невозможностью импорта файлов QuickTime, но рендеринг QuickTime mov-файлов по-прежнему не поддерживается.**
 
 @en - **Apple ProRes Template <small>(VP18+. If template doesn't exist, this method is unavailable.)</small>**
 @zh - **Apple ProRes 模板 <small>（18 及以上版本。若不存在对应模板，则说明无法通过此办法渲染。）</small>**
@@ -4909,7 +4909,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 @en A: **Uninstall VEGAS**, then delete all files in **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`** (for VP13-: `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`), then **reinstall VEGAS**. (If multiple VEGAS versions, uninstalling one is enough; the uninstall is just to allow reinstallation later.)
 @zh A：**卸载 Vegas** 后，删除 **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`**（vv13 及以下为 `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`）里的所有文件，再**重装 Vegas**。（如果有多个版本的 Vegas，只需卸载一个，提前卸载只是为了之后能够安装上。）
-@zh-hant A：**解除安裝 Vegas**後，刪除 **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`**（vv13 及以下為 `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`）裡的所有檔案，再**重裝 Vegas**。（如果有多個版本的 Vegas，只需解除安裝一個，提前解除安裝只是為了之後能夠安裝上。）
+@zh-hant A：**解除安裝 Vegas** 後，刪除 **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`**（vv13 及以下為 `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`）裡的所有檔案，再**重裝 Vegas**。（如果有多個版本的 Vegas，只需解除安裝一個，提前解除安裝只是為了之後能夠安裝上。）
 @ja A: **VEGAS をアンインストール**し、 **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`** （VP13-： `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`）内のすべてのファイルを削除し、 **VEGAS を再インストール**。（複数の VEGAS バージョンがある場合、1 つのアンインストールで十分。アンインストールは後の再インストールのため。）
 @ko A: **VEGAS를 제거**한 후 **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`** (VP13-: `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`)의 모든 파일을 삭제한 후 **VEGAS를 다시 설치**하십시오. (여러 VEGAS 버전이 있는 경우 하나만 제거하면 됩니다. 제거는 나중에 다시 설치할 수 있도록 하기 위한 것입니다.)
 @de A: **Deinstallieren Sie VEGAS**, dann löschen Sie alle Dateien in **`C:\Programme (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`** (für VP13-: `C:\Programme (x86)\Sony\Shared Plug-Ins\Audio_x64\`), dann **neuinstallieren Sie VEGAS**. (Wenn mehrere VEGAS-Versionen, Deinstallation einer reicht; die Deinstallation ist nur, um Neuinstallation später zu ermöglichen.)
