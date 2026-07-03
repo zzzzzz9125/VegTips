@@ -32,14 +32,7 @@ title: UltraPaste! Extension
 @fr # Extension UltraPaste!
 @ru # Расширение UltraPaste!
 
-@en <ImageOnDemand alt="Icon" src="ultrapaste/img001_ultrapaste_icon.png" />
-@zh <ImageOnDemand alt="图标" src="ultrapaste/img001_ultrapaste_icon.png" />
-@zh-hant <ImageOnDemand alt="圖示" src="ultrapaste/img001_ultrapaste_icon.png" />
-@ja <ImageOnDemand alt="アイコン" src="ultrapaste/img001_ultrapaste_icon.png" />
-@ko <ImageOnDemand alt="아이콘" src="ultrapaste/img001_ultrapaste_icon.png" />
-@de <ImageOnDemand alt="Symbol" src="ultrapaste/img001_ultrapaste_icon.png" />
-@fr <ImageOnDemand alt="Icône" src="ultrapaste/img001_ultrapaste_icon.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Иконка" src="img/ultrapaste/img001_ultrapaste_icon.png" />
+<ImageOnDemand src="ultrapaste/img001_ultrapaste_icon.png" />
 
 @en ## Overview
 @zh ## 简述
@@ -68,14 +61,7 @@ title: UltraPaste! Extension
 @fr Exemple de la méthode d'importation de fichiers multimédias :
 @ru Пример метода импорта медиафайлов:
 
-@en <ImageOnDemand alt="Media Import" src="ultrapaste/img015_ultrapaste_media_import.gif" />
-@zh <ImageOnDemand alt="媒体导入" src="ultrapaste/img015_ultrapaste_media_import.gif" />
-@zh-hant <ImageOnDemand alt="媒體匯入" src="ultrapaste/img015_ultrapaste_media_import.gif" />
-@ja <ImageOnDemand alt="メディアインポート" src="ultrapaste/img015_ultrapaste_media_import.gif" />
-@ko <ImageOnDemand alt="미디어 가져오기" src="ultrapaste/img015_ultrapaste_media_import.gif" />
-@de <ImageOnDemand alt="Medienimport" src="ultrapaste/img015_ultrapaste_media_import.gif" />
-@fr <ImageOnDemand alt="Importation Média" src="ultrapaste/img015_ultrapaste_media_import.gif" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Импорт медиа" src="img/ultrapaste/img015_ultrapaste_media_import.gif" />
+<ImageOnDemand src="ultrapaste/img015_ultrapaste_media_import.gif" />
 
 @en Interaction of the `Clipboard Image` feature with your screenshot tool:
 @zh `剪贴板图像` 功能与你的截图工具的交互：
@@ -86,14 +72,7 @@ title: UltraPaste! Extension
 @fr Interaction de la fonction `Image du presse-papiers` avec votre outil de capture d'écran :
 @ru Взаимодействие функции `Изображение из буфера обмена` с вашим инструментом для скриншотов:
 
-@en <ImageOnDemand alt="Screenshot" src="ultrapaste/img016_ultrapaste_screenshot.gif" />
-@zh <ImageOnDemand alt="截图" src="ultrapaste/img016_ultrapaste_screenshot.gif" />
-@zh-hant <ImageOnDemand alt="截圖" src="ultrapaste/img016_ultrapaste_screenshot.gif" />
-@ja <ImageOnDemand alt="スクリーンショット" src="ultrapaste/img016_ultrapaste_screenshot.gif" />
-@ko <ImageOnDemand alt="스크린샷" src="ultrapaste/img016_ultrapaste_screenshot.gif" />
-@de <ImageOnDemand alt="Screenshot" src="ultrapaste/img016_ultrapaste_screenshot.gif" />
-@fr <ImageOnDemand alt="Capture d'écran" src="ultrapaste/img016_ultrapaste_screenshot.gif" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Скриншот" src="img/ultrapaste/img016_ultrapaste_screenshot.gif" />
+<ImageOnDemand src="ultrapaste/img016_ultrapaste_screenshot.gif" />
 
 @en Interaction of the `Clipboard Image` feature with PowerPoint:
 @zh `剪贴板图像` 功能与 PPT 的交互：
@@ -104,14 +83,7 @@ title: UltraPaste! Extension
 @fr Interaction de la fonction `Image du presse-papiers` avec PowerPoint :
 @ru Взаимодействие функции `Изображение из буфера обмена` с PowerPoint:
 
-@en <ImageOnDemand alt="PowerPoint" src="ultrapaste/img017_ultrapaste_ppt.gif" />
-@zh <ImageOnDemand alt="PPT" src="ultrapaste/img017_ultrapaste_ppt.gif" />
-@zh-hant <ImageOnDemand alt="PPT" src="ultrapaste/img017_ultrapaste_ppt.gif" />
-@ja <ImageOnDemand alt="PowerPoint" src="ultrapaste/img017_ultrapaste_ppt.gif" />
-@ko <ImageOnDemand alt="파워포인트" src="ultrapaste/img017_ultrapaste_ppt.gif" />
-@de <ImageOnDemand alt="PowerPoint" src="ultrapaste/img017_ultrapaste_ppt.gif" />
-@fr <ImageOnDemand alt="PowerPoint" src="ultrapaste/img017_ultrapaste_ppt.gif" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="PowerPoint" src="img/ultrapaste/img017_ultrapaste_ppt.gif" />
+<ImageOnDemand src="ultrapaste/img017_ultrapaste_ppt.gif" />
 
 @en ## Installation
 @zh ## 安装
@@ -185,14 +157,7 @@ title: UltraPaste! Extension
 @fr 2.  Après l'installation, vous pouvez trouver la fenêtre d'extension ancrable via `Outils -> UltraPaste!`.
 @ru 2.  После установки вы можете найти докируемое окно расширения через `Инструменты -> UltraPaste!`.
 
-@en <ImageOnDemand alt="Tools Menu" src="ultrapaste/img002_ultrapaste_tools_menu.png" />
-@zh <ImageOnDemand alt="工具菜单" src="ultrapaste/img002_ultrapaste_tools_menu.png" />
-@zh-hant <ImageOnDemand alt="工具選單" src="ultrapaste/img002_ultrapaste_tools_menu.png" />
-@ja <ImageOnDemand alt="ツールメニュー" src="ultrapaste/img002_ultrapaste_tools_menu.png" />
-@ko <ImageOnDemand alt="도구 메뉴" src="ultrapaste/img002_ultrapaste_tools_menu.png" />
-@de <ImageOnDemand alt="Extras-Menü" src="ultrapaste/img002_ultrapaste_tools_menu.png" />
-@fr <ImageOnDemand alt="Menu Outils" src="ultrapaste/img002_ultrapaste_tools_menu.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Меню Инструменты" src="img/ultrapaste/img002_ultrapaste_tools_menu.png" />
+<ImageOnDemand src="ultrapaste/img002_ultrapaste_tools_menu.png" />
 
 @en ## Usage
 @zh ## 使用
@@ -212,14 +177,7 @@ title: UltraPaste! Extension
 @fr Tout d'abord, l'élément principal `UltraPaste!`. C'est la fonction principale de l'extension ; presque toutes les opérations peuvent être réalisées avec celle-ci. Vous pouvez lui attribuer un raccourci clavier dans `Options -> Personnaliser le clavier` :
 @ru Первым идет самый верхний пункт `UltraPaste!`. Это основная функция расширения; почти все операции могут быть выполнены с его помощью. Вы можете назначить ему сочетание клавиш в `Параметры -> Настроить клавиатуру`:
 
-@en <ImageOnDemand alt="Customize Keyboard" src="ultrapaste/img003_ultrapaste_keyboard.png" />
-@zh <ImageOnDemand alt="自定义键盘" src="ultrapaste/img003_ultrapaste_keyboard.png" />
-@zh-hant <ImageOnDemand alt="自訂鍵盤" src="ultrapaste/img003_ultrapaste_keyboard.png" />
-@ja <ImageOnDemand alt="カスタマイズキーボード" src="ultrapaste/img003_ultrapaste_keyboard.png" />
-@ko <ImageOnDemand alt="키보드 사용자 지정" src="ultrapaste/img003_ultrapaste_keyboard.png" />
-@de <ImageOnDemand alt="Tastatur anpassen" src="ultrapaste/img003_ultrapaste_keyboard.png" />
-@fr <ImageOnDemand alt="Personnaliser le clavier" src="ultrapaste/img003_ultrapaste_keyboard.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Настроить клавиатуру" src="img/ultrapaste/img003_ultrapaste_keyboard.png" />
+<ImageOnDemand src="ultrapaste/img003_ultrapaste_keyboard.png" />
 
 @en `Ctrl + Shift + V` is my personal recommendation. You can bind another convenient shortcut as well. It's not recommended to bind `Ctrl + V`, as it would override VEGAS's native paste key.
 @zh `Ctrl + Shift +V` 是我个人推荐的快捷键，绑个其他顺手的也可以。不建议绑 `Ctrl + V`，会覆盖掉 VEGAS 原生的粘贴键。
@@ -320,14 +278,7 @@ title: UltraPaste! Extension
 @fr ### Général
 @ru ### Общие
 
-@en <ImageOnDemand alt="General" src="ultrapaste/img004_ultrapaste_general.png" />
-@zh <ImageOnDemand alt="常规" src="ultrapaste/img004_ultrapaste_general.png" />
-@zh-hant <ImageOnDemand alt="一般" src="ultrapaste/img004_ultrapaste_general.png" />
-@ja <ImageOnDemand alt="一般" src="ultrapaste/img004_ultrapaste_general.png" />
-@ko <ImageOnDemand alt="일반" src="ultrapaste/img004_ultrapaste_general.png" />
-@de <ImageOnDemand alt="Allgemein" src="ultrapaste/img004_ultrapaste_general.png" />
-@fr <ImageOnDemand alt="Général" src="ultrapaste/img004_ultrapaste_general.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Общие" src="img/ultrapaste/img004_ultrapaste_general.png" />
+<ImageOnDemand src="ultrapaste/img004_ultrapaste_general.png" />
 
 @en Exclude File Types: This option makes the extension exclude files matching specific name patterns. It uses basic DOS expressions. For example, the `*.sfvp0` and `*.sfap0` in the image are VEGAS Pro's video proxy files and audio proxy files, respectively. These proxy files can actually be imported directly into VEGAS, but they are excluded by default to prevent user error. If you don't need to import certain specific files, you can adjust this setting yourself.
 @zh 排除文件类型：这个选项会使扩展排除特定名称规则的文件。使用的是基本的 DOS 表达式。比如图上的 `*.sfvp0` 和 `*.sfap0`，分别是 VEGAS Pro 的视频代理文件和音频代理文件。这些代理文件实际上是可以直接导入进 VEGAS 的，但是为了避免用户误操作，默认是排除掉的。如果你不需要导入某些特定的文件的话，可以自行调整这个设置。
@@ -356,14 +307,7 @@ title: UltraPaste! Extension
 @fr ### Image du presse-papiers
 @ru ### Изображение из буфера обмена
 
-@en <ImageOnDemand alt="Clipboard Image" src="ultrapaste/img005_ultrapaste_clipboard_image.png" />
-@zh <ImageOnDemand alt="剪贴板图像" src="ultrapaste/img005_ultrapaste_clipboard_image.png" />
-@zh-hant <ImageOnDemand alt="剪貼簿圖像" src="ultrapaste/img005_ultrapaste_clipboard_image.png" />
-@ja <ImageOnDemand alt="クリップボード画像" src="ultrapaste/img005_ultrapaste_clipboard_image.png" />
-@ko <ImageOnDemand alt="클립보드 이미지" src="ultrapaste/img005_ultrapaste_clipboard_image.png" />
-@de <ImageOnDemand alt="Zwischenablagebild" src="ultrapaste/img005_ultrapaste_clipboard_image.png" />
-@fr <ImageOnDemand alt="Image du presse-papiers" src="ultrapaste/img005_ultrapaste_clipboard_image.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Изображение из буфера обмена" src="img/ultrapaste/img005_ultrapaste_clipboard_image.png" />
+<ImageOnDemand src="ultrapaste/img005_ultrapaste_clipboard_image.png" />
 
 @en `Start Position`: The starting position for file import. Divided into three categories: `Cursor`, `Playback Cursor`, `Project Start`. The difference between `Cursor` and `Playback Cursor` is that when you play the timeline, the `Cursor` is just the starting point of playback, while the `Playback Cursor` is the real-time playback position of the timeline.
 @zh `起始位置`：文件导入的起始位置。一共分为三类：`光标`、`播放光标`、`项目起始处`。`光标` 和 `播放光标` 的区别是，当你播放时间轴时， `光标` 只是播放的起始处，而 `播放光标` 是时间轴的实时播放位置。
@@ -437,14 +381,7 @@ title: UltraPaste! Extension
 @fr ### Données REAPER
 @ru ### Данные REAPER
 
-@en <ImageOnDemand alt="Reaper Data" src="ultrapaste/img006_ultrapaste_reaper_data.png" />
-@zh <ImageOnDemand alt="Reaper 数据" src="ultrapaste/img006_ultrapaste_reaper_data.png" />
-@zh-hant <ImageOnDemand alt="Reaper 資料" src="ultrapaste/img006_ultrapaste_reaper_data.png" />
-@ja <ImageOnDemand alt="Reaper データ" src="ultrapaste/img006_ultrapaste_reaper_data.png" />
-@ko <ImageOnDemand alt="Reaper 데이터" src="ultrapaste/img006_ultrapaste_reaper_data.png" />
-@de <ImageOnDemand alt="Reaper-Daten" src="ultrapaste/img006_ultrapaste_reaper_data.png" />
-@fr <ImageOnDemand alt="Données Reaper" src="ultrapaste/img006_ultrapaste_reaper_data.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Данные Reaper" src="img/ultrapaste/img006_ultrapaste_reaper_data.png" />
+<ImageOnDemand src="ultrapaste/img006_ultrapaste_reaper_data.png" />
 
 @en This is one of the key features of this extension: complete implementation of REAPER clipboard data import and export. You can select various items or tracks in REAPER, `Ctrl + C`, then directly `Ctrl + Shift + V` paste them into the VEGAS timeline.
 @zh 这个是本扩展的重点功能之一：完全实现了 REAPER 剪贴板数据的导入和导出。你可以在 REAPER 中选择各种物件或者轨道，`Ctrl + C` 以后，直接 `Ctrl + Shift + V` 粘贴到 VEGAS 时间轴里。
@@ -527,23 +464,9 @@ title: UltraPaste! Extension
 @fr Vous pouvez également exporter des événements ou des pistes VEGAS vers des données du presse-papiers REAPER, puis faire `Ctrl + V` dans REAPER, réalisant ainsi une interopérabilité totale entre les logiciels.
 @ru Вы также можете экспортировать события или дорожки VEGAS как данные буфера обмена REAPER, а затем нажать `Ctrl + V` в REAPER, достигнув полной совместимости между программами.
 
-@en <ImageOnDemand alt="Reaper Example 1" src="ultrapaste/img007_ultrapaste_reaper_1.png" />
-@zh <ImageOnDemand alt="Reaper 图例 1" src="ultrapaste/img007_ultrapaste_reaper_1.png" />
-@zh-hant <ImageOnDemand alt="Reaper 圖例 1" src="ultrapaste/img007_ultrapaste_reaper_1.png" />
-@ja <ImageOnDemand alt="Reaper 例 1" src="ultrapaste/img007_ultrapaste_reaper_1.png" />
-@ko <ImageOnDemand alt="Reaper 예제 1" src="ultrapaste/img007_ultrapaste_reaper_1.png" />
-@de <ImageOnDemand alt="Reaper-Beispiel 1" src="ultrapaste/img007_ultrapaste_reaper_1.png" />
-@fr <ImageOnDemand alt="Exemple Reaper 1" src="ultrapaste/img007_ultrapaste_reaper_1.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Пример Reaper 1" src="img/ultrapaste/img007_ultrapaste_reaper_1.png" />
+<ImageOnDemand src="ultrapaste/img007_ultrapaste_reaper_1.png" />
 
-@en <ImageOnDemand alt="Reaper Example 2" src="ultrapaste/img008_ultrapaste_reaper_2.png" />
-@zh <ImageOnDemand alt="Reaper 图例 2" src="ultrapaste/img008_ultrapaste_reaper_2.png" />
-@zh-hant <ImageOnDemand alt="Reaper 圖例 2" src="ultrapaste/img008_ultrapaste_reaper_2.png" />
-@ja <ImageOnDemand alt="Reaper 例 2" src="ultrapaste/img008_ultrapaste_reaper_2.png" />
-@ko <ImageOnDemand alt="Reaper 예제 2" src="ultrapaste/img008_ultrapaste_reaper_2.png" />
-@de <ImageOnDemand alt="Reaper-Beispiel 2" src="ultrapaste/img008_ultrapaste_reaper_2.png" />
-@fr <ImageOnDemand alt="Exemple Reaper 2" src="ultrapaste/img008_ultrapaste_reaper_2.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Пример Reaper 2" src="img/ultrapaste/img008_ultrapaste_reaper_2.png" />
+<ImageOnDemand src="ultrapaste/img008_ultrapaste_reaper_2.png" />
 
 @en Note: Due to scripting API limitations, when the VEGAS version is older than the final version of 15, `VP15B416`, all parameters related to audio event pitch cannot be transferred into VEGAS, nor can they be output to REAPER clipboard data.
 @zh 注意，由于脚本 API 限制，当 VEGAS 版本低于 15 的最终版 `VP15B416` 时，与音频事件的音高有关的所有参数无法被转移进入 VEGAS 里，也无法输出到 REAPER 剪贴板数据。
@@ -590,14 +513,7 @@ title: UltraPaste! Extension
 @fr ### Images PSD
 @ru ### Изображения PSD
 
-@en <ImageOnDemand alt="PSD Images" src="ultrapaste/img009_ultrapaste_psd.png" />
-@zh <ImageOnDemand alt="PSD 图像" src="ultrapaste/img009_ultrapaste_psd.png" />
-@zh-hant <ImageOnDemand alt="PSD 圖像" src="ultrapaste/img009_ultrapaste_psd.png" />
-@ja <ImageOnDemand alt="PSD 画像" src="ultrapaste/img009_ultrapaste_psd.png" />
-@ko <ImageOnDemand alt="PSD 이미지" src="ultrapaste/img009_ultrapaste_psd.png" />
-@de <ImageOnDemand alt="PSD-Bilder" src="ultrapaste/img009_ultrapaste_psd.png" />
-@fr <ImageOnDemand alt="Images PSD" src="ultrapaste/img009_ultrapaste_psd.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Изображения PSD" src="img/ultrapaste/img009_ultrapaste_psd.png" />
+<ImageOnDemand src="ultrapaste/img009_ultrapaste_psd.png" />
 
 @en `Expand All Layers`: When importing a multi-layer PSD image, automatically expand it into separate VEGAS tracks.
 @zh `展开所有图层`：当导入的 PSD 图像含有多个图层时，自动在 VEGAS 轨道中展开。
@@ -635,14 +551,7 @@ title: UltraPaste! Extension
 @fr ### Sous-titres
 @ru ### Субтитры
 
-@en <ImageOnDemand alt="Subtitles" src="ultrapaste/img010_ultrapaste_subtitles.png" />
-@zh <ImageOnDemand alt="字幕" src="ultrapaste/img010_ultrapaste_subtitles.png" />
-@zh-hant <ImageOnDemand alt="字幕" src="ultrapaste/img010_ultrapaste_subtitles.png" />
-@ja <ImageOnDemand alt="字幕" src="ultrapaste/img010_ultrapaste_subtitles.png" />
-@ko <ImageOnDemand alt="자막" src="ultrapaste/img010_ultrapaste_subtitles.png" />
-@de <ImageOnDemand alt="Untertitel" src="ultrapaste/img010_ultrapaste_subtitles.png" />
-@fr <ImageOnDemand alt="Sous-titres" src="ultrapaste/img010_ultrapaste_subtitles.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Субтитры" src="img/ultrapaste/img010_ultrapaste_subtitles.png" />
+<ImageOnDemand src="ultrapaste/img010_ultrapaste_subtitles.png" />
 
 @en Subtitles are another key feature of this extension. You can copy any `Plain Text` / `TXT` file / `SRT` subtitle file / `LRC` subtitle file and paste it into the VEGAS timeline.
 @zh 字幕也是本扩展的重点功能之一。你可以复制任意 `纯文本` / `TXT` 文件 / `SRT` 字幕文件 / `LRC` 字幕文件，粘贴到 VEGAS 时间轴里。
@@ -734,14 +643,7 @@ title: UltraPaste! Extension
 @fr `Longueur par défaut` : La longueur par défaut (en secondes) lors de l'importation de texte brut du presse-papiers ou de fichiers TXT sans horodatage.
 @ru `Длина по умолчанию`: Длина по умолчанию (в секундах) при импорте простого текста из буфера обмена или TXT-файлов без временных меток.
 
-@en <ImageOnDemand alt="Subtitle Region" src="ultrapaste/img011_ultrapaste_subtitles_region.png" />
-@zh <ImageOnDemand alt="字幕区域" src="ultrapaste/img011_ultrapaste_subtitles_region.png" />
-@zh-hant <ImageOnDemand alt="字幕區域" src="ultrapaste/img011_ultrapaste_subtitles_region.png" />
-@ja <ImageOnDemand alt="字幕リージョン" src="ultrapaste/img011_ultrapaste_subtitles_region.png" />
-@ko <ImageOnDemand alt="자막 영역" src="ultrapaste/img011_ultrapaste_subtitles_region.png" />
-@de <ImageOnDemand alt="Untertitelbereich" src="ultrapaste/img011_ultrapaste_subtitles_region.png" />
-@fr <ImageOnDemand alt="Région de sous-titres" src="ultrapaste/img011_ultrapaste_subtitles_region.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Область субтитров" src="img/ultrapaste/img011_ultrapaste_subtitles_region.png" />
+<ImageOnDemand src="ultrapaste/img011_ultrapaste_subtitles_region.png" />
 
 @en <p align="center">Tip: It's more convenient to define a region on the timeline first, then press the shortcut key.</p>
 @zh <p align="center">小技巧：在时间轴上提前划好区域后直接按下快捷键，更方便。</p>
@@ -788,14 +690,7 @@ title: UltraPaste! Extension
 @fr ### Média
 @ru ### Медиа
 
-@en <ImageOnDemand alt="Media" src="ultrapaste/img012_ultrapaste_media.png" />
-@zh <ImageOnDemand alt="媒体" src="ultrapaste/img012_ultrapaste_media.png" />
-@zh-hant <ImageOnDemand alt="媒體" src="ultrapaste/img012_ultrapaste_media.png" />
-@ja <ImageOnDemand alt="メディア" src="ultrapaste/img012_ultrapaste_media.png" />
-@ko <ImageOnDemand alt="미디어" src="ultrapaste/img012_ultrapaste_media.png" />
-@de <ImageOnDemand alt="Medien" src="ultrapaste/img012_ultrapaste_media.png" />
-@fr <ImageOnDemand alt="Média" src="ultrapaste/img012_ultrapaste_media.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Медиа" src="img/ultrapaste/img012_ultrapaste_media.png" />
+<ImageOnDemand src="ultrapaste/img012_ultrapaste_media.png" />
 
 @en `Add Method`: Divided into three types: `Across Time`, `Across Tracks`, `As Takes`. Completely consistent with the three file import methods in VEGAS's native right-click drag import menu.
 @zh `添加方式`：一共分为 `跨时间`、`跨轨道`、`作为片段` 三种。与 VEGAS 自带的右键拖动导入选单中的三种文件导入方式完全一致。
@@ -860,14 +755,7 @@ title: UltraPaste! Extension
 @fr Importation personnalisée des médias :
 @ru Пользовательский импорт медиа:
 
-@en <ImageOnDemand alt="Media Custom Import" src="ultrapaste/img013_ultrapaste_media_custom.png" />
-@zh <ImageOnDemand alt="媒体自定义导入" src="ultrapaste/img013_ultrapaste_media_custom.png" />
-@zh-hant <ImageOnDemand alt="媒體自訂匯入" src="ultrapaste/img013_ultrapaste_media_custom.png" />
-@ja <ImageOnDemand alt="メディアカスタムインポート" src="ultrapaste/img013_ultrapaste_media_custom.png" />
-@ko <ImageOnDemand alt="미디어 사용자 지정 가져오기" src="ultrapaste/img013_ultrapaste_media_custom.png" />
-@de <ImageOnDemand alt="Medienbenutzerdefinierter Import" src="ultrapaste/img013_ultrapaste_media_custom.png" />
-@fr <ImageOnDemand alt="Importation personnalisée des médias" src="ultrapaste/img013_ultrapaste_media_custom.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Пользовательский импорт медиа" src="img/ultrapaste/img013_ultrapaste_media_custom.png" />
+<ImageOnDemand src="ultrapaste/img013_ultrapaste_media_custom.png" />
 
 @en <p align="center">Set import rules for specific media file names</p>
 @zh <p align="center">为特定的媒体文件名称设置导入规则</p>
@@ -923,14 +811,7 @@ title: UltraPaste! Extension
 @fr ### Données VEGAS
 @ru ### Данные VEGAS
 
-@en <ImageOnDemand alt="VEGAS Data" src="ultrapaste/img014_ultrapaste_vegas_data.png" />
-@zh <ImageOnDemand alt="VEGAS 数据" src="ultrapaste/img014_ultrapaste_vegas_data.png" />
-@zh-hant <ImageOnDemand alt="VEGAS 資料" src="ultrapaste/img014_ultrapaste_vegas_data.png" />
-@ja <ImageOnDemand alt="VEGAS データ" src="ultrapaste/img014_ultrapaste_vegas_data.png" />
-@ko <ImageOnDemand alt="VEGAS 데이터" src="ultrapaste/img014_ultrapaste_vegas_data.png" />
-@de <ImageOnDemand alt="VEGAS-Daten" src="ultrapaste/img014_ultrapaste_vegas_data.png" />
-@fr <ImageOnDemand alt="Données VEGAS" src="ultrapaste/img014_ultrapaste_vegas_data.png" />
-@ru <ImageOnDemand button-text="Загрузить изображение" alt="Данные VEGAS" src="img/ultrapaste/img014_ultrapaste_vegas_data.png" />
+<ImageOnDemand src="ultrapaste/img014_ultrapaste_vegas_data.png" />
 
 @en `VEG Import Type`: Divided into three categories: `Open Project File`, `As Nested Project`, `Import Media from Project`.
 @zh `VEG 导入类型`：一共分为 `打开项目文件`、`作为嵌套项目导入`、`导入项目中的媒体` 三类。
