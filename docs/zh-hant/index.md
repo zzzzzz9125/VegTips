@@ -190,9 +190,9 @@ Microsoft Visual C++ 運行庫：https://learn.microsoft.com/cpp/windows/latest-
 
 **Vegas 版本與你的電腦是否合適，這個問題很隨緣。**
 
-公認最穩定的版本應該是 vv13，追求穩定性和功能性兼顧的建議用 **vv18**，新版不保證一定會很穩。自 `21 build 300` 的影片引擎更新以來，Vegas 的影片解碼和算繪慢的問題正在逐步得到解決，這一更新會一直持續到 22 最終版。**目前我最推薦用 22 最終版（`22 build 250`），有很大的改進。**最新版的 23 仍然不是很穩定。
+公認最穩定的版本應該是 vv13，追求穩定性和功能性兼顧的建議用 **vv18**，新版不保證一定會很穩。自 `21 build 300` 的影片引擎更新以來，Vegas 的影片解碼和算繪慢的問題正在逐步得到解決，這一更新會一直持續到 22 最終版。**目前我最推薦用 22 最終版（`22 build 250`），有很大的改進。**最新版的 2026 仍然不是很穩定。
 
-VEGAS 版本更新歷史：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-vegas-post-release-history--104998/
+VEGAS 版本更新歷史：https://forum.borisfx.com/t/vegas-pro-release-history/24284
 
 <br>
 
@@ -225,7 +225,7 @@ Q：Vegas 軟體本體**如何漢化**？
 
 A：Vegas 軟體程式內部一共自帶 `英德法葡西波中日韓` 9 種語言，但是官網提供的 Vegas 本體安裝包，就只有國際語言版，即上述的前 5 種語言，**不含中文**。有以下三種漢化途徑：
 
-1. **使用中文安裝包**。建議在 [入正](#十六軟體入正渠道) 前仔細檢視語言支援列表，看是否含有中文。比如目前官網提供的版本不包含中文，而國內代理思傑馬克丁提供的版本以及 Steam 版均含中文。否則，只能嘗試後兩種途徑。
+1. **使用中文安裝包**。建議在 [入正](#十六、軟體入正渠道) 前仔細檢視語言支援列表，看是否含有中文。比如目前官網提供的版本不包含中文，而國內代理思傑馬克丁提供的版本以及 Steam 版均含中文。否則，只能嘗試後兩種途徑。
 
 2. **使用其他使用者製作的漢化包**。
 
@@ -1283,7 +1283,7 @@ Q：**使用自帶的 AI 效果，提示要安裝 VEGAS 深度學習模型元件
 A：對於高版本自帶的 AI 效果，**需要額外安裝對應版本的深度學習模型（Deep Learning Models）**才能使用。
 
 <small>
-官方 AI 深度學習模型下載連結：<a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/<br></a>
+官方 AI 深度學習模型下載連結：<a href="https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247">https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247<br></a>
 </small>
 
 <br>
@@ -1619,7 +1619,7 @@ A：如果**媒體檔案被放在了需要管理員許可權的資料夾**，會
 
   - Vegas Pro 現已在 Boris FX 旗下，由 Boris FX 進行開發和管理。Boris FX 官網只售賣最新版本的 Vegas。在定價捆綁包上，目前一共有 3 個版本，即標準版（`Vegas Pro`）、增強版（`Vegas Pro Plus`）和終極版（`Vegas Pro Ultimate`）。其中標準版包含 Vegas Pro 軟體本體和 Boris FX Continuum 外掛的一部分，增強版和終極版則包含更多的額外軟體和外掛。在此基礎上，對於標準版和增強版，還分永久版（`Permanent`）和訂閱版（`Subscription`）。Boris FX 提供的版本需要通過 Boris FX Hub 進行安裝。在安裝時，可能不會安裝成你想要的語言版本，但你可以找到安裝包程式，解除安裝後重新安裝一遍，單獨的安裝包程式提供語言選項，包含中文。
 
-  - Magix 版安裝包連結：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/
+  - 安裝包連結：https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
 
 2. 國區代理：https://vegaschina.cn/
   - 注意，國內代理商思傑馬克丁有風評問題，建議自行考慮是否通過該渠道入正。

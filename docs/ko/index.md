@@ -190,9 +190,9 @@ Microsoft Visual C++ 재배포 가능 패키지: https://learn.microsoft.com/cpp
 
 **VEGAS 버전이 귀하의 PC에 적합한지는 다소 무작위적입니다.**
 
-가장 안정적인 버전은 일반적으로 VP13으로 간주됩니다. 안정성과 기능성의 균형을 원한다면 **VP18**을 권장합니다. 최신 버전이 안정적이라고 보장되지 않습니다. `21 build 300`의 비디오 엔진 업데이트 이후 VEGAS의 느린 비디오 디코딩 및 렌더링 문제가 점차 해결되고 있습니다. 이 개선은 VP22 최종 버전까지 계속됩니다. **현재 가장 권장하는 것은 VP22 최종 버전(`22 build 250`)으로, 상당한 개선이 이루어졌습니다.** 최신 VP23은 여전히 매우 안정적이지 않습니다.
+가장 안정적인 버전은 일반적으로 VP13으로 간주됩니다. 안정성과 기능성의 균형을 원한다면 **VP18**을 권장합니다. 최신 버전이 안정적이라고 보장되지 않습니다. `21 build 300`의 비디오 엔진 업데이트 이후 VEGAS의 느린 비디오 디코딩 및 렌더링 문제가 점차 해결되고 있습니다. 이 개선은 VP22 최종 버전까지 계속됩니다. **현재 가장 권장하는 것은 VP22 최종 버전(`22 build 250`)으로, 상당한 개선이 이루어졌습니다.** 최신 VP2026은 여전히 매우 안정적이지 않습니다.
 
-VEGAS Pro / VEGAS Post 출시 기록: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-vegas-post-release-history--104998/
+VEGAS Pro / VEGAS Post 출시 기록: https://forum.borisfx.com/t/vegas-pro-release-history/24284
 
 <br>
 
@@ -1283,7 +1283,7 @@ Q: **내장 AI FX 사용 시 VEGAS 딥 러닝 모델 구성 요소 설치 요청
 A: 새로운 내장 AI FX의 경우 **해당 버전의 딥 러닝 모델을 별도로 설치**해야 합니다.
 
 <small>
-공식 AI 딥 러닝 모델 다운로드: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/<br></a>
+공식 AI 딥 러닝 모델 다운로드: <a href="https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247">https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247<br></a>
 </small>
 
 <br>
@@ -1619,7 +1619,7 @@ A: **미디어 파일이 관리자 권한이 필요한 폴더에 있는 경우**
 
   - Vegas Pro는 현재 Boris FX 산하에 있으며, Boris FX에서 개발 및 관리를 담당합니다. Boris FX 공식 웹사이트에서는 최신 버전의 Vegas만 판매합니다. 가격 번들에는 현재 총 3가지 에디션이 있습니다: 스탠다드 에디션(`Vegas Pro`), 플러스 에디션(`Vegas Pro Plus`), 그리고 얼티밋 에디션(`Vegas Pro Ultimate`). 스탠다드 에디션에는 Vegas Pro 소프트웨어 본체와 Boris FX Continuum 플러그인의 일부가 포함되며, 플러스 에디션과 얼티밋 에디션에는 더 많은 추가 소프트웨어와 플러그인이 포함됩니다. 이와 함께 스탠다드 에디션과 플러스 에디션은 영구 버전(`Permanent`)과 구독 버전(`Subscription`)으로 나뉩니다. Boris FX가 제공하는 버전은 Boris FX Hub를 통해 설치해야 합니다. 설치 시 원하는 언어 버전으로 설치되지 않을 수 있지만, 설치 프로그램을 찾아 제거한 후 다시 설치하면 됩니다. 독립형 설치 프로그램은 언어 옵션을 제공합니다.
 
-  - 공식 설치 프로그램 링크(Magix): https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/
+  - 공식 설치 프로그램 링크: https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
 
 2. 한국 지역 대리점：https://pluginshop.co.kr/products/vegas-pro-22-%EC%98%81%EC%83%81%ED%8E%B8%EC%A7%91-%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-12%EC%9B%94-9%EC%9D%BC%EA%B9%8C%EC%A7%80-%EC%84%B8%EC%9D%BC
 

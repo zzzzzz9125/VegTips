@@ -190,9 +190,9 @@ Microsoft Visual C++ 再頒布可能パッケージ： https://learn.microsoft.c
 
 **VEGAS バージョンがあなたの PC に適しているかどうかは、ある程度ランダムです。**
 
-最も安定しているバージョンは広く VP13 と考えられています。安定性と機能性のバランスを求めるなら、 **VP18** をお勧めします。新しいバージョンは安定している保証はありません。 `21 build 300` でのビデオエンジンの更新以来、VEGAS の遅いビデオデコードとレンダリングの問題は徐々に解決されつつあります。この改善は VP22 の最終版まで続いています。 **現在、私は VP22 最終版（`22 build 250`）を最もお勧めします。大幅な改善があります。** 最新の VP23 はまだあまり安定していません。
+最も安定しているバージョンは広く VP13 と考えられています。安定性と機能性のバランスを求めるなら、 **VP18** をお勧めします。新しいバージョンは安定している保証はありません。 `21 build 300` でのビデオエンジンの更新以来、VEGAS の遅いビデオデコードとレンダリングの問題は徐々に解決されつつあります。この改善は VP22 の最終版まで続いています。 **現在、私は VP22 最終版（`22 build 250`）を最もお勧めします。大幅な改善があります。** 最新の VP2026 はまだあまり安定していません。
 
-VEGAS Pro / VEGAS Post リリース履歴： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-vegas-post-release-history--104998/
+VEGAS Pro / VEGAS Post リリース履歴： https://forum.borisfx.com/t/vegas-pro-release-history/24284
 
 <br>
 
@@ -1283,7 +1283,7 @@ Q: **組み込み AI FX を使用すると、VEGAS Deep Learning Models コン�
 A: 新しい組み込み AI FX には、**対応するバージョンの Deep Learning Models を別途インストールする必要があります**。
 
 <small>
-公式 AI Deep Learning Models ダウンロード： <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/<br></a>
+公式 AI Deep Learning Models ダウンロード： <a href="https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247">https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247<br></a>
 </small>
 
 <br>
@@ -1619,7 +1619,7 @@ A: **メディアファイルが管理者権限を必要とするフォルダ**�
 
   - Vegas Pro は現在 Boris FX の傘下にあり、Boris FX によって開発・管理されています。Boris FX の公式ウェブサイトでは、最新バージョンの Vegas のみを販売しています。価格バンドルには、現在、スタンダード版（`Vegas Pro`）、プラス版（`Vegas Pro Plus`）、アルティメット版（`Vegas Pro Ultimate`）の 3 つのエディションがあります。スタンダード版には Vegas Pro ソフトウェア本体と Boris FX Continuum プラグインの一部が含まれ、プラス版とアルティメット版にはさらに多くの追加ソフトウェアとプラグインが含まれています。これに加えて、スタンダード版とプラス版には、永続版（`Permanent`）とサブスクリプション版（`Subscription`）があります。Boris FX が提供するバージョンは、Boris FX Hub を介してインストールする必要があります。インストール時に希望する言語バージョンにならない場合がありますが、インストーラープログラムを見つけてアンインストールし、再度インストールし直すことができます。単体のインストーラープログラムでは言語オプションが提供されています。
 
-  - 公式インストーラリンク（Magix）： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/
+  - 公式インストーラリンク： https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
 
 
 

@@ -190,9 +190,9 @@ Microsoft Visual C++ Redistributables: https://learn.microsoft.com/cpp/windows/l
 
 **Whether a VEGAS version suits your PC is somewhat random.**
 
-The most stable version is widely considered to be VP13. For a balance of stability and features, **VP18** is recommended. Newer versions are not guaranteed to be stable. Since the video engine update in `21 build 300`, VEGAS's slow video decoding and rendering issues are being gradually addressed. This improvement continues through VP22's final version. **Currently, I most recommend the VP22 final version (`22 build 250`), as it has significant improvements.** The latest VP23 is still not very stable.
+The most stable version is widely considered to be VP13. For a balance of stability and features, **VP18** is recommended. Newer versions are not guaranteed to be stable. Since the video engine update in `21 build 300`, VEGAS's slow video decoding and rendering issues are being gradually addressed. This improvement continues through VP22's final version. **Currently, I most recommend the VP22 final version (`22 build 250`), as it has significant improvements.** The latest VP2026 is still not very stable.
 
-VEGAS Pro / VEGAS Post Release History: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-vegas-post-release-history--104998/
+VEGAS Pro / VEGAS Post Release History: https://forum.borisfx.com/t/vegas-pro-release-history/24284
 
 <br>
 
@@ -1283,7 +1283,7 @@ Q: **Using built-in AI FX prompts to install VEGAS Deep Learning Models componen
 A: For newer built-in AI FX, **you must install the corresponding version of Deep Learning Models** separately.
 
 <small>
-Official AI Deep Learning Models download: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/<br></a>
+Official AI Deep Learning Models download: <a href="https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247">https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247<br></a>
 </small>
 
 <br>
@@ -1619,7 +1619,7 @@ Also, for info on <code>.sfk</code>, <code>.sfl</code>, <code>.sfap0</code>, <co
 
   - Vegas Pro is now under Boris FX, developed and managed by Boris FX. The official Boris FX website only sells the latest version of Vegas. In terms of pricing bundles, there are currently three editions: the Standard Edition (`Vegas Pro`), the Plus Edition (`Vegas Pro Plus`), and the Ultimate Edition (`Vegas Pro Ultimate`). The Standard Edition includes the Vegas Pro software itself and a portion of the Boris FX Continuum plugins, while the Plus and Ultimate Editions include more additional software and plugins. On top of this, for the Standard and Plus Editions, there are also perpetual licenses (`Permanent`) and subscription plans (`Subscription`). The versions provided by Boris FX need to be installed via the Boris FX Hub. During installation, the software may not be installed in your desired language, but you can locate the installer program, uninstall it, and then reinstall it. The standalone installer program offers language options.
 
-  - Magix Official Installer Links: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/
+  - Official Installer Links: https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
 
 
 

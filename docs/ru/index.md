@@ -190,9 +190,9 @@ layout: doc
 
 **В некоторой степени случайно, подходит ли версия VEGAS для вашего ПК.**
 
-Наиболее стабильной версией широко считается VP13. Для баланса стабильности и функций рекомендуется **VP18**. Более новые версии не гарантируют стабильность. С момента обновления видео-движка в `21 build 300`, проблемы медленного декодирования и рендеринга видео в VEGAS постепенно решаются. Это улучшение продолжается до финальной версии VP22. **В настоящее время я больше всего рекомендую финальную версию VP22 (`22 build 250`), так как в ней есть значительные улучшения.** Последняя VP23 все еще не очень стабильна.
+Наиболее стабильной версией широко считается VP13. Для баланса стабильности и функций рекомендуется **VP18**. Более новые версии не гарантируют стабильность. С момента обновления видео-движка в `21 build 300`, проблемы медленного декодирования и рендеринга видео в VEGAS постепенно решаются. Это улучшение продолжается до финальной версии VP22. **В настоящее время я больше всего рекомендую финальную версию VP22 (`22 build 250`), так как в ней есть значительные улучшения.** Последняя VP2026 все еще не очень стабильна.
 
-История выпусков VEGAS Pro / VEGAS Post: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-vegas-post-release-history--104998/
+История выпусков VEGAS Pro / VEGAS Post: https://forum.borisfx.com/t/vegas-pro-release-history/24284
 
 <br>
 
@@ -1283,7 +1283,7 @@ GUID:
 О: Для новых встроенных AI FX **вы должны установить соответствующую версию Deep Learning Models** отдельно.
 
 <small>
-Официальная загрузка AI Deep Learning Models: <a href="https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/">https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/<br></a>
+Официальная загрузка AI Deep Learning Models: <a href="https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247">https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247<br></a>
 </small>
 
 <br>
@@ -1619,7 +1619,7 @@ VEGAS поддерживает несколько экземпляров. Вы �
 
   - Vegas Pro теперь находится под управлением Boris FX, разрабатывается и управляется компанией Boris FX. На официальном сайте Boris FX продаётся только последняя версия Vegas. Что касается пакетов лицензирования, в настоящее время существует три редакции: Стандартная (`Vegas Pro`), Расширенная (`Vegas Pro Plus`) и Максимальная (`Vegas Pro Ultimate`). Стандартная редакция включает в себя само программное обеспечение Vegas Pro и часть плагинов Boris FX Continuum, в то время как Расширенная и Максимальная редакции включают больше дополнительного ПО и плагинов. Кроме того, для Стандартной и Расширенной редакций предлагаются как бессрочная лицензия (`Permanent`), так и подписка (`Subscription`). Версии, предоставляемые Boris FX, необходимо устанавливать через Boris FX Hub. При установке может быть установлена не та языковая версия, которую вы хотите, но вы можете найти установщик, удалить программу и установить заново — отдельный установщик предлагает выбор языка.
 
-  - Ссылки на официальные установщики (Magix): https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/faq-where-can-i-download-vegas-pro-and-other-vegas-software--104782/
+  - Ссылки на официальные установщики: https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
 
 
 
