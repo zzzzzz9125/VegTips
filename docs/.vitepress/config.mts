@@ -34,7 +34,7 @@ const navTemplate: Array<LocaleText & { link: string }> = [
   {
     en: 'Vegas Troubleshooting', zh: 'Vegas 疑难杂症', 'zh-hant': 'Vegas 疑難雜症',
     ja: 'Vegas トラブルシューティング', ko: 'Vegas 문제 해결', de: 'Vegas Fehlerbehebung',
-    fr: 'Vegas Dépannage', ru: 'Vegas Устранение неполадок', link: ''
+    fr: 'Vegas Dépannage', ru: 'Vegas Устранение неполадок', link: '/'
   },
   {
     en: 'Video FX List', zh: '视频 FX 效果列表', 'zh-hant': '影片 FX 效果列表',
