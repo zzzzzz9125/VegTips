@@ -121,6 +121,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useData } from 'vitepress'
+import { useI18n } from '../composables/useI18n'
 
 type Kind = 'T' | 'P' | 'M' | 'F' | 'E' | 'N'
 
@@ -179,9 +180,7 @@ type MessageSet = {
   diffSummary: (a: number, r: number, c: number) => string
 }
 
-const props = withDefaults(defineProps<{ locale?: string }>(), {
-  locale: 'en'
-})
+withDefaults(defineProps<{}>(), {})
 
 const versions = ['21.0.0.208', '21.0.0.315', '22.0.0.250', '23.0.0.302', '2026.0.0.66']
 const versionA = ref(versions[versions.length - 1])
@@ -374,7 +373,7 @@ const messageMap: Record<string, MessageSet> = {
   }
 }
 
-const t = computed(() => messageMap[props.locale || 'en'] ?? messageMap.en)
+const { t } = useI18n(messageMap)
 
 const versionBOptions = computed(() => versions.filter((v) => v !== versionA.value))
 

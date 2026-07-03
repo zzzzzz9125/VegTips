@@ -132,6 +132,7 @@
 import { computed, onBeforeUnmount, onMounted, ref, watch, watchEffect } from 'vue'
 import { pinyin } from 'pinyin-pro'
 import { useData } from 'vitepress'
+import { useI18n } from '../composables/useI18n'
 
 type FxType = 'videoFx' | 'transitionFx' | 'generatorFx' | 'compositeFx'
 
@@ -329,7 +330,8 @@ const transliterateText = (text: string): string[] => {
   return out
 }
 
-const { lang, site } = useData()
+const { site } = useData()
+const { locale } = useI18n({})
 const typeKeys: FxType[] = ['videoFx', 'transitionFx', 'generatorFx', 'compositeFx']
 const allColumns: ColumnDef[] = [
   { key: 'name', labelKey: 'colChineseName', minWidth: 220 },
@@ -388,20 +390,11 @@ const resizing = ref<{ key: ColumnKey; startX: number; startWidth: number } | nu
 let activeMove: ((e: PointerEvent) => void) | null = null
 let activeStop: (() => void) | null = null
 
-const isZh = computed(() => (lang.value || '').toLowerCase().startsWith('zh'))
-const currentLocale = computed(() => {
-  const lv = (lang.value || '').toLowerCase()
-  if (lv.startsWith('zh')) return 'zh'
-  if (lv.startsWith('ja')) return 'ja'
-  if (lv.startsWith('ko')) return 'ko'
-  if (lv.startsWith('de')) return 'de'
-  if (lv.startsWith('fr')) return 'fr'
-  if (lv.startsWith('ru')) return 'ru'
-  return 'en'
-})
+const isZh = computed(() => locale.value === 'zh' || locale.value === 'zh-hant')
 
 const messages = computed<Messages>(() => {
-  switch (currentLocale.value) {
+  switch (locale.value) {
+    case 'zh-hant':
     case 'zh':
       return {
         searchLabel: '搜索',

@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import i18nMacroPlugin from './plugins/markdown-it/i18n-macro'
 
 const readTheDocsCanonicalUrl = process.env.READTHEDOCS_CANONICAL_URL
 
@@ -22,157 +23,67 @@ function getReadTheDocsBase() {
 const isReadTheDocs = Boolean(process.env.READTHEDOCS)
 const base = process.env.GITHUB_ACTIONS ? '/VegTips/' : (getReadTheDocsBase() ?? '/')
 
-const enNav = [
-  { text: 'Vegas Troubleshooting', link: '/' },
-  { text: 'Video FX List', link: '/videofxlist' },
-  { text: 'UltraPaste! Extension', link: '/ultrapaste' },
-  { text: 'Script API', link: '/scriptapi' }
-]
+type LocaleKey = 'en' | 'zh' | 'zh-hant' | 'ja' | 'ko' | 'de' | 'fr' | 'ru'
+type LocaleText = Record<LocaleKey, string>
 
-const zhNav = [
-  { text: 'Vegas 疑难杂症', link: '/zh/' },
-  { text: '视频 FX 效果列表', link: '/zh/videofxlist' },
-  { text: '超级粘贴! 扩展', link: '/zh/ultrapaste' },
-  { text: '脚本 API', link: '/zh/scriptapi' }
-]
+function localeText(item: LocaleText, locale: string): string {
+  return (item as Record<string, string>)[locale] ?? item.en
+}
 
-const zhHantNav = [
-  { text: 'Vegas 疑難雜症', link: '/zh-hant/' },
-  { text: '影片 FX 效果列表', link: '/zh-hant/videofxlist' },
-  { text: 'UltraPaste! 擴充套件', link: '/zh-hant/ultrapaste' },
-  { text: '指令碼 API', link: '/zh-hant/scriptapi' }
-]
-
-const jaNav = [
-  { text: 'Vegas トラブルシューティング', link: '/ja/' },
-  { text: 'ビデオ FX リスト', link: '/ja/videofxlist' },
-  { text: 'UltraPaste! 拡張機能', link: '/ja/ultrapaste' },
-  { text: 'スクリプト API', link: '/ja/scriptapi' }
-]
-
-const koNav = [
-  { text: 'Vegas 문제 해결', link: '/ko/' },
-  { text: 'Video FX 목록', link: '/ko/videofxlist' },
-  { text: 'UltraPaste! 확장', link: '/ko/ultrapaste' },
-  { text: '스크립트 API', link: '/ko/scriptapi' }
-]
-
-const deNav = [
-  { text: 'Vegas Fehlerbehebung', link: '/de/' },
-  { text: 'Video‑FX‑Liste', link: '/de/videofxlist' },
-  { text: 'UltraPaste! Erweiterung', link: '/de/ultrapaste' },
-  { text: 'Skript-API', link: '/de/scriptapi' }
-]
-
-const frNav = [
-  { text: 'Vegas Dépannage', link: '/fr/' },
-  { text: 'Liste des FX vidéo', link: '/fr/videofxlist' },
-  { text: 'UltraPaste! Extension', link: '/fr/ultrapaste' },
-  { text: 'API de script', link: '/fr/scriptapi' }
-]
-
-const ruNav = [
-  { text: 'Vegas Устранение неполадок', link: '/ru/' },
-  { text: 'Список видеоэффектов', link: '/ru/videofxlist' },
-  { text: 'Расширение UltraPaste!', link: '/ru/ultrapaste' },
-  { text: 'Скриптовый API', link: '/ru/scriptapi' }
-]
-
-const enSidebar = [
+const navTemplate: Array<LocaleText & { link: string }> = [
   {
-    text: 'Articles',
+    en: 'Vegas Troubleshooting', zh: 'Vegas 疑难杂症', 'zh-hant': 'Vegas 疑難雜症',
+    ja: 'Vegas トラブルシューティング', ko: 'Vegas 문제 해결', de: 'Vegas Fehlerbehebung',
+    fr: 'Vegas Dépannage', ru: 'Vegas Устранение неполадок', link: ''
+  },
+  {
+    en: 'Video FX List', zh: '视频 FX 效果列表', 'zh-hant': '影片 FX 效果列表',
+    ja: 'ビデオ FX リスト', ko: 'Video FX 목록', de: 'Video‑FX‑Liste',
+    fr: 'Liste des FX vidéo', ru: 'Список видеоэффектов', link: '/videofxlist'
+  },
+  {
+    en: 'UltraPaste! Extension', zh: '超级粘贴! 扩展', 'zh-hant': 'UltraPaste! 擴充套件',
+    ja: 'UltraPaste! 拡張機能', ko: 'UltraPaste! 확장', de: 'UltraPaste! Erweiterung',
+    fr: 'UltraPaste! Extension', ru: 'Расширение UltraPaste!', link: '/ultrapaste'
+  },
+  {
+    en: 'Script API', zh: '脚本 API', 'zh-hant': '指令碼 API',
+    ja: 'スクリプト API', ko: '스크립트 API', de: 'Skript-API',
+    fr: 'API de script', ru: 'Скриптовый API', link: '/scriptapi'
+  }
+]
+
+const sidebarTemplate: Array<LocaleText & { items: Array<LocaleText & { link: string }> }> = [
+  {
+    en: 'Articles', zh: '文章', 'zh-hant': '文章',
+    ja: '記事', ko: '문서', de: 'Artikel', fr: 'Articles', ru: 'Материалы',
     items: [
-      { text: 'Vegas Troubleshooting', link: '/' },
-      { text: 'Video FX List', link: '/videofxlist' },
-      { text: 'UltraPaste! Extension', link: '/ultrapaste' },
-      { text: 'Script API', link: '/scriptapi' }
+      { ...navTemplate[0] },
+      { ...navTemplate[1] },
+      { ...navTemplate[2] },
+      { ...navTemplate[3] }
     ]
   }
 ]
 
-const zhSidebar = [
-  {
-    text: '文章',
-    items: [
-      { text: 'Vegas 疑难杂症', link: '/zh/' },
-      { text: '视频 FX 效果列表', link: '/zh/videofxlist' },
-      { text: '超级粘贴! 扩展', link: '/zh/ultrapaste' },
-      { text: '脚本 API', link: '/zh/scriptapi' }
-    ]
-  }
-]
+function navForLocale(locale: string) {
+  const prefix = locale === 'root' ? '' : `/${locale}`
+  return navTemplate.map(item => ({
+    text: localeText(item, locale),
+    link: prefix + item.link
+  }))
+}
 
-const zhHantSidebar = [
-  {
-    text: '文章',
-    items: [
-      { text: 'Vegas 疑難雜症', link: '/zh-hant/' },
-      { text: '影片 FX 效果列表', link: '/zh-hant/videofxlist' },
-      { text: 'UltraPaste! 擴充套件', link: '/zh-hant/ultrapaste' },
-      { text: '指令碼 API', link: '/zh-hant/scriptapi' }
-    ]
-  }
-]
-
-const jaSidebar = [
-  {
-    text: '記事',
-    items: [
-      { text: 'Vegas トラブルシューティング', link: '/ja/' },
-      { text: 'Video FX リスト', link: '/ja/videofxlist' },
-      { text: 'UltraPaste! 拡張機能', link: '/ja/ultrapaste' },
-      { text: 'スクリプト API', link: '/ja/scriptapi' }
-    ]
-  }
-]
-
-const koSidebar = [
-  {
-    text: '문서',
-    items: [
-      { text: 'Vegas 문제 해결', link: '/ko/' },
-      { text: 'Video FX 목록', link: '/ko/videofxlist' },
-      { text: 'UltraPaste! 확장', link: '/ko/ultrapaste' },
-      { text: '스크립트 API', link: '/ko/scriptapi' }
-    ]
-  }
-]
-
-const deSidebar = [
-  {
-    text: 'Artikel',
-    items: [
-      { text: 'Vegas Fehlerbehebung', link: '/de/' },
-      { text: 'Video‑FX‑Liste', link: '/de/videofxlist' },
-      { text: 'UltraPaste! Erweiterung', link: '/de/ultrapaste' },
-      { text: 'Skript-API', link: '/de/scriptapi' }
-    ]
-  }
-]
-
-const frSidebar = [
-  {
-    text: 'Articles',
-    items: [
-      { text: 'Vegas Dépannage', link: '/fr/' },
-      { text: 'Liste des FX vidéo', link: '/fr/videofxlist' },
-      { text: 'UltraPaste! Extension', link: '/fr/ultrapaste' },
-      { text: 'API de script', link: '/fr/scriptapi' }
-    ]
-  }
-]
-
-const ruSidebar = [
-  {
-    text: 'Материалы',
-    items: [
-      { text: 'Vegas Устранение неполадок', link: '/ru/' },
-      { text: 'Список видеоэффектов', link: '/ru/videofxlist' },
-      { text: 'Расширение UltraPaste!', link: '/ru/ultrapaste' },
-      { text: 'Скриптовый API', link: '/ru/scriptapi' }
-    ]
-  }
-]
+function sidebarForLocale(locale: string) {
+  const prefix = locale === 'root' ? '' : `/${locale}`
+  return sidebarTemplate.map(group => ({
+    text: localeText(group, locale),
+    items: group.items.map(item => ({
+      text: localeText(item, locale),
+      link: prefix + item.link
+    }))
+  }))
+}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -189,8 +100,8 @@ export default defineConfig({
       title: 'VegTips',
       description: 'Some practical tips for VEGAS Pro',
       themeConfig: {
-        nav: enNav,
-        sidebar: enSidebar
+        nav: navForLocale('root'),
+        sidebar: sidebarForLocale('root')
       }
     },
     zh: {
@@ -200,8 +111,8 @@ export default defineConfig({
       description: 'VEGAS Pro 的实用技巧',
       link: '/zh/',
       themeConfig: {
-        nav: zhNav,
-        sidebar: zhSidebar,
+        nav: navForLocale('zh'),
+        sidebar: sidebarForLocale('zh'),
         outlineTitle: '页面导航',
         docFooter: {
           prev: '上一页',
@@ -216,8 +127,8 @@ export default defineConfig({
       description: 'VEGAS Pro 的實用技巧',
       link: '/zh-hant/',
       themeConfig: {
-        nav: zhHantNav,
-        sidebar: zhHantSidebar,
+        nav: navForLocale('zh-hant'),
+        sidebar: sidebarForLocale('zh-hant'),
         outlineTitle: '頁面導覽',
         docFooter: {
           prev: '上一頁',
@@ -232,8 +143,8 @@ export default defineConfig({
       description: 'VEGAS Pro の実用的なヒント',
       link: '/ja/',
       themeConfig: {
-        nav: jaNav,
-        sidebar: jaSidebar,
+        nav: navForLocale('ja'),
+        sidebar: sidebarForLocale('ja'),
         outlineTitle: 'ページナビゲーション',
         docFooter: {
           prev: '前へ',
@@ -248,8 +159,8 @@ export default defineConfig({
       description: 'VEGAS Pro 실용 팁',
       link: '/ko/',
       themeConfig: {
-        nav: koNav,
-        sidebar: koSidebar,
+        nav: navForLocale('ko'),
+        sidebar: sidebarForLocale('ko'),
         outlineTitle: '페이지 탐색',
         docFooter: {
           prev: '이전',
@@ -264,8 +175,8 @@ export default defineConfig({
       description: 'Praktische Tipps für VEGAS Pro',
       link: '/de/',
       themeConfig: {
-        nav: deNav,
-        sidebar: deSidebar,
+        nav: navForLocale('de'),
+        sidebar: sidebarForLocale('de'),
         outlineTitle: 'Seitennavigation',
         docFooter: {
           prev: 'Zurück',
@@ -280,8 +191,8 @@ export default defineConfig({
       description: 'Astuces pratiques pour VEGAS Pro',
       link: '/fr/',
       themeConfig: {
-        nav: frNav,
-        sidebar: frSidebar,
+        nav: navForLocale('fr'),
+        sidebar: sidebarForLocale('fr'),
         outlineTitle: 'Navigation de page',
         docFooter: {
           prev: 'Précédent',
@@ -296,8 +207,8 @@ export default defineConfig({
       description: 'Практические советы для VEGAS Pro',
       link: '/ru/',
       themeConfig: {
-        nav: ruNav,
-        sidebar: ruSidebar,
+        nav: navForLocale('ru'),
+        sidebar: sidebarForLocale('ru'),
         outlineTitle: 'Навигация по странице',
         docFooter: {
           prev: 'Назад',
@@ -312,9 +223,14 @@ export default defineConfig({
     ['script', { src: `${base}js/outline-depth.js` }],
     ['script', { src: `${base}js/hash-stabilizer.js` }]
   ],
+  markdown: {
+    config: (md) => {
+      md.use(i18nMacroPlugin)
+    }
+  },
   themeConfig: {
-    nav: enNav,
-    sidebar: enSidebar,
+    nav: navForLocale('root'),
+    sidebar: sidebarForLocale('root'),
     socialLinks: [
       { icon: 'github', link: 'https://github.com/zzzzzz9125/VegTips' }
     ],

@@ -31,8 +31,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
-import { useData, useRoute } from 'vitepress'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { useRoute } from 'vitepress'
+import { useI18n } from '../composables/useI18n'
 
 const storageKey = 'vegTips-outline-depth'
 const storageKeyAuto = 'vegTips-outline-auto-expand'
@@ -40,23 +41,22 @@ const levels = [2, 3, 4]
 const depth = ref(2)
 const expandedH2Href = ref<string | null>(null)
 const autoExpand = ref(true)
-const { lang } = useData()
 const route = useRoute()
 let outlineObserver: MutationObserver | null = null
 let activeMarkerObserver: MutationObserver | null = null
 let proxyActiveLink: HTMLAnchorElement | null = null
 let activeMarkerRaf = 0
 
-const labels = computed(() => {
-  const lv = (lang.value || '').toLowerCase()
-  if (lv.startsWith('zh')) return { depth: '目录层级', autoExpand: '自动展开' }
-  if (lv.startsWith('ja')) return { depth: 'アウトラインの深さ', autoExpand: '自動展開' }
-  if (lv.startsWith('ko')) return { depth: '개요 깊이', autoExpand: '자동 펼치기' }
-  if (lv.startsWith('de')) return { depth: 'Gliederungstiefe', autoExpand: 'Automatisch erweitern' }
-  if (lv.startsWith('fr')) return { depth: 'Profondeur du plan', autoExpand: 'Dépliage automatique' }
-  if (lv.startsWith('ru')) return { depth: 'Глубина оглавления', autoExpand: 'Авторазворачивание' }
-  return { depth: 'Outline depth', autoExpand: 'Auto expand' }
-})
+const labels = useI18n({
+  en: { depth: 'Outline depth', autoExpand: 'Auto expand' },
+  zh: { depth: '目录层级', autoExpand: '自动展开' },
+  'zh-hant': { depth: '目錄層級', autoExpand: '自動展開' },
+  ja: { depth: 'アウトラインの深さ', autoExpand: '自動展開' },
+  ko: { depth: '개요 깊이', autoExpand: '자동 펼치기' },
+  de: { depth: 'Gliederungstiefe', autoExpand: 'Automatisch erweitern' },
+  fr: { depth: 'Profondeur du plan', autoExpand: 'Dépliage automatique' },
+  ru: { depth: 'Глубина оглавления', autoExpand: 'Авторазворачивание' }
+}).t
 
 const applyDepthDataset = (value: number) => {
   if (typeof document === 'undefined') return

@@ -21,8 +21,6 @@
  * current theme colors.  The flyout's own defaults are dark‑theme, so
  * without these overrides the flyout would stay dark even when the page
  * is in light mode.
- *
- * This matches the implementation in otomad/OtomadHelper.
  */
 readthedocs-flyout {
   --readthedocs-flyout-color: var(--vp-c-text-2);

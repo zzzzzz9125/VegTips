@@ -8,6 +8,7 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
 import { useData, withBase } from 'vitepress'
+import { useI18n } from '../composables/useI18n'
 
 const props = defineProps<{
   src: string
@@ -16,6 +17,7 @@ const props = defineProps<{
 }>()
 
 const { lang } = useData()
+const { locale } = useI18n({})
 
 const normalizePath = (path: string) => path.replace(/^\/+/, '')
 const ensureImgPrefix = (path: string) => (path.startsWith('img/') ? path : `img/${path}`)
@@ -23,15 +25,8 @@ const ensureImgPrefix = (path: string) => (path.startsWith('img/') ? path : `img
 const baseRelativePath = computed(() => ensureImgPrefix(normalizePath(props.src)))
 
 const localePrefix = computed(() => {
-  const lv = (lang.value || '').toLowerCase()
-  if (lv.startsWith('zh-hant')) return 'zh-hant'
-  if (lv.startsWith('zh')) return 'zh'
-  if (lv.startsWith('ja')) return 'ja'
-  if (lv.startsWith('ko')) return 'ko'
-  if (lv.startsWith('de')) return 'de'
-  if (lv.startsWith('fr')) return 'fr'
-  if (lv.startsWith('ru')) return 'ru'
-  return ''
+  if (locale.value === 'en') return ''
+  return locale.value
 })
 
 const localizedRelativePath = computed(() => {

@@ -22,20 +22,16 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useData } from 'vitepress'
+import { useI18n } from '../composables/useI18n'
 
-const { lang } = useData()
-
-const labels = computed(() => {
-  const lv = (lang.value || '').toLowerCase()
-  if (lv.startsWith('zh-hant') || lv.startsWith('zh-tw') || lv.startsWith('zh-hk') || lv.startsWith('zh-mo')) return { hosted: '託管於' }
-  if (lv.startsWith('zh')) return { hosted: '托管于' }
-  if (lv.startsWith('ja')) return { hosted: 'ホスティング先:' }
-  if (lv.startsWith('ko')) return { hosted: '호스팅:' }
-  if (lv.startsWith('de')) return { hosted: 'Gehostet bei' }
-  if (lv.startsWith('fr')) return { hosted: 'Hébergé sur' }
-  if (lv.startsWith('ru')) return { hosted: 'Размещено на' }
-  return { hosted: 'Hosted on' }
+const { t: labels } = useI18n({
+  en: { hosted: 'Hosted on' },
+  zh: { hosted: '托管于' },
+  'zh-hant': { hosted: '託管於' },
+  ja: { hosted: 'ホスティング先:' },
+  ko: { hosted: '호스팅:' },
+  de: { hosted: 'Gehostet bei' },
+  fr: { hosted: 'Hébergé sur' },
+  ru: { hosted: 'Размещено на' }
 })
 </script>
