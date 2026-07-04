@@ -6,8 +6,9 @@
     "vitepress": "^2.0.0-alpha.15"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "prebuild": "node scripts/copy-locale-pages.mjs",
+    "docs:dev": "npm run prebuild && vitepress dev docs",
+    "docs:build": "npm run prebuild && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "docs:deploy": "npm run docs:build && gh-pages -d docs/.vitepress/dist -t true"
   }

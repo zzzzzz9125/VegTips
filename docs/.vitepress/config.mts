@@ -231,6 +231,158 @@ export default defineConfig({
   themeConfig: {
     nav: navForLocale('root'),
     sidebar: sidebarForLocale('root'),
+    search: {
+      provider: 'local',
+      options: {
+        _render(md_src, env, md) {
+          const locale = env.relativePath.split('/')[0]
+          env.localeIndex = (env.relativePath.includes('/') && locale) ? locale : 'root'
+          return md.renderAsync(md_src, env)
+        },
+        locales: {
+          zh: {
+            translations: {
+              button: { buttonText: '搜索', buttonAriaLabel: '搜索' },
+              modal: {
+                displayDetails: '显示详细列表',
+                resetButtonTitle: '重置搜索',
+                backButtonTitle: '关闭搜索',
+                noResultsText: '无结果',
+                footer: {
+                  selectText: '选择',
+                  selectKeyAriaLabel: '回车',
+                  navigateText: '导航',
+                  navigateUpKeyAriaLabel: '上箭头',
+                  navigateDownKeyAriaLabel: '下箭头',
+                  closeText: '关闭',
+                  closeKeyAriaLabel: 'Esc',
+                },
+              },
+            },
+          },
+          'zh-hant': {
+            translations: {
+              button: { buttonText: '搜尋', buttonAriaLabel: '搜尋' },
+              modal: {
+                displayDetails: '顯示詳細列表',
+                resetButtonTitle: '重置搜尋',
+                backButtonTitle: '關閉搜尋',
+                noResultsText: '無結果',
+                footer: {
+                  selectText: '選擇',
+                  selectKeyAriaLabel: '回車',
+                  navigateText: '導航',
+                  navigateUpKeyAriaLabel: '上箭頭',
+                  navigateDownKeyAriaLabel: '下箭頭',
+                  closeText: '關閉',
+                  closeKeyAriaLabel: 'Esc',
+                },
+              },
+            },
+          },
+          ja: {
+            translations: {
+              button: { buttonText: '検索', buttonAriaLabel: '検索' },
+              modal: {
+                displayDetails: '詳細リストを表示',
+                resetButtonTitle: '検索をリセット',
+                backButtonTitle: '検索を閉じる',
+                noResultsText: '結果なし',
+                footer: {
+                  selectText: '選択',
+                  selectKeyAriaLabel: '入力',
+                  navigateText: '移動',
+                  navigateUpKeyAriaLabel: '上矢印',
+                  navigateDownKeyAriaLabel: '下矢印',
+                  closeText: '閉じる',
+                  closeKeyAriaLabel: 'Esc',
+                },
+              },
+            },
+          },
+          ko: {
+            translations: {
+              button: { buttonText: '검색', buttonAriaLabel: '검색' },
+              modal: {
+                displayDetails: '상세 목록 표시',
+                resetButtonTitle: '검색 초기화',
+                backButtonTitle: '검색 닫기',
+                noResultsText: '결과 없음',
+                footer: {
+                  selectText: '선택',
+                  selectKeyAriaLabel: '입력',
+                  navigateText: '이동',
+                  navigateUpKeyAriaLabel: '위쪽 화살표',
+                  navigateDownKeyAriaLabel: '아래쪽 화살표',
+                  closeText: '닫기',
+                  closeKeyAriaLabel: 'Esc',
+                },
+              },
+            },
+          },
+          de: {
+            translations: {
+              button: { buttonText: 'Suche', buttonAriaLabel: 'Suche' },
+              modal: {
+                displayDetails: 'Detailliste anzeigen',
+                resetButtonTitle: 'Suche zurücksetzen',
+                backButtonTitle: 'Suche schließen',
+                noResultsText: 'Keine Ergebnisse',
+                footer: {
+                  selectText: 'auswählen',
+                  selectKeyAriaLabel: 'Eingabe',
+                  navigateText: 'navigieren',
+                  navigateUpKeyAriaLabel: 'Pfeil nach oben',
+                  navigateDownKeyAriaLabel: 'Pfeil nach unten',
+                  closeText: 'schließen',
+                  closeKeyAriaLabel: 'Esc',
+                },
+              },
+            },
+          },
+          fr: {
+            translations: {
+              button: { buttonText: 'Rechercher', buttonAriaLabel: 'Rechercher' },
+              modal: {
+                displayDetails: 'Afficher la liste détaillée',
+                resetButtonTitle: 'Réinitialiser la recherche',
+                backButtonTitle: 'Fermer la recherche',
+                noResultsText: 'Aucun résultat',
+                footer: {
+                  selectText: 'sélectionner',
+                  selectKeyAriaLabel: 'Entrée',
+                  navigateText: 'naviguer',
+                  navigateUpKeyAriaLabel: 'Flèche vers le haut',
+                  navigateDownKeyAriaLabel: 'Flèche vers le bas',
+                  closeText: 'fermer',
+                  closeKeyAriaLabel: 'Échap',
+                },
+              },
+            },
+          },
+          ru: {
+            translations: {
+              button: { buttonText: 'Поиск', buttonAriaLabel: 'Поиск' },
+              modal: {
+                displayDetails: 'Показать подробный список',
+                resetButtonTitle: 'Сбросить поиск',
+                backButtonTitle: 'Закрыть поиск',
+                noResultsText: 'Нет результатов',
+                footer: {
+                  selectText: 'выбрать',
+                  selectKeyAriaLabel: 'Ввод',
+                  navigateText: 'навигация',
+                  navigateUpKeyAriaLabel: 'Стрелка вверх',
+                  navigateDownKeyAriaLabel: 'Стрелка вниз',
+                  closeText: 'закрыть',
+                  closeKeyAriaLabel: 'Esc',
+                },
+              },
+            },
+          },
+        },
+      },
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/zzzzzz9125/VegTips' }
     ],
