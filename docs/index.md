@@ -1051,6 +1051,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Tout d'abord, essayez de redémarrer votre PC. Si cela ne fonctionne pas, vous devez modifier le registre. Ouvrez l'Éditeur du Registre, naviguez vers **`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager`**, **supprimez la valeur `PendingFileRenameOperations`**, puis redémarrez votre PC.
 @ru О: Сначала попробуйте перезагрузить ПК. Если это не помогло, вам нужно изменить реестр. Откройте редактор реестра, перейдите к **`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager`**, **удалите значение `PendingFileRenameOperations`**, затем перезагрузите ПК.
 
+@en <!-- -->
 @zh <small>参见：https://tieba.baidu.com/p/4339996851<br></small>
 @zh-hant <small>參見：https://tieba.baidu.com/p/4339996851<br></small>
 
@@ -1116,9 +1117,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Tout d'abord, essayez de réinstaller vos pilotes graphiques. Si cela ne fonctionne pas, essayez cette correction de registre. Ouvrez l'Éditeur du Registre, trouvez la valeur : **`IntelOpenCL64.dll`** sous **`HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\OpenCL\Vendors`** et la valeur **`IntelOpenCL32.dll`** sous **`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Khronos\OpenCL\Vendors`**. Changez les données pour les deux valeurs **de `0` à `1`**, puis redémarrez VEGAS.
 @ru О: Сначала попробуйте переустановить драйверы видеокарты. Если это не помогло, попробуйте это исправление реестра. Откройте редактор реестра, найдите значение: **`IntelOpenCL64.dll`** в разделе **`HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\OpenCL\Vendors`** и значение **`IntelOpenCL32.dll`** в разделе **`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Khronos\OpenCL\Vendors`**. Измените данные для обоих значений **с `0` на `1`**, затем перезапустите VEGAS.
 
+@en <!-- -->
 @zh <small>参见：https://www.bilibili.com/video/BV11z411i74a/<br></small>
 @zh-hant <small>參見：https://www.bilibili.com/video/BV11z411i74a/<br></small>
-@de <small>Siehe: https://www.bilibili.com/video/BV11z411i74a/<br></small>
 
 <br>
 
@@ -1353,6 +1354,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Essayez **de renommer n'importe quel fichier média utilisé dans le projet** pour que le projet ne puisse pas le trouver. Lors de la réouverture, **ignorez les invites "média hors ligne"**. Après avoir ouvert avec succès, **renommez le fichier ou remplacez-le**.
 @ru О: Попробуйте **переименовать любой медиафайл, используемый в проекте**, чтобы проект не мог его найти. При повторном открытии **игнорируйте предупреждения «медиафайл недоступен»**. После успешного открытия **переименуйте файл обратно или замените его**.
 
+@en <!-- -->
 @zh <small>参见：https://tieba.baidu.com/p/7511708251<br></small>
 @zh-hant <small>參見：https://tieba.baidu.com/p/7511708251<br></small>
 
@@ -4578,14 +4580,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr <small>Alternativement, utilisez **l'extension de recherche FX [VPConsole](https://www.ratinfx.com/vpconsole/)** comme remplacement.</small>
 @ru <small>В качестве альтернативы используйте <b>расширение поиска FX [VPConsole](https://www.ratinfx.com/vpconsole/)</b> в качестве замены.</small>
 
-@en <p align="center"><iframe src="//player.bilibili.com/player.html?bvid=BV1U4XhYgEG5&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></p>
+@en <iframe width="560" height="315" src="https://www.youtube.com/embed/4ZZBfTb2Ubg?si=vkKTf8trYe8t6RR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 @zh <p align="center"><iframe src="//player.bilibili.com/player.html?bvid=BV1U4XhYgEG5&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></p>
 @zh-hant <p align="center"><iframe src="//player.bilibili.com/player.html?bvid=BV1U4XhYgEG5&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></p>
-@ja <iframe width="560" height="315" src="https://www.youtube.com/embed/4ZZBfTb2Ubg?si=vkKTf8trYe8t6RR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-@ko <iframe width="560" height="315" src="https://www.youtube.com/embed/4ZZBfTb2Ubg?si=vkKTf8trYe8t6RR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-@de <iframe width="560" height="315" src="https://www.youtube.com/embed/4ZZBfTb2Ubg?si=vkKTf8trYe8t6RR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-@fr <iframe width="560" height="315" src="https://www.youtube.com/embed/4ZZBfTb2Ubg?si=vkKTf8trYe8t6RR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-@ru <iframe width="560" height="315" src="https://www.youtube.com/embed/4ZZBfTb2Ubg?si=vkKTf8trYe8t6RR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <br>
 
@@ -5831,12 +5828,15 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 @fr   - Liens des installateurs officiels : https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
 @ru   - Ссылки на официальные установщики: https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
 
+@en <!-- -->
 @zh 2. 国区代理：https://vegaschina.cn/
 @zh-hant 2. 國區代理：https://vegaschina.cn/
 
+@en <!-- -->
 @zh   - 注意，国内代理商思杰马克丁有风评问题，建议自行考虑是否通过该渠道入正。
 @zh-hant   - 注意，國內代理商思傑馬克丁有風評問題，建議自行考慮是否通過該渠道入正。
 
+@en <!-- -->
 @zh   - **国区代理的序列号只能激活国区代理所提供的安装包。激活后可获得能够绑定在 Magix 账号上的 Magix 版序列号。Magix 版序列号支持激活 Magix 版安装包。**
 @zh-hant   - **國區代理的序列號只能啟動國區代理所提供的安裝包。啟動後可獲得能夠繫結在 Magix 帳號上的 Magix 版序列號。Magix 版序列號支援啟動 Magix 版安裝包，也支援官網的以舊換新優惠。**
 
@@ -5905,6 +5905,7 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 @fr ## XVII. Communautés/Forums VEGAS
 @ru ## XVII. Сообщества/Форумы VEGAS
 
+@en <!-- -->
 @zh 夜__晓的 Vegas Pro 交流 QQ 群：[570497914](https://qm.qq.com/cgi-bin/qm/qr?k=vByv4vz64zLaygZW7AgX8-2QReEXjL0a) / [650370844](http://qm.qq.com/cgi-bin/qm/qr?k=ueSwAdOLZl7EvMaGXJu_U5o59fZQ_afi)
 @zh-hant 夜__曉的 Vegas Pro 交流 QQ 群：[570497914](https://qm.qq.com/cgi-bin/qm/qr?k=vByv4vz64zLaygZW7AgX8-2QReEXjL0a) / [650370844](http://qm.qq.com/cgi-bin/qm/qr?k=ueSwAdOLZl7EvMaGXJu_U5o59fZQ_afi)
 
