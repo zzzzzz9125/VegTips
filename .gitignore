@@ -9,13 +9,4 @@ docs/.vitepress/cache/
 docs/out/
 docs/output/
 
-# Auto-generated locale pages (copied from English source by prebuild script)
-docs/zh/*.md
-docs/zh-hant/*.md
-docs/ja/*.md
-docs/ko/*.md
-docs/de/*.md
-docs/fr/*.md
-docs/ru/*.md
-
 .temp/

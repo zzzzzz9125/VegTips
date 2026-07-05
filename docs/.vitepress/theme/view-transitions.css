@@ -69,7 +69,8 @@
   z-index: 22;
 }
 
-.VPDocAsideOutline {
+.VPDocAsideOutline,
+.VPLocalNavOutlineDropdown {
   view-transition-name: doc-aside;
 }
 
