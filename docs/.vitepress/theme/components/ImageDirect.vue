@@ -1,22 +1,20 @@
 <template>
   <figure class="image-direct">
-    <img :src="currentSrc" :alt="alt" class="image-direct__image" @error="handleImageError" />
+    <img :src="currentSrc" :alt="alt" class="image-direct__image" />
     <figcaption v-if="alt" class="image-direct__caption">{{ alt }}</figcaption>
   </figure>
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
-import { useData, withBase } from 'vitepress'
+import { computed, ref, watch, onMounted, onUnmounted } from 'vue'
+import { withBase } from 'vitepress'
 import { useI18n } from '../composables/useI18n'
 
 const props = defineProps<{
   src: string
   alt?: string
-  buttonText?: string
 }>()
 
-const { lang } = useData()
 const { locale } = useI18n({})
 
 const normalizePath = (path: string) => path.replace(/^\/+/, '')
@@ -24,10 +22,7 @@ const ensureImgPrefix = (path: string) => (path.startsWith('img/') ? path : `img
 
 const baseRelativePath = computed(() => ensureImgPrefix(normalizePath(props.src)))
 
-const localePrefix = computed(() => {
-  if (locale.value === 'en') return ''
-  return locale.value
-})
+const localePrefix = computed(() => (locale.value === 'en' ? '' : locale.value))
 
 const localizedRelativePath = computed(() => {
   if (!localePrefix.value) return null
@@ -40,27 +35,68 @@ const resolvedLocalizedSrc = computed(() =>
   localizedRelativePath.value ? withBase(`/${localizedRelativePath.value}`) : null
 )
 
-const currentSrc = ref<string>(resolvedLocalizedSrc.value ?? resolvedDefaultSrc.value)
-const hasTriedDefaultFallback = ref(false)
+const currentSrc = ref(resolvedDefaultSrc.value)
 
-watch([resolvedLocalizedSrc, resolvedDefaultSrc], ([localized, fallback]) => {
-  currentSrc.value = localized ?? fallback
-  hasTriedDefaultFallback.value = false
-})
+let probeTimer: ReturnType<typeof setTimeout> | null = null
+let probeImg: HTMLImageElement | null = null
 
-const handleImageError = (event: Event) => {
-  const img = event.target as HTMLImageElement
+function tryLocalizedImage() {
+  if (typeof Image === 'undefined') return
+  const localizedSrc = resolvedLocalizedSrc.value
+  if (!localizedSrc) return
 
-  if (
-    !hasTriedDefaultFallback.value &&
-    currentSrc.value === resolvedLocalizedSrc.value &&
-    resolvedLocalizedSrc.value
-  ) {
-    hasTriedDefaultFallback.value = true
-    currentSrc.value = resolvedDefaultSrc.value
-    img.src = currentSrc.value
+  cleanupProbe()
+
+  probeImg = new Image()
+  let done = false
+
+  probeImg.onload = () => {
+    if (!done) {
+      done = true
+      currentSrc.value = localizedSrc
+      cleanupProbe()
+    }
+  }
+
+  probeImg.onerror = () => {
+    done = true
+    cleanupProbe()
+  }
+
+  probeImg.src = localizedSrc
+
+  probeTimer = setTimeout(() => {
+    if (!done) {
+      done = true
+      cleanupProbe()
+    }
+  }, 3000)
+}
+
+function cleanupProbe() {
+  if (probeTimer) {
+    clearTimeout(probeTimer)
+    probeTimer = null
+  }
+  if (probeImg) {
+    probeImg.onload = null
+    probeImg.onerror = null
+    probeImg = null
   }
 }
+
+watch(locale, () => {
+  currentSrc.value = resolvedDefaultSrc.value
+  tryLocalizedImage()
+})
+
+onMounted(() => {
+  tryLocalizedImage()
+})
+
+onUnmounted(() => {
+  cleanupProbe()
+})
 </script>
 
 <style scoped>

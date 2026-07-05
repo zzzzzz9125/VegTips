@@ -3,6 +3,7 @@ import DefaultTheme from 'vitepress/theme'
 import VideoFxTable from './components/VideoFxTable.vue'
 import ScriptApiExplorer from './components/ScriptApiExplorer.vue'
 import ImageDirect from './components/ImageDirect.vue'
+import SavePdfButton from './components/SavePdfButton.vue'
 import MyLayout from './Layout.vue'
 import './style.css'
 import './view-transitions.css'
@@ -14,6 +15,7 @@ export default {
     app.component('VideoFxTable', VideoFxTable)
     app.component('ScriptApiExplorer', ScriptApiExplorer)
     app.component('ImageOnDemand', ImageDirect)
+    app.component('SavePdfButton', SavePdfButton)
 
     if (!inBrowser) return
 

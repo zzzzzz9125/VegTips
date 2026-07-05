@@ -764,3 +764,90 @@ img {
     white-space: nowrap;
   }
 }
+
+/* ============================================================
+   Print styles — fallback for browser File > Print
+   (primary PDF path uses new-window extraction instead)
+   ============================================================ */
+
+@media print {
+  @page {
+    margin: 2cm;
+  }
+
+  html, body, #app, .Layout,
+  .VPContent, .VPDoc,
+  .VPDoc .container, .VPDoc .content, .VPDoc .content-container {
+    display: block !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .vp-doc {
+    max-width: none !important;
+  }
+
+  :root {
+    --vp-c-bg: #fff !important;
+    --vp-c-bg-alt: #fff !important;
+    --vp-c-bg-soft: #f9f9f9 !important;
+    --vp-c-text-1: #1a1a1a !important;
+    --vp-c-text-2: #555 !important;
+    --vp-c-brand-1: #3451b2 !important;
+    color-scheme: light !important;
+  }
+
+  .VPNav, .VPSidebar, .VPLocalNav, .VPFooter,
+  .VPSkipLink, .VPBackdrop,
+  .global-footer, .outline-depth-toggle, .save-pdf-btn,
+  .edit-link, .last-updated, .pager,
+  .aside, .aside-container, .aside-curtain, .aside-content,
+  .VPDocAside, .VPDocAsideOutline {
+    display: none !important;
+  }
+
+  .vfxtable__controls, .scriptapi__controls,
+  .vfxtable__resize, .vfxtable__th::after,
+  .vfxtable__switch, .scriptapi__switch,
+  .vfxtable__chip,
+  .scriptapi__status, .vfxtable__status {
+    display: none !important;
+  }
+
+  .vp-doc div[class*='language-'],
+  .vfxtable__table-wrapper, .scriptapi__table-wrap {
+    overflow: visible !important;
+  }
+
+  table { width: 100% !important; border-collapse: collapse !important; }
+  th, td { border: 1px solid #ddd !important; padding: 6px 8px !important; }
+  th { background: #f5f5f5 !important; position: static !important; }
+  thead { display: table-header-group; }
+  tbody tr:nth-child(even), tbody tr:nth-child(odd) { background: none !important; }
+
+  pre, code, kbd {
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd !important;
+    color: #1a1a1a !important;
+    text-shadow: none !important;
+  }
+  pre, code { white-space: pre-wrap !important; word-break: break-word !important; }
+
+  img { max-width: 100% !important; height: auto !important; }
+
+  h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+
+  a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.85em;
+    color: #888;
+    word-break: break-all;
+  }
+  a[href^='#']::after, a.header-anchor::after { content: none; }
+}

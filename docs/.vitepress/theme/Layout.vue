@@ -5,6 +5,7 @@ import { nextTick, onMounted, provide } from 'vue'
 import flyoutShadowStyle from './readthedocs-flyout-shadow.css?inline'
 import OutlineDepthToggle from './components/OutlineDepthToggle.vue'
 import GlobalFooterBar from './components/GlobalFooterBar.vue'
+import SavePdfButton from './components/SavePdfButton.vue'
 
 const { isDark } = useData()
 
@@ -88,6 +89,12 @@ onMounted(async () => {
 
 <template>
   <DefaultTheme.Layout>
+    <template #nav-bar-content-before>
+      <SavePdfButton />
+    </template>
+    <template #nav-screen-content-before>
+      <SavePdfButton />
+    </template>
     <template #aside-outline-before>
       <OutlineDepthToggle />
     </template>
