@@ -5139,14 +5139,14 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 @fr 2.  Vérifiez si le dossier `Application Extensions` existe. Sinon, créez-le manuellement avec le nom exact. Entrez dans le dossier.
 @ru 2.  Проверьте, существует ли папка `Application Extensions`. Если нет, создайте ее вручную с точным именем. Войдите в папку.
 
-@en    - If you prefer using the Windows user's `Documents` folder, you can also open your Windows File Explorer and navigate to the `Documents` folder. Then, check if the **`Vegas Application Extensions`** folder exists. If not, create it manually with the exact name. Enter that folder.
-@zh    - 如果你更喜欢使用 Windows 用户的 `文档` 文件夹，你也可以打开你的 Windows 文件资源管理器，并跳转到 `文档` 文件夹。之后，检查 **`Vegas Application Extensions`** 文件夹是否存在。若不存在，手动创建一个，并保证名称完全一致。进入该文件夹。
-@zh-hant    - 如果你更喜歡使用 Windows 使用者的 `文件` 資料夾，你也可以打開你的 Windows 檔案總管，並跳轉到 `文件` 資料夾。之後，檢查 **`Vegas Application Extensions`** 資料夾是否存在。若不存在，手動建立一個，並保證名稱完全一致。進入該資料夾。
-@ja    - Windows ユーザーの `ドキュメント` フォルダを使用する方が好みの場合は、Windows エクスプローラーを開いて `ドキュメント` フォルダに移動することもできます。次に、**`Vegas Application Extensions`** フォルダが存在するか確認します。存在しない場合は、正確な名前で手動で作成します。そのフォルダに入ります。
-@ko    - Windows 사용자의 `문서` 폴더를 사용하는 것을 선호한다면, Windows 파일 탐색기를 열고 `문서` 폴더로 이동할 수도 있습니다. 그런 다음 **`Vegas Application Extensions`** 폴더가 존재하는지 확인합니다. 없으면 정확한 이름으로 수동 생성합니다. 해당 폴더에 들어갑니다.
-@de    - Wenn Sie lieber den `Dokumente`-Ordner des Windows-Benutzers verwenden, können Sie auch Ihren Windows-Datei-Explorer öffnen und zum `Dokumente`-Ordner navigieren. Überprüfen Sie dann, ob der Ordner **`Vegas Application Extensions`** existiert. Wenn nicht, erstellen Sie ihn manuell mit dem exakten Namen. Betreten Sie diesen Ordner.
-@fr    - Si vous préférez utiliser le dossier `Documents` de l'utilisateur Windows, vous pouvez également ouvrir l'Explorateur de fichiers Windows et accéder au dossier `Documents`. Ensuite, vérifiez si le dossier **`Vegas Application Extensions`** existe. Sinon, créez-le manuellement avec le nom exact. Entrez dans ce dossier.
-@ru    - Если вы предпочитаете использовать папку `Документы` пользователя Windows, вы также можете открыть Проводник Windows и перейти в папку `Документы`. Затем проверьте, существует ли папка **`Vegas Application Extensions`**. Если нет, создайте ее вручную с точным именем. Войдите в эту папку.
+@en     *   If you prefer using the Windows user's `Documents` folder, you can also open your Windows File Explorer and navigate to the `Documents` folder. Then, check if the **`Vegas Application Extensions`** folder exists. If not, create it manually with the exact name. Enter that folder.
+@zh     *   如果你更喜欢使用 Windows 用户的 `文档` 文件夹，你也可以打开你的 Windows 文件资源管理器，并跳转到 `文档` 文件夹。之后，检查 **`Vegas Application Extensions`** 文件夹是否存在。若不存在，手动创建一个，并保证名称完全一致。进入该文件夹。
+@zh-hant     *   如果你更喜歡使用 Windows 使用者的 `文件` 資料夾，你也可以打開你的 Windows 檔案總管，並跳轉到 `文件` 資料夾。之後，檢查 **`Vegas Application Extensions`** 資料夾是否存在。若不存在，手動建立一個，並保證名稱完全一致。進入該資料夾。
+@ja     *   Windows ユーザーの `ドキュメント` フォルダを使用する方が好みの場合は、Windows エクスプローラーを開いて `ドキュメント` フォルダに移動することもできます。次に、**`Vegas Application Extensions`** フォルダが存在するか確認します。存在しない場合は、正確な名前で手動で作成します。そのフォルダに入ります。
+@ko     *   Windows 사용자의 `문서` 폴더를 사용하는 것을 선호한다면, Windows 파일 탐색기를 열고 `문서` 폴더로 이동할 수도 있습니다. 그런 다음 **`Vegas Application Extensions`** 폴더가 존재하는지 확인합니다. 없으면 정확한 이름으로 수동 생성합니다. 해당 폴더에 들어갑니다.
+@de     *   Wenn Sie lieber den `Dokumente`-Ordner des Windows-Benutzers verwenden, können Sie auch Ihren Windows-Datei-Explorer öffnen und zum `Dokumente`-Ordner navigieren. Überprüfen Sie dann, ob der Ordner **`Vegas Application Extensions`** existiert. Wenn nicht, erstellen Sie ihn manuell mit dem exakten Namen. Betreten Sie diesen Ordner.
+@fr     *   Si vous préférez utiliser le dossier `Documents` de l'utilisateur Windows, vous pouvez également ouvrir l'Explorateur de fichiers Windows et accéder au dossier `Documents`. Ensuite, vérifiez si le dossier **`Vegas Application Extensions`** existe. Sinon, créez-le manuellement avec le nom exact. Entrez dans ce dossier.
+@ru     *   Если вы предпочитаете использовать папку `Документы` пользователя Windows, вы также можете открыть Проводник Windows и перейти в папку `Документы`. Затем проверьте, существует ли папка **`Vegas Application Extensions`**. Если нет, создайте ее вручную с точным именем. Войдите в эту папку.
 
 @en 3.  Copy all required `.dll` files for the extension and paste them directly here. E.g., `C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`.
 @zh 3.  复制该扩展所需的所有 `.dll` 文件，直接粘贴到这个文件夹内。比如：`C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`。
