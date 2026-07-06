@@ -2057,7 +2057,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 <ImageOnDemand src="vegtips/image010_profile_button.png" />
 
-@en <p align="center">Actually, "Pixel aspect ratio" is a translation error; it should be "Pixel aspect ratio", meaning "width:height".</p>
+@en <!-- -->
 @zh <p align="center">其实“像素高宽比”的翻译是错误的，应该为“像素宽高比”，即“宽:高”。</p>
 @zh-hant <p align="center">其實“像素高寬比”的翻譯是錯誤的，應該為“像素寬高比”，即“寬:高”。</p>
 
@@ -4966,61 +4966,62 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 <br>
 
+## 十二、脚本/扩展相关
 @en ## XII. Scripts/Extensions Related
 @zh ## 十二、脚本/扩展相关
 @zh-hant ## 十二、腳本/擴充相關
 @ja ## 十二、スクリプト/拡張機能関連
 @ko ## XII. 스크립트/확장 관련
-@de ## XII. Skripte/Erweiterungen bezogen
+@de ## XII. Skripte/Erweiterungen
 @fr ## XII. FAQ concernant les scripts/extensions
-@ru ## XII. Связанное со скриптами/расширениями
+@ru ## XII. Скрипты/расширения
 
-@en VEGAS supports custom scripts in `C#` (or `JScript`, `Visual Basic`) to optimize workflows.
-@zh Vegas 支持用户以 `C#`（或 `JScript`、`Visual Basic`）语言编写自定义脚本，以优化工作流程。
-@zh-hant Vegas 支援使用者以 `C#`（或 `JScript`、`Visual Basic`）語言編寫自定義腳本，以優化工作流程。
-@ja VEGAS は `C#`（または `JScript`、 `Visual Basic`）でのカスタムスクリプトをサポートし、ワークフローを最適化します。
-@ko VEGAS는 `C#`(또는 `JScript`, `Visual Basic`)로 사용자 정의 스크립트를 지원하여 워크플로를 최적화합니다.
-@de VEGAS unterstützt benutzerdefinierte Skripte in `C#` (oder `JScript`, `Visual Basic`), um Arbeitsabläufe zu optimieren.
-@fr VEGAS supporte les scripts personnalisés en `C#` (ou `JScript`, `Visual Basic`) pour optimiser les flux de travail.
-@ru VEGAS поддерживает пользовательские скрипты на `C#` (или `JScript`, `Visual Basic`) для оптимизации рабочих процессов.
+@en Vegas supports users to write custom scripts in `C#` (or `JScript`, `Visual Basic`) to optimize workflows. `Visual Basic` scripts (`*.vb`) are no longer supported in recent versions.
+@zh Vegas 支持用户以 `C#`（或 `JScript`、`Visual Basic`）语言编写自定义脚本，以优化工作流程。`Visual Basic` 脚本（`*.vb`）在最近的版本中已不受支持。
+@zh-hant Vegas 支援使用者以 `C#`（或 `JScript`、`Visual Basic`）語言編寫自定義腳本，以優化工作流程。`Visual Basic` 腳本（`*.vb`）在最近的版本中已不受支援。
+@ja Vegas は `C#`（または `JScript`、`Visual Basic`）でユーザーがカスタムスクリプトを作成することをサポートし、ワークフローを最適化します。`Visual Basic` スクリプト（`*.vb`）は最近のバージョンではサポートされていません。
+@ko Vegas는 `C#`(또는 `JScript`, `Visual Basic`) 언어로 사용자 정의 스크립트를 작성할 수 있도록 지원하여 워크플로를 최적화합니다. `Visual Basic` 스크립트(`*.vb`)는 최근 버전에서 지원되지 않습니다.
+@de Vegas unterstützt das Erstellen benutzerdefinierter Skripte in `C#` (oder `JScript`, `Visual Basic`), um Arbeitsabläufe zu optimieren. `Visual Basic`-Skripte (`*.vb`) werden in neueren Versionen nicht mehr unterstützt.
+@fr Vegas permet aux utilisateurs d'écrire des scripts personnalisés en `C#` (ou `JScript`, `Visual Basic`) pour optimiser les flux de travail. Les scripts `Visual Basic` (`*.vb`) ne sont plus pris en charge dans les versions récentes.
+@ru Vegas поддерживает написание пользовательских скриптов на `C#` (или `JScript`, `Visual Basic`) для оптимизации рабочих процессов. Скрипты `Visual Basic` (`*.vb`) в последних версиях не поддерживаются.
 
 @en - **Script**: Must be run manually by the user; relatively simple functionality.
-@zh - 脚本（`Script`）：只能由用户主动运行，功能较为简单。
-@zh-hant - 腳本（`Script`）：只能由使用者主動執行，功能較為簡單。
-@ja - **スクリプト**：ユーザーが手動で実行する必要があります。比較的単純な機能。
-@ko - **스크립트**: 사용자가 수동으로 실행해야 합니다. 기능이 비교적 단순합니다.
-@de - **Skript**: Muss manuell vom Benutzer ausgeführt werden; relativ einfache Funktionalität.
-@fr - **Script** : Doit être exécuté manuellement par l'utilisateur ; fonctionnalité relativement simple.
-@ru - **Скрипт (Script)**: Должен запускаться пользователем вручную; относительно простая функциональность.
+@zh - **脚本（`Script`）**：只能由用户主动运行，功能较为简单。
+@zh-hant - **腳本（`Script`）**：只能由使用者主動執行，功能較為簡單。
+@ja - **スクリプト (`Script`)**：ユーザーが手動で実行する必要があります。機能は比較的単純です。
+@ko - **스크립트(`Script`)**: 사용자가 수동으로 실행해야 합니다. 기능이 비교적 단순합니다.
+@de - **Skript (`Script`)**: Muss manuell vom Benutzer ausgeführt werden; relativ einfache Funktionalität.
+@fr - **Script (`Script`)** : Doit être exécuté manuellement par l'utilisateur ; fonctionnalité relativement simple.
+@ru - **Скрипт (`Script`)**: Должен запускаться пользователем вручную; относительно простая функциональность.
 
-@en - **Extension**: Can run automatically when VEGAS starts. Enables more complex features, like creating dockable windows within VEGAS.
-@zh - 扩展（`Extention`）：可以在 Vegas 程序启动时就一同运行。能实现更复杂的功能，比如在 Vegas 内创建可停靠窗口等。
-@zh-hant - 擴充（`Extention`）：可以在 Vegas 程式啟動時就一同執行。能實現更複雜的功能，比如在 Vegas 內建立可停靠視窗等。
-@ja - **拡張機能**：VEGAS 起動時に自動的に実行できます。より複雑な機能を可能にし、VEGAS 内にドッキング可能なウィンドウの作成などを含みます。
-@ko - **확장**: VEGAS 시작 시 자동으로 실행될 수 있습니다. 더 복잡한 기능을 가능하게 하며, VEGAS 내에 도킹 가능한 창 생성과 같은 기능을 포함합니다.
-@de - **Erweiterung**: Kann automatisch laufen, wenn VEGAS startet. Ermöglicht komplexere Funktionen, wie das Erstellen von andockbaren Fenstern innerhalb VEGAS.
-@fr - **Extension** : Peut s'exécuter automatiquement au démarrage de VEGAS. Permet des fonctionnalités plus complexes, comme créer des fenêtres accrochables dans VEGAS.
-@ru - **Расширение (Extension)**: Может запускаться автоматически при старте VEGAS. Позволяет реализовать более сложные функции, например, создавать закрепляемые окна внутри VEGAS.
+@en - **Extension**: Can run automatically when Vegas starts. Enables more complex features, such as creating dockable windows within Vegas.
+@zh - **扩展（`Extension`）**：可以在 Vegas 程序启动时就一同运行。能实现更复杂的功能，比如在 Vegas 内创建可停靠窗口等。
+@zh-hant - **擴充（`Extension`）**：可以在 Vegas 程式啟動時就一同執行。能實現更複雜的功能，比如在 Vegas 內建立可停靠視窗等。
+@ja - **拡張機能 (`Extension`)**：Vegas 起動時に自動的に実行できます。より複雑な機能を可能にし、Vegas 内にドッキング可能なウィンドウの作成などが含まれます。
+@ko - **확장(`Extension`)**: Vegas 시작 시 자동으로 실행될 수 있습니다. 더 복잡한 기능을 가능하게 하며, Vegas 내에 도킹 가능한 창 생성과 같은 기능을 포함합니다.
+@de - **Erweiterung (`Extension`)**: Kann automatisch laufen, wenn Vegas startet. Ermöglicht komplexere Funktionen, wie das Erstellen von andockbaren Fenstern innerhalb von Vegas.
+@fr - **Extension (`Extension`)** : Peut s'exécuter automatiquement au démarrage de Vegas. Permet des fonctionnalités plus complexes, comme créer des fenêtres accrochables dans Vegas.
+@ru - **Расширение (`Extension`)**: Может запускаться автоматически при старте Vegas. Позволяет реализовать более сложные функции, например, создавать закрепляемые окна внутри Vegas.
 
-@en <small>This section only covers installation issues. For tutorials, see: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
+@en <small>This article only covers certain issues encountered during script/extension installation. For basic tutorials, see: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
 @zh <small>本文只介绍脚本/扩展安装时遇到的某些问题。如需基础教程，可见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
 @zh-hant <small>本文只介紹腳本/擴充安裝時遇到的某些問題。如需基礎教學，可見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
-@ja <small>このセクションはインストール問題のみをカバーします。チュートリアルは： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
-@ko <small>이 섹션은 설치 문제만 다룹니다. 튜토리얼은 다음을 참조하십시오: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
-@de <small>Dieser Abschnitt behandelt nur Installationsprobleme. Für Tutorials siehe: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
-@fr <small>Cette section ne couvre que les problèmes d'installation. Pour les tutoriels, voir : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
-@ru <small>Этот раздел охватывает только проблемы установки. Для руководств см.: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
+@ja <small>この記事はスクリプト/拡張機能のインストール時に発生する特定の問題のみを紹介します。基本的なチュートリアルについては、以下を参照してください： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
+@ko <small>이 문서는 스크립트/확장 설치 시 발생하는 특정 문제만 다룹니다. 기본 튜토리얼은 다음을 참조하십시오: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
+@de <small>Dieser Artikel behandelt nur bestimmte Probleme bei der Skript-/Erweiterungsinstallation. Für grundlegende Tutorials siehe: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
+@fr <small>Cet article ne couvre que certains problèmes rencontrés lors de l'installation de scripts/extensions. Pour des tutoriels de base, voir : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
+@ru <small>В этой статье рассматриваются только определенные проблемы, возникающие при установке скриптов/расширений. Для базовых руководств см.: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
 
 <br>
 
-@en **Valid Script Installation Paths:**
+@en **List of Valid Script Installation Paths:**
 @zh **脚本可用安装路径列表：**
 @zh-hant **腳本可用安裝路徑列表：**
-@ja **有効なスクリプトインストールパス：**
-@ko **유효한 스크립트 설치 경로:**
-@de **Gültige Skript-Installationspfade:**
-@fr **Chemins d'installation de script valides :**
-@ru **Допустимые пути установки скриптов:**
+@ja **有効なスクリプトインストールパスのリスト：**
+@ko **유효한 스크립트 설치 경로 목록:**
+@de **Liste gültiger Skript-Installationspfade:**
+@fr **Liste des chemins d'installation de script valides :**
+@ru **Список допустимых путей установки скриптов:**
 
 ```text{1}
 C:\ProgramData\VEGAS Pro\Script Menu\
@@ -5030,28 +5031,26 @@ C:\ProgramData\VEGAS Pro\23.0\Script Menu\
 %appdata%\VEGAS Pro\23.0\Script Menu\
 %localappdata%\VEGAS Pro\Script Menu\
 %localappdata%\VEGAS Pro\23.0\Script Menu\
-...<VEGAS install path>\Script Menu\
+@en ...<VEGAS install path>\Script Menu\
+@zh ...<Vegas 安装路径>\Script Menu\
+@zh-hant ...<Vegas 安裝路徑>\Script Menu\
+@ja ...<Vegas インストールパス>\Script Menu\
+@ko ...<Vegas 설치 경로>\Script Menu\
+@de ...<Vegas Installationspfad>\Script Menu\
+@fr ...<Chemin d'installation Vegas>\Script Menu\
+@ru ...<путь установки Vegas>\Script Menu\
 ```
-
-@en `...<VEGAS install path>\Script Menu\`
-@zh `...<Vegas 安装路径>\Script Menu\`
-@zh-hant `...<Vegas 安裝路徑>\Script Menu\`
-@ja `...<VEGAS インストールパス>\Script Menu\`
-@ko `...<VEGAS 설치 경로>\Script Menu\`
-@de `...<VEGAS Installationspfad>\Script Menu\`
-@fr `...<Chemin d'installation VEGAS>\Script Menu\`
-@ru `...<путь установки VEGAS>\Script Menu\`
 
 <br>
 
-@en **Valid Extension Installation Paths:**
+@en **List of Valid Extension Installation Paths:**
 @zh **扩展可用安装路径列表：**
 @zh-hant **擴充可用安裝路徑列表：**
-@ja **有効な拡張機能インストールパス：**
-@ko **유효한 확장 설치 경로:**
-@de **Gültige Erweiterungs-Installationspfade:**
-@fr **Chemins d'installation d'extension valides :**
-@ru **Допустимые пути установки расширений:**
+@ja **有効な拡張機能インストールパスのリスト：**
+@ko **유효한 확장 설치 경로 목록:**
+@de **Liste gültiger Erweiterungs-Installationspfade:**
+@fr **Liste des chemins d'installation d'extension valides :**
+@ru **Список допустимых путей установки расширений:**
 
 ```text{1}
 C:\ProgramData\VEGAS Pro\Application Extensions\
@@ -5061,29 +5060,46 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 %appdata%\VEGAS Pro\23.0\Application Extensions\
 %localappdata%\VEGAS Pro\Application Extensions\
 %localappdata%\VEGAS Pro\23.0\Application Extensions\
+@en ...<VEGAS install path>\Application Extensions\
+@zh ...<Vegas 安装路径>\Application Extensions\
+@zh-hant ...<Vegas 安裝路徑>\Application Extensions\
+@ja ...<Vegas インストールパス>\Application Extensions\
+@ko ...<Vegas 설치 경로>\Application Extensions\
+@de ...<Vegas Installationspfad>\Application Extensions\
+@fr ...<Chemin d'installation Vegas>\Application Extensions\
+@ru ...<путь установки Vegas>\Application Extensions\
 ```
 
 <br>
 
-@en Where `23.0` is your VEGAS version. The first path (`C:\ProgramData\...`) is my top recommendation. Note: `ProgramData` is a hidden folder by default. For Sony-era (VP13-) paths, add a **`Sony`** folder above `VEGAS Pro`, e.g., `C:\ProgramData\Sony\VEGAS Pro\Script Menu\`.
+@en Where `23.0` is your Vegas version. The first path (`C:\ProgramData\...`) is my top recommendation. Note: `ProgramData` is a hidden folder by default. For Sony-era (VP13-) paths, add a **`Sony`** folder above `VEGAS Pro`, e.g., `C:\ProgramData\Sony\VEGAS Pro\Script Menu\`.
 @zh 其中 `23.0` 指对应 Vegas 版本号。第一个路径是我最推荐的路径，不过 `ProgramData` 文件夹默认是隐藏文件夹，这个注意。Sony 版（13 及以下）的路径需要在 `VEGAS Pro` 文件夹的上一层添加 **`Sony`** 文件夹，比如 `C:\ProgramData\Sony\VEGAS Pro\Script Menu\` 等。
 @zh-hant 其中 `23.0` 指對應 Vegas 版本號。第一個路徑是我最推薦的路徑，不過 `ProgramData` 資料夾預設是隱藏資料夾，這個注意。Sony 版（13 及以下）的路徑需要在 `VEGAS Pro` 資料夾的上一層添加 **`Sony`** 資料夾，比如 `C:\ProgramData\Sony\VEGAS Pro\Script Menu\` 等。
-@ja `23.0` は VEGAS バージョン。最初のパス（`C:\ProgramData\...`）が最もお勧めです。注： `ProgramData` はデフォルトで隠しフォルダーです。Sony 時代（VP13-）のパスには、 `VEGAS Pro` の上の階層に **`Sony`** フォルダを追加します（例： `C:\ProgramData\Sony\VEGAS Pro\Script Menu\`）。
-@ko 여기서 `23.0`은 VEGAS 버전입니다. 첫 번째 경로(`C:\ProgramData\...`)가 가장 권장됩니다. 참고: `ProgramData`는 기본적으로 숨겨진 폴더입니다. Sony 시대(VP13-) 경로의 경우 `VEGAS Pro` 위에 **`Sony`** 폴더를 추가합니다. 예: `C:\ProgramData\Sony\VEGAS Pro\Script Menu\`.
-@de Wobei `23.0` Ihre VEGAS-Version ist. Der erste Pfad (`C:\ProgramData\...`) ist meine Top-Empfehlung. Hinweis: `ProgramData` ist standardmäßig ein versteckter Ordner. Für Sony-Ära (VP13-) Pfade fügen Sie einen **`Sony`**-Ordner über `VEGAS Pro` hinzu, z. B. `C:\ProgramData\Sony\VEGAS Pro\Script Menu\`.
-@fr Où `23.0` est votre version VEGAS. Le premier chemin (`C:\ProgramData\...`) est ma recommandation principale. Note : `ProgramData` est un dossier caché par défaut. Pour les chemins de l'ère Sony (VP13-), ajoutez un dossier **`Sony`** au-dessus de `VEGAS Pro`, par ex. `C:\ProgramData\Sony\VEGAS Pro\Script Menu\`.
-@ru Где `23.0` — ваша версия VEGAS. Первый путь (`C:\ProgramData\...`) — моя главная рекомендация. Примечание: `ProgramData` — скрытая папка по умолчанию. Для путей эпохи Sony (VP13-) добавьте папку **`Sony`** над `VEGAS Pro`, например, `C:\ProgramData\Sony\VEGAS Pro\Script Menu\`.
+@ja ここで `23.0` は Vegas のバージョンを指します。最初のパス (`C:\ProgramData\...`) が最もお勧めです。注: `ProgramData` はデフォルトで隠しフォルダーです。Sony 時代（VP13 以前）のパスでは、`VEGAS Pro` の上の階層に **`Sony`** フォルダを追加します。例: `C:\ProgramData\Sony\VEGAS Pro\Script Menu\` など。
+@ko 여기서 `23.0`은 Vegas 버전을 의미합니다. 첫 번째 경로(`C:\ProgramData\...`)가 가장 권장됩니다. 참고: `ProgramData`는 기본적으로 숨겨진 폴더입니다. Sony 시대(VP13 이하) 경로의 경우 `VEGAS Pro` 위에 **`Sony`** 폴더를 추가합니다. 예: `C:\ProgramData\Sony\VEGAS Pro\Script Menu\` 등.
+@de Wobei `23.0` Ihre Vegas-Version ist. Der erste Pfad (`C:\ProgramData\...`) ist meine Top-Empfehlung. Hinweis: `ProgramData` ist standardmäßig ein versteckter Ordner. Für Pfade der Sony-Ära (VP13 und älter) fügen Sie einen **`Sony`**-Ordner über `VEGAS Pro` hinzu, z. B. `C:\ProgramData\Sony\VEGAS Pro\Script Menu\` usw.
+@fr Où `23.0` correspond à votre version de Vegas. Le premier chemin (`C:\ProgramData\...`) est ma principale recommandation. Remarque : `ProgramData` est un dossier caché par défaut. Pour les chemins de l'ère Sony (VP13 et antérieur), ajoutez un dossier **`Sony`** au-dessus de `VEGAS Pro`, par ex. `C:\ProgramData\Sony\VEGAS Pro\Script Menu\`, etc.
+@ru Где `23.0` — ваша версия Vegas. Первый путь (`C:\ProgramData\...`) — моя главная рекомендация. Примечание: `ProgramData` — скрытая папка по умолчанию. Для путей эпохи Sony (VP13 и старше) добавьте папку **`Sony`** над `VEGAS Pro`, например, `C:\ProgramData\Sony\VEGAS Pro\Script Menu\` и т.д.
+
+@en The path `%userprofile%\Documents\Script Menu\` i.e. `<Documents>\Script Menu\`, actually points to `C:\Users\<username>\Documents\Script Menu\`; or if you have OneDrive enabled, it points to `C:\Users\<username>\OneDrive\Documents\Script Menu\`. You can use your Windows File Explorer to navigate to your `Documents` folder, and then create folders and perform other operations.
+@zh 路径 `%userprofile%\Documents\Script Menu\` 即 `<文档>\Script Menu\`，它实际指向 `C:\Users\<用户名>\Documents\Script Menu\`；或者如果你启用了 OneDrive 的话，它指向 `C:\Users\<用户名>\OneDrive\Documents\Script Menu\`。你可以通过你的 Windows 文件资源管理器，来跳转到你的 `文档` 文件夹，之后进行创建文件夹等操作。
+@zh-hant 路徑 `%userprofile%\Documents\Script Menu\` 即 `<文件>\Script Menu\`，它實際指向 `C:\Users\<使用者名稱>\Documents\Script Menu\`；或者如果你啟用了 OneDrive 的話，它指向 `C:\Users\<使用者名稱>\OneDrive\Documents\Script Menu\`。你可以通過你的 Windows 檔案總管，來跳轉到你的 `文件` 資料夾，之後進行建立資料夾等操作。
+@ja パス `%userprofile%\Documents\Script Menu\` は `<ドキュメント>\Script Menu\` を意味し、実際には `C:\Users\<ユーザー名>\Documents\Script Menu\` を指します。OneDrive を有効にしている場合は、`C:\Users\<ユーザー名>\OneDrive\Documents\Script Menu\` を指します。Windows のエクスプローラーを使用して `ドキュメント` フォルダーに移動し、フォルダーの作成などの操作を行うことができます。
+@ko 경로 `%userprofile%\Documents\Script Menu\`는 `<문서>\Script Menu\`이며, 실제로는 `C:\Users\<사용자 이름>\Documents\Script Menu\`를 가리킵니다. OneDrive를 활성화한 경우 `C:\Users\<사용자 이름>\OneDrive\Documents\Script Menu\`를 가리킵니다. Windows 파일 탐색기를 사용하여 `문서` 폴더로 이동한 후 폴더 만들기 등의 작업을 수행할 수 있습니다.
+@de Der Pfad `%userprofile%\Documents\Script Menu\` d.h. `<Dokumente>\Script Menu\`, zeigt tatsächlich auf `C:\Users\<Benutzername>\Documents\Script Menu\`; oder, wenn Sie OneDrive aktiviert haben, auf `C:\Users\<Benutzername>\OneDrive\Documents\Script Menu\`. Sie können Ihren Windows-Datei-Explorer verwenden, um zu Ihrem `Dokumente`-Ordner zu navigieren und dort Ordner zu erstellen usw.
+@fr Le chemin `%userprofile%\Documents\Script Menu\` c'est-à-dire `<Documents>\Script Menu\`, pointe en réalité vers `C:\Users\<nom d'utilisateur>\Documents\Script Menu\` ; ou, si vous avez activé OneDrive, vers `C:\Users\<nom d'utilisateur>\OneDrive\Documents\Script Menu\`. Vous pouvez utiliser l'Explorateur de fichiers Windows pour accéder à votre dossier `Documents`, puis créer des dossiers, etc.
+@ru Путь `%userprofile%\Documents\Script Menu\`, т.е. `<Документы>\Script Menu\`, на самом деле указывает на `C:\Users\<имя пользователя>\Documents\Script Menu\`; или, если у вас включен OneDrive, он указывает на `C:\Users\<имя пользователя>\OneDrive\Documents\Script Menu\`. Вы можете использовать Проводник Windows, чтобы перейти к папке `Документы`, а затем создавать папки и выполнять другие операции.
 
 <br>
 
-@en Due to API changes in history, scripts/extensions for SonicFoundry era, Sony-era (VP13-) and MAGIX-era / Boris FX era (VP14+) VEGAS are not directly compatible. Very ancient SonicFoundry-era uses `SonicFoundry.Vegas` namespace; relatively ancient Sony-era uses `Sony.Vegas`; morden MAGIX-era / Boris FX era uses `ScriptPortal.Vegas`. For source code files (`.cs`, `.js`, `.vb`), you can edit the namespace manually in a text editor. For pre-compiled `.dll` files, you must modify the source project and recompile.
+@en Due to API changes, scripts/extensions for SonicFoundry era, Sony era (VP13 and earlier) and Magix / Boris FX era (VP14 and later) Vegas are not directly compatible. The very ancient SonicFoundry era uses `SonicFoundry.Vegas` namespace; the relatively ancient Sony era uses `Sony.Vegas`; the modern Magix / Boris FX era uses `ScriptPortal.Vegas`. For script source code files (`.cs`, `.js`, `.vb`), you can manually edit the file content using a text editor (like Notepad) to make them compatible. For pre-compiled `.dll` files, you must modify the source project and recompile.
 @zh 由于对于脚本 API 的更改，SonicFoundry 版、Sony 版（13 以前）和 Magix / Boris FX 版（14 至今）的脚本和扩展是不直接兼容的。十分远古的 SonicFoundry 版使用 `SonicFoundry.Vegas` 命名空间，比较远古的 Sony 版使用 `Sony.Vegas` 命名空间，现代的 Magix / Boris FX 版使用 `ScriptPortal.Vegas` 命名空间。对于现成的脚本代码文件（`.cs`、`.js` 或 `.vb`），可以手动用记事本编辑其中的文件内容，使其兼容。对于已经编译成 `.dll` 的脚本或扩展文件，只能修改原项目以后重新编译。
 @zh-hant 由於對於腳本 API 的更改，SonicFoundry 版、Sony 版（13 以前）和 Magix / Boris FX 版（14 至今）的腳本和擴充是不直接相容的。十分遠古的 SonicFoundry 版使用 `SonicFoundry.Vegas` 命名空間，比較遠古的 Sony 版使用 `Sony.Vegas` 命名空間，現代的 Magix / Boris FX 版使用 `ScriptPortal.Vegas` 命名空間。對於現成的腳本程式碼檔案（`.cs`、`.js` 或 `.vb`），可以手動用記事本編輯其中的檔案內容，使其相容。對於已經編譯成 `.dll` 的腳本或擴充檔案，只能修改原項目以後重新編譯。
-@ja 歴史的な API 変更のため、SonicFoundry 時代、Sony 時代（VP13-）、MAGIX / Boris FX 時代（VP14+）の VEGAS 用スクリプト/拡張機能は直接互換性がありません。非常に古い SonicFoundry 時代は `SonicFoundry.Vegas` 名前空間を使用。比較的古い Sony 時代は `Sony.Vegas` を使用。現代の MAGIX / Boris FX 時代は `ScriptPortal.Vegas` を使用。ソースコードファイル（`.cs`、 `.js`、 `.vb`）については、テキストエディターで名前空間を手動編集できます。事前コンパイルされた `.dll` ファイルについては、ソースプロジェクトを変更し再コンパイルする必要があります。
-@ko 역사적인 API 변경으로 인해 SonicFoundry 시대, Sony 시대(VP13-) 및 MAGIX / Boris FX 시대(VP14+) VEGAS용 스크립트/확장은 직접 호환되지 않습니다. 매우 오래된 SonicFoundry 시대는 `SonicFoundry.Vegas` 네임스페이스를 사용합니다. 비교적 오래된 Sony 시대는 `Sony.Vegas`를 사용합니다. 현대 MAGIX / Boris FX 시대는 `ScriptPortal.Vegas`를 사용합니다. 소스 코드 파일(`.cs`, `.js`, `.vb`)의 경우 텍스트 편집기에서 네임스페이스를 수동으로 편집할 수 있습니다. 사전 컴파일된 `.dll` 파일의 경우 소스 프로젝트를 수정하고 다시 컴파일해야 합니다.
-@de Aufgrund von API-Änderungen in der Geschichte sind Skripte/Erweiterungen für SonicFoundry-Ära, Sony-Ära (VP13-) und MAGIX-Ära / Boris-FX-Ära (VP14+) VEGAS nicht direkt kompatibel. Sehr alte SonicFoundry-Ära verwendet `SonicFoundry.Vegas`-Namespace; relativ alte Sony-Ära verwendet `Sony.Vegas`; moderne MAGIX-Ära / Boris-FX-Ära verwendet `ScriptPortal.Vegas`. Für Quellcodedateien (`.cs`, `.js`, `.vb`) können Sie den Namespace manuell in einem Texteditor bearbeiten. Für vorkompilierte `.dll`-Dateien müssen Sie das Quellprojekt modifizieren und neu kompilieren.
-@fr En raison des changements d'API dans l'histoire, les scripts/extensions pour VEGAS de l'ère SonicFoundry, Sony (VP13-) et MAGIX / Boris FX (VP14+) ne sont pas directement compatibles. L'ère SonicFoundry très ancienne utilise l'espace de noms `SonicFoundry.Vegas` ; l'ère Sony relativement ancienne utilise `Sony.Vegas` ; l'ère moderne MAGIX / Boris FX utilise `ScriptPortal.Vegas`. Pour les fichiers de code source (`.cs`, `.js`, `.vb`), vous pouvez éditer manuellement l'espace de noms dans un éditeur de texte. Pour les fichiers précompilés `.dll`, vous devez modifier le projet source et recompiler.
-@ru Из-за изменений API в истории скрипты/расширения для VEGAS эпохи SonicFoundry, Sony (VP13-) и MAGIX / Boris FX (VP14+) не совместимы напрямую. Очень древние эпохи SonicFoundry используют пространство имен `SonicFoundry.Vegas`; относительно древние Sony — `Sony.Vegas`; современные MAGIX / Boris FX — `ScriptPortal.Vegas`. Для исходных файлов кода (`.cs`, `.js`, `.vb`) вы можете вручную отредактировать пространство имен в текстовом редакторе. Для предварительно скомпилированных файлов `.dll` вы должны изменить исходный проект и перекомпилировать.
+@ja API の変更により、SonicFoundry 時代、Sony 時代（VP13 以前）、および Magix / Boris FX 時代（VP14 以降）の Vegas 用スクリプト/拡張機能は直接互換性がありません。非常に古い SonicFoundry 時代は `SonicFoundry.Vegas` 名前空間を使用し、比較的古い Sony 時代は `Sony.Vegas` を、現代の Magix / Boris FX 時代は `ScriptPortal.Vegas` を使用します。スクリプトのソースコードファイル（`.cs`、`.js`、`.vb`）については、テキストエディター（メモ帳など）でファイルの内容を手動編集し、互換性を持たせることができます。事前コンパイルされた `.dll` ファイルについては、ソースプロジェクトを変更して再コンパイルする必要があります。
+@ko API 변경으로 인해 SonicFoundry 시대, Sony 시대(VP13 이전) 및 Magix / Boris FX 시대(VP14 이후) Vegas용 스크립트/확장은 직접 호환되지 않습니다. 매우 오래된 SonicFoundry 시대는 `SonicFoundry.Vegas` 네임스페이스를 사용하고, 비교적 오래된 Sony 시대는 `Sony.Vegas`를, 현대 Magix / Boris FX 시대는 `ScriptPortal.Vegas`를 사용합니다. 스크립트 소스 코드 파일(`.cs`, `.js`, `.vb`)은 텍스트 편집기(메모장 등)를 사용하여 파일 내용을 수동으로 편집하여 호환되도록 할 수 있습니다. 사전 컴파일된 `.dll` 파일의 경우 소스 프로젝트를 수정하고 다시 컴파일해야 합니다.
+@de Aufgrund von API-Änderungen sind Skripte/Erweiterungen für die SonicFoundry-Ära, Sony-Ära (VP13 und älter) und Magix / Boris FX-Ära (VP14 und neuer) von Vegas nicht direkt kompatibel. Die sehr alte SonicFoundry-Ära verwendet den Namespace `SonicFoundry.Vegas`, die relativ alte Sony-Ära `Sony.Vegas`, die moderne Magix / Boris FX-Ära `ScriptPortal.Vegas`. Für Skript-Quellcodedateien (`.cs`, `.js`, `.vb`) können Sie den Dateiinhalt manuell mit einem Texteditor (z. B. Notepad) bearbeiten, um sie kompatibel zu machen. Für vorkompilierte `.dll`-Dateien müssen Sie das Quellprojekt ändern und neu kompilieren.
+@fr En raison des changements d'API, les scripts/extensions pour Vegas des ères SonicFoundry, Sony (VP13 et antérieur) et Magix / Boris FX (VP14 et ultérieur) ne sont pas directement compatibles. L'ère très ancienne SonicFoundry utilise l'espace de noms `SonicFoundry.Vegas` ; l'ère Sony relativement ancienne utilise `Sony.Vegas` ; l'ère moderne Magix / Boris FX utilise `ScriptPortal.Vegas`. Pour les fichiers de code source de script (`.cs`, `.js`, `.vb`), vous pouvez modifier manuellement le contenu du fichier à l'aide d'un éditeur de texte (comme le Bloc-notes) pour les rendre compatibles. Pour les fichiers précompilés `.dll`, vous devez modifier le projet source et recompiler.
+@ru Из-за изменений API скрипты/расширения для Vegas эпох SonicFoundry, Sony (VP13 и старше) и Magix / Boris FX (VP14 и новее) не совместимы напрямую. Очень древняя эпоха SonicFoundry использует пространство имен `SonicFoundry.Vegas`, относительно древняя Sony — `Sony.Vegas`, современная Magix / Boris FX — `ScriptPortal.Vegas`. Для файлов исходного кода скриптов (`.cs`, `.js`, `.vb`) вы можете вручную отредактировать содержимое файла с помощью текстового редактора (например, Блокнота), чтобы сделать их совместимыми. Для предварительно скомпилированных `.dll` файлов необходимо изменить исходный проект и перекомпилировать.
 
 <br>
 
@@ -5096,57 +5112,66 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 @fr ### Étapes générales pour installer un script ou une extension
 @ru ### Общие шаги для установки скрипта или расширения
 
-@en Using extensions as an example; similar for scripts. For other paths, see the [lists above](#xii-scripts-extensions-related).
+@en Taking extensions as an example, the same applies to scripts. For other installation paths, see the [lists above](#xii-scripts-extensions-related).
 @zh 以扩展为例，脚本也同理。其他安装路径见 [上方列表](#十二、脚本-扩展相关)。
 @zh-hant 以擴充為例，腳本也同理。其他安裝路徑見 [上方列表](#十二、腳本-擴充相關)。
-@ja 拡張機能を例に、スクリプトも同様です。他のパスは [上記リスト](#十二、スクリプト-拡張機能関連) 参照。
-@ko 예를 들어 확장을 사용합니다. 스크립트도 유사합니다. 다른 경로는 [위 목록](#xii-스크립트-확장-관련)을 참조하십시오.
-@de Verwenden von Erweiterungen als Beispiel; ähnlich für Skripte. Für andere Pfade siehe die [Listen oben](#xii-scripts-erweiterungen-bezogene).
-@fr En utilisant les extensions comme exemple ; similaire pour les scripts. Pour d'autres chemins, voir les [listes ci-dessus](#xii-faq-concernant-les-scripts-extensions).
-@ru На примере расширений; аналогично для скриптов. Для других путей см. [списки выше](#xii-скрипты-расширения-связанные).
+@ja 拡張機能を例に説明しますが、スクリプトも同様です。他のインストールパスについては [上記のリスト](#十二、スクリプト-拡張機能関連) を参照してください。
+@ko 예를 들어 확장을 기준으로 설명하지만 스크립트도 동일합니다. 다른 설치 경로는 [위 목록](#xii-스크립트-확장-관련)을 참조하십시오.
+@de Am Beispiel von Erweiterungen; gilt analog für Skripte. Für andere Installationspfade siehe die [Listen oben](#xii-skripte-erweiterungen).
+@fr En prenant les extensions comme exemple, même chose pour les scripts. Pour d'autres chemins d'installation, voir les [listes ci-dessus](#xii-faq-concernant-les-scripts-extensions).
+@ru На примере расширений; аналогично для скриптов. Другие пути установки см. в [списках выше](#xii-скрипты-расширения-связанные).
 
-@en 1.  Copy `C:\ProgramData\VEGAS Pro\` (or, for Sony editions, `C:\ProgramData\Sony\VEGAS Pro\`) and paste into File Explorer's address bar to navigate.
-@zh 1. 先复制 `C:\ProgramData\VEGAS Pro\`（或者 Sony 版的 `C:\ProgramData\Sony\VEGAS Pro\`）并粘贴到你的文件资源管理器的地址栏中，跳转至该目录。
-@zh-hant 1. 先複製 `C:\ProgramData\VEGAS Pro\`（或者 Sony 版的 `C:\ProgramData\Sony\VEGAS Pro\`）並貼上到你的檔案總管的位址列中，跳轉至該目錄。
-@ja 1.  `C:\ProgramData\VEGAS Pro\`（または Sony 版の場合は `C:\ProgramData\Sony\VEGAS Pro\`）をコピーし、エクスプローラーのアドレスバーに貼り付けて移動。
-@ko 1.  `C:\ProgramData\VEGAS Pro\`(또는 Sony 버전의 경우 `C:\ProgramData\Sony\VEGAS Pro\`)를 복사하여 파일 탐색기의 주소 표시줄에 붙여넣어 이동합니다.
-@de 1.  Kopieren Sie `C:\ProgramData\VEGAS Pro\` (oder bei Sony-Versionen `C:\ProgramData\Sony\VEGAS Pro\`) und fügen Sie in die Adressleiste des Datei-Explorers ein, um dorthin zu navigieren.
-@fr 1.  Copiez `C:\ProgramData\VEGAS Pro\` (ou, pour les versions Sony, `C:\ProgramData\Sony\VEGAS Pro\`) et collez dans la barre d'adresse de l'Explorateur de fichiers pour naviguer.
-@ru 1.  Скопируйте `C:\ProgramData\VEGAS Pro\` (или, для версии Sony, `C:\ProgramData\Sony\VEGAS Pro\`) и вставьте в адресную строку проводника для перехода.
+@en 1.  Copy `C:\ProgramData\VEGAS Pro\` (or, for Sony editions, `C:\ProgramData\Sony\VEGAS Pro\`) and paste it into File Explorer's address bar to navigate.
+@zh 1.  先复制 `C:\ProgramData\VEGAS Pro\`（或者 Sony 版的 `C:\ProgramData\Sony\VEGAS Pro\`）并粘贴到你的文件资源管理器的地址栏中，跳转至该目录。
+@zh-hant 1.  先複製 `C:\ProgramData\VEGAS Pro\`（或者 Sony 版的 `C:\ProgramData\Sony\VEGAS Pro\`）並貼上到你的檔案總管的位址列中，跳轉至該目錄。
+@ja 1.  最初に `C:\ProgramData\VEGAS Pro\`（Sony 版の場合は `C:\ProgramData\Sony\VEGAS Pro\`）をコピーし、エクスプローラーのアドレスバーに貼り付けて移動します。
+@ko 1.  먼저 `C:\ProgramData\VEGAS Pro\`(Sony 버전의 경우 `C:\ProgramData\Sony\VEGAS Pro\`)를 복사하여 파일 탐색기의 주소 표시줄에 붙여넣어 이동합니다.
+@de 1.  Kopieren Sie zuerst `C:\ProgramData\VEGAS Pro\` (oder bei Sony-Versionen `C:\ProgramData\Sony\VEGAS Pro\`) und fügen Sie es in die Adressleiste des Datei-Explorers ein, um dorthin zu navigieren.
+@fr 1.  Copiez d'abord `C:\ProgramData\VEGAS Pro\` (ou, pour les versions Sony, `C:\ProgramData\Sony\VEGAS Pro\`) et collez-le dans la barre d'adresse de l'Explorateur de fichiers pour y accéder.
+@ru 1.  Сначала скопируйте `C:\ProgramData\VEGAS Pro\` (или, для версии Sony, `C:\ProgramData\Sony\VEGAS Pro\`) и вставьте в адресную строку проводника для перехода.
 
-@en 2.  Check if the `Application Extensions` folder exists. If not, create it with the exact name. Enter the folder.
-@zh 2. 检查 `Application Extensions` 文件夹是否存在。若不存在，手动创建一个，并保证名称完全一致。进入该文件夹。
-@zh-hant 2. 檢查 `Application Extensions` 資料夾是否存在。若不存在，手動建立一個，並保證名稱完全一致。進入該資料夾。
-@ja 2.  `Application Extensions` フォルダが存在するか確認。存在しない場合は、正確な名前で作成します。フォルダに入ります。
-@ko 2.  `Application Extensions` 폴더가 존재하는지 확인합니다. 없으면 정확한 이름으로 생성합니다. 폴더에 들어갑니다.
-@de 2.  Überprüfen Sie, ob der Ordner `Application Extensions` existiert. Wenn nicht, erstellen Sie ihn mit exakt dem Namen. Betreten Sie den Ordner.
-@fr 2.  Vérifiez si le dossier `Application Extensions` existe. Sinon, créez-le avec le nom exact. Entrez dans le dossier.
-@ru 2.  Проверьте, существует ли папка `Application Extensions`. Если нет, создайте ее с точным именем. Войдите в папку.
+@en 2.  Check if the `Application Extensions` folder exists. If not, create it manually with the exact name. Enter the folder.
+@zh 2.  检查 `Application Extensions` 文件夹是否存在。若不存在，手动创建一个，并保证名称完全一致。进入该文件夹。
+@zh-hant 2.  檢查 `Application Extensions` 資料夾是否存在。若不存在，手動建立一個，並保證名稱完全一致。進入該資料夾。
+@ja 2.  `Application Extensions` フォルダが存在するか確認します。存在しない場合は、正確な名前で手動で作成します。フォルダに入ります。
+@ko 2.  `Application Extensions` 폴더가 존재하는지 확인합니다. 없으면 정확한 이름으로 수동 생성합니다. 폴더에 들어갑니다.
+@de 2.  Überprüfen Sie, ob der Ordner `Application Extensions` existiert. Wenn nicht, erstellen Sie ihn manuell mit exakt dem Namen. Betreten Sie den Ordner.
+@fr 2.  Vérifiez si le dossier `Application Extensions` existe. Sinon, créez-le manuellement avec le nom exact. Entrez dans le dossier.
+@ru 2.  Проверьте, существует ли папка `Application Extensions`. Если нет, создайте ее вручную с точным именем. Войдите в папку.
+
+@en    - If you prefer using the Windows user's `Documents` folder, you can also open your Windows File Explorer and navigate to the `Documents` folder. Then, check if the **`Vegas Application Extensions`** folder exists. If not, create it manually with the exact name. Enter that folder.
+@zh    - 如果你更喜欢使用 Windows 用户的 `文档` 文件夹，你也可以打开你的 Windows 文件资源管理器，并跳转到 `文档` 文件夹。之后，检查 **`Vegas Application Extensions`** 文件夹是否存在。若不存在，手动创建一个，并保证名称完全一致。进入该文件夹。
+@zh-hant    - 如果你更喜歡使用 Windows 使用者的 `文件` 資料夾，你也可以打開你的 Windows 檔案總管，並跳轉到 `文件` 資料夾。之後，檢查 **`Vegas Application Extensions`** 資料夾是否存在。若不存在，手動建立一個，並保證名稱完全一致。進入該資料夾。
+@ja    - Windows ユーザーの `ドキュメント` フォルダを使用する方が好みの場合は、Windows エクスプローラーを開いて `ドキュメント` フォルダに移動することもできます。次に、**`Vegas Application Extensions`** フォルダが存在するか確認します。存在しない場合は、正確な名前で手動で作成します。そのフォルダに入ります。
+@ko    - Windows 사용자의 `문서` 폴더를 사용하는 것을 선호한다면, Windows 파일 탐색기를 열고 `문서` 폴더로 이동할 수도 있습니다. 그런 다음 **`Vegas Application Extensions`** 폴더가 존재하는지 확인합니다. 없으면 정확한 이름으로 수동 생성합니다. 해당 폴더에 들어갑니다.
+@de    - Wenn Sie lieber den `Dokumente`-Ordner des Windows-Benutzers verwenden, können Sie auch Ihren Windows-Datei-Explorer öffnen und zum `Dokumente`-Ordner navigieren. Überprüfen Sie dann, ob der Ordner **`Vegas Application Extensions`** existiert. Wenn nicht, erstellen Sie ihn manuell mit dem exakten Namen. Betreten Sie diesen Ordner.
+@fr    - Si vous préférez utiliser le dossier `Documents` de l'utilisateur Windows, vous pouvez également ouvrir l'Explorateur de fichiers Windows et accéder au dossier `Documents`. Ensuite, vérifiez si le dossier **`Vegas Application Extensions`** existe. Sinon, créez-le manuellement avec le nom exact. Entrez dans ce dossier.
+@ru    - Если вы предпочитаете использовать папку `Документы` пользователя Windows, вы также можете открыть Проводник Windows и перейти в папку `Документы`. Затем проверьте, существует ли папка **`Vegas Application Extensions`**. Если нет, создайте ее вручную с точным именем. Войдите в эту папку.
 
 @en 3.  Copy all required `.dll` files for the extension and paste them directly here. E.g., `C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`.
-@zh 3. 复制该扩展所需的所有 `.dll` 文件，直接粘贴到这个文件夹内。比如：`C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`。
-@zh-hant 3. 複製該擴充所需的所有 `.dll` 檔案，直接貼上到這個資料夾內。比如：`C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`。
-@ja 3.  拡張機能に必要なすべての `.dll` ファイルをコピーし、ここに直接貼り付けます（例： `C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`）。
-@ko 3.  확장에 필요한 모든 `.dll` 파일을 복사하여 여기에 직접 붙여넣습니다. 예: `C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`.
+@zh 3.  复制该扩展所需的所有 `.dll` 文件，直接粘贴到这个文件夹内。比如：`C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`。
+@zh-hant 3.  複製該擴充所需的所有 `.dll` 檔案，直接貼上到這個資料夾內。比如：`C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`。
+@ja 3.  拡張機能に必要なすべての `.dll` ファイルをコピーし、このフォルダに直接貼り付けます。例：`C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`。
+@ko 3.  확장에 필요한 모든 `.dll` 파일을 복사하여 이 폴더에 직접 붙여넣습니다. 예: `C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`.
 @de 3.  Kopieren Sie alle erforderlichen `.dll`-Dateien für die Erweiterung und fügen Sie sie direkt hier ein. Z. B.: `C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`.
-@fr 3.  Copiez tous les fichiers `.dll` requis pour l'extension et collez-les directement ici. Par ex. `C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`.
-@ru 3.  Скопируйте все необходимые файлы `.dll` для расширения и вставьте их прямо сюда. Например, `C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`.
+@fr 3.  Copiez tous les fichiers `.dll` requis pour l'extension et collez-les directement ici. Par ex. : `C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`.
+@ru 3.  Скопируйте все необходимые файлы `.dll` для расширения и вставьте их прямо сюда. Например: `C:\ProgramData\VEGAS Pro\Application Extensions\UltraPaste.dll`.
 
-@en     *   Some scripts/extensions may include `16*16` `.png` icon files. You can optionally place these. Icons appear in VEGAS menus/toolbars for identification.
+@en     *   Some scripts/extensions may include `16*16` `.png` icon files. Usually you can optionally place them. The icon files can be used to distinguish different scripts and extensions in Vegas menus and toolbars.
 @zh     *   有些脚本和扩展也可能有 `16*16` 的 `.png` 图标文件，通常情况下你可以选择是否放入。图标文件可用于在 Vegas 菜单栏和工具栏中区分不同的脚本和扩展。
 @zh-hant     *   有些腳本和擴充也可能有 `16*16` 的 `.png` 圖示檔案，通常情況下你可以選擇是否放入。圖示檔案可用於在 Vegas 選單列和工具列中區分不同的腳本和擴充。
-@ja     *   一部のスクリプト/拡張機能には `16*16` `.png` アイコンファイルが含まれる場合があります。これらを任意に配置できます。アイコンは VEGAS メニュー/ツールバーで識別に表示されます。
-@ko     *   일부 스크립트/확장에는 `16*16` `.png` 아이콘 파일이 포함될 수 있습니다. 선택적으로 배치할 수 있습니다. 아이콘은 VEGAS 메뉴/도구 모음에서 식별용으로 나타납니다.
-@de     *   Einige Skripte/Erweiterungen können `16*16` `.png`-Symbol-Dateien enthalten. Sie können diese optional platzieren. Symbole erscheinen in VEGAS-Menüs/Symbolleisten zur Identifikation.
-@fr     *   Certains scripts/extensions peuvent inclure des fichiers icône `.png` `16*16`. Vous pouvez optionnellement les placer. Les icônes apparaissent dans les menus/barres d'outils VEGAS pour l'identification.
-@ru     *   Некоторые скрипты/расширения могут включать файлы значков `.png` размером `16*16`. Вы можете по желанию разместить их. Значки появляются в меню/панелях инструментов VEGAS для идентификации.
+@ja     *   一部のスクリプト/拡張機能には `16*16` の `.png` アイコンファイルが含まれる場合があります。通常、配置するかどうかは選択できます。アイコンファイルは、Vegas のメニューやツールバーで異なるスクリプトや拡張機能を区別するために使用できます。
+@ko     *   일부 스크립트/확장에는 `16*16` `.png` 아이콘 파일이 포함될 수 있습니다. 일반적으로 배치 여부를 선택할 수 있습니다. 아이콘 파일은 Vegas 메뉴 및 도구 모음에서 다른 스크립트와 확장을 구별하는 데 사용할 수 있습니다.
+@de     *   Einige Skripte/Erweiterungen können `16*16` `.png`-Symbol-Dateien enthalten. Normalerweise können Sie wählen, ob Sie diese ablegen. Die Symbol-Dateien können verwendet werden, um verschiedene Skripte und Erweiterungen in Vegas-Menüs und -Symbolleisten zu unterscheiden.
+@fr     *   Certains scripts/extensions peuvent inclure des fichiers icône `.png` `16*16`. Normalement, vous pouvez choisir de les placer ou non. Les fichiers icône peuvent être utilisés pour distinguer les différents scripts et extensions dans les menus et barres d'outils de Vegas.
+@ru     *   Некоторые скрипты/расширения могут включать файлы значков `.png` размером `16*16`. Обычно вы можете по желанию разместить их. Файлы значков можно использовать для различения разных скриптов и расширений в меню и панелях инструментов Vegas.
 
 @en 4. If some scripts/extensions require additional installers, please follow the installation steps they provide.
 @zh 4. 如果某些脚本/扩展需要额外的安装包，请根据他们给出的安装步骤来。
 @zh-hant 4. 如果某些腳本/擴充需要額外的安裝包，請根據他們給出的安裝步驟來。
-@ja 4. 一部のスクリプト/拡張機能に追加のインストーラーが必要な場合があります。提供されるインストール手順に従ってください。
+@ja 4. 一部のスクリプト/拡張機能に追加のインストーラーが必要な場合は、提供されるインストール手順に従ってください。
 @ko 4. 일부 스크립트/확장에 추가 설치 프로그램이 필요한 경우 제공된 설치 단계를 따르십시오.
-@de 4. Wenn einige Skripte/Erweiterungen zusätzliche Installer benötigen, folgen Sie bitte den von ihnen bereitgestellten Installationsschritten.
+@de 4. Wenn einige Skripte/Erweiterungen zusätzliche Installationsprogramme benötigen, folgen Sie bitte den von ihnen bereitgestellten Installationsschritten.
 @fr 4. Si certains scripts/extensions nécessitent des programmes d'installation supplémentaires, veuillez suivre les étapes d'installation qu'ils fournissent.
 @ru 4. Если некоторые скрипты/расширения требуют дополнительных установщиков, пожалуйста, следуйте предоставленным ими шагам установки.
 
