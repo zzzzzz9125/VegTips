@@ -4926,14 +4926,36 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr Q : **Les plugins DirectX n'apparaissent pas dans la liste FX Audio**/**apparaissent mais invalides lorsqu'ajoutés**/**le plugin devient version Démo, l'ajout provoque des bips** ?
 @ru В: **Плагины DirectX не отображаются в списке Аудио FX**/**отображаются, но недействительны при добавлении**/**плагин становится демо-версией, добавление вызывает звуковой сигнал**?
 
-@en A: **Uninstall VEGAS**, then delete all files in **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`** (for VP13-: `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`), then **reinstall VEGAS**. (If multiple VEGAS versions, uninstalling one is enough; the uninstall is just to allow reinstallation later.)
-@zh A：**卸载 Vegas** 后，删除 **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`**（vv13 及以下为 `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`）里的所有文件，再**重装 Vegas**。（如果有多个版本的 Vegas，只需卸载一个，提前卸载只是为了之后能够安装上。）
-@zh-hant A：**解除安裝 Vegas** 後，刪除 **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`**（vv13 及以下為 `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`）裡的所有檔案，再**重裝 Vegas**。（如果有多個版本的 Vegas，只需解除安裝一個，提前解除安裝只是為了之後能夠安裝上。）
-@ja A: **VEGAS をアンインストール**し、 **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`** （VP13-： `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`）内のすべてのファイルを削除し、 **VEGAS を再インストール**。（複数の VEGAS バージョンがある場合、1 つのアンインストールで十分。アンインストールは後の再インストールのため。）
-@ko A: **VEGAS를 제거**한 후 **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`** (VP13-: `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`)의 모든 파일을 삭제한 후 **VEGAS를 다시 설치**하십시오. (여러 VEGAS 버전이 있는 경우 하나만 제거하면 됩니다. 제거는 나중에 다시 설치할 수 있도록 하기 위한 것입니다.)
-@de A: **Deinstallieren Sie VEGAS**, dann löschen Sie alle Dateien in **`C:\Programme (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`** (für VP13-: `C:\Programme (x86)\Sony\Shared Plug-Ins\Audio_x64\`), dann **neuinstallieren Sie VEGAS**. (Wenn mehrere VEGAS-Versionen, Deinstallation einer reicht; die Deinstallation ist nur, um Neuinstallation später zu ermöglichen.)
-@fr R : **Désinstallez VEGAS**, puis supprimez tous les fichiers dans **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`** (pour VP13- : `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`), puis **réinstallez VEGAS**. (Si plusieurs versions VEGAS, désinstaller une suffit ; la désinstallation est juste pour permettre la réinstallation plus tard.)
-@ru О: **Удалите VEGAS**, затем удалите все файлы в **`C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\`** (для VP13-: `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\`), затем **переустановите VEGAS**. (Если несколько версий VEGAS, достаточно удалить одну; удаление — просто чтобы позволить переустановку позже.)
+@en A: First uninstall Vegas. If you have multiple versions of Vegas, you only need to uninstall one; uninstalling in advance is just so that you can install later.
+@zh A：先卸载 Vegas。如果有多个版本的 Vegas，只需卸载一个，提前卸载只是为了之后能够安装上。
+@zh-hant A：先解除安裝 Vegas。如果有多個版本的 Vegas，只需解除安裝一個，提前解除安裝只是為了之後能夠安裝上。
+@ja A：まず Vegas をアンインストールします。複数のバージョンがある場合でも、アンインストールするのは1つだけで構いません。事前にアンインストールするのは、後でインストールできるようにするためです。
+@ko A: 먼저 Vegas를 제거합니다. 여러 버전의 Vegas가 있더라도 하나만 제거하면 됩니다. 미리 제거하는 것은 나중에 설치할 수 있도록 하기 위함입니다.
+@de A: Deinstallieren Sie zunächst Vegas. Wenn Sie mehrere Vegas-Versionen haben, müssen Sie nur eine deinstallieren. Die vorherige Deinstallation dient nur dazu, später installieren zu können.
+@fr R : Désinstallez d'abord Vegas. Si vous avez plusieurs versions de Vegas, il suffit d'en désinstaller une seule ; la désinstallation préalable sert uniquement à pouvoir installer par la suite.
+@ru O: Сначала удалите Vegas. Если у вас несколько версий Vegas, достаточно удалить одну; предварительное удаление нужно только для того, чтобы потом можно было установить.
+
+@en Then, depending on the version you intend to use, delete the corresponding folder:
+@zh 然后，根据你打算使用的版本，删除对应文件夹：
+@zh-hant 然後，根據你打算使用的版本，刪除對應資料夾：
+@ja 次に、使用予定のバージョンに応じて、対応するフォルダを削除します。
+@ko 그런 다음 사용하려는 버전에 따라 해당 폴더를 삭제합니다.
+@de Löschen Sie dann, je nach der von Ihnen beabsichtigten Version, den entsprechenden Ordner:
+@fr Ensuite, selon la version que vous comptez utiliser, supprimez le dossier correspondant :
+@ru Затем, в зависимости от версии, которую вы собираетесь использовать, удалите соответствующую папку:
+
+- `C:\ProgramData\BorisFX\Vegas\Shared Plug-Ins\Audio_x64\` <sup>**Boris FX 2026+**</sup>
+- `C:\Program Files (x86)\VEGAS\Shared Plug-Ins\Audio_x64\` <sup>**MAGIX 14 ~ 23**</sup>
+- `C:\Program Files (x86)\Sony\Shared Plug-Ins\Audio_x64\` <sup>**Sony 13-**</sup>
+
+@en Finally, reinstall Vegas.
+@zh 最后重装 Vegas。
+@zh-hant 最後重裝 Vegas。
+@ja 最後に Vegas を再インストールします。
+@ko 마지막으로 Vegas를 다시 설치합니다.
+@de Installieren Sie Vegas abschließend neu.
+@fr Enfin, réinstallez Vegas.
+@ru В конце переустановите Vegas.
 
 @en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/</small>
 @zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/</small>
