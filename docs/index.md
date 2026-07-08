@@ -5008,7 +5008,6 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 <br>
 
-## 十二、脚本/扩展相关
 @en ## XII. Scripts/Extensions Related
 @zh ## 十二、脚本/扩展相关
 @zh-hant ## 十二、腳本/擴充相關
