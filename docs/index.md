@@ -3881,23 +3881,23 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 <br>
 
-@en Q: When the project contains audio bus tracks other than the master audio bus, I cannot render the project to a WAV file (the render progress immediately reaches 100%, but no WAV file is produced). Also, when rendering to any other format, all effect parameters on the audio bus tracks have no effect.
-@zh Q：当工程内有除音频主控以外的音频总线轨道时，无法将工程渲染为 WAV 文件（渲染进度立即跑满，但是未渲染出 WAV 文件）？并且渲染其他所有格式时，音频总线轨道的各种效果参数均不起作用？
-@zh-hant Q：當工程內有除音訊主控以外的音訊匯流排軌道時，無法將工程算繪為 WAV 檔案（算繪進度立即跑滿，但是未算繪出 WAV 檔案）？並且算繪其他所有格式時，音訊匯流排軌道的各種效果參數均不起作用？
-@ja Q: プロジェクトにマスターオーディオバス以外のオーディオバストラックが含まれている場合、プロジェクトを WAV ファイルにレンダリングできません（レンダリングの進行状況がすぐに 100% になりますが、WAV ファイルは出力されません）。また、他のすべての形式にレンダリングする際、オーディオバストラックのエフェクトパラメータがすべて機能しません。
-@ko Q: 프로젝트에 마스터 오디오 버스 이외의 오디오 버스 트랙이 있을 때, 프로젝트를 WAV 파일로 렌더링할 수 없습니다(렌더링 진행률이 즉시 100%에 도달하지만 WAV 파일이 출력되지 않음). 또한 다른 모든 형식으로 렌더링할 때 오디오 버스 트랙의 모든 효과 매개변수가 적용되지 않습니다.
-@de F: Wenn das Projekt Audiobusspuren außer dem Master-Audiobus enthält, kann ich das Projekt nicht als WAV-Datei rendern (der Renderfortschritt erreicht sofort 100 %, aber es wird keine WAV-Datei ausgegeben). Und beim Rendern in alle anderen Formate haben alle Effektparameter der Audiobusspuren keine Wirkung.
-@fr Q : Lorsque le projet contient des pistes de bus audio autres que le bus audio maître, je ne peux pas restituer le projet en fichier WAV (la progression du rendu atteint immédiatement 100 %, mais aucun fichier WAV n’est produit). De plus, lors du rendu vers tous les autres formats, tous les paramètres d’effet des pistes de bus audio n’ont aucun effet.
-@ru B: Когда в проекте присутствуют аудиошинные дорожки, отличные от мастер-шины, проект не рендерится в WAV-файл (прогресс рендеринга сразу достигает 100%, но WAV-файл не создаётся). Кроме того, при рендеринге во все другие форматы все параметры эффектов на аудиошинных дорожках не работают.
+@en Q: When the project contains audio bus tracks other than the master audio bus, **I cannot render the project to a WAV file** (the render progress immediately reaches 100%, but **no WAV file is produced**). Also, when rendering to any other format, **all effect parameters on the audio bus tracks have no effect**.
+@zh Q：当工程内有除音频主控以外的音频总线轨道时，**无法将工程渲染为 WAV 文件**（渲染进度立即跑满，但是**未渲染出 WAV 文件**）？并且渲染其他所有格式时，**音频总线轨道的各种效果参数均不起作用**？
+@zh-hant Q：當工程內有除音訊主控以外的音訊匯流排軌道時，**無法將工程算繪為 WAV 檔案**（算繪進度立即跑滿，但是**未算繪出 WAV 檔案**）？並且算繪其他所有格式時，**音訊匯流排軌道的各種效果參數均不起作用**？
+@ja Q: プロジェクトにマスターオーディオバス以外のオーディオバストラックが含まれている場合、**プロジェクトを WAV ファイルにレンダリングできません**（レンダリングの進行状況がすぐに 100% になりますが、**WAV ファイルは出力されません**）。また、他のすべての形式にレンダリングする際、**オーディオバストラックのエフェクトパラメータがすべて機能しません**。
+@ko Q: 프로젝트에 마스터 오디오 버스 이외의 오디오 버스 트랙이 있을 때, **프로젝트를 WAV 파일로 렌더링할 수 없습니다**(렌더링 진행률이 즉시 100%에 도달하지만 **WAV 파일이 출력되지 않음**). 또한 다른 모든 형식으로 렌더링할 때 **오디오 버스 트랙의 모든 효과 매개변수가 적용되지 않습니다**.
+@de F: Wenn das Projekt Audiobusspuren außer dem Master-Audiobus enthält, **kann ich das Projekt nicht als WAV-Datei rendern** (der Renderfortschritt erreicht sofort 100 %, aber **es wird keine WAV-Datei ausgegeben**). Und beim Rendern in alle anderen Formate **haben alle Effektparameter der Audiobusspuren keine Wirkung**.
+@fr Q : Lorsque le projet contient des pistes de bus audio autres que le bus audio maître, **je ne peux pas restituer le projet en fichier WAV** (la progression du rendu atteint immédiatement 100 %, mais **aucun fichier WAV n’est produit**). De plus, lors du rendu vers tous les autres formats, **tous les paramètres d’effet des pistes de bus audio n’ont aucun effet**.
+@ru B: Когда в проекте присутствуют аудиошинные дорожки, отличные от мастер-шины, **проект не рендерится в WAV-файл** (прогресс рендеринга сразу достигает 100%, но **WAV-файл не создаётся**). Кроме того, при рендеринге во все другие форматы **все параметры эффектов на аудиошинных дорожках не работают**.
 
-@en A: This is caused by `Multi Stream Render`. You need to go to [Internal Preferences](#accessing-vegas-internal-preferences), search for `Enable Multi Stream Render`, and change it from `TRUE` to the default `FALSE`.
-@zh A：这个是 `多流渲染` 导致的。需要进入 [内部首选项](#vegas-内部首选项的进入方法)，搜索并找到 `Enable Multi Stream Render`，将其从 `TRUE` 修改为默认的 `FALSE`。
-@zh-hant A：這個是 `多流算繪` 導致的。需要進入 [內部首選項](#vegas-內部首選項的進入方法)，搜尋並找到 `Enable Multi Stream Render`，將其從 `TRUE` 修改為預設的 `FALSE`。
-@ja A: これは `マルチストリームレンダリング` が原因です。[内部プリファレンス](#vegas-内部プリファレンスへのアクセス) に移動し、`Enable Multi Stream Render` を検索して見つけ、`TRUE` からデフォルトの `FALSE` に変更する必要があります。
-@ko A: 이는 `멀티 스트림 렌더링` 때문입니다. [내부 환경설정](#vegas-내부-환경설정-접근)으로 이동하여 `Enable Multi Stream Render`를 검색하여 찾은 다음, `TRUE`에서 기본값인 `FALSE`로 변경하십시오.
-@de A: Dies wird durch `Multi Stream Render` verursacht. Sie müssen zu den [internen Einstellungen](#auf-die-internen-vegas-einstellungen-zugreifen) gehen, nach `Enable Multi Stream Render` suchen und es von `TRUE` auf den Standardwert `FALSE` ändern.
-@fr R : Ceci est causé par le `Multi Stream Render`. Vous devez accéder aux [préférences internes](#accéder-aux-préférences-internes-vegas), rechercher `Enable Multi Stream Render` et le faire passer de `TRUE` à la valeur par défaut `FALSE`.
-@ru O: Это вызвано `многопоточным рендерингом`. Необходимо перейти в [внутренние настройки](#доступ-к-внутренним-настройкам-vegas), найти `Enable Multi Stream Render` и изменить его с `TRUE` на значение по умолчанию `FALSE`.
+@en A: This is caused by **`Multi Stream Render`**. You need to go to **[Internal Preferences](#accessing-vegas-internal-preferences)**, search for `Enable Multi Stream Render`, and change it from **`TRUE`** to the default **`FALSE`**.
+@zh A：这个是 **`多流渲染`** 导致的。进入 **[内部首选项](#vegas-内部首选项的进入方法)**，搜索并找到 `Enable Multi Stream Render`，将其从 **`TRUE`** 修改为默认的 **`FALSE`**。
+@zh-hant A：這個是 **`多流算繪`** 導致的。進入 **[內部首選項](#vegas-內部首選項的進入方法)**，搜尋並找到 `Enable Multi Stream Render`，將其從 **`TRUE`** 修改為預設的 **`FALSE`**。
+@ja A: これは **`マルチストリームレンダリング`** が原因です。**[内部プリファレンス](#vegas-内部プリファレンスへのアクセス)** に移動し、`Enable Multi Stream Render` を検索して見つけ、**`TRUE`** からデフォルトの **`FALSE`** に変更する必要があります。
+@ko A: 이는 **`멀티 스트림 렌더링`** 때문입니다. **[내부 환경설정](#vegas-내부-환경설정-접근)**으로 이동하여 `Enable Multi Stream Render`를 검색하여 찾은 다음, **`TRUE`**에서 기본값인 **`FALSE`**로 변경하십시오.
+@de A: Dies wird durch **`Multi Stream Render`** verursacht. Sie müssen zu den **[internen Einstellungen](#auf-die-internen-vegas-einstellungen-zugreifen)** gehen, nach `Enable Multi Stream Render` suchen und es von **`TRUE`** auf den Standardwert **`FALSE`** ändern.
+@fr R : Ceci est causé par le **`Multi Stream Render`**. Vous devez accéder aux **[préférences internes](#accéder-aux-préférences-internes-vegas)**, rechercher `Enable Multi Stream Render` et le faire passer de **`TRUE`** à la valeur par défaut **`FALSE`**.
+@ru O: Это вызвано **`многопоточным рендерингом`**. Необходимо перейти в **[внутренние настройки](#доступ-к-внутренним-настройкам-vegas)**, найти `Enable Multi Stream Render` и изменить его с **`TRUE`** на значение по умолчанию **`FALSE`**.
 
 <br>
 
