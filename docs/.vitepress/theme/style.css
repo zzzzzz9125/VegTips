@@ -691,7 +691,7 @@ img {
 
   .VPNav, .VPSidebar, .VPLocalNav, .VPFooter,
   .VPSkipLink, .VPBackdrop,
-  .global-footer, .save-pdf-btn,
+  .global-footer, .outline-depth-toggle, .save-pdf-btn,
   .edit-link, .last-updated, .pager,
   .aside, .aside-container, .aside-curtain, .aside-content,
   .VPDocAside, .VPDocAsideOutline {

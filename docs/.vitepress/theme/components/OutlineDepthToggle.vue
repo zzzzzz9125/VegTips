@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import { ref, watch, useId, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onMounted, onUnmounted } from 'vue'
 import { inBrowser } from 'vitepress'
-import VPSwitch from './Switch.vue'
-import Slider from './Slider.vue'
 import { useI18n } from '../composables/useI18n'
 
 const labels = useI18n({
@@ -16,7 +14,6 @@ const labels = useI18n({
   ru: { depth: 'Глубина оглавления', autoExpand: 'Авторазворачивание' },
 }).t
 
-const id = useId()
 const depth = ref(2)
 const autoExpand = ref(true)
 
@@ -75,37 +72,125 @@ onUnmounted(() => {
 
 <template>
   <div class="outline-depth-toggle">
-    <label :for="`${id}-depth`">{{ labels.depth }}</label>
-    <Slider :id="`${id}-depth`" min="2" max="6" step="1" v-model="depth" />
-    <label :for="`${id}-auto-expand`">{{ labels.autoExpand }}</label>
-    <label>
-      <VPSwitch :id="`${id}-auto-expand`" v-model="autoExpand" />
+    <div class="row">
+      <span class="label">{{ labels.depth }}</span>
+      <div class="depth-slider">
+        <input type="range" min="2" max="6" step="1" v-model="depth" />
+      </div>
+    </div>
+    <label class="row auto-expand">
+      <span class="label">{{ labels.autoExpand }}</span>
+      <span class="switch">
+        <input
+          type="checkbox"
+          v-model="autoExpand"
+          role="switch"
+          :aria-checked="autoExpand"
+          :aria-label="labels.autoExpand"
+        />
+        <span class="slider" aria-hidden="true"></span>
+      </span>
     </label>
   </div>
 </template>
 
 <style scoped>
 .outline-depth-toggle {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 8px 6.4px;
-  align-items: center;
-  padding: 4px 0 6px 16px;
-  border-left: 1px solid var(--vp-c-divider);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.25rem 0.5rem 0.5rem;
+  border-bottom: 1px solid var(--vp-c-divider);
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
 }
 
 .outline-depth-toggle:has(~ .VPDocAsideOutline:not(.has-outline)) {
   display: none;
 }
 
-label {
-  white-space: nowrap;
-  font-size: 0.875rem;
-  color: var(--vp-c-text-2);
+.outline-depth-toggle .row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
 }
 
-.VPSwitch {
-  justify-self: end;
+.outline-depth-toggle .label {
+  font-size: 0.875rem;
+  color: var(--vp-c-text-2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.outline-depth-toggle .depth-slider {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.outline-depth-toggle .depth-slider input[type='range'] {
+  width: 100%;
+  accent-color: var(--vp-c-brand-1);
+  cursor: pointer;
+}
+
+.outline-depth-toggle .auto-expand {
+  font-size: 0.9rem;
+  color: var(--vp-c-text-1);
+  gap: 0.35rem;
+  justify-content: space-between;
+}
+
+.outline-depth-toggle .switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+
+.outline-depth-toggle .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.outline-depth-toggle .switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-border);
+  transition: 0.2s;
+  border-radius: 34px;
+}
+
+.outline-depth-toggle .switch .slider:before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 2px;
+  background-color: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-border);
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.outline-depth-toggle .switch input:checked + .slider {
+  background-color: var(--vp-c-brand-soft);
+  border-color: var(--vp-c-brand-1);
+}
+
+.outline-depth-toggle .switch input:checked + .slider:before {
+  transform: translateX(16px);
+  border-color: var(--vp-c-brand-1);
 }
 </style>
 
