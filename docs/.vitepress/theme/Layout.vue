@@ -108,6 +108,9 @@ onMounted(async () => {
 :root:active-view-transition-type(instant) {
   * {
     view-transition-name: none !important;
+    view-transition-class: none !important;
+    transition: none !important;
+    animation: none !important;
   }
 
   &::view-transition-old(root),
@@ -137,5 +140,11 @@ onMounted(async () => {
 
 :root.locale-changing * {
   view-transition-name: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+
+:root.locale-changing {
+  scroll-behavior: auto !important;
 }
 </style>

@@ -132,6 +132,26 @@ readthedocs-flyout::part(flyout) {
   animation-name: float-up-slight-in;
 }
 
+.VPSidebarItem .items {
+  transition: block-size, display;
+  transition-behavior: allow-discrete;
+  transition-duration: 250ms;
+  overflow: clip;
+
+  @starting-style {
+    block-size: 0;
+  }
+
+  :active-view-transition &,
+  &:is(.no-transition *) {
+    transition: none;
+  }
+}
+
+.VPSidebarItem.collapsed .items {
+  block-size: 0;
+}
+
 @keyframes float-up-out {
   to {
     translate: 0 -2rem;

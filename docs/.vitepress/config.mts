@@ -79,6 +79,7 @@ function sidebarForLocale(locale: string) {
   const prefix = locale === 'root' ? '' : `/${locale}`
   return sidebarTemplate.map(group => ({
     text: localeText(group, locale),
+    collapsed: false,
     items: group.items.map(item => ({
       text: localeText(item, locale),
       link: prefix + item.link
@@ -276,7 +277,6 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}favicon.svg` }],
     // ['script', { src: `${base}js/language-redirect.js` }],
-    ['script', { src: `${base}js/outline-depth.js` }],
     ['script', { src: `${base}js/hash-stabilizer.js` }]
   ],
   markdown: {
@@ -290,6 +290,6 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/zzzzzz9125/VegTips' }
     ],
-    outline: [2, 4]
+    outline: [2, 6]
   }
 })
