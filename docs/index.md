@@ -3241,8 +3241,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @ru О: Если вы используете **кодировщик NVIDIA NVENC** и ваша **версия драйвера видеокарты > `590`**, то **встроенные шаблоны рендеринга в VP22 и ниже не могут вызывать NVENC**. Текущие решения:
 
 @en - **Choose templates with other encoders than `NVENC`**.
-@zh - **选择调用除 `NVENC` 的其他编码器的渲染模板进行渲染**。
-@zh-hant - **選擇呼叫除 `NVENC` 的其他編碼器的算繪範本進行算繪**。
+@zh - **选择调用除 `NVENC` 以外的其他编码器的渲染模板进行渲染**。
+@zh-hant - **選擇呼叫除 `NVENC` 以外的其他編碼器的算繪範本進行算繪**。
 @ja - **`NVENC` 以外のエンコーダーを使用するテンプレートを選択する**。
 @ko - **`NVENC` 이외의 인코더를 사용하는 템플릿을 선택하세요**.
 @de - **Wählen Sie Vorlagen mit anderen Encodern als `NVENC`**.
