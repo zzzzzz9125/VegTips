@@ -109,8 +109,8 @@ Pour le moment, je n'accepte pas de demandes privées directes concernant des pr
 @ru - Эта статья не является базовым руководством для начинающих. Это руководство по устранению различных проблем в VEGAS Pro, поэтому она не будет подробно освещать базовые операции с программным обеспечением. Данная статья поддерживает использование лицензионного ПО. Информацию о покупке легальной лицензии см. в разделе [Каналы приобретения ПО](#xvi-каналы-приобретения-по) в конце.
 
 @en - This article is over 10,000 words and covers common issues and solutions for VEGAS Pro. It was first published on Chinese website Bilibili and later summarized and translated into this document for online viewing. If you find any omissions, you can point them out [in this post](https://forum.borisfx.com/t/vegas-pro-troubleshooting-guide-common-issues-and-solutions/21231).
-@zh - 本文总共超过两万字，涵盖 Vegas Pro 软件的各种常见疑难杂症及其解决方案。本文首发于 B 站专栏 [cv27004832](https://www.bilibili.com/read/cv27004832/)，后整理成文档，供在线预览。如有疏漏之处，可于此专栏的评论区中指出。
-@zh-hant - 本文總共超過兩萬字，涵蓋 Vegas Pro 軟體的各種常見疑難雜症及其解決方案。本文首發於 B 站專欄 [cv27004832](https://www.bilibili.com/read/cv27004832/)，後整理成文檔，供線上預覽。如有疏漏之處，可於此專欄的評論區中指出。
+@zh - 本文总共超过两万字，涵盖 Vegas Pro 软件的各种常见疑难杂症及其解决方案。本文首发于 B 站专栏 [cv27004832](https://www.bilibili.com/read/cv27004832/)，之后整理排版成为更完善的文档，供在线浏览。如有疏漏之处，可于此专栏的评论区中指出。
+@zh-hant - 本文總共超過兩萬字，涵蓋 Vegas Pro 軟體的各種常見疑難雜症及其解決方案。本文首發於 B 站專欄 [cv27004832](https://www.bilibili.com/read/cv27004832/)，之後整理排版成為更完善的文檔，供線上瀏覽。如有疏漏之處，可於此專欄的評論區中指出。
 @ja - この記事は 20,000 語以上に及び、VEGAS Pro のよくある問題と解決策を網羅しています。中国のウェブサイト Bilibili で初公開され、後にまとめられ、オンライン閲覧用にこのドキュメントに翻訳されました。抜け漏れがあれば、[この投稿](https://forum.borisfx.com/t/vegas-pro-troubleshooting-guide-common-issues-and-solutions/21231)で指摘してください。
 @ko - 이 글은 20,000단어가 넘으며 VEGAS Pro의 일반적인 문제와 해결책을 다룹니다. 처음 중국 웹사이트 Bilibili에 게시된 후 요약 번역되어 온라인으로 볼 수 있는 이 문서로 정리되었습니다. 누락된 부분이 있으면 [이 게시물](https://forum.borisfx.com/t/vegas-pro-troubleshooting-guide-common-issues-and-solutions/21231)에 지적할 수 있습니다.
 @de - Dieser Artikel umfasst über 10.000 Wörter und behandelt häufige Probleme und Lösungen für VEGAS Pro. Er wurde zuerst auf der chinesischen Website Bilibili veröffentlicht und später zu diesem Dokument zusammengefasst und übersetzt, um online betrachtet zu werden. Wenn Sie Fehler oder Auslassungen finden, können Sie diese [in diesem Beitrag](https://forum.borisfx.com/t/vegas-pro-troubleshooting-guide-common-issues-and-solutions/21231) melden.
@@ -5765,8 +5765,8 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 @ru ### 4. Использовать инкрементное сохранение (VP18+)
 
 @en Incremental Save, available since VP18, shortcut **`Ctrl + Alt + S`**. Similar to "Save As" but more convenient; **automatically saves as a new file with an incremental number**, not overwriting the original. You can remap the shortcut via `Options -> Customize Keyboard`.
-@zh 增量保存功能是从 vv18 开始有的，快捷键是**`Ctrl + Alt + S`**。有点类似于另存为，但是比另存为方便，会**自动按照序号另存为新的文件**，而不覆盖掉原始工程文件。快捷键不习惯的话，也可以到上边**选项-自定义键盘**，修改成你想要的快捷键。默认的快捷键和 QQ 自带的录屏冲突。
-@zh-hant 增量儲存功能是從 vv18 開始有的，快捷鍵是**`Ctrl + Alt + S`**。有點類似於另存為，但是比另存為方便，會**自動按照序號另存為新的檔案**，而不覆蓋掉原始工程檔案。快捷鍵不習慣的話，也可以到上邊**選項-自定義鍵盤**，修改成你想要的快捷鍵。預設的快捷鍵和 QQ 自帶的錄屏衝突。
+@zh 增量保存功能是从 vv18 开始有的，快捷键是 **`Ctrl + Alt + S`**。有点类似于另存为，但是比另存为方便，会**自动按照序号另存为新的文件**，而不覆盖掉原始工程文件。快捷键不习惯的话，也可以到上边 **`选项 -> 自定义键盘`**，修改成你想要的快捷键。默认的快捷键和 QQ 自带的录屏冲突。
+@zh-hant 增量儲存功能是從 vv18 開始有的，快捷鍵是 **`Ctrl + Alt + S`**。有點類似於另存為，但是比另存為方便，會**自動按照序號另存為新的檔案**，而不覆蓋掉原始工程檔案。快捷鍵不習慣的話，也可以到上邊 **`選項 -> 自定義鍵盤`**，修改成你想要的快捷鍵。預設的快捷鍵和 QQ 自帶的錄屏衝突。
 @ja インクリメンタル保存は VP18 から利用可能で、ショートカット **`Ctrl + Alt + S`**。「名前を付けて保存」に似ていますが、より便利で、**元を上書きせずにインクリメンタル番号で新しいファイルとして自動保存**。ショートカットは `オプション -> キーボードのカスタマイズ` で再マップできます。
 @ko VP18부터 제공되는 증분 저장, 단축키 **`Ctrl + Alt + S`**. 다른 이름으로 저장과 유사하지만 더 편리합니다. **자동으로 증분 번호가 있는 새 파일로 저장**하여 원본을 덮어쓰지 않습니다. `옵션 -> 키보드 사용자 정의`를 통해 단축키를 다시 매핑할 수 있습니다.
 @de Inkrementelles Speichern, verfügbar seit VP18, Tastenkombination **`Strg + Alt + S`**. Ähnlich wie "Speichern unter", aber bequemer; **speichert automatisch als neue Datei mit einer Inkrementnummer**, überschreibt das Original nicht. Sie können die Tastenkombination über `Optionen -> Tastatur anpassen` neu zuweisen.
