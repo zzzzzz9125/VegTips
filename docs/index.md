@@ -993,14 +993,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr Si vous avez installé la version anglaise, la valeur par défaut de `ULangID` est probablement la valeur hexadécimale `409` (décimal `1033`). Changez-la en **`40c` (décimal `1036`) pour le français**.
 @ru Если вы установили английскую версию, значение по умолчанию для `ULangID`, скорее всего, будет шестнадцатеричным значением `409` (десятичное `1033`). Измените его на **`419` (шестнадцатеричное, десятичное `1049`) для русского**.
 
-@en <small>For other language IDs, see Microsoft's documentation: https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid<br></small>
-@zh <small>其他语言编号详见微软的文档：https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid<br></small>
-@zh-hant <small>其他語言編號詳見微軟的文件：https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid<br></small>
-@ja <small>他の言語 ID については、Microsoft のドキュメントを参照： https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid<br></small>
-@ko <small>다른 언어 ID는 Microsoft 문서를 참조하십시오: https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid<br></small>
-@de <small>Für andere Sprach-IDs siehe die Microsoft-Dokumentation: https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid<br></small>
-@fr <small>Pour d'autres identifiants de langue, voir la documentation Microsoft : https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid<br></small>
-@ru <small>Для других идентификаторов языков см. документацию Microsoft: https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid<br></small>
+<small>
+
+@en For other language IDs, see Microsoft's documentation: https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid
+@zh 其他语言编号详见微软的文档：https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid
+@zh-hant 其他語言編號詳見微軟的文件：https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid
+@ja 他の言語 ID については、Microsoft のドキュメントを参照： https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid
+@ko 다른 언어 ID는 Microsoft 문서를 참조하십시오: https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid
+@de Für andere Sprach-IDs siehe die Microsoft-Dokumentation: https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid
+@fr Pour d'autres identifiants de langue, voir la documentation Microsoft : https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid
+@ru Для других идентификаторов языков см. документацию Microsoft: https://learn.microsoft.com/openspecs/windows_protocols/ms-lcid
+
+</small>
 
 @en For newer MAGIX VEGAS Pro versions, if **after changing the registry, VEGAS fails to start with `Error code: -1`**, navigate to the `language` folder in VEGAS's installation directory (default: `C:\Program Files\VEGAS\VEGAS Pro 23.0\language\`, where `23.0` is the version). **Rename any `local_xx_XX.cfg` file** (e.g., `local_en_US.cfg` for US English) **to `local_zh_CN.cfg`**.
 @zh 对于 Magix VEGAS Pro 的较高版本，如果**改完语言注册表以后重新启动 Vegas，显示 `错误代码: -1`，无法正常启动**，可转到 Vegas 的安装目录中的 `language` 文件夹（默认为 `C:\Program Files\VEGAS\VEGAS Pro 23.0\language\`，其中 `23.0` 是版本号），将其中任意一个 `local_xx_XX.cfg` 文件（比如美式英语的 `local_en_US.cfg`）**重命名成 `local_zh_CN.cfg`**。
@@ -1011,14 +1015,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr Pour les versions plus récentes de MAGIX VEGAS Pro, si **après avoir changé le registre, VEGAS ne démarre pas avec `Code d'erreur : -1`**, naviguez vers le dossier `language` dans le répertoire d'installation de VEGAS (par défaut : `C:\Program Files\VEGAS\VEGAS Pro 23.0\language\`, où `23.0` est la version). **Renommez tout fichier `local_xx_XX.cfg`** (par ex. `local_en_US.cfg` pour l'anglais américain) **en `local_fr_FR.cfg`**.
 @ru Для более новых версий MAGIX VEGAS Pro, если **после изменения реестра VEGAS не запускается с `Код ошибки: -1`**, перейдите в папку `language` в каталоге установки VEGAS (по умолчанию: `C:\Program Files\VEGAS\VEGAS Pro 23.0\language\`, где `23.0` — версия). **Переименуйте любой файл `local_xx_XX.cfg`** (например, `local_en_US.cfg` для американского английского) **в `local_ru_RU.cfg`**. **Учтите, что файл `local_ru_RU.cfg` может отсутствовать в версиях VP17 и выше, так как русская локализация была удалена.**
 
-@en <small>Another useful tool: <code>Vegas Language Changer</code>: https://github.com/IZH318/Vegas-Language-Changer</small>
-@zh <small>另一个有用的工具 <code>Vegas Language Changer</code>：https://github.com/IZH318/Vegas-Language-Changer</small>
-@zh-hant <small>另一個有用的工具 <code>Vegas Language Changer</code>：https://github.com/IZH318/Vegas-Language-Changer</small>
-@ja <small>別の便利なツール： <code>Vegas Language Changer</code>: https://github.com/IZH318/Vegas-Language-Changer</small>
-@ko <small>또 다른 유용한 도구: <code>Vegas Language Changer</code>: https://github.com/IZH318/Vegas-Language-Changer</small>
-@de <small>Ein weiteres nützliches Tool: <code>Vegas Language Changer</code>: https://github.com/IZH318/Vegas-Language-Changer</small>
-@fr <small>Un autre outil utile : <code>Vegas Language Changer</code> : https://github.com/IZH318/Vegas-Language-Changer</small>
-@ru <small>Еще один полезный инструмент: <code>Vegas Language Changer</code>: https://github.com/IZH318/Vegas-Language-Changer</small>
+<small>
+
+@en Another useful tool: `Vegas Language Changer`: https://github.com/IZH318/Vegas-Language-Changer
+@zh 另一个有用的工具 `Vegas Language Changer`：https://github.com/IZH318/Vegas-Language-Changer
+@zh-hant 另一個有用的工具 `Vegas Language Changer`：https://github.com/IZH318/Vegas-Language-Changer
+@ja 別の便利なツール： `Vegas Language Changer`: https://github.com/IZH318/Vegas-Language-Changer
+@ko 또 다른 유용한 도구: `Vegas Language Changer`: https://github.com/IZH318/Vegas-Language-Changer
+@de Ein weiteres nützliches Tool: `Vegas Language Changer`: https://github.com/IZH318/Vegas-Language-Changer
+@fr Un autre outil utile : `Vegas Language Changer` : https://github.com/IZH318/Vegas-Language-Changer
+@ru Еще один полезный инструмент: `Vegas Language Changer`: https://github.com/IZH318/Vegas-Language-Changer
+
+</small>
 
 @en After successfully starting VEGAS, if the names of built-in video FX are still in English, you can try [clearing the plugin cache](#video-plugin-q-a).
 @zh 成功启动 Vegas 后，若发现自带视频插件的效果名称仍然为英文，可以尝试 [清理插件缓存](#视频插件相关的-q-a)。
@@ -1051,9 +1059,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Tout d'abord, essayez de redémarrer votre PC. Si cela ne fonctionne pas, vous devez modifier le registre. Ouvrez l'Éditeur du Registre, naviguez vers **`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager`**, **supprimez la valeur `PendingFileRenameOperations`**, puis redémarrez votre PC.
 @ru О: Сначала попробуйте перезагрузить ПК. Если это не помогло, вам нужно изменить реестр. Откройте редактор реестра, перейдите к **`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager`**, **удалите значение `PendingFileRenameOperations`**, затем перезагрузите ПК.
 
+<small>
+
 @en <!-- -->
-@zh <small>参见：https://tieba.baidu.com/p/4339996851<br></small>
-@zh-hant <small>參見：https://tieba.baidu.com/p/4339996851<br></small>
+@zh 参见：https://tieba.baidu.com/p/4339996851
+@zh-hant 參見：https://tieba.baidu.com/p/4339996851
+
+</small>
 
 <br>
 
@@ -1117,9 +1129,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Tout d'abord, essayez de réinstaller vos pilotes graphiques. Si cela ne fonctionne pas, essayez cette correction de registre. Ouvrez l'Éditeur du Registre, trouvez la valeur : **`IntelOpenCL64.dll`** sous **`HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\OpenCL\Vendors`** et la valeur **`IntelOpenCL32.dll`** sous **`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Khronos\OpenCL\Vendors`**. Changez les données pour les deux valeurs **de `0` à `1`**, puis redémarrez VEGAS.
 @ru О: Сначала попробуйте переустановить драйверы видеокарты. Если это не помогло, попробуйте это исправление реестра. Откройте редактор реестра, найдите значение: **`IntelOpenCL64.dll`** в разделе **`HKEY_LOCAL_MACHINE\SOFTWARE\Khronos\OpenCL\Vendors`** и значение **`IntelOpenCL32.dll`** в разделе **`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Khronos\OpenCL\Vendors`**. Измените данные для обоих значений **с `0` на `1`**, затем перезапустите VEGAS.
 
+<small>
+
 @en <!-- -->
-@zh <small>参见：https://www.bilibili.com/video/BV11z411i74a/<br></small>
-@zh-hant <small>參見：https://www.bilibili.com/video/BV11z411i74a/<br></small>
+@zh 参见：https://www.bilibili.com/video/BV11z411i74a/
+@zh-hant 參見：https://www.bilibili.com/video/BV11z411i74a/
+
+</small>
 
 <br>
 
@@ -1132,14 +1148,27 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr Q : VEGAS **plante/se bloque (Code d'erreur `0xC06D007F`)** à l'étape "**Usine de plugins vidéo...**" pendant le démarrage ?
 @ru В: VEGAS **аварийно завершает работу/зависает (Код ошибки `0xC06D007F`)** на шаге "**Фабрика видео-плагинов...**" во время запуска?
 
-@en A: This step loads video plugins. It's often an issue with OFX video plugin scanning. Go to the OFX path: **`C:\Program Files\Common Files\OFX\Plugins\`, move out potentially problematic plugins from this folder, then try starting VEGAS**. Once it starts normally, you can try moving the files back or reinstalling the plugin. If you have specific error details, try to find keywords related to the plugin name.<br>**<small>(Prioritize checking Red Giant Universe plugins, as they cause startup crashes for many users.)</small>**
-@zh A：这一步是在加载视频插件，一般可以考虑是 OFX 视频插件的扫描问题，转到 OFX 路径：**`C:\Program Files\Common Files\OFX\Plugins\`，把可能出现问题的插件从这个文件夹移出来，再尝试启动 Vegas**。确定能够正常启动后，可以再试着把文件重新移回去，或者重装这个插件等。有具体报错内容的话，可以试着从中找到对应插件名称的关键词。<br>**<small>（建议优先排查红巨星宇宙插件 `Red Giant Universe`，大部分人遇到的启动时崩溃问题都由它导致。）</small>**
-@zh-hant A：這一步是在載入影片外掛程式，一般可以考慮是 OFX 影片外掛程式的掃描問題，轉到 OFX 路徑：**`C:\Program Files\Common Files\OFX\Plugins\`，把可能出現問題的外掛程式從這個資料夾移出來，再嘗試啟動 Vegas**。確定能夠正常啟動後，可以再試著把檔案重新移回去，或者重裝這個外掛程式等。有具體報錯內容的話，可以試著從中找到對應外掛程式名稱的關鍵詞。<br>**<small>（建議優先排查紅巨星宇宙外掛程式 `Red Giant Universe`，大部分人遇到的啟動時崩潰問題都由它導致。）</small>**
-@ja A: このステップはビデオプラグインをロードします。多くの場合、OFX ビデオプラグインのスキャンに関する問題です。OFX パス： **`C:\Program Files\Common Files\OFX\Plugins\`** に移動し、問題のある可能性のあるプラグインをこのフォルダから移動し、VEGAS の起動を試みてください。正常に起動したら、ファイルを戻したり、プラグインを再インストールしたりできます。特定のエラーの詳細がある場合は、プラグイン名に関連するキーワードを見つけてみてください。<br>**<small>（優先的に Red Giant Universe プラグインを確認してください。多くのユーザーで起動クラッシュを引き起こします。）</small>**
-@ko A: 이 단계에서는 비디오 플러그인을 로드합니다. 종종 OFX 비디오 플러그인 스캔 문제입니다. OFX 경로로 이동: **`C:\Program Files\Common Files\OFX\Plugins\`, 이 폴더에서 잠재적으로 문제가 있는 플러그인을 이동한 후 VEGAS 시작을 시도해 보십시오**. 정상적으로 시작되면 파일을 다시 이동하거나 플러그인을 재설치할 수 있습니다. 특정 오류 세부 정보가 있으면 플러그인 이름과 관련된 키워드를 찾아보십시오.<br>**<small>(Red Giant Universe 플러그인을 우선 확인하십시오. 많은 사용자의 시작 시 크래시를 유발합니다.)</small>**
-@de A: Dieser Schritt lädt Video-Plugins. Es ist oft ein Problem mit dem OFX-Video-Plugin-Scan. Gehen Sie zum OFX-Pfad: **`C:\Programme\Gemeinsame Dateien\OFX\Plugins\`**, **entfernen Sie potenziell problematische Plugins aus diesem Ordner**, dann versuchen Sie, VEGAS zu starten. Sobald es normal startet, können Sie versuchen, die Dateien zurückzubewegen oder das Plugin neu zu installieren. Wenn Sie spezifische Fehlerdetails haben, versuchen Sie, Schlüsselwörter im Zusammenhang mit dem Plugin-Namen zu finden.<br>**<small>(Überprüfen Sie zuerst Red Giant Universe-Plugins, da sie bei vielen Benutzern Startabstürze verursachen.)</small>**
-@fr R : Cette étape charge les plugins vidéo. C'est souvent un problème de scan des plugins vidéo OFX. Allez dans le chemin OFX : **`C:\Program Files\Common Files\OFX\Plugins\`**, déplacez les plugins potentiellement problématiques hors de ce dossier, puis essayez de démarrer VEGAS**. Une fois démarré normalement, vous pouvez essayer de remettre les fichiers ou de réinstaller le plugin. Si vous avez des détails d'erreur spécifiques, essayez de trouver des mots-clés liés au nom du plugin.<br>**<small>(Vérifiez en priorité les plugins Red Giant Universe, car ils provoquent des plantages au démarrage pour de nombreux utilisateurs.)</small>**
-@ru О: Этот шаг загружает видео-плагины. Часто это проблема со сканированием OFX видео-плагинов. Перейдите по пути OFX: **`C:\Program Files\Common Files\OFX\Plugins\`, переместите потенциально проблемные плагины из этой папки, затем попробуйте запустить VEGAS**. После нормального запуска вы можете попробовать вернуть файлы обратно или переустановить плагин. Если у вас есть конкретные детали ошибки, попробуйте найти ключевые слова, связанные с именем плагина.<br>**<small>(В первую очередь проверьте плагины Red Giant Universe, так как они вызывают сбои при запуске у многих пользователей.)</small>**
+@en A: This step loads video plugins. It's often an issue with OFX video plugin scanning. Go to the OFX path: **`C:\Program Files\Common Files\OFX\Plugins\`, move out potentially problematic plugins from this folder, then try starting VEGAS**. Once it starts normally, you can try moving the files back or reinstalling the plugin. If you have specific error details, try to find keywords related to the plugin name.
+@zh A：这一步是在加载视频插件，一般可以考虑是 OFX 视频插件的扫描问题，转到 OFX 路径：**`C:\Program Files\Common Files\OFX\Plugins\`，把可能出现问题的插件从这个文件夹移出来，再尝试启动 Vegas**。确定能够正常启动后，可以再试着把文件重新移回去，或者重装这个插件等。有具体报错内容的话，可以试着从中找到对应插件名称的关键词。
+@zh-hant A：這一步是在載入影片外掛程式，一般可以考慮是 OFX 影片外掛程式的掃描問題，轉到 OFX 路徑：**`C:\Program Files\Common Files\OFX\Plugins\`，把可能出現問題的外掛程式從這個資料夾移出來，再嘗試啟動 Vegas**。確定能夠正常啟動後，可以再試著把檔案重新移回去，或者重裝這個外掛程式等。有具體報錯內容的話，可以試著從中找到對應外掛程式名稱的關鍵詞。
+@ja A: このステップはビデオプラグインをロードします。多くの場合、OFX ビデオプラグインのスキャンに関する問題です。OFX パス： **`C:\Program Files\Common Files\OFX\Plugins\`** に移動し、問題のある可能性のあるプラグインをこのフォルダから移動し、VEGAS の起動を試みてください。正常に起動したら、ファイルを戻したり、プラグインを再インストールしたりできます。特定のエラーの詳細がある場合は、プラグイン名に関連するキーワードを見つけてみてください。
+@ko A: 이 단계에서는 비디오 플러그인을 로드합니다. 종종 OFX 비디오 플러그인 스캔 문제입니다. OFX 경로로 이동: **`C:\Program Files\Common Files\OFX\Plugins\`, 이 폴더에서 잠재적으로 문제가 있는 플러그인을 이동한 후 VEGAS 시작을 시도해 보십시오**. 정상적으로 시작되면 파일을 다시 이동하거나 플러그인을 재설치할 수 있습니다. 특정 오류 세부 정보가 있으면 플러그인 이름과 관련된 키워드를 찾아보십시오.
+@de A: Dieser Schritt lädt Video-Plugins. Es ist oft ein Problem mit dem OFX-Video-Plugin-Scan. Gehen Sie zum OFX-Pfad: **`C:\Programme\Gemeinsame Dateien\OFX\Plugins\`**, **entfernen Sie potenziell problematische Plugins aus diesem Ordner**, dann versuchen Sie, VEGAS zu starten. Sobald es normal startet, können Sie versuchen, die Dateien zurückzubewegen oder das Plugin neu zu installieren. Wenn Sie spezifische Fehlerdetails haben, versuchen Sie, Schlüsselwörter im Zusammenhang mit dem Plugin-Namen zu finden.
+@fr R : Cette étape charge les plugins vidéo. C'est souvent un problème de scan des plugins vidéo OFX. Allez dans le chemin OFX : **`C:\Program Files\Common Files\OFX\Plugins\`**, déplacez les plugins potentiellement problématiques hors de ce dossier, puis essayez de démarrer VEGAS**. Une fois démarré normalement, vous pouvez essayer de remettre les fichiers ou de réinstaller le plugin. Si vous avez des détails d'erreur spécifiques, essayez de trouver des mots-clés liés au nom du plugin.
+@ru О: Этот шаг загружает видео-плагины. Часто это проблема со сканированием OFX видео-плагинов. Перейдите по пути OFX: **`C:\Program Files\Common Files\OFX\Plugins\`, переместите потенциально проблемные плагины из этой папки, затем попробуйте запустить VEGAS**. После нормального запуска вы можете попробовать вернуть файлы обратно или переустановить плагин. Если у вас есть конкретные детали ошибки, попробуйте найти ключевые слова, связанные с именем плагина.
+
+<small>
+
+@en **(Prioritize checking Red Giant Universe plugins, as they cause startup crashes for many users.)**
+@zh **（建议优先排查红巨星宇宙插件 `Red Giant Universe`，大部分人遇到的启动时崩溃问题都由它导致。）**
+@zh-hant **（建議優先排查紅巨星宇宙外掛程式 `Red Giant Universe`，大部分人遇到的啟動時崩潰問題都由它導致。）**
+@ja **（優先的に Red Giant Universe プラグインを確認してください。多くのユーザーで起動クラッシュを引き起こします。）**
+@ko **(Red Giant Universe 플러그인을 우선 확인하십시오. 많은 사용자의 시작 시 크래시를 유발합니다.)**
+@de **(Überprüfen Sie zuerst Red Giant Universe-Plugins, da sie bei vielen Benutzern Startabstürze verursachen.)**
+@fr **(Vérifiez en priorité les plugins Red Giant Universe, car ils provoquent des plantages au démarrage pour de nombreux utilisateurs.)**
+@ru **(В первую очередь проверьте плагины Red Giant Universe, так как они вызывают сбои при запуске у многих пользователей.)**
+
+</small>
 
 <br>
 
@@ -1301,14 +1330,32 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr 4. Naviguez vers `14.44.35112\onecore\x64\Microsoft.VC143.OpenMP`, trouvez **`vcomp140.dll`**, copiez-le, et collez-le dans votre répertoire d'installation VEGAS. Redémarrez VEGAS.
 @ru 4. Перейдите в `14.44.35112\onecore\x64\Microsoft.VC143.OpenMP`, найдите **`vcomp140.dll`**, скопируйте его и вставьте в каталог установки VEGAS. Перезапустите VEGAS.
 
-@en <small>Download link for <code>x64</code> <code>vcomp140.dll</code>: </small>[vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)<small><br>If you are using <code>ARM</code> Windows, choose the <code>ARM</code> folder, not <code>x64</code>. If you don't know what <code>ARM</code> is, you are likely an <code>x64</code> user; use the <code>x64</code> version.<br>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290<br></small>
-@zh <small><code>x64</code> 版 <code>vcomp140.dll</code> 下载链接：</small>[vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)<small><br>如果你正在使用 <code>ARM</code> 版 Windows，请选择 <code>ARM</code> 文件夹，而不是 <code>x64</code> 文件夹。如果你不知道 <code>ARM</code> 是什么，那你应该是 <code>x64</code> 用户，请使用 <code>x64</code> 版。<br>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290<br></small>
-@zh-hant <small><code>x64</code> 版 <code>vcomp140.dll</code> 下載連結：</small>[vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)<small><br>如果你正在使用 <code>ARM</code> 版 Windows，請選擇 <code>ARM</code> 資料夾，而不是 <code>x64</code> 資料夾。如果你不知道 <code>ARM</code> 是什麼，那你應該是 <code>x64</code> 使用者，請使用 <code>x64</code> 版。<br>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290<br></small>
-@ja <small><code>x64</code> 版 <code>vcomp140.dll</code> ダウンロードリンク： </small>[vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)<small><br><code>ARM</code> Windows を使用している場合は、<code>x64</code> ではなく <code>ARM</code> フォルダを選択してください。<code>ARM</code> が何かわからない場合、おそらく <code>x64</code> ユーザーです。<code>x64</code> 版を使用してください。<br>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290<br></small>
-@ko <small><code>x64</code> <code>vcomp140.dll</code> 다운로드 링크: </small>[vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)<small><br><code>ARM</code> Windows를 사용하는 경우 <code>x64</code>가 아닌 <code>ARM</code> 폴더를 선택하십시오. <code>ARM</code>이 무엇인지 모른다면 아마도 <code>x64</code> 사용자일 것입니다. <code>x64</code> 버전을 사용하십시오.<br>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290<br></small>
-@de <small>Download-Link für <code>x64</code> <code>vcomp140.dll</code>: </small>[vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)<small><br>Wenn Sie <code>ARM</code> Windows verwenden, wählen Sie den <code>ARM</code>-Ordner, nicht <code>x64</code>. Wenn Sie nicht wissen, was <code>ARM</code> ist, sind Sie wahrscheinlich ein <code>x64</code>-Benutzer; verwenden Sie die <code>x64</code>-Version.<br>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290<br></small>
-@fr <small>Lien de téléchargement pour <code>vcomp140.dll</code> <code>x64</code> : </small>[vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)<small><br>Si vous utilisez Windows <code>ARM</code>, choisissez le dossier <code>ARM</code>, pas <code>x64</code>. Si vous ne savez pas ce qu'est <code>ARM</code>, vous êtes probablement un utilisateur <code>x64</code> ; utilisez la version <code>x64</code>.<br>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290<br></small>
-@ru <small>Ссылка для скачивания <code>x64</code> <code>vcomp140.dll</code>: </small>[vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)<small><br>Если вы используете Windows на <code>ARM</code>, выберите папку <code>ARM</code>, а не <code>x64</code>. Если вы не знаете, что такое <code>ARM</code>, вы, вероятно, пользователь <code>x64</code>; используйте версию <code>x64</code>.<br>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290<br></small>
+@en Download link for `x64` `vcomp140.dll`: [vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)
+@zh `x64` 版 `vcomp140.dll` 下载链接：[vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)
+@zh-hant `x64` 版 `vcomp140.dll` 下載連結：[vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)
+@ja `x64` 版 `vcomp140.dll` ダウンロードリンク： [vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)
+@ko `x64` `vcomp140.dll` 다운로드 링크: [vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)
+@de Download-Link für `x64` `vcomp140.dll`: [vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)
+@fr Lien de téléchargement pour `vcomp140.dll` `x64` : [vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)
+@ru Ссылка для скачивания `x64` `vcomp140.dll`: [vcomp140.dll](/downloads/fixes/vcomp140.dll.zip)
+
+@en If you are using `ARM` Windows, choose the `ARM` folder, not `x64`. If you don't know what `ARM` is, you are likely an `x64` user; use the `x64` version.
+@zh 如果你正在使用 `ARM` 版 Windows，请选择 `ARM` 文件夹，而不是 `x64` 文件夹。如果你不知道 `ARM` 是什么，那你应该是 `x64` 用户，请使用 `x64` 版。
+@zh-hant 如果你正在使用 `ARM` 版 Windows，請選擇 `ARM` 資料夾，而不是 `x64` 資料夾。如果你不知道 `ARM` 是什麼，那你應該是 `x64` 使用者，請使用 `x64` 版。
+@ja `ARM` Windows を使用している場合は、`x64` ではなく `ARM` フォルダを選択してください。`ARM` が何かわからない場合、おそらく `x64` ユーザーです。`x64` 版を使用してください。
+@ko `ARM` Windows를 사용하는 경우 `x64`가 아닌 `ARM` 폴더를 선택하십시오. `ARM`이 무엇인지 모른다면 아마도 `x64` 사용자일 것입니다. `x64` 버전을 사용하십시오.
+@de Wenn Sie `ARM` Windows verwenden, wählen Sie den `ARM`-Ordner, nicht `x64`. Wenn Sie nicht wissen, was `ARM` ist, sind Sie wahrscheinlich ein `x64`-Benutzer; verwenden Sie die `x64`-Version.
+@fr Si vous utilisez Windows `ARM`, choisissez le dossier `ARM`, pas `x64`. Si vous ne savez pas ce qu'est `ARM`, vous êtes probablement un utilisateur `x64` ; utilisez la version `x64`.
+@ru Если вы используете Windows на `ARM`, выберите папку `ARM`, а не `x64`. Если вы не знаете, что такое `ARM`, вы, вероятно, пользователь `x64`; используйте версию `x64`.
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crashing-trying-to-launch-22-and-23-windows-11--149890/#ca943290
 
 </small>
 
@@ -1354,9 +1401,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Essayez **de renommer n'importe quel fichier média utilisé dans le projet** pour que le projet ne puisse pas le trouver. Lors de la réouverture, **ignorez les invites "média hors ligne"**. Après avoir ouvert avec succès, **renommez le fichier ou remplacez-le**.
 @ru О: Попробуйте **переименовать любой медиафайл, используемый в проекте**, чтобы проект не мог его найти. При повторном открытии **игнорируйте предупреждения «медиафайл недоступен»**. После успешного открытия **переименуйте файл обратно или замените его**.
 
+<small>
+
 @en <!-- -->
-@zh <small>参见：https://tieba.baidu.com/p/7511708251<br></small>
-@zh-hant <small>參見：https://tieba.baidu.com/p/7511708251<br></small>
+@zh 参见：https://tieba.baidu.com/p/7511708251
+@zh-hant 參見：https://tieba.baidu.com/p/7511708251
+
+</small>
 
 <br>
 
@@ -1378,14 +1429,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Cela peut arriver dans toutes les versions VEGAS en raison d'une disposition de fenêtre spécifique. C'est plus probable lorsque la fenêtre Aperçu est **détachée (flottante)**. Un correctif temporaire : **Avant d'ouvrir une nouvelle instance VEGAS, fermez ou accrochez la fenêtre Aperçu de l'ancienne instance** pour éviter les plantages potentiels.
 @ru О: Это может произойти во всех версиях VEGAS из-за определенного макета окон. Это более вероятно, когда окно предварительного просмотра **не закреплено (плавающее)**. Временное исправление: **Перед открытием нового экземпляра VEGAS закройте или закрепите окно предварительного просмотра старого экземпляра**, чтобы избежать потенциальных сбоев.
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/<br></small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/<br></small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/<br></small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/<br></small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/<br></small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/<br></small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/<br></small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/<br></small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-to-open-more-instances-of-vegas-pro-22--148817/
+
+</small>
 
 <br>
 
@@ -1427,14 +1482,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : C'est un **problème spécifique à VP19 dans les anciens builds (par ex. `19 build 341`)**. **Mettez à jour vers `19 build 651`** pour le résoudre.
 @ru О: Это **специфичная для VP19 проблема в старых сборках (например, `19 build 341`)**. **Обновитесь до `19 build 651`**, чтобы решить ее.
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/<br></small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/<br></small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/<br></small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/<br></small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/<br></small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/<br></small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/<br></small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/<br></small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/ui-issues-with-vegas-pro-19-0--131391/
+
+</small>
 
 <br>
 
@@ -1476,14 +1535,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Problème de mise à jour Windows. Téléchargez et exécutez vc_redist.x86.exe et vc_redist.x64.exe pour réparer les runtimes C++ : https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist<br>Les retours suggèrent que la mise à jour d'autres logiciels (comme OBS) pourrait aussi être nécessaire.
 @ru О: Проблема с обновлением Windows. Скачайте и запустите vc_redist.x86.exe и vc_redist.x64.exe для восстановления сред выполнения C++: https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist<br>Отзывы предполагают, что может потребоваться обновление другого ПО (например, OBS).
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/<br></small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/<br></small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/<br></small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/<br></small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/<br></small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/<br></small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/<br></small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/<br></small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-won-t-run-after-sept-2024-windows-update--147255/
+
+</small>
 
 <br>
 
@@ -1505,14 +1568,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : C'est un problème **spécifique à la version française**. La seule solution est de **désinstaller et réinstaller la version anglaise**. Les officiels VEGAS avaient l'intention de le corriger mais n'ont pas de solution claire. Les utilisateurs qui peuvent reproduire ce problème sont encouragés à contacter les officiels VEGAS.
 @ru О: Это проблема, **специфичная для французской версии**. Единственное решение — **удалить и переустановить английскую версию**. Официальная команда VEGAS намеревалась исправить это, но четкого решения нет. Пользователям, которые могут воспроизвести эту проблему, рекомендуется обратиться к официальной команде VEGAS.
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950<br></small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950<br></small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950<br></small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950<br></small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950<br></small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950<br></small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950<br></small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950<br></small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-22-build-93-crash-at-start-when-he-say-window-creation--147150/#ca926950
+
+</small>
 
 <br>
 
@@ -1656,7 +1723,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @ru `Файл -> Свойства (File -> Properties)`, в разделе `Повторная дискретизация (Resample)` выберите **`Отключить повторную дискретизацию (Disable resample)`**.
 
 @en Disabling resample addresses **frame-related issues**. If resample is enabled (e.g., 30fps footage in a 60fps project), **VEGAS generates frame blending between original frames** (visible as a **crossfade between two frames** when scrubbing frame by frame).
-@zh 禁用重采样主要针对的是**和帧有关的问题**，如果启用了重采样功能，比如将 30fps 的素材扔进 60fps 的工程里，**Vegas 就会自动在原素材的两帧之间生成帧混合**（肉體上逐幀預覽，可以看見類似於**兩幀淡入淡出**的效果）。
+@zh 禁用重采样主要针对的是**和帧有关的问题**，如果启用了重采样功能，比如将 30fps 的素材扔进 60fps 的工程里，**Vegas 就会自动在原素材的两帧之间生成帧混合**（肉眼上逐帧预览，可以看见类似于**两帧淡入淡出**的效果）。
 @zh-hant 禁用重采樣主要針對的是**和幀有關的問題**，如果啟用了重采樣功能，比如將 30fps 的素材扔進 60fps 的工程裡，**Vegas 就會自動在原素材的兩幀之間生成幀混合**（肉體上逐幀預覽，可以看見類似於**兩幀淡入淡出**的效果）。
 @ja リサンプルを無効にすると、**フレーム関連の問題**に対処します。リサンプルが有効な場合（例：30fps 素材を 60fps プロジェクトに）、**VEGAS は元のフレーム間でフレームブレンディングを生成**します（フレームごとにスクラブすると、**2 フレーム間のクロスフェード**のように見えます）。
 @ko 리샘플 비활성화는 **프레임 관련 문제**를 해결합니다. 리샘플이 활성화된 경우(예: 60fps 프로젝트의 30fps 영상), **VEGAS는 원본 프레임 사이에 프레임 블렌딩을 생성**합니다(프레임별로 스크러빙할 때 **두 프레임 간의 크로스페이드**로 표시됨).
@@ -1921,14 +1988,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Cela se produit lorsque OBS utilise MP4 fragmenté pour l'enregistrement, que VEGAS ne peut pas décoder correctement. **Changez le format de sortie dans les paramètres OBS**. Pour les séquences existantes, utilisez la méthode de copie de flux, par ex. `ffmpeg -i input.mp4 -c copy output.mp4`.
 @ru О: Это происходит, когда OBS использует фрагментированный MP4 для записи, который VEGAS не может правильно декодировать. **Измените формат вывода в настройках OBS**. Для существующих материалов используйте метод копирования потока, например, `ffmpeg -i input.mp4 -c copy output.mp4`.
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/<br></small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/<br></small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/<br></small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/<br></small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/<br></small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/<br></small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/<br></small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/<br></small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/solved-3-hour-video-only-1ms-of-video--144992/
+
+</small>
 
 <br>
 
@@ -1988,14 +2059,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Dans VEGAS, **clic droit sur le fichier média ou l'événement -> Propriétés**, passez à l'onglet `Média`, trouvez `Canal alpha`, changez-le en **`Direct (sans cache)`**.
 @ru О: В VEGAS **щелкните правой кнопкой мыши на медиафайле или событии -> Свойства**, переключитесь на вкладку `Медиа (Media)`, найдите `Альфа-канал (Alpha channel)`, измените его на **`Прямой (без матирования) (Straight (unmatted))`**.
 
-@en <small>(Note: For <code>Alpha channel</code>, <b>as long as you don't select <code>Undefined</code> or <code>None</code></b>, the alpha channel should display.)</small>
-@zh <small>（注：<code>alpha 通道</code> 这一栏，<b>只要不选 <code>未定义</code> 或者 <code>无</code></b>，应该都能正常显示 alpha 通道。）</small>
-@zh-hant <small>（注：<code>alpha 通道</code> 這一欄，<b>只要不選 <code>未定義</code> 或者 <code>無</code></b>，應該都能正常顯示 alpha 通道。）</small>
-@ja <small>（注： <code>アルファチャンネル</code> については、 <b><code>未定義</code> または <code>なし</code> を選択しない限り</b>、アルファチャンネルが表示されるはずです。）</small>
-@ko <small>(참고: <code>알파 채널</code>의 경우, <b><code>정의되지 않음</code> 또는 <code>없음</code>을 선택하지 않는 한</b> 알파 채널이 표시되어야 합니다.)</small>
-@de <small>(Hinweis: Für <code>Alpha-Kanal</code>, <b>solange Sie nicht <code>Undefiniert</code> oder <code>Kein</code> wählen</b>, sollte der Alphakanal angezeigt werden.)</small>
-@fr <small>(Note : Pour <code>Canal alpha</code>, <b>tant que vous ne sélectionnez pas <code>Indéfini</code> ou <code>Aucun</code></b>, le canal alpha devrait s'afficher.)</small>
-@ru <small>(Примечание: Для <code>Альфа-канала (Alpha channel)</code>, <b>пока вы не выберете <code>Неопределенный (Undefined)</code> или <code>Нет (None)</code></b>, альфа-канал должен отображаться.)</small>
+<small>
+
+@en (Note: For `Alpha channel`, **as long as you don't select `Undefined` or `None`**, the alpha channel should display.)
+@zh （注：`alpha 通道` 这一栏，**只要不选 `未定义` 或者 `无`**，应该都能正常显示 alpha 通道。）
+@zh-hant （注：`alpha 通道` 這一欄，**只要不選 `未定義` 或者 `無`**，應該都能正常顯示 alpha 通道。）
+@ja （注： `アルファチャンネル` については、 **`未定義` または `なし` を選択しない限り**、アルファチャンネルが表示されるはずです。）
+@ko (참고: `알파 채널`의 경우, **`정의되지 않음` 또는 `없음`을 선택하지 않는 한** 알파 채널이 표시되어야 합니다.)
+@de (Hinweis: Für `Alpha-Kanal`, **solange Sie nicht `Undefiniert` oder `Kein` wählen**, sollte der Alphakanal angezeigt werden.)
+@fr (Note : Pour `Canal alpha`, **tant que vous ne sélectionnez pas `Indéfini` ou `Aucun`**, le canal alpha devrait s'afficher.)
+@ru (Примечание: Для `Альфа-канала (Alpha channel)`, **пока вы не выберете `Неопределенный (Undefined)` или `Нет (None)`**, альфа-канал должен отображаться.)
+
+</small>
 
 @en You can also modify this property for multiple files in the **`Project Media`** window.
 @zh 另外，在 **`项目媒体`** 窗口中，是可以多选修改媒体属性的，也可以利用这个办法统一修改。
@@ -2026,14 +2101,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : C'est **entièrement un bug du logiciel VEGAS**, et jusqu'à la dernière version (`23 build 302`), ce n'est pas corrigé. **Les tests montrent que toutes les méthodes précédentes échouent. La seule solution est d'extraire/réencoder l'audio et de l'importer séparément.** Les vidéos téléchargées via l'application TikTok ne sont pas affectées.
 @ru О: Это **полностью ошибка программного обеспечения VEGAS**, и по состоянию на последнюю версию (`23 build 302`) не исправлена. **Тестирование показывает, что все предыдущие методы не работают. Единственное решение — извлечь/перекодировать аудио и импортировать его отдельно.** Видео, загруженные через приложение TikTok, не затрагиваются.
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682<br></small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682<br></small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682<br></small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682<br></small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682<br></small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682<br></small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682<br></small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682<br></small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/noise-at-the-end-of-a-clip--140457/#ca884682
+
+</small>
 
 <br>
 
@@ -2146,14 +2225,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 <ImageOnDemand src="vegtips/image012_profile_edit_2.png" />
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773<br></small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773<br></small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773<br></small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773<br></small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773<br></small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773<br></small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773<br></small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773<br></small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/4-3-video-clip-in-16-9-project--128760/#ca800773
+
+</small>
 
 <br>
 
@@ -2386,14 +2469,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 
 <ImageOnDemand src="vegtips/image017_unicode_settings.png" />
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/<br></small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/<br></small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/<br></small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/<br></small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/<br></small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/<br></small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/<br></small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/<br></small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/credit-roll-window-not-displaying-in-full--138828/
+
+</small>
 
 <br>
 
@@ -2566,14 +2653,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr - Correction temporaire pour les anciens VEGAS : **Clic droit sur l'exécutable/raccourci VEGAS -> `Propriétés -> Compatibilité`, sous `Mode de compatibilité` sélectionnez `Windows 8`**.
 @ru - Временное исправление для старых версий VEGAS: **Щелкните правой кнопкой мыши на исполняемом файле/ярлыке VEGAS -> `Свойства -> Совместимость`, в разделе `Режим совместимости (Compatibility mode)` выберите `Windows 8`**.
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/<br></small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/<br></small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/<br></small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/<br></small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/<br></small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/<br></small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/<br></small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/<br></small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-22-consistent-crashing-when-copying-keyframes--148746/
+
+</small>
 
 <br>
 
@@ -2595,14 +2686,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Après VP22, glisser à gauche sur la timeline sélectionne les événements, tandis que glisser à droite sélectionne une plage de temps. Si vous êtes habitué à l'ancienne logique, vous pouvez **cocher `Préférences -> Édition -> Utiliser le bouton droit de la souris pour basculer vers l'outil d'édition de sélection`** pour échanger les fonctions des boutons gauche/droit, similaire à la logique par défaut de Reaper.  
 @ru О: После VP22 перетаскивание левой кнопкой мыши на временной шкале выбирает события, а правой — выбирает диапазон времени. Если вы привыкли к старой логике, вы можете **установить флажок `Настройки -> Редактирование -> Использовать правую кнопку мыши для переключения на инструмент выбора редактирования (Preferences -> Editing -> Use right mouse button to switch to selection edit tool)`**, чтобы поменять функции левой/правой кнопок, аналогично логике по умолчанию в Reaper.  
 
-@en <small>If this happens in older versions, first confirm your edit tool is selected correctly (press <code>D</code> key twice).</small>
-@zh <small>若是旧版遇到这个问题，你先确认一遍你鼠标编辑工具选没选对，敲两下 `D` 键。</small>
-@zh-hant <small>若是舊版遇到這個問題，你先確認一遍你滑鼠編輯工具選沒選對，敲兩下 `D` 鍵。</small>
-@ja <small>古いバージョンでこれが発生する場合は、まず編集ツールが正しく選択されているか確認します（<code>D</code> キーを 2 回押す）。</small>
-@ko <small>이전 버전에서 발생하는 경우 먼저 편집 도구가 올바르게 선택되었는지 확인하십시오(<code>D</code> 키 두 번 누르기).</small>
-@de <small>Wenn dies in älteren Versionen passiert, bestätigen Sie zuerst, dass Ihr Bearbeitungswerkzeug korrekt ausgewählt ist (drücken Sie <code>D</code>-Taste zweimal).</small>
-@fr <small>Si cela se produit dans les anciennes versions, confirmez d'abord que votre outil d'édition est correctement sélectionné (appuyez sur la touche <code>D</code> deux fois).</small>
-@ru <small>Если это происходит в старых версиях, сначала убедитесь, что ваш инструмент редактирования выбран правильно (дважды нажмите клавишу <code>D</code>).</small>
+<small>
+
+@en If this happens in older versions, first confirm your edit tool is selected correctly (press `D` key twice).
+@zh 若是旧版遇到这个问题，你先确认一遍你鼠标编辑工具选没选对，敲两下 `D` 键。
+@zh-hant 若是舊版遇到這個問題，你先確認一遍你滑鼠編輯工具選沒選對，敲兩下 `D` 鍵。
+@ja 古いバージョンでこれが発生する場合は、まず編集ツールが正しく選択されているか確認します（`D` キーを 2 回押す）。
+@ko 이전 버전에서 발생하는 경우 먼저 편집 도구가 올바르게 선택되었는지 확인하십시오(`D` 키 두 번 누르기).
+@de Wenn dies in älteren Versionen passiert, bestätigen Sie zuerst, dass Ihr Bearbeitungswerkzeug korrekt ausgewählt ist (drücken Sie `D`-Taste zweimal).
+@fr Si cela se produit dans les anciennes versions, confirmez d'abord que votre outil d'édition est correctement sélectionné (appuyez sur la touche `D` deux fois).
+@ru Если это происходит в старых версиях, сначала убедитесь, что ваш инструмент редактирования выбран правильно (дважды нажмите клавишу `D`).
+
+</small>
 
 @en This update also introduced a minor issue: the actual event selection area is slightly smaller than the mouse-drawn area due to a new offset value. Go to [Internal Preferences](#accessing-vegas-internal-preferences), search for **`Default SelectionMode Offset`**, change it to **`0`**.
 @zh 这次更新以后，还出现了一个新的小问题，也就是实际的事件选择范围，与你鼠标划的区域稍有差异，实际的事件选择范围会略小于鼠标划的区域。这是因为新版额外引入了一个选区偏移值。到 [内部首选项](#vegas-内部首选项的进入方法)，搜索并找到 **`Default SelectionMode Offset`**，改成 **`0`** 即可。
@@ -2763,6 +2858,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr 3. Revenir au pilote Nvidia `522.30` ou antérieur, ou mettre à jour vers le plus récent. Lors de la réinstallation, **choisissez l'installation "Personnalisée"** et cochez **`Effectuer une installation propre`**. Cela réinitialise tous les paramètres du pilote par défaut, donc **non recommandé**.
 @ru 3. Откатите драйвер Nvidia до `522.30` или ранее или обновите до последнего. При переустановке **выберите «Выборочная» установку** и установите флажок **`Выполнить чистую установку (Perform a clean installation)`**. Это сбрасывает все настройки драйвера к значениям по умолчанию, поэтому **не рекомендуется**.
 
+<small>
+
 @en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problems-with-nvidia-driver-526-98--138196/
 @zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problems-with-nvidia-driver-526-98--138196/
 @zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problems-with-nvidia-driver-526-98--138196/
@@ -2771,6 +2868,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problems-with-nvidia-driver-526-98--138196/
 @fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problems-with-nvidia-driver-526-98--138196/
 @ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problems-with-nvidia-driver-526-98--138196/
+
+</small>
 
 <br>
 
@@ -3276,6 +3375,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr - Utilisez l'encodeur NVENC de **[Voukoder](#plugin-de-rendu-recommandé-voukoder)** sans erreur.
 @ru - Используйте кодировщик NVENC в **[Voukoder](#рекомендуемый-плагин-рендеринга-voukoder)** без ошибки.
 
+<small>
+
 @en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/rendering-issues-after-gpu-replacement-nvenc--150382/
 @zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/rendering-issues-after-gpu-replacement-nvenc--150382/
 @zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/rendering-issues-after-gpu-replacement-nvenc--150382/
@@ -3284,6 +3385,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/rendering-issues-after-gpu-replacement-nvenc--150382/
 @fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/rendering-issues-after-gpu-replacement-nvenc--150382/
 @ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/rendering-issues-after-gpu-replacement-nvenc--150382/
+
+</small>
 
 <br>
 
@@ -3305,6 +3408,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr A : À partir de **Win11 24H2**, Microsoft a supprimé le **codec AC-3** dont dépendent VEGAS et d'autres logiciels. Sur une **installation neuve de Win11 24H2 ou plus**, ce codec est manquant, causant l'échec de VEGAS à **décoder l'audio AC-3 dans les fichiers m2ts** et à **rendre m2ts**. Référez-vous à [**ce tutoriel anglais**](https://www.elevenforum.com/t/ac-3-dolby-digital-codec-no-longer-included-with-windows-11-version-24h2.25597/post-459390) pour rajouter le codec AC-3, ou **mettre à niveau vers VP22 final (`22 build 250`) ou plus**, qui inclut un nouveau codec AC-3.
 @ru О: Начиная с **Win11 24H2**, Microsoft удалила **кодек AC-3**, от которого зависят VEGAS и другое ПО. При **чистой установке Win11 24H2 или более поздней версии** этот кодек отсутствует, что приводит к **сбою декодирования аудио AC-3 в файлах m2ts** и **сбою рендеринга m2ts** в VEGAS. Обратитесь к [**этому руководству на английском**](https://www.elevenforum.com/t/ac-3-dolby-digital-codec-no-longer-included-with-windows-11-version-24h2.25597/post-459390), чтобы добавить кодек AC-3 обратно, или **обновитесь до финальной версии VP22 (`22 build 250`) или выше**, которая включает новый кодек AC-3.
 
+<small>
+
 @en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/no-audio-and-no-rendering-possible-with-m2ts-files-in-win11-24h2--147963/
 @zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/no-audio-and-no-rendering-possible-with-m2ts-files-in-win11-24h2--147963/
 @zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/no-audio-and-no-rendering-possible-with-m2ts-files-in-win11-24h2--147963/
@@ -3313,6 +3418,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/no-audio-and-no-rendering-possible-with-m2ts-files-in-win11-24h2--147963/
 @fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/no-audio-and-no-rendering-possible-with-m2ts-files-in-win11-24h2--147963/
 @ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/no-audio-and-no-rendering-possible-with-m2ts-files-in-win11-24h2--147963/
+
+</small>
 
 <br>
 
@@ -3526,6 +3633,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr 3.  Appliquez le préréglage FX **`Levels`** **`RGB studio vers RGB ordinateur`** aux fichiers multimédias.
 @ru 3.  Примените к медиафайлам предустановку FX **`Уровни (Levels)`** **`Студийный RGB в компьютерный RGB (Studio RGB to Computer RGB)`**.
 
+<small>
+
 @en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/why-magix-avc-mp4-encoder-changes-the-color-of-the-original-video--142942/
 @zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/why-magix-avc-mp4-encoder-changes-the-color-of-the-original-video--142942/
 @zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/why-magix-avc-mp4-encoder-changes-the-color-of-the-original-video--142942/
@@ -3534,6 +3643,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/why-magix-avc-mp4-encoder-changes-the-color-of-the-original-video--142942/
 @fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/why-magix-avc-mp4-encoder-changes-the-color-of-the-original-video--142942/
 @ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/why-magix-avc-mp4-encoder-changes-the-color-of-the-original-video--142942/
+
+</small>
 
 <br>
 
@@ -3617,6 +3728,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr - **Avant le rendu**, ajoutez le FX intégré **`Mélange de canaux` au bus de sortie vidéo, sélectionnez le préréglage `RGBA -> BGRA`**.
 @ru - **Перед рендерингом** добавьте встроенный FX **`Смешивание каналов (Channel Blend)` в Шину видеовыхода (Video Output Bus), выберите предустановку `RGBA -> BGRA`**.
 
+<small>
+
 @en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-with-rendering--142292/
 @zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-with-rendering--142292/
 @zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-with-rendering--142292/
@@ -3625,6 +3738,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-with-rendering--142292/
 @fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-with-rendering--142292/
 @ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/problem-with-rendering--142292/
+
+</small>
 
 <br>
 
@@ -3709,6 +3824,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr - Note : Cette méthode ne peut pas dépasser la limite maximale de l'encodeur (par ex. `4096*4096` pour NVENC).
 @ru - Примечание: Этот метод не может превысить максимальный предел кодировщика (например, `4096*4096` для NVENC).
 
+<small>
+
 @en Reference: https://www.reddit.com/r/VegasPro/comments/wo1wpr/solution_to_max_height_reverting_back_to_2304/
 @zh 参见：https://www.reddit.com/r/VegasPro/comments/wo1wpr/solution_to_max_height_reverting_back_to_2304/
 @zh-hant 參見：https://www.reddit.com/r/VegasPro/comments/wo1wpr/solution_to_max_height_reverting_back_to_2304/
@@ -3717,6 +3834,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @de Referenz: https://www.reddit.com/r/VegasPro/comments/wo1wpr/solution_to_max_height_reverting_back_to_2304/
 @fr Référence : https://www.reddit.com/r/VegasPro/comments/wo1wpr/solution_to_max_height_reverting_back_to_2304/
 @ru Ссылка: https://www.reddit.com/r/VegasPro/comments/wo1wpr/solution_to_max_height_reverting_back_to_2304/
+
+</small>
 
 <br>
 
@@ -3814,6 +3933,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr 3.  Rendez dans un autre format (`.mov`), puis convertissez en utilisant [FFmpeg](https://ffmpeg.org/).
 @ru 3.  Рендерите в другой формат (`.mov`), затем конвертируйте с помощью [FFmpeg](https://ffmpeg.org/).
 
+<small>
+
 @en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/image-sequence-rendering-option-gone-on-vegas-18--147113/#ca950963
 @zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/image-sequence-rendering-option-gone-on-vegas-18--147113/#ca950963
 @zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/image-sequence-rendering-option-gone-on-vegas-18--147113/#ca950963
@@ -3822,6 +3943,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/image-sequence-rendering-option-gone-on-vegas-18--147113/#ca950963
 @fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/image-sequence-rendering-option-gone-on-vegas-18--147113/#ca950963
 @ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/image-sequence-rendering-option-gone-on-vegas-18--147113/#ca950963
+
+</small>
 
 <br>
 
@@ -3870,6 +3993,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr Le principe exact de réparation n'est pas clair.
 @ru Точный принцип ремонта неясен.
 
+<small>
+
 @en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/avi-files-rendering-as-wdp-in-vegas-pro-10--83436/
 @zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/avi-files-rendering-as-wdp-in-vegas-pro-10--83436/
 @zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/avi-files-rendering-as-wdp-in-vegas-pro-10--83436/
@@ -3878,6 +4003,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/avi-files-rendering-as-wdp-in-vegas-pro-10--83436/
 @fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/avi-files-rendering-as-wdp-in-vegas-pro-10--83436/
 @ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/avi-files-rendering-as-wdp-in-vegas-pro-10--83436/
+
+</small>
 
 <br>
 
@@ -3939,6 +4066,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr Cela peut affecter la stabilité, donc passer à Win10 est conseillé.
 @ru Это может повлиять на стабильность, поэтому рекомендуется обновление до Win10.
 
+<small>
+
 @en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/win-7-rendering-issue-with-the-magix-vegas-482-version--128221/
 @zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/win-7-rendering-issue-with-the-magix-vegas-482-version--128221/
 @zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/win-7-rendering-issue-with-the-magix-vegas-482-version--128221/
@@ -3956,6 +4085,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @de Download-Link für `18 Build 284` `RenderAsDialog.dll`: [RenderAsDialog.dll](/downloads/fixes/RenderAsDialog.dll.zip)
 @fr Lien de téléchargement pour `RenderAsDialog.dll` de `18 build 284` : [RenderAsDialog.dll](/downloads/fixes/RenderAsDialog.dll.zip)
 @ru Ссылка для скачивания `RenderAsDialog.dll` от `18 build 284`: [RenderAsDialog.dll](/downloads/fixes/RenderAsDialog.dll.zip)
+
+</small>
 
 <br>
 
@@ -4091,14 +4222,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Un bug relativement rare, apparemment non corrigé. Cela pourrait fonctionner un jour et s'arrêter le lendemain. Actuellement, la seule correction connue est **[réinitialiser les préférences](#5-réinitialiser-les-préférences)**.
 @ru О: Относительно редкая ошибка, по-видимому, не исправленная. Она может работать в один день и перестать на следующий. В настоящее время единственное известное исправление — **[сброс настроек](#5-сбросить-настройки)**.
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/</small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/</small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/</small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/</small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/</small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/</small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/</small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/</small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/insert-subtitles-from-file-doesn-t-open-dialog-box-anymore--137861/
+
+</small>
 
 <br>
 
@@ -4204,14 +4339,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr   - Utilisation : Sélectionnez un seul événement "Titres et texte" sur une piste, exécutez le script pour faire correspondre les autres événements de sous-titre sur la même piste à ses attributs.
 @ru   - Использование: Выберите одно событие «Титры и текст» на дорожке, запустите скрипт, чтобы сопоставить атрибуты других событий субтитров на той же дорожке с его атрибутами.
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/</small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/</small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/</small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/</small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/</small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/</small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/</small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/</small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/bug-while-using-new-update-of-title-text-attribute-paste-function--145461/
+
+</small>
 
 <br>
 
@@ -4562,14 +4701,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : C'est généralement un **plantage de chargement de miniature**. Pas de correction directe ; vous pouvez seulement l'éviter. Si vous n'avez pas besoin de cette série de plugins, trouvez ses fichiers OFX (externes dans le chemin commun, intégrés à VEGAS dans le chemin spécifique) et supprimez-les. Si vous voulez toujours la série de plugins mais pas ce FX, **essayez d'éditer le fichier de traduction `xml`** pour le déplacer à la fin, évitant la sélection accidentelle.  
 @ru О: Это обычно **сбой загрузки миниатюры**. Прямого исправления нет; можно только избежать. Если вам не нужна эта серия плагинов, найдите ее файлы OFX (внешние — в общем пути, встроенные в VEGAS — в специфичном) и удалите их. Если вы все еще хотите серию плагинов, но не этот FX, **попробуйте отредактировать файл перевода `xml`**, чтобы переместить его в конец, избегая случайного выбора.
 
-@en <small>Alternatively, use the <b>FX Search extension [VPConsole](https://www.ratinfx.com/vpconsole/)</b> as a replacement.</small>
-@zh <small>也可以使用<b>效果搜索插件 [VPConsole](https://www.ratinfx.com/vpconsole/)</b>，作为自带效果搜索功能的平替。</small>
-@zh-hant <small>也可以使用<b>效果搜尋外掛程式 [VPConsole](https://www.ratinfx.com/vpconsole/)</b>，作為自帶效果搜尋功能的平替。</small>
-@ja <small>または、 <b>FX 検索拡張機能 [VPConsole](https://www.ratinfx.com/vpconsole/)</b> を代替として使用。</small>
-@ko <small>또는 <b>FX 검색 확장 [VPConsole](https://www.ratinfx.com/vpconsole/)</b>을 대안으로 사용할 수 있습니다.</small>
-@de <small>Alternativ verwenden Sie die <b>FX-Such-Erweiterung [VPConsole](https://www.ratinfx.com/vpconsole/)</b> als Ersatz.</small>
-@fr <small>Alternativement, utilisez **l'extension de recherche FX [VPConsole](https://www.ratinfx.com/vpconsole/)** comme remplacement.</small>
-@ru <small>В качестве альтернативы используйте <b>расширение поиска FX [VPConsole](https://www.ratinfx.com/vpconsole/)</b> в качестве замены.</small>
+<small>
+
+@en Alternatively, use the **FX Search extension [VPConsole](https://www.ratinfx.com/vpconsole/)** as a replacement.
+@zh 也可以使用**效果搜索插件 [VPConsole](https://www.ratinfx.com/vpconsole/)**，作为自带效果搜索功能的平替。
+@zh-hant 也可以使用**效果搜尋外掛程式 [VPConsole](https://www.ratinfx.com/vpconsole/)**，作為自帶效果搜尋功能的平替。
+@ja または、 **FX 検索拡張機能 [VPConsole](https://www.ratinfx.com/vpconsole/)** を代替として使用。
+@ko 또는 **FX 검색 확장 [VPConsole](https://www.ratinfx.com/vpconsole/)**을 대안으로 사용할 수 있습니다.
+@de Alternativ verwenden Sie die **FX-Such-Erweiterung [VPConsole](https://www.ratinfx.com/vpconsole/)** als Ersatz.
+@fr Alternativement, utilisez **l'extension de recherche FX [VPConsole](https://www.ratinfx.com/vpconsole/)** comme remplacement.
+@ru В качестве альтернативы используйте **расширение поиска FX [VPConsole](https://www.ratinfx.com/vpconsole/)** в качестве замены.
+
+</small>
 
 <br>
 
@@ -4591,14 +4734,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Avec de nombreux plugins installés, les anciennes versions VEGAS se bloquent souvent lors de l'utilisation de la recherche, prenant beaucoup de temps à récupérer. **VP18 a corrigé cela**, donc mettre à niveau vers VP18+ est recommandé pour une recherche fluide.  
 @ru О: При установке многих плагинов старые версии VEGAS часто зависают при использовании поиска, требуя много времени на восстановление. **VP18 исправил это**, поэтому для плавного поиска рекомендуется обновление до VP18+.
 
-@en <small>Alternatively, use the <b>FX Search extension [VPConsole](https://www.ratinfx.com/vpconsole/)</b> as a replacement.</small>
-@zh <small>也可以使用<b>效果搜索插件 [VPConsole](https://www.ratinfx.com/vpconsole/)</b>，作为自带效果搜索功能的平替。</small>
-@zh-hant <small>也可以使用<b>效果搜尋外掛程式 [VPConsole](https://www.ratinfx.com/vpconsole/)</b>，作為自帶效果搜尋功能的平替。</small>
-@ja <small>または、 <b>FX 検索拡張機能 [VPConsole](https://www.ratinfx.com/vpconsole/)</b> を代替として使用。</small>
-@ko <small>또는 <b>FX 검색 확장 [VPConsole](https://www.ratinfx.com/vpconsole/)</b>을 대안으로 사용할 수 있습니다.</small>
-@de <small>Alternativ verwenden Sie die <b>FX-Such-Erweiterung [VPConsole](https://www.ratinfx.com/vpconsole/)</b> als Ersatz.</small>
-@fr <small>Alternativement, utilisez **l'extension de recherche FX [VPConsole](https://www.ratinfx.com/vpconsole/)** comme remplacement.</small>
-@ru <small>В качестве альтернативы используйте <b>расширение поиска FX [VPConsole](https://www.ratinfx.com/vpconsole/)</b> в качестве замены.</small>
+<small>
+
+@en Alternatively, use the **FX Search extension [VPConsole](https://www.ratinfx.com/vpconsole/)** as a replacement.
+@zh 也可以使用**效果搜索插件 [VPConsole](https://www.ratinfx.com/vpconsole/)**，作为自带效果搜索功能的平替。
+@zh-hant 也可以使用**效果搜尋外掛程式 [VPConsole](https://www.ratinfx.com/vpconsole/)**，作為自帶效果搜尋功能的平替。
+@ja または、 **FX 検索拡張機能 [VPConsole](https://www.ratinfx.com/vpconsole/)** を代替として使用。
+@ko 또는 **FX 검색 확장 [VPConsole](https://www.ratinfx.com/vpconsole/)**을 대안으로 사용할 수 있습니다.
+@de Alternativ verwenden Sie die **FX-Such-Erweiterung [VPConsole](https://www.ratinfx.com/vpconsole/)** als Ersatz.
+@fr Alternativement, utilisez **l'extension de recherche FX [VPConsole](https://www.ratinfx.com/vpconsole/)** comme remplacement.
+@ru В качестве альтернативы используйте **расширение поиска FX [VPConsole](https://www.ratinfx.com/vpconsole/)** в качестве замены.
+
+</small>
 
 @en <iframe width="560" height="315" src="https://www.youtube.com/embed/4ZZBfTb2Ubg?si=vkKTf8trYe8t6RR5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 @zh <p align="center"><iframe src="//player.bilibili.com/player.html?bvid=BV1U4XhYgEG5&autoplay=false" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></p>
@@ -4633,14 +4780,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Pour les nouveaux FX IA intégrés, **vous devez installer la version correspondante de Modèles d'Apprentissage Profond** séparément.
 @ru О: Для новых встроенных AI FX **вы должны установить соответствующую версию Deep Learning Models** отдельно.
 
-@en <small>Official AI Deep Learning Models download: https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247</small>
-@zh <small>官方 AI 深度学习模型下载链接：https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247</small>
-@zh-hant <small>官方 AI 深度學習模型下載連結：https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247</small>
-@ja <small>公式 AI Deep Learning Models ダウンロード： https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247</small>
-@ko <small>공식 AI 딥 러닝 모델 다운로드: https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247</small>
-@de <small>Offizielle AI Deep Learning Models Download: https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247</small>
-@fr <small>Téléchargement officiel des Modèles d'Apprentissage Profond IA : https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247</small>
-@ru <small>Официальная загрузка AI Deep Learning Models: https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247</small>
+<small>
+
+@en Official AI Deep Learning Models download: https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
+@zh 官方 AI 深度学习模型下载链接：https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
+@zh-hant 官方 AI 深度學習模型下載連結：https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
+@ja 公式 AI Deep Learning Models ダウンロード： https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
+@ko 공식 AI 딥 러닝 모델 다운로드: https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
+@de Offizielle AI Deep Learning Models Download: https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
+@fr Téléchargement officiel des Modèles d'Apprentissage Profond IA : https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
+@ru Официальная загрузка AI Deep Learning Models: https://forum.borisfx.com/t/where-can-i-download-vegas-pro-including-old-versions/24247
+
+</small>
 
 <br>
 
@@ -4733,14 +4884,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr R : Vous pouvez sauvegarder ce FX en tant que chaîne de plugin dans une ancienne version VEGAS, puis appliquer la chaîne dans VP21. Ce bug est corrigé dans VP22.
 @ru О: Вы можете сохранить этот FX как цепочку плагинов в старой версии VEGAS, затем применить цепочку в VP21. Эта ошибка исправлена в VP22.
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/</small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/</small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/</small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/</small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/</small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/</small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/</small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/</small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/crash-when-using-plugins-color-match-ofx-3d-lut-creator-ofx-plugin--144354/
+
+</small>
 
 <br>
 
@@ -4782,14 +4937,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr - **Chemin VST commun** : `C:\Program Files\VSTPlugins\`
 @ru - **Общий путь VST**: `C:\Program Files\VSTPlugins\`
 
-@en <small>If other software changed the common VST path, VEGAS follows that. You can check the registry key <code>HKEY_LOCAL_MACHINE\SOFTWARE\VST</code>, value <code>VSTPluginsPath</code>.</small>
-@zh <small>如果其他软件改了公共 VST 路径，则会按照改过的来。可自行查询注册表项 <code>HKEY_LOCAL_MACHINE\SOFTWARE\VST</code> 的 <code>VSTPluginsPath</code> 值所对应的路径字符串数据。</small>
-@zh-hant <small>如果其他軟體改了公共 VST 路徑，則會按照改過的來。可自行查詢登錄檔項 <code>HKEY_LOCAL_MACHINE\SOFTWARE\VST</code> 的 <code>VSTPluginsPath</code> 值所對應的路徑字串資料。</small>
-@ja <small>他のソフトウェアが共通 VST パスを変更した場合、VEGAS はそれに従います。レジストリキー <code>HKEY_LOCAL_MACHINE\SOFTWARE\VST</code>、値 <code>VSTPluginsPath</code> を確認できます。</small>
-@ko <small>다른 소프트웨어가 공통 VST 경로를 변경한 경우 VEGAS는 이를 따릅니다. 레지스트리 키 <code>HKEY_LOCAL_MACHINE\SOFTWARE\VST</code>, 값 <code>VSTPluginsPath</code>를 확인할 수 있습니다.</small>
-@de <small>Wenn andere Software den allgemeinen VST-Pfad geändert hat, folgt VEGAS dem. Sie können den Registrierungsschlüssel <code>HKEY_LOCAL_MACHINE\SOFTWARE\VST</code>, Wert <code>VSTPluginsPath</code> überprüfen.</small>
-@fr <small>Si d'autres logiciels ont changé le chemin VST commun, VEGAS le suit. Vous pouvez vérifier la clé de registre <code>HKEY_LOCAL_MACHINE\SOFTWARE\VST</code>, valeur <code>VSTPluginsPath</code>.</small>
-@ru <small>Если другое ПО изменило общий путь VST, VEGAS следует этому. Вы можете проверить ключ реестра <code>HKEY_LOCAL_MACHINE\SOFTWARE\VST</code>, значение <code>VSTPluginsPath</code>.</small>
+<small>
+
+@en If other software changed the common VST path, VEGAS follows that. You can check the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\VST`, value `VSTPluginsPath`.
+@zh 如果其他软件改了公共 VST 路径，则会按照改过的来。可自行查询注册表项 `HKEY_LOCAL_MACHINE\SOFTWARE\VST` 的 `VSTPluginsPath` 值所对应的路径字符串数据。
+@zh-hant 如果其他軟體改了公共 VST 路徑，則會按照改過的來。可自行查詢登錄檔項 `HKEY_LOCAL_MACHINE\SOFTWARE\VST` 的 `VSTPluginsPath` 值所對應的路徑字串資料。
+@ja 他のソフトウェアが共通 VST パスを変更した場合、VEGAS はそれに従います。レジストリキー `HKEY_LOCAL_MACHINE\SOFTWARE\VST`、値 `VSTPluginsPath` を確認できます。
+@ko 다른 소프트웨어가 공통 VST 경로를 변경한 경우 VEGAS는 이를 따릅니다. 레지스트리 키 `HKEY_LOCAL_MACHINE\SOFTWARE\VST`, 값 `VSTPluginsPath`를 확인할 수 있습니다.
+@de Wenn andere Software den allgemeinen VST-Pfad geändert hat, folgt VEGAS dem. Sie können den Registrierungsschlüssel `HKEY_LOCAL_MACHINE\SOFTWARE\VST`, Wert `VSTPluginsPath` überprüfen.
+@fr Si d'autres logiciels ont changé le chemin VST commun, VEGAS le suit. Vous pouvez vérifier la clé de registre `HKEY_LOCAL_MACHINE\SOFTWARE\VST`, valeur `VSTPluginsPath`.
+@ru Если другое ПО изменило общий путь VST, VEGAS следует этому. Вы можете проверить ключ реестра `HKEY_LOCAL_MACHINE\SOFTWARE\VST`, значение `VSTPluginsPath`.
+
+</small>
 
 @en - **VEGAS-specific VST Path (VP16+)**: `...<VEGAS install path>\MAGIX Plugins\` <sup>**MAGIX 16 and above**</sup> or `...<VEGAS install path>\Vegas Plugins\` <sup>**Boris FX 2026 and above**</sup>
 @zh - **独立 VST 路径**：`...<Vegas 安装路径>\MAGIX Plugins\` <sup>**MAGIX 16 及以上**</sup> 或 `...<Vegas 安装路径>\Vegas Plugins\` <sup>**Boris FX 2026 及以上**</sup>
@@ -4977,14 +5136,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr Enfin, réinstallez Vegas.
 @ru В конце переустановите Vegas.
 
-@en <small>Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/</small>
-@zh <small>参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/</small>
-@zh-hant <small>參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/</small>
-@ja <small>参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/</small>
-@ko <small>참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/</small>
-@de <small>Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/</small>
-@fr <small>Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/</small>
-@ru <small>Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/</small>
+<small>
+
+@en Reference: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/
+@zh 参见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/
+@zh-hant 參見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/
+@ja 参照： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/
+@ko 참조: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/
+@de Referenz: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/
+@fr Référence : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/
+@ru Ссылка: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/less-audiofx--143986/
+
+</small>
 
 <br>
 
@@ -5044,14 +5207,18 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Sony Creative Software\Error Reporting Client\1.0\La
 @fr - **Extension (`Extension`)** : Peut s'exécuter automatiquement au démarrage de Vegas. Permet des fonctionnalités plus complexes, comme créer des fenêtres accrochables dans Vegas.
 @ru - **Расширение (`Extension`)**: Может запускаться автоматически при старте Vegas. Позволяет реализовать более сложные функции, например, создавать закрепляемые окна внутри Vegas.
 
-@en <small>This article only covers certain issues encountered during script/extension installation. For basic tutorials, see: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
-@zh <small>本文只介绍脚本/扩展安装时遇到的某些问题。如需基础教程，可见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
-@zh-hant <small>本文只介紹腳本/擴充安裝時遇到的某些問題。如需基礎教學，可見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
-@ja <small>この記事はスクリプト/拡張機能のインストール時に発生する特定の問題のみを紹介します。基本的なチュートリアルについては、以下を参照してください： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
-@ko <small>이 문서는 스크립트/확장 설치 시 발생하는 특정 문제만 다룹니다. 기본 튜토리얼은 다음을 참조하십시오: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
-@de <small>Dieser Artikel behandelt nur bestimmte Probleme bei der Skript-/Erweiterungsinstallation. Für grundlegende Tutorials siehe: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
-@fr <small>Cet article ne couvre que certains problèmes rencontrés lors de l'installation de scripts/extensions. Pour des tutoriels de base, voir : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
-@ru <small>В этой статье рассматриваются только определенные проблемы, возникающие при установке скриптов/расширений. Для базовых руководств см.: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/</small>
+<small>
+
+@en This article only covers certain issues encountered during script/extension installation. For basic tutorials, see: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/
+@zh 本文只介绍脚本/扩展安装时遇到的某些问题。如需基础教程，可见：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/
+@zh-hant 本文只介紹腳本/擴充安裝時遇到的某些問題。如需基礎教學，可見：https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/
+@ja この記事はスクリプト/拡張機能のインストール時に発生する特定の問題のみを紹介します。基本的なチュートリアルについては、以下を参照してください： https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/
+@ko 이 문서는 스크립트/확장 설치 시 발생하는 특정 문제만 다룹니다. 기본 튜토리얼은 다음을 참조하십시오: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/
+@de Dieser Artikel behandelt nur bestimmte Probleme bei der Skript-/Erweiterungsinstallation. Für grundlegende Tutorials siehe: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/
+@fr Cet article ne couvre que certains problèmes rencontrés lors de l'installation de scripts/extensions. Pour des tutoriels de base, voir : https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/
+@ru В этой статье рассматриваются только определенные проблемы, возникающие при установке скриптов/расширений. Для базовых руководств см.: https://web.archive.org/web/https://www.vegascreativesoftware.info/us/forum/vegas-pro-scripting-faqs-resources--104563/
+
+</small>
 
 <br>
 
@@ -5236,14 +5403,14 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 @fr **Le conseil le plus important d'abord :**
 @ru **Самый важный совет вначале:**
 
-@en <p align="center"><big><b>Develop a good habit of pressing <code>Ctrl + S</code> frequently!</b></big></p>
-@zh <p align="center"><big><b>养成良好的随手 <code>Ctrl + S</code> 的习惯！</b></big></p>
-@zh-hant <p align="center"><big><b>養成良好的隨手 <code>Ctrl + S</code> 的習慣！</b></big></p>
-@ja <p align="center"><big><b>頻繁に <code>Ctrl + S</code> を押す習慣を身につけましょう！</b></big></p>
-@ko <p align="center"><big><b>자주 <code>Ctrl + S</code>를 누르는 좋은 습관을 들이십시오!</b></big></p>
-@de <p align="center"><big><b>Entwickeln Sie eine gute Gewohnheit, häufig <code>Strg + S</code> zu drücken!</b></big></p>
-@fr <p align="center"><big><b>Développez une bonne habitude d'appuyer fréquemment sur <code>Ctrl + S</code> !</b></big></p>
-@ru <p align="center"><big><b>Выработайте хорошую привычку часто нажимать <code>Ctrl + S</code>!</b></big></p>
+@en <p align="center"><big><b>Develop a good habit of pressing `Ctrl + S` frequently!</b></big></p>
+@zh <p align="center"><big><b>养成良好的随手 `Ctrl + S` 的习惯！</b></big></p>
+@zh-hant <p align="center"><big><b>養成良好的隨手 `Ctrl + S` 的習慣！</b></big></p>
+@ja <p align="center"><big><b>頻繁に `Ctrl + S` を押す習慣を身につけましょう！</b></big></p>
+@ko <p align="center"><big><b>자주 `Ctrl + S`를 누르는 좋은 습관을 들이십시오!</b></big></p>
+@de <p align="center"><big><b>Entwickeln Sie eine gute Gewohnheit, häufig `Strg + S` zu drücken!</b></big></p>
+@fr <p align="center"><big><b>Développez une bonne habitude d'appuyer fréquemment sur `Ctrl + S` !</b></big></p>
+@ru <p align="center"><big><b>Выработайте хорошую привычку часто нажимать `Ctrl + S`!</b></big></p>
 
 @en This section helps with situations like **saved project file disappearing/corrupt**, **software crash before saving**, etc.
 @zh 本段旨在帮助解决 **保存后原工程文件消失了或者无法正常打开**、**软件崩溃但没来得及保存** 等需要恢复工程文件的情况。
@@ -5433,14 +5600,14 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 
 <ImageOnDemand src="vegtips/image038_advanced_save.png" />
 
-@en <p align="center">Menu: <b><code>Tools -> Advanced Save</code></b>.</p>
-@zh <p align="center">菜单栏的 <b><code>工具 -> 高级保存</code></b>。</p>
-@zh-hant <p align="center">選單列的 <b><code>工具 -> 高級儲存</code></b>。</p>
-@ja <p align="center">メニュー： <b><code>ツール -> 高度な保存</code></b>。</p>
-@ko <p align="center">메뉴: <b><code>도구 -> 고급 저장</code></b>.</p>
-@de <p align="center">Menü: <b><code>Werkzeuge -> Erweitertes Speichern</code></b>.</p>
-@fr <p align="center">Menu : <b><code>Outils -> Sauvegarde avancée</code></b>.</p>
-@ru <p align="center">Меню: <b><code>Инструменты -> Расширенное сохранение (Tools -> Advanced Save)</code></b>.</p>
+@en <p align="center">Menu: <b>`Tools -> Advanced Save`</b>.</p>
+@zh <p align="center">菜单栏的 <b>`工具 -> 高级保存`</b>。</p>
+@zh-hant <p align="center">選單列的 <b>`工具 -> 高級儲存`</b>。</p>
+@ja <p align="center">メニュー： <b>`ツール -> 高度な保存`</b>。</p>
+@ko <p align="center">메뉴: <b>`도구 -> 고급 저장`</b>.</p>
+@de <p align="center">Menü: <b>`Werkzeuge -> Erweitertes Speichern`</b>.</p>
+@fr <p align="center">Menu : <b>`Outils -> Sauvegarde avancée`</b>.</p>
+@ru <p align="center">Меню: <b>`Инструменты -> Расширенное сохранение (Tools -> Advanced Save)`</b>.</p>
 
 @en Two functions: Live Save and Advanced Backup.
 @zh 高级保存功能共分为两项功能：实时保存和高级备份。
@@ -5809,14 +5976,18 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 @fr - **Anciennes versions** : Non. `.sfk` est le fichier de pic audio. VEGAS n'a **aucun paramètre** pour stocker les fichiers `.sfk` ailleurs ; ils doivent être à côté du fichier média. Supprimer manuellement provoque une régénération à la réouverture du projet.  
 @ru - **Старые версии**: Нет. `.sfk` — файл пиковых значений аудио. В VEGAS **нет настройки** для хранения файлов `.sfk` в другом месте; они должны быть рядом с медиафайлом. Удаление вручную вызывает повторную генерацию при повторном открытии проекта.
 
-@en   <small><s>Even Sound Forge can directly hide peak files, but Vegas can't. Isn't this a bit...</s></small>
-@zh   <small><s>连自家的 Sound Forge 都能直接隐藏峰值文件，就 Vegas 不能，这是否有点...</s></small>
-@zh-hant   <small><s>連自家的 Sound Forge 都能直接隱藏峰值檔案，就 Vegas 不能，這是否有點...</s></small>
-@ja   <small><s>Sound Forge でさえピークファイルを直接隠せるのに、Vegas はできない。これはちょっと...</s></small>
-@ko   <small><s>심지어 Sound Forge는 직접 피크 파일을 숨길 수 있는데 Vegas는 못합니다. 이건 좀...</s></small>
-@de   <small><s>Sogar Sound Forge kann Peak-Dateien direkt ausblenden, aber Vegas kann es nicht. Ist das nicht ein bisschen...</s></small>
-@fr   <small><s>Même Sound Forge peut directement masquer les fichiers de pics, mais Vegas ne peut pas. N'est-ce pas un peu...</s></small>
-@ru   <small><s>Даже Sound Forge может напрямую скрывать пиковые файлы, а Vegas не может. Не слишком ли это...</s></small>
+<small>
+
+@en   <s>Even Sound Forge can directly hide peak files, but Vegas can't. Isn't this a bit...</s>
+@zh   <s>连自家的 Sound Forge 都能直接隐藏峰值文件，就 Vegas 不能，这是否有点...</s>
+@zh-hant   <s>連自家的 Sound Forge 都能直接隱藏峰值檔案，就 Vegas 不能，這是否有點...</s>
+@ja   <s>Sound Forge でさえピークファイルを直接隠せるのに、Vegas はできない。これはちょっと...</s>
+@ko   <s>심지어 Sound Forge는 직접 피크 파일을 숨길 수 있는데 Vegas는 못합니다. 이건 좀...</s>
+@de   <s>Sogar Sound Forge kann Peak-Dateien direkt ausblenden, aber Vegas kann es nicht. Ist das nicht ein bisschen...</s>
+@fr   <s>Même Sound Forge peut directement masquer les fichiers de pics, mais Vegas ne peut pas. N'est-ce pas un peu...</s>
+@ru   <s>Даже Sound Forge может напрямую скрывать пиковые файлы, а Vegas не может. Не слишком ли это...</s>
+
+</small>
 
 @en - **New versions (`21 build 300`+)**: `Preferences -> General`, two new options: **`Do not create .sfk files to store peak data`** and `Hide new .sfk files`. Checking only the second hides new `.sfk` files (visible if "Show hidden files" is enabled). Checking the first **prevents `.sfk` generation entirely** (peak data recreated on project open, usually fine), **recommended**.
 @zh - **新版（`21 build 300` 及以上）**： `首选项 -> 常规`，新增 **`不要创建.sfk 文件来存储峰值数据`** 和 `隐藏新的 .sfk 文件` 这两个选项。若只勾选第二个选项，则会将新生成的 `.sfk` 文件的属性设为隐藏，电脑启用过“隐藏文件显示”以后仍然可见。若勾选了第一个选项，则不再生成 `.sfk` 文件，但每次重进工程时均需重新创建峰值，不过一般影响不大，因此**建议勾选**。
@@ -5847,14 +6018,18 @@ C:\ProgramData\VEGAS Pro\23.0\Application Extensions\
 @fr R : Si **les fichiers multimédias sont dans un dossier nécessitant des autorisations d'administrateur**, VEGAS ne peut pas générer de fichiers `.sfk`, provoquant **`Pics indisponibles`**. Solution : **Déplacez les fichiers multimédias vers un dossier ne nécessitant pas de privilèges d'administrateur**.
 @ru О: Если **медиафайлы находятся в папке, требующей разрешений администратора**, VEGAS не может генерировать файлы `.sfk`, вызывая **`Пики недоступны`**. Решение: **Переместите медиафайлы в папку, не требующую привилегий администратора**.
 
-@en <small>Also, for info on <code>.sfk</code>, <code>.sfl</code>, <code>.sfap0</code>, <code>.sfvp0</code> files, see: https://vegasaur.com/sweeper</small>
-@zh <small>另：有关 <code>.sfk</code>、<code>.sfl</code>、<code>.sfap0</code>、<code>.sfvp0</code> 等文件的相关介绍，可见：https://vegasaur.com/sweeper</small>
-@zh-hant <small>另：有關 <code>.sfk</code>、<code>.sfl</code>、<code>.sfap0</code>、<code>.sfvp0</code> 等檔案的相關介紹，可見：https://vegasaur.com/sweeper</small>
-@ja <small>また、 <code>.sfk</code>、<code>.sfl</code>、<code>.sfap0</code>、<code>.sfvp0</code> ファイルに関する情報は： https://vegasaur.com/sweeper</small>
-@ko <small>또한 <code>.sfk</code>, <code>.sfl</code>, <code>.sfap0</code>, <code>.sfvp0</code> 파일에 대한 정보는 다음을 참조하십시오: https://vegasaur.com/sweeper</small>
-@de <small>Auch, für Info zu <code>.sfk</code>, <code>.sfl</code>, <code>.sfap0</code>, <code>.sfvp0</code> Dateien, siehe: https://vegasaur.com/sweeper</small>
-@fr <small>Aussi, pour les infos sur les fichiers <code>.sfk</code>, <code>.sfl</code>, <code>.sfap0</code>, <code>.sfvp0</code>, voir : https://vegasaur.com/sweeper</small>
-@ru <small>Также, для информации о файлах <code>.sfk</code>, <code>.sfl</code>, <code>.sfap0</code>, <code>.sfvp0</code> см.: https://vegasaur.com/sweeper</small>
+<small>
+
+@en Also, for info on `.sfk`, `.sfl`, `.sfap0`, `.sfvp0` files, see: https://vegasaur.com/sweeper
+@zh 另：有关 `.sfk`、`.sfl`、`.sfap0`、`.sfvp0` 等文件的相关介绍，可见：https://vegasaur.com/sweeper
+@zh-hant 另：有關 `.sfk`、`.sfl`、`.sfap0`、`.sfvp0` 等檔案的相關介紹，可見：https://vegasaur.com/sweeper
+@ja また、 `.sfk`、`.sfl`、`.sfap0`、`.sfvp0` ファイルに関する情報は： https://vegasaur.com/sweeper
+@ko 또한 `.sfk`, `.sfl`, `.sfap0`, `.sfvp0` 파일에 대한 정보는 다음을 참조하십시오: https://vegasaur.com/sweeper
+@de Auch, für Info zu `.sfk`, `.sfl`, `.sfap0`, `.sfvp0` Dateien, siehe: https://vegasaur.com/sweeper
+@fr Aussi, pour les infos sur les fichiers `.sfk`, `.sfl`, `.sfap0`, `.sfvp0`, voir : https://vegasaur.com/sweeper
+@ru Также, для информации о файлах `.sfk`, `.sfl`, `.sfap0`, `.sfvp0` см.: https://vegasaur.com/sweeper
+
+</small>
 
 <br>
 

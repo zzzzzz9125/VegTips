@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
 import i18nMacroPlugin from './plugins/markdown-it/i18n-macro'
+import { transformPagefindSfc } from './plugins/transform-pagefind-sfc'
 
 const readTheDocsCanonicalUrl = process.env.READTHEDOCS_CANONICAL_URL
 
@@ -94,7 +95,20 @@ export default defineConfig({
   base,
   vite: {
     publicDir: '../public',
+    css: {
+      // VitePress v2 alpha uses lightningcss for minification, which does not
+      // yet support `@container style()` queries used by the default theme.
+      // Switch to PostCSS for transformation and disable lightningcss minify.
+      transformer: 'postcss',
+    },
+    build: {
+      cssMinify: false,
+    },
     plugins: [
+      // Must run before Vue plugin so defineProps<T>() / defineEmits<T>()
+      // in vitepress-plugin-pagefind SFCs are converted to runtime syntax
+      // before @vue/compiler-sfc tries to resolve the types.
+      transformPagefindSfc(),
       pagefindPlugin({
         customSearchQuery: chineseSearchOptimize,
         locales: {
